@@ -88,39 +88,63 @@ async function main() {
   let usage = { input_tokens: 0, output_tokens: 0 };
   let error = null;
   let dropped = [];
+  const rejected = []; // API 400s from request variants that were tried and turned down
 
   try {
     if (!process.env.ANTHROPIC_API_KEY) throw new Error('missing key');
     const client = new Anthropic(); // reads ANTHROPIC_API_KEY from the environment
 
-    const request = {
-      model,
-      max_tokens: 16000,
-      system,
-      output_config: { effort: 'low', format: { type: 'json_schema', schema: DAILY_BRIEF_SCHEMA } },
-      messages: [{ role: 'user', content: `Here is today's data (JSON). Write today's brief.\n\n${inputText}` }],
-    };
+    const userMessage = { role: 'user', content: `Here is today's data (JSON). Write today's brief.\n\n${inputText}` };
 
     // Cost guard: the cheap Haiku rate only applies under 100k input tokens.
-    const counted = await client.messages.countTokens({ model, system, messages: request.messages });
+    const counted = await client.messages.countTokens({ model, system, messages: [userMessage] });
     console.log(`Input: ${counted.input_tokens} tokens (limit ${maxInputTokens}).`);
     if (counted.input_tokens > maxInputTokens) throw new Error(`the input was ${counted.input_tokens} tokens, over the ${maxInputTokens} limit`);
 
-    // One attempt, plus one retry if the reply can't be used.
-    for (let attempt = 1; attempt <= 2 && !result; attempt++) {
-      const response = await client.messages.create(request);
+    // The preferred request uses structured output, so the API enforces the reply's shape.
+    // If the API rejects a request (HTTP 400), the next variant drops the feature it may not accept;
+    // the reply is checked by checkBrief() either way. The API's explanation is always logged.
+    const schemaNote = `\n\n---\n\nReply with only one JSON object (no other text) that matches this JSON schema:\n${JSON.stringify(DAILY_BRIEF_SCHEMA)}`;
+    const variants = [
+      { label: 'structured output', request: { model, max_tokens: 16000, system, output_config: { effort: 'low', format: { type: 'json_schema', schema: DAILY_BRIEF_SCHEMA } }, messages: [userMessage] } },
+      { label: 'JSON by instruction', request: { model, max_tokens: 16000, system: system + schemaNote, output_config: { effort: 'low' }, messages: [userMessage] } },
+      { label: 'JSON by instruction, default effort', request: { model, max_tokens: 16000, system: system + schemaNote, messages: [userMessage] } },
+    ];
+
+    let variant = 0;
+    let usableAttempts = 0;
+    // Up to two usable replies (one retry), stepping to the next variant only on a 400.
+    while (!result && usableAttempts < 2 && variant < variants.length) {
+      const { label, request } = variants[variant];
+      let response;
+      try {
+        response = await client.messages.create(request);
+      } catch (apiError) {
+        if (apiError instanceof Anthropic.BadRequestError) {
+          console.warn(`The API rejected the request (${label}): ${apiError.message}`);
+          rejected.push(`${label}: ${apiError.message}`.slice(0, 300));
+          error = apiError;
+          variant++;
+          continue;
+        }
+        throw apiError;
+      }
+      usableAttempts++;
       usage = { input_tokens: usage.input_tokens + response.usage.input_tokens, output_tokens: usage.output_tokens + response.usage.output_tokens };
       if (response.stop_reason === 'refusal') { error = new Error('Claude declined to write the brief'); continue; }
       if (response.stop_reason === 'max_tokens') { error = new Error('the reply was cut off'); continue; }
-      const text = response.content.find(b => b.type === 'text')?.text;
+      const text = response.content.find(b => b.type === 'text')?.text || '';
       try {
-        const checked = checkBrief(JSON.parse(text), index, inputText);
+        // Without structured output the JSON can arrive wrapped in a code fence; take the outermost object.
+        const json = text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
+        const checked = checkBrief(JSON.parse(json), index, inputText);
         result = checked.brief;
         dropped = checked.dropped;
         error = null;
+        console.log(`Brief written using ${label}.`);
       } catch (parseError) {
         error = new Error(`the reply wasn't valid (${parseError.message})`);
-        console.warn(`Attempt ${attempt}: ${error.message}`);
+        console.warn(`Attempt ${usableAttempts} (${label}): ${error.message}`);
       }
     }
   } catch (e) {
@@ -139,9 +163,9 @@ async function main() {
   console.log(`Usage: ${usage.input_tokens} in, ${usage.output_tokens} out, about US$${costUsd.toFixed(4)} (month so far US$${usageLog.monthToDate.costUsd}).`);
 
   if (!result) {
-    status.brief = { ok: false, error: explain(error), at: melbourneIso() };
+    status.brief = { ok: false, error: explain(error), detail: error?.message ? String(error.message).slice(0, 300) : null, at: melbourneIso() };
     writeJson(statusPath, status);
-    console.error(`Brief not written: ${status.brief.error}`);
+    console.error(`Brief not written: ${status.brief.error}${status.brief.detail ? `\nDetail: ${status.brief.detail}` : ''}`);
     process.exitCode = 2;
     return;
   }
@@ -149,7 +173,7 @@ async function main() {
   merge(edition, result, index, model);
   writeJson(join(out, 'latest.json'), edition);
   writeJson(join(out, 'editions', `${edition.edition.date}.json`), edition, false);
-  status.brief = { ok: true, error: null, at: melbourneIso(), droppedItems: dropped.length };
+  status.brief = { ok: true, error: null, at: melbourneIso(), droppedItems: dropped.length, rejectedRequests: rejected };
   writeJson(statusPath, status);
   if (dropped.length) console.log(`Dropped ${dropped.length} item(s) that failed the checks:\n - ${dropped.join('\n - ')}`);
   console.log('Brief written.');
