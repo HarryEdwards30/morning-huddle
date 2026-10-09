@@ -1,6 +1,7 @@
 // My Teams tab: one hub per team (NBA team and NFL team from settings), switchable at the top.
 // Sections: header with record, since the last edition, last result and next game, injury report,
-// player form, roster moves and news, playoff race.
+// player form, roster moves and news, playoff race. In the off-season, player form and the playoff race
+// are left out.
 
 import { el, card, icon, teamChip, statusChip, sourceLinks, emptyNote, returnTimeline, typicalRecovery } from '../ui.js';
 import { formatGameDateTime, formatShortDate } from '../time.js';
@@ -36,15 +37,16 @@ export function renderTeams({ settings, edition }) {
     sinceLast(team.sinceLast),
     lastAndNext(team),
     injuries(team.injuries),
-    playerForm(team.form),
+    team.offSeason ? null : playerForm(team.form),
     rosterNews(team.news),
-    playoffRace(team.playoffRace, info.abbr),
+    team.offSeason ? null : playoffRace(team.playoffRace, info.abbr),
   );
 }
 
 function hero(team, info) {
   return el('section', { class: 'team-hero' },
-    el('div', { class: 'story-meta' }, teamChip(info.abbr || team.abbr), el('span', { class: 'chip chip-league' }, team.league)),
+    el('div', { class: 'story-meta' }, teamChip(info.abbr || team.abbr), el('span', { class: 'chip chip-league' }, team.league),
+      team.offSeason ? el('span', { class: 'chip chip-league' }, 'Off-season') : null),
     el('h1', {}, info.name || team.name),
     team.record ? el('div', { class: 'record num' }, team.record.summary) : null,
     team.record?.standing ? el('div', { class: 'standing' }, team.record.standing) : null,
@@ -81,7 +83,7 @@ function lastAndNext(team) {
         el('div', { class: 'value' }, versus(next)),
         el('div', { class: 'small num' }, formatGameDateTime(next.start)),
         next.note ? el('div', { class: 'small muted' }, next.note) : null,
-      ] : el('div', { class: 'small muted' }, 'Not scheduled'),
+      ] : el('div', { class: 'small muted' }, team.offSeason ? 'Schedule not out yet' : 'Not scheduled'),
     ),
   );
 }

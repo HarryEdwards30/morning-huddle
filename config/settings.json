@@ -12,6 +12,7 @@
     "seasonTimeline": true
   },
   "schedule": { "dailyBriefLocalTime": "09:00", "runLocalHour": 8, "wrapDay": "Wednesday" },
+  "offSeason": { "nba": "auto", "nfl": "auto" },
   "ai": { "model": "claude-haiku-5-5", "maxInputTokens": 90000, "pricePerMillionTokensUsd": { "input": 0.10, "output": 0.50 } },
   "seasonDates": {
     "nba": [

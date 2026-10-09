@@ -54,14 +54,17 @@ export function resultsFrom(scoreboards, idx, { excludeIds = new Set(), since } 
 // Standout individual lines from a game (used for the "Hot" players list).
 function gameLeaders(comp, idx) {
   const out = [];
-  const add = (category, leader) => {
+  // NBA lines are bare numbers ("34"), so the stat name is added ("34 points"). NFL lines are already full.
+  const add = (category, leader, label) => {
     if (!leader?.athlete) return;
     const teamId = leader.team?.id ?? leader.athlete.team?.id;
-    out.push({ category, value: Number(leader.value), line: leader.displayValue, name: leader.athlete.displayName, team: teamId ? idx.abbr(teamId) : null });
+    const shown = String(leader.displayValue ?? '');
+    const line = label && /^\d+(\.\d+)?$/.test(shown) ? `${shown} ${label.toLowerCase()}` : shown;
+    out.push({ category, value: Number(leader.value), line, name: leader.athlete.displayName, team: teamId ? idx.abbr(teamId) : null });
   };
   for (const cat of comp.leaders || []) add(cat.name, cat.leaders?.[0]);            // NFL: game leaders
   for (const competitor of comp.competitors || []) {                                // NBA: leaders per team
-    for (const cat of competitor.leaders || []) add(cat.name, { ...cat.leaders?.[0], team: { id: competitor.team?.id } });
+    for (const cat of competitor.leaders || []) add(cat.name, { ...cat.leaders?.[0], team: { id: competitor.team?.id } }, cat.displayName || cat.name);
   }
   return out;
 }

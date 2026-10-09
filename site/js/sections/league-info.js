@@ -37,9 +37,9 @@ export function pulse(p) {
 
 // Standings. NBA: both conferences, with lines after the playoff (6) and play-in (10) spots, so this card
 // doubles as the NBA playoff race. NFL: pick AFC or NFC, then the four divisions.
-export function standings(league, data) {
+export function standings(league, data, { offSeason = false } = {}) {
   const isNfl = league === 'nfl';
-  const title = isNfl ? 'Standings' : 'Standings and playoff race';
+  const title = offSeason ? 'Last season’s final standings' : isNfl ? 'Standings' : 'Standings and playoff race';
   const groups = data?.groups || [];
   if (!groups.length) return card({ type: 'results', title }, emptyNote('Standings not available.'));
 
@@ -145,8 +145,8 @@ export function majorInjuries(list) {
       )));
 }
 
-export function transactions(list) {
-  return card({ type: 'moves', title: 'Transactions' },
+export function transactions(list, title = 'Transactions') {
+  return card({ type: 'moves', title },
     !list?.length ? emptyNote('No notable moves.') :
       list.map(t => el('div', { class: `entry${involvesMyTeam(t.teams) ? ' mine' : ''}` },
         el('div', { class: 'entry-head' },
@@ -156,6 +156,17 @@ export function transactions(list) {
         el('p', { style: 'margin-top:4px' }, t.text),
         sourceLinks(t.sources),
       )));
+}
+
+// Off-season: what the tab is showing instead, and the next key date from the settings file.
+export function offSeason(league, dates, now) {
+  const next = (dates || []).map(d => ({ ...d, days: daysUntil(d.date, now) })).filter(d => d.days >= 0).sort((a, b) => a.days - b.days)[0];
+  return card({ type: 'plain', title: 'Off-season' },
+    el('p', {}, `The ${league.toUpperCase()} season is over. Until the next one starts, this tab follows the draft, free agency, trades and coaching changes.`),
+    next ? el('p', { class: 'small' }, el('strong', {}, 'Next up: '),
+      `${next.label}, ${next.days === 0 ? 'today' : next.days === 1 ? 'tomorrow' : `in ${next.days} days`} (${formatCalendarDate(next.date, { long: false })}).`) : null,
+    el('p', { class: 'muted small' }, 'Your team’s first game shows in My Teams once next season’s schedule is out.'),
+  );
 }
 
 // Countdowns come straight from the settings file, so they stay correct even if an edition is late.

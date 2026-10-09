@@ -16,18 +16,18 @@ export function renderWatch({ edition, now = new Date() }) {
         `${formatCalendarDate(guide.weekOf, { long: false })} to ${formatCalendarDate(guide.weekEnd, { long: false })}`) : null),
     !guide ? el('p', { class: 'empty-state' }, 'The watch guide arrives on Wednesday morning.') : [
       guide.note ? el('p', { class: 'muted small', style: 'margin:0 0 16px' }, guide.note) : null,
-      leagueGuide('NBA', guide.nba, now),
-      leagueGuide('NFL', guide.nfl, now),
+      leagueGuide('NBA', guide.nba, now, edition.nba?.offSeason),
+      leagueGuide('NFL', guide.nfl, now, edition.nfl?.offSeason),
       el('p', { class: 'muted small', style: 'text-align:center' }, 'All times are Melbourne time.'),
     ],
   );
 }
 
-function leagueGuide(label, data, now) {
+function leagueGuide(label, data, now, offSeason) {
   const picks = data?.picks || [];
   const yours = data?.yourTeam || [];
   const title = `${label} games to watch`;
-  if (!picks.length && !yours.length) return card({ type: 'watch', title }, emptyNote('No games this week.'));
+  if (!picks.length && !yours.length) return card({ type: 'watch', title }, emptyNote(offSeason ? `It’s the ${label} off-season, so there are no games this week.` : 'No games this week.'));
   return card({ type: 'watch', title },
     picks.map(g => gameEntry(g, g.rank, now)),
     yours.length ? el('div', { class: 'group' },

@@ -2,6 +2,8 @@
 // Tabs: NFL, NBA, My Teams, Watch. Each lives in js/tabs/ and only reads its own part of the edition.
 // The app opens on the tab you used last (My Teams the first time).
 // Past editions (the last 60 days) can be opened from the info button; see data/editions/index.json.
+// sw.js keeps a copy on the phone so the app opens offline. When the app comes back to the front and a
+// newer edition is out, it reloads (an app on the home screen has no reload button).
 
 import { el, setMyTeams, setSources } from './ui.js';
 import { formatCalendarDate, formatGameDateTime, melbourneToday, melbourneHour } from './time.js';
@@ -123,13 +125,29 @@ function setUpInfoDialog(ctx) {
         el('dt', {}, 'Times'), el('dd', {}, 'All times are Melbourne time.'),
       ),
       edition.sample ? el('p', { class: 'muted small' }, 'This edition is sample data.') : null,
+      installSteps(),
       past.length ? el('h3', { class: 'subhead' }, 'Past editions') : null,
       past.length ? el('ul', { class: 'past-editions' }, past.map(a => el('li', {},
         el('button', { class: 'button-small', type: 'button', onclick: () => { dialog.close(); openPastEdition(ctx, a.date); } },
           formatCalendarDate(a.date, { long: false }) + (a.type === 'wednesday' ? ' · Wrap' : ''))))) : null,
-    ].filter(Boolean));
+    ].flat().filter(Boolean));
     dialog.showModal();
   });
+}
+
+// How to add the app to the home screen. Hidden once it's opened from the home screen.
+function installSteps() {
+  const installed = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  if (installed) return null;
+  const iPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  return [
+    el('h3', { class: 'subhead' }, 'Add it to your home screen'),
+    el('ol', { class: 'install-steps' }, iPhone
+      ? [el('li', {}, 'Open this page in Safari.'), el('li', {}, 'Tap the Share button (the square with an arrow).'),
+        el('li', {}, 'Scroll down and tap Add to Home Screen, then Add.')]
+      : [el('li', {}, 'Open this page in Chrome.'), el('li', {}, 'Tap the ⋮ menu at the top right.'),
+        el('li', {}, 'Tap Add to Home screen (or Install app), then Install.')]),
+  ];
 }
 
 // Shows a past edition from the archive, with a banner to get back to today's.
@@ -180,8 +198,38 @@ async function start() {
 
   const ctx = { settings, edition, latest: edition, status, archive, now: new Date() };
   setUpInfoDialog(ctx);
+  if (!navigator.onLine) showOfflineNotice();
+  window.addEventListener('offline', showOfflineNotice);
+  window.addEventListener('online', () => {
+    document.getElementById('offline-notice')?.remove();
+    checkForNewEdition(ctx);
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') checkForNewEdition(ctx);
+  });
   showTab(ctx);
   window.addEventListener('hashchange', () => showTab(ctx));
+}
+
+// Shown with any other banners when the phone has no connection.
+function showOfflineNotice() {
+  if (document.getElementById('offline-notice')) return;
+  notices.prepend(el('div', { class: 'notice notice-info', role: 'note', id: 'offline-notice' },
+    el('strong', {}, 'OFFLINE. '), 'Showing the last edition saved on this phone.'));
+}
+
+// When the app is reopened from the background, reload if a newer edition has been published.
+async function checkForNewEdition(ctx) {
+  if (!navigator.onLine) return;
+  ctx.now = new Date();
+  try {
+    const latest = await loadJson('data/latest.json');
+    if (latest.edition?.generatedAt !== ctx.latest.edition?.generatedAt) location.reload();
+  } catch { /* stay on what's showing */ }
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(error => console.warn('Offline copy not available:', error));
 }
 
 start();

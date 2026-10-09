@@ -17,6 +17,8 @@ const dailyLeague = {
   headlines: { type: 'array', items: obj({ title: str, summary: str, whyItMatters: str, refs }) },
   contextCard: nullable(obj({ title: str, body: str })),
   awardRaces: { type: 'array', items: obj({ award: str, contenders: { type: 'array', items: person } }) },
+  // One line per followed player (only when the data has followedPlayers). `id` is the player's input id.
+  followedNotes: { type: 'array', items: obj({ id: str, note: str }) },
 };
 
 // Wednesday Wrap: the league's past week. biggestResults are ids of the week's results (the app shows the scores).
@@ -100,6 +102,12 @@ export function checkBrief(brief, index, inputText, { wednesday = false } = {}) 
     const card = l.contextCard;
     out[league].contextCard = card && card.title && card.body && contextCards === 0 ? card : null;
     if (out[league].contextCard) contextCards++;
+
+    out[league].followedNotes = (l.followedNotes || []).filter((f, i) => {
+      const entry = index.get(f.id);
+      if (!entry || entry.kind !== 'followed' || entry.league !== league) { dropped.push(`${league} followed note ${i + 1}: ${f.id} isn't a followed player`); return false; }
+      return f.note && numbersOk(f.note, `${league} followed note ${i + 1}`);
+    });
 
     out[league].awardRaces = (l.awardRaces || []).map(a => ({
       award: a.award,

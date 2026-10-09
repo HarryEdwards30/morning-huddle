@@ -212,6 +212,7 @@ function merge(edition, brief, index, model, facts) {
       });
     }
     section.contextCard = b.contextCard;
+    for (const f of b.followedNotes) index.get(f.id).item.note = f.note;
     section.awardRaces = b.awardRaces.map(a => ({ award: a.award, contenders: a.contenders.map(({ refs, ...c }) => c) }));
 
     if (b.wrap !== undefined) {
