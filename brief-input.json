@@ -287,6 +287,14 @@
     "headlines": [
       {
         "id": "nba-h1",
+        "title": "LeBron James scores 10 points in 18 minutes in 76ers debut",
+        "summary": "LeBron James, who joined the 76ers this summer, had 10 points, five assists and four rebounds in the first half of his debut with Philadelphia.",
+        "teams": [
+          "PHI"
+        ]
+      },
+      {
+        "id": "nba-h2",
         "title": "Bruce Brown continues to fight and make a strong case to crack Knicks roster this preseason",
         "summary": "Bruce Brown had another solid showing in the Knicks' preseason loss to the Wizards on Thursday and continued to make a strong case to crack the roster.",
         "teams": [
@@ -294,17 +302,9 @@
         ]
       },
       {
-        "id": "nba-h2",
+        "id": "nba-h3",
         "title": "76ers' Embiid calls 'not true' LeBron report 'unfortunate'",
         "summary": "Joel Embiid said a recent report about LeBron James getting on him about being late to practice \"is not true\" and caused him to wonder why he was targeted.",
-        "teams": [
-          "PHI"
-        ]
-      },
-      {
-        "id": "nba-h3",
-        "title": "LeBron James scores 10 points in 18 minutes in 76ers debut",
-        "summary": "LeBron James, who joined the 76ers this summer, had 10 points, five assists and four rebounds in the first half of his debut with Philadelphia.",
         "teams": [
           "PHI"
         ]
