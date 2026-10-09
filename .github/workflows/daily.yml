@@ -39,6 +39,10 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 22
+          cache: npm
+
+      - name: Install the Claude library
+        run: npm ci --no-audit --no-fund
 
       - name: Get the data branch
         run: bash scripts/data-branch.sh checkout data-branch
@@ -48,6 +52,16 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
         run: node pipeline/build-edition.js --out data-branch
+
+      # One Claude call writes the brief. The key comes from the repo's ANTHROPIC_API_KEY secret and is never printed.
+      # If this fails, the edition keeps today's data without the written parts, and status.json says why.
+      - name: Write the brief with Claude
+        id: brief
+        if: github.event_name == 'workflow_dispatch' && steps.edition.outcome == 'success'
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node pipeline/write-brief.js --out data-branch
 
       - name: Save the edition to the data branch
         if: github.event_name == 'workflow_dispatch'
@@ -70,8 +84,13 @@ jobs:
 
       # The last good edition is still published above; this just makes a failed edition show as a red run.
       - name: Report a failed edition
-        if: steps.edition.outcome == 'failure'
+        if: steps.edition.outcome == 'failure' || steps.brief.outcome == 'failure'
         run: |
-          echo "Today's edition couldn't be built. The app is still showing the last good edition."
-          echo "See the 'Build today's edition' step above for the reason."
+          if [ "${{ steps.edition.outcome }}" = "failure" ]; then
+            echo "Today's edition couldn't be built. The app is still showing the last good edition."
+            echo "See the 'Build today's edition' step above for the reason."
+          else
+            echo "Today's data was published, but the written brief couldn't be produced."
+            echo "See the 'Write the brief with Claude' step above for the reason."
+          fi
           exit 1

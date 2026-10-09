@@ -10,5 +10,8 @@
     "build": "node scripts/build-site.js",
     "preview": "node scripts/build-site.js && node scripts/preview.js",
     "check-sources": "node scripts/check-sources.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1"
   }
 }

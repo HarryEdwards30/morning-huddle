@@ -70,6 +70,7 @@ async function buildLeague(league, settingsTeam, ctx) {
   const allNews = [...espnNews, ...rssNews];
   const leagueHeadlines = headlines(allNews, idx, sources, { since: since - 12 * 3600000, limit: 8 });
 
+  const leaders = statLeaders(await espn.leagueLeaders(log, league), idx);
   const injuriesJson = await espn.injuries(log, league);
   const transactionsJson = await espn.transactions(log, league);
   const newsText = allNews.map(n => `${n.title} ${n.description}`).join(' ');
@@ -98,7 +99,26 @@ async function buildLeague(league, settingsTeam, ctx) {
     ...ctx, results, confJson, injuriesJson, transactionsJson, teamNewsSince: since,
   }) : null;
 
-  return { leagueSection, myTeam, idx };
+  return { leagueSection, myTeam, idx, leaders };
+}
+
+// The top five in each stat category this season, for Claude's award races.
+// Before a season starts ESPN returns last season's leaders, so those are ignored.
+function statLeaders(json, idx) {
+  const myEspnAbbr = idx.byId.get(idx.myId)?.abbreviation;
+  const abbr = a => (a && a === myEspnAbbr ? idx.abbr(idx.myId) : a);
+  if (!json?.leaders?.categories) return [];
+  const current = json.currentSeason?.year;
+  const requested = json.requestedSeason?.year;
+  if (current && requested && current !== requested) return [];
+  return json.leaders.categories.slice(0, 10).map(c => ({
+    category: c.displayName || c.name,
+    leaders: (c.leaders || []).slice(0, 5).map(l => ({
+      name: l.athlete?.displayName,
+      team: abbr(l.athlete?.team?.abbreviation || l.team?.abbreviation) || null,
+      value: l.displayValue,
+    })).filter(l => l.name),
+  })).filter(c => c.leaders.length);
 }
 
 // The best single-game lines from the latest results, for the "Hot" column.
@@ -272,6 +292,8 @@ async function main() {
   };
 
   if (ok) {
+    // Extra facts for Claude's brief that the app doesn't show (see pipeline/write-brief.js).
+    writeFileSync(join(out, 'facts.json'), JSON.stringify({ date: today, leaders: { nba: nba.leaders, nfl: nfl.leaders } }, null, 2) + '\n');
     writeFileSync(join(out, 'latest.json'), JSON.stringify(edition, null, 2) + '\n');
     writeFileSync(join(out, 'editions', `${today}.json`), JSON.stringify(edition) + '\n');
     pruneArchive(join(out, 'editions'), today);

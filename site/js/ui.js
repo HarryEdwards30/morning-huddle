@@ -143,6 +143,14 @@ const BASIS_LABEL = {
   media: 'Media report',
   typical: 'Typical recovery',
 };
+// A typical recovery time from general knowledge (written by Claude), always labelled as typical.
+export function typicalRecovery(text) {
+  if (!text) return null;
+  return el('div', { class: 'timeline-line' },
+    'Typically: ', el('strong', {}, text),
+    el('span', { class: 'basis' }, BASIS_LABEL.typical));
+}
+
 export function returnTimeline(timeline) {
   if (!timeline) return null;
   return el('div', { class: 'timeline-line' },

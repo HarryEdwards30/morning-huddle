@@ -12,7 +12,7 @@
     "seasonTimeline": true
   },
   "schedule": { "dailyBriefLocalTime": "09:00", "runLocalHour": 8, "wrapDay": "Wednesday" },
-  "ai": { "model": "claude-haiku-5-5", "maxInputTokens": 90000 },
+  "ai": { "model": "claude-haiku-5-5", "maxInputTokens": 90000, "pricePerMillionTokensUsd": { "input": 0.10, "output": 0.50 } },
   "seasonDates": {
     "nba": [
       { "label": "Opening night", "date": "2026-10-20" },

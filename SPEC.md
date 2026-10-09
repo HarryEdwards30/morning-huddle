@@ -344,6 +344,7 @@ Stop after each phase and check in with Jack.
 - Done when: the app shows real, current data, with times correct in Melbourne time.
 
 **Phase 3: AI-written brief**
+- (Built.) If the brief can't be written, the edition still publishes the day's data without the written parts, and `status.json` records the reason, rather than showing yesterday's edition.
 - Add the Claude Haiku generation, prompts, schema validation, the cost guard and usage logging. The prompts and schema produce separate NFL and NBA sections from one call (see Section 9).
 - Done when: a manual run produces a sensible daily brief, the logged token counts are within budget, and nothing is invented.
 
