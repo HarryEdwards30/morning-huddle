@@ -72,7 +72,7 @@ function lastAndNext(team) {
       last ? [
         el('div', { class: 'value num' }, `${last.result} ${last.teamScore}–${last.oppScore}`),
         el('div', { class: 'small' }, versus(last)),
-        el('div', { class: 'small muted' }, formatShortDate(last.start)),
+        el('div', { class: 'small muted' }, formatShortDate(last.start), last.note ? ` · ${last.note}` : ''),
       ] : el('div', { class: 'small muted' }, 'None yet'),
     ),
     el('div', {},
@@ -113,8 +113,12 @@ const TREND = {
 };
 
 function playerForm(list) {
-  if (!list?.length) return null;
-  return card({ type: 'plain', title: 'Player form', extra: 'Last 5 vs season', iconName: 'up' },
+  if (!list?.length) {
+    return card({ type: 'plain', title: 'Player form', iconName: 'up' },
+      emptyNote('Player form appears once a few games have been played.'));
+  }
+  const preseason = list.some(p => /preseason/i.test(p.seasonLabel || ''));
+  return card({ type: 'plain', title: 'Player form', extra: preseason ? 'Last 5 vs preseason' : 'Last 5 vs season', iconName: 'up' },
     list.map(p => {
       const key = TREND[p.trend] ? p.trend : 'steady';
       const trend = TREND[key];

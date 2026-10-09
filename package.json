@@ -3,9 +3,12 @@
   "private": true,
   "description": "Jack's daily NFL and NBA brief, published to GitHub Pages.",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node scripts/build-site.js",
-    "preview": "node scripts/build-site.js && node scripts/preview.js"
+    "preview": "node scripts/build-site.js && node scripts/preview.js",
+    "check-sources": "node scripts/check-sources.js"
   }
 }

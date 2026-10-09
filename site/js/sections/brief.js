@@ -58,7 +58,7 @@ export function headlines(items) {
       return el('article', { class: `story${mine ? ' mine' : ''}` },
         h.teams?.length ? el('div', { class: 'story-meta' }, h.teams.map(teamChip)) : null,
         el('h3', {}, h.title),
-        el('p', {}, h.summary),
+        h.summary ? el('p', {}, h.summary) : null,
         whyItMatters(h.whyItMatters),
         sourceLinks(h.sources),
       );

@@ -15,6 +15,17 @@ Jack's daily NFL and NBA brief, built around the Spurs and the Raiders. It's a p
 
 The app opens on the tab you used last (My Teams the first time).
 
+## Getting a fresh edition
+
+Until the 8am schedule is added (Phase 4), editions are made by hand:
+
+1. Open the repo on GitHub and click the **Actions** tab.
+2. Click **Morning Huddle** in the list on the left.
+3. Click **Run workflow** (on the right), then the green **Run workflow** button.
+4. Wait about a minute for the run to turn green, then refresh the app.
+
+Each edition is saved to the separate **data** branch, so your `main` history only shows real changes to the app. If a run can't get the data it needs, it turns red and the app keeps showing the last good edition.
+
 ## Changing things
 
 - **Settings** (teams, sections on or off, season dates): [config/settings.json](config/settings.json)

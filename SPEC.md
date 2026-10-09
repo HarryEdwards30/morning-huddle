@@ -338,6 +338,7 @@ Stop after each phase and check in with Jack.
 - Done when: Jack can open the site on his phone and see the layout.
 
 **Phase 2: Real data (no AI yet)**
+- (Done.) Verified sources: ESPN site and core JSON APIs, CBS Sports and Yahoo Sports RSS. ESPN's RSS feeds return nothing to scripts, so ESPN news uses its JSON news endpoint. Editions are saved to a separate `data` branch.
 - Build the source adapters and data shaping.
 - Fill results, schedules, standings, injuries, the season timeline and news headlines from real data.
 - Done when: the app shows real, current data, with times correct in Melbourne time.
