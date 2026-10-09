@@ -2,7 +2,7 @@
 // Sections: header with record, since the last edition, last result and next game, injury report,
 // player form, roster moves and news, playoff race.
 
-import { el, card, icon, teamChip, statusChip, sourceLinks, emptyNote, returnTimeline } from '../ui.js';
+import { el, card, icon, teamChip, statusChip, sourceLinks, emptyNote, returnTimeline, typicalRecovery } from '../ui.js';
 import { formatGameDateTime, formatShortDate } from '../time.js';
 
 const LEAGUES = ['nba', 'nfl'];
@@ -95,6 +95,7 @@ function injuries(list) {
           statusChip(i.status)),
         el('p', { class: 'what' }, i.injury, i.about ? el('span', { class: 'muted' }, `. ${i.about}`) : null),
         returnTimeline(i.timeline),
+        typicalRecovery(i.typical),
         sourceLinks(i.sources),
       )));
 }

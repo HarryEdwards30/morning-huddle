@@ -5,7 +5,8 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 ## Status
 - Phase 1 (app shell with sample data) is done, then reworked to the four tabs below with colour-coded cards.
 - Phase 2 (real data, no AI) is done: the pipeline in `pipeline/` builds an edition from ESPN, CBS and Yahoo and saves it to the `data` branch.
-- Phases 3 to 6 (AI brief, schedule, Wednesday edition, polish) are still to do. See SPEC.md Section 14.
+- Phase 3 (the Claude-written brief) is done: `pipeline/write-brief.js`.
+- Phases 4 to 6 (schedule, Wednesday edition, polish) are still to do. See SPEC.md Section 14.
 
 ## Layout of the app
 - Tabs: **NFL · NBA · My Teams · Watch**. The app opens on the last tab used (saved in `localStorage` as `huddle:lastTab`), or My Teams the first time.
@@ -24,7 +25,14 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - ESPN quirks: its firewall rejects some user agents (keep `MorningHuddle/1.0 (personal news app)`); its RSS feeds return nothing to scripts, so ESPN news comes from the JSON news endpoint; NBA standings need `seasontype=2` or preseason games are counted.
 - `npm run check-sources` prints what every endpoint returns. The development workspace can't reach these sites, so test on GitHub (Actions).
 - `scripts/data-branch.sh checkout|save <folder>` gets and saves the `data` branch.
-- Fields left empty until Phase 3 (Claude writes them): `oneThing`, `whyItMatters`, `contextCard`, `awardRaces`, form `note`. `edition.written` is `false` until then, and the app shows a "Live data" notice.
+- `build-edition.js` also writes `facts.json` (league stat leaders for the award races; not shown in the app).
+
+## The written brief (`pipeline/write-brief.js`, `pipeline/brief/`, `prompts/`)
+- One Claude call per edition (model and token limit from `config/settings.json`, effort `low`, structured JSON output). `brief/input.js` builds a compact input (about 5k tokens) with an id on every item and trims it if it's over budget; `brief/schema.js` holds the output schema and the checks.
+- Checks on the reply: items must cite real input ids (headlines must cite a headline, whose sources become the story's "Read more" links); any number in the text that isn't in the input is dropped (small numbers 0 to 10 are allowed); award contenders must appear in the input; at most one context card a day. Typical recovery times are general knowledge and labelled "Typical recovery".
+- Retries once if the reply can't be used. On failure the edition keeps its data without the written parts (`edition.written: false`, "Live data" notice) and `status.json` gets `brief: { ok: false, error }` in plain English; the script exits 2 so the run shows red.
+- Writes `brief-input.json` (exactly what Claude saw) and `usage.json` (tokens and cost per run, month total) to the data folder.
+- Test without a key by pointing `ANTHROPIC_BASE_URL` at a local fake server; the real API is only called on GitHub (the key is a repo secret).
 
 ## Data
 - The app reads `data/latest.json` and `settings.json`. Both are copied into `_site/` by `scripts/build-site.js`, which uses the `data` branch's edition, or the sample only if there is no real edition.
@@ -38,13 +46,13 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 
 ## Running locally
 - `npm run preview` builds `_site/` with the sample edition and serves it at http://localhost:8080.
-- No dependencies yet. Node 20 or later.
+- One dependency: `@anthropic-ai/sdk` (`npm ci`). Node 20 or later.
 
 ## Publishing
 - `.github/workflows/daily.yml`: a manual run (Actions tab, "Run workflow") fetches fresh data, saves the edition to the `data` branch and publishes. A push to `main` republishes with the latest edition already on the `data` branch.
 - Daily data lives on the `data` branch so `main` only shows real changes. Phase 4 adds the 8am Melbourne schedule.
 
-## AI brief (Phase 3, not built yet): the rules
+## AI brief: the rules
 - One Claude API call per morning (model ID from `config/settings.json`, `claude-haiku-5-5`), returning separate `nfl` and `nba` sections.
 - Keep input under `ai.maxInputTokens` (90k); the cheap rate stops at 100k. Log token usage to `data/usage.json`.
 - No web search tool. Claude may only state facts that appear in the data it's given, and every story cites its source IDs. Typical injury recovery times must be labelled as typical.

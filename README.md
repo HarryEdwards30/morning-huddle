@@ -26,6 +26,26 @@ Until the 8am schedule is added (Phase 4), editions are made by hand:
 
 Each edition is saved to the separate **data** branch, so your `main` history only shows real changes to the app. If a run can't get the data it needs, it turns red and the app keeps showing the last good edition.
 
+## The written brief
+
+Each edition makes **one** call to Claude (Haiku 5.5), which writes "If you only read one thing", "Why it matters", your teams' updates, player-form notes, typical recovery times, award races and the daily context card. Claude is only given the day's data and is told not to add anything that isn't in it. Every item it writes has to point back to the data it came from, and any item with a number that isn't in the data is dropped.
+
+- **Edit the writing instructions** in [prompts/](prompts/): `style.md` is the voice (tone, spelling, the "facts only" rules) and `daily-brief.md` says what to write. They're plain English, so edit them like a document, then do a manual run to see the effect.
+- **See what Claude was given**: open `brief-input.json` on the **data** branch.
+- **Check API usage**: open `usage.json` on the **data** branch (or https://harryedwards30.github.io/morning-huddle/data/usage.json). It lists the tokens and estimated cost of every run and the total for the month. A run costs about US$0.002. You can also see usage in the Claude Console.
+
+## If the brief doesn't appear
+
+The app still shows the day's data, and the run on the Actions tab turns red. Click the red run, then the **Write the brief with Claude** step, to see the reason:
+
+| Reason shown | What to do |
+|---|---|
+| No API key | In the repo, go to **Settings → Secrets and variables → Actions** and add a secret named `ANTHROPIC_API_KEY`. |
+| The API key was rejected | The key has expired or been deleted. Create a new key in the Claude Console, then update the `ANTHROPIC_API_KEY` secret (same place as above, click the pencil). |
+| Spending limit reached / out of credit | In the Claude Console, check **Billing** and **Limits**. Your limit is US$2 a month, far above what the app uses, so this usually means credit has run out. |
+| Claude was busy | Nothing to fix. Run it again later. |
+| The reply wasn't valid | Usually a one-off. Run it again. If it keeps happening, tell Claude Code. |
+
 ## Changing things
 
 - **Settings** (teams, sections on or off, season dates): [config/settings.json](config/settings.json)

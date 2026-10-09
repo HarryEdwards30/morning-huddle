@@ -95,6 +95,7 @@ function setUpInfoDialog(edition) {
         el('dt', {}, 'Edition'), el('dd', {}, e.date ? formatCalendarDate(e.date) : 'Unknown'),
         el('dt', {}, 'Type'), el('dd', {}, e.type === 'wednesday' ? 'Wednesday edition (with the Wrap and watch guide)' : 'Daily brief'),
         el('dt', {}, 'Updated'), el('dd', {}, e.generatedAt ? formatGameDateTime(e.generatedAt) : 'Unknown'),
+        el('dt', {}, 'Written by'), el('dd', {}, e.written ? `Claude (${e.writtenBy || 'AI'}) from the day’s data` : 'Not written yet: data only'),
         el('dt', {}, 'Times'), el('dd', {}, 'All times are Melbourne time.'),
       ),
       edition.sample ? el('p', { class: 'muted small' }, 'This edition is sample data.') : null,

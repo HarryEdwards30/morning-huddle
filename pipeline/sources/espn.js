@@ -28,6 +28,9 @@ export const espn = {
   roster: (log, league, id) => getJson(log, `espn ${league} team roster`, `${site(league)}/teams/${id}/roster`),
   teamLeaders: (log, league, season, seasonType, id) => getJson(log, `espn ${league} team leaders`,
     `${core(league)}/seasons/${season}/types/${seasonType}/teams/${id}/leaders`, { optional: true }),
+  // League-wide stat leaders with player names (used by Claude for the award races; not shown as a table).
+  leagueLeaders: (log, league) => getJson(log, `espn ${league} league leaders`,
+    `https://site.web.api.espn.com/apis/site/v3/sports/${PATHS[league]}/leaders`, { optional: true }),
   gamelog: (log, league, athleteId) => getJson(log, `espn ${league} player game log`,
     `https://site.web.api.espn.com/apis/common/v3/sports/${PATHS[league]}/athletes/${athleteId}/gamelog`, { optional: true }),
 };
