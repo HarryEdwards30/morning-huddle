@@ -1,0 +1,44 @@
+# Temporary: checks the Wednesday edition against real ESPN data. Reads only; saves nothing. Removed after use.
+name: Probe (temporary)
+on:
+  push:
+    branches: [claude/morning-huddle-spec-plan-2fgh1z]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: bash scripts/data-branch.sh checkout data-branch
+      - name: Pretend-Wednesday build (not saved)
+        env:
+          PRETEND_WEDNESDAY: 'true'
+        run: node pipeline/build-edition.js --out data-branch
+      - name: Show the week and the watch guide
+        run: |
+          node --input-type=module -e "
+          import { readFileSync } from 'node:fs';
+          import { buildInput, forClaude, estimateTokens } from './pipeline/brief/input.js';
+          const e = JSON.parse(readFileSync('data-branch/latest.json'));
+          const f = JSON.parse(readFileSync('data-branch/facts.json'));
+          for (const l of ['nfl', 'nba']) {
+            const w = f.week[l];
+            console.log('\n==', l, w.label, 'results', w.results.length, 'standouts', w.standouts.length, 'headlines', w.headlines.length, 'moves', w.moves.length, 'games', w.games.length);
+            console.log('standouts:', JSON.stringify(w.standouts.slice(0, 3)));
+            for (const g of w.games.slice(0, 8)) console.log(' ', g.score, g.start, g.away.abbr, '@', g.home.abbr, '| tv', g.tv, '| slot', g.slot, '| note', g.note, '|', g.reason);
+            console.log('first game raw keys ok:', JSON.stringify(w.games[0] && { away: w.games[0].away.standing, tv: w.games[0].tv }));
+            for (const p of e.watchGuide[l].picks) console.log(' pick', p.rank, p.away.abbr, '@', p.home.abbr, p.reason);
+            for (const p of e.watchGuide[l].yourTeam) console.log(' yours', p.start, p.away.abbr, '@', p.home.abbr, p.reason);
+          }
+          const input = forClaude(buildInput(e, f, []));
+          console.log('\nestimated input tokens:', estimateTokens(input));
+          console.log(JSON.stringify(input.nfl.watchCandidates.slice(0, 3), null, 1));
+          console.log(JSON.stringify(input.nba.week.results.slice(0, 3), null, 1));
+          console.log(readFileSync('data-branch/editions/index.json', 'utf8').slice(0, 600));
+          "
