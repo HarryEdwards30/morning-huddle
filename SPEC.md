@@ -349,6 +349,7 @@ Stop after each phase and check in with Jack.
 - Done when: a manual run produces a sensible daily brief, the logged token counts are within budget, and nothing is invented.
 
 **Phase 4: Schedule and deploy**
+- (Built.) Scheduled runs build only if it's 8am or later in Melbourne and today's edition doesn't exist yet. The "didn't update" banner also appears if there's no edition for today by 10am.
 - Add the daily GitHub Actions workflow (cron + manual run), commit-and-deploy in one workflow, the idempotency check, and the error status and banner.
 - Done when: it runs on schedule and the app updates by itself.
 

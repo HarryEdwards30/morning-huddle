@@ -6,7 +6,8 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - Phase 1 (app shell with sample data) is done, then reworked to the four tabs below with colour-coded cards.
 - Phase 2 (real data, no AI) is done: the pipeline in `pipeline/` builds an edition from ESPN, CBS and Yahoo and saves it to the `data` branch.
 - Phase 3 (the Claude-written brief) is done: `pipeline/write-brief.js`.
-- Phases 4 to 6 (schedule, Wednesday edition, polish) are still to do. See SPEC.md Section 14.
+- Phase 4 (the 8am schedule and the error banner) is done.
+- Phases 5 and 6 (Wednesday edition, polish) are still to do. See SPEC.md Section 14.
 
 ## Layout of the app
 - Tabs: **NFL · NBA · My Teams · Watch**. The app opens on the last tab used (saved in `localStorage` as `huddle:lastTab`), or My Teams the first time.
@@ -28,9 +29,9 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - `build-edition.js` also writes `facts.json` (league stat leaders for the award races; not shown in the app).
 
 ## The written brief (`pipeline/write-brief.js`, `pipeline/brief/`, `prompts/`)
-- One Claude call per edition (model and token limit from `config/settings.json`, effort `low`, structured JSON output). `brief/input.js` builds a compact input (about 5k tokens) with an id on every item and trims it if it's over budget; `brief/schema.js` holds the output schema and the checks.
+- One Claude call per edition (model and token limit from `config/settings.json`, effort `low`). The JSON shape is given in the instructions (`DAILY_BRIEF_SCHEMA`), not as structured output: the API rejects that schema with "The compiled grammar is too large". `brief/input.js` builds a compact input (about 5k tokens) with an id on every item and trims it if it's over budget; `brief/schema.js` holds the output schema and the checks.
 - Checks on the reply: items must cite real input ids (headlines must cite a headline, whose sources become the story's "Read more" links); any number in the text that isn't in the input is dropped (small numbers 0 to 10 are allowed); award contenders must appear in the input; at most one context card a day. Typical recovery times are general knowledge and labelled "Typical recovery".
-- If the API rejects the request (HTTP 400), it retries without structured output (schema given in the instructions instead), then without the effort setting; the API's message is logged and kept in `status.json` (`brief.rejectedRequests` or `brief.detail`). Retries once if a reply can't be used. On failure the edition keeps its data without the written parts (`edition.written: false`, "Live data" notice) and `status.json` gets `brief: { ok: false, error }` in plain English; the script exits 2 so the run shows red.
+- If the API rejects the request (HTTP 400), it retries without the effort setting; the API's message is logged and kept in `status.json` (`brief.rejectedRequests` or `brief.detail`). Retries once if a reply can't be used. On failure the edition keeps its data without the written parts (`edition.written: false`, "Live data" notice) and `status.json` gets `brief: { ok: false, error }` in plain English; the script exits 2 so the run shows red.
 - Writes `brief-input.json` (exactly what Claude saw) and `usage.json` (tokens and cost per run, month total) to the data folder.
 - Test without a key by pointing `ANTHROPIC_BASE_URL` at a local fake server; the real API is only called on GitHub (the key is a repo secret).
 
@@ -48,9 +49,11 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - `npm run preview` builds `_site/` with the sample edition and serves it at http://localhost:8080.
 - One dependency: `@anthropic-ai/sdk` (`npm ci`). Node 20 or later.
 
-## Publishing
-- `.github/workflows/daily.yml`: a manual run (Actions tab, "Run workflow") fetches fresh data, saves the edition to the `data` branch and publishes. A push to `main` republishes with the latest edition already on the `data` branch.
-- Daily data lives on the `data` branch so `main` only shows real changes. Phase 4 adds the 8am Melbourne schedule.
+## Publishing and the schedule
+- `.github/workflows/daily.yml` runs on a schedule (cron 21:00 and 22:00 UTC), on a manual run, and on pushes to `main`.
+- `scripts/should-run.js` decides whether to build: manual runs always build; scheduled runs build only if it's at or after `schedule.runLocalHour` (8) in Melbourne and today's edition isn't on the data branch yet (so exactly one build a day across AEDT/AEST, and a late cron still builds); pushes only republish. A skipped scheduled run doesn't publish.
+- Daily data lives on the `data` branch so `main` only shows real changes.
+- The app reads `data/status.json` for the banner: run failed (`ok: false`), no edition for today after 10am Melbourne, or brief failed (`brief.ok: false`).
 
 ## AI brief: the rules
 - One Claude API call per morning (model ID from `config/settings.json`, `claude-haiku-5-5`), returning separate `nfl` and `nba` sections.

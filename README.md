@@ -15,16 +15,28 @@ Jack's daily NFL and NBA brief, built around the Spurs and the Raiders. It's a p
 
 The app opens on the tab you used last (My Teams the first time).
 
-## Getting a fresh edition
+## When it updates
 
-Until the 8am schedule is added (Phase 4), editions are made by hand:
+A new edition is built automatically **every morning at 8am Melbourne time**, ready well before 9am. It works all year: GitHub runs at 21:00 and 22:00 UTC, and whichever of those is 8am in Melbourne (AEDT in summer, AEST in winter) builds the edition while the other one skips. If GitHub starts a little late, the edition is still built as long as it hasn't been already.
+
+**To get a fresh edition at any other time** (for testing, or after changing settings or prompts):
 
 1. Open the repo on GitHub and click the **Actions** tab.
 2. Click **Morning Huddle** in the list on the left.
 3. Click **Run workflow** (on the right), then the green **Run workflow** button.
 4. Wait about a minute for the run to turn green, then refresh the app.
 
-Each edition is saved to the separate **data** branch, so your `main` history only shows real changes to the app. If a run can't get the data it needs, it turns red and the app keeps showing the last good edition.
+Each edition is saved to the separate **data** branch, so your `main` history only shows real changes to the app. On the Actions tab you'll see two scheduled runs each morning: one builds the edition, the other finishes in seconds having skipped. Both are green.
+
+## The banner at the top of the app
+
+| Banner | What it means |
+|---|---|
+| **Today's brief didn't update.** Reason: Couldn't get … from ESPN | A data source was down. The app shows the last good edition. Usually fixes itself the next morning, or do a manual run later. |
+| **Today's brief didn't update.** Reason: The 8am update didn't run | It's after 10am and there's no edition for today. Check the Actions tab: GitHub may be running very late, or the schedule may have been switched off (see below). A manual run fixes it for today. |
+| **Today's written brief didn't update.** | The scores and news are current, but Claude couldn't write the brief. The reason is shown; see "If the brief doesn't appear" below. |
+
+**If the schedule ever stops:** GitHub switches off scheduled runs in a repo that has had no activity for 60 days, and emails you when it does. To switch it back on: **Actions → Morning Huddle → Enable workflow**.
 
 ## The written brief
 

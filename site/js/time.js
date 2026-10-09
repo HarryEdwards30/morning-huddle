@@ -56,6 +56,11 @@ export function melbourneToday(now = new Date()) {
   return `${p.year}-${p.month}-${p.day}`;
 }
 
+// The current hour (0 to 23) in Melbourne.
+export function melbourneHour(now = new Date()) {
+  return Number(parts(now, { hour: '2-digit', hourCycle: 'h23' }).hour);
+}
+
 // Whole days from today (Melbourne) until a calendar date. Negative if it has passed.
 export function daysUntil(ymd, now = new Date()) {
   const today = Date.parse(`${melbourneToday(now)}T00:00:00Z`);

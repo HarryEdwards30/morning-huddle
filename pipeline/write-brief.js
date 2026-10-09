@@ -101,12 +101,12 @@ async function main() {
     console.log(`Input: ${counted.input_tokens} tokens (limit ${maxInputTokens}).`);
     if (counted.input_tokens > maxInputTokens) throw new Error(`the input was ${counted.input_tokens} tokens, over the ${maxInputTokens} limit`);
 
-    // The preferred request uses structured output, so the API enforces the reply's shape.
-    // If the API rejects a request (HTTP 400), the next variant drops the feature it may not accept;
-    // the reply is checked by checkBrief() either way. The API's explanation is always logged.
+    // The reply's JSON shape is given in the instructions and checked by checkBrief().
+    // (Structured output isn't used: the API rejects this schema with "The compiled grammar is too large".)
+    // If the API rejects a request (HTTP 400), the next variant drops the effort setting.
+    // The API's explanation is always logged.
     const schemaNote = `\n\n---\n\nReply with only one JSON object (no other text) that matches this JSON schema:\n${JSON.stringify(DAILY_BRIEF_SCHEMA)}`;
     const variants = [
-      { label: 'structured output', request: { model, max_tokens: 16000, system, output_config: { effort: 'low', format: { type: 'json_schema', schema: DAILY_BRIEF_SCHEMA } }, messages: [userMessage] } },
       { label: 'JSON by instruction', request: { model, max_tokens: 16000, system: system + schemaNote, output_config: { effort: 'low' }, messages: [userMessage] } },
       { label: 'JSON by instruction, default effort', request: { model, max_tokens: 16000, system: system + schemaNote, messages: [userMessage] } },
     ];

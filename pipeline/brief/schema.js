@@ -76,6 +76,9 @@ export function checkBrief(brief, index, inputText) {
       contenders: (a.contenders || []).filter((c, i) => {
         const where = `${league} ${a.award} contender ${i + 1}`;
         if (!inputText.includes(c.name)) { dropped.push(`${where}: ${c.name} isn't in the data`); return false; }
+        // The leaders data reads "Name (ABBR) value"; use that abbreviation for the team chip.
+        const abbr = new RegExp(`${c.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} \\(([A-Z]{2,4})\\)`).exec(inputText)?.[1];
+        if (abbr) c.team = abbr;
         return numbersOk(c.note, where);
       }),
     })).filter(a => a.contenders.length);

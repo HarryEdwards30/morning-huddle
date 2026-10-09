@@ -19,7 +19,7 @@ Each data item has an `id` (like `nfl-h3`, `nba-r2`, `myteam-nfl-f4`). Put the I
 
 **contextCard**: at most ONE context card across both leagues each day. Put it in the league it's about and set the other league's to null. It's one short card (2 to 4 sentences) on league mechanics or season context that helps Jack follow what's happening now, for example how the trade deadline works, how playoff tiebreakers work or what the NBA Cup is. Never explain the rules of the game itself. Don't repeat a topic listed in `recentContextCards`. You may use general knowledge for how the league works (that's the point of the card), but don't state current-season facts unless they're in the data. If nothing fits, set both to null.
 
-**awardRaces**: "current contenders" for the main awards (NFL: MVP, Offensive Player of the Year, Defensive Player of the Year; NBA: MVP, Defensive Player of the Year and others if the data supports them). Use only the stat leaders and standings in the data: 2 or 3 contenders per award, each with a short note citing their numbers. If the season hasn't started or the data is too thin, return an empty list rather than guessing.
+**awardRaces**: "current contenders" for the main awards (NFL: MVP, Offensive Player of the Year, Defensive Player of the Year; NBA: MVP, Defensive Player of the Year and others if the data supports them). Use only the stat leaders and standings in the data: 2 or 3 contenders per award, each with a short note citing their numbers. For `team`, use the team abbreviation exactly as it appears in the stat leaders (for example LV, KC). If the season hasn't started or the data is too thin, return an empty list rather than guessing.
 
 ## For Jack's teams (myTeams)
 

@@ -2,15 +2,19 @@
 # (commits made by a workflow don't start other workflows, so the publish has to happen here too).
 #
 # When it runs:
-#   - "Run workflow" on the Actions tab: fetches fresh data, saves the edition to the "data" branch, publishes.
+#   - Every morning: scheduled at 21:00 and 22:00 UTC. Whichever lands at 8am or later in Melbourne
+#     (AEDT or AEST) builds the day's edition; the other skips (see scripts/should-run.js).
+#   - "Run workflow" on the Actions tab: always builds a fresh edition.
 #   - A change merged into main: publishes the app with the latest edition already on the data branch.
-#   (Phase 4 adds the 8am Melbourne schedule.)
 #
 # The app shows the sample edition only if the data branch has no real edition yet.
 
 name: Morning Huddle
 
 on:
+  schedule:
+    - cron: '0 21 * * *'
+    - cron: '0 22 * * *'
   push:
     branches: [main]
   workflow_dispatch:
@@ -47,9 +51,16 @@ jobs:
       - name: Get the data branch
         run: bash scripts/data-branch.sh checkout data-branch
 
+      - name: Check whether to build an edition
+        id: gate
+        run: |
+          node scripts/should-run.js "${{ github.event_name }}" data-branch > gate.txt
+          cat gate.txt
+          grep '^run=' gate.txt >> "$GITHUB_OUTPUT"
+
       - name: Build today's edition
         id: edition
-        if: github.event_name == 'workflow_dispatch'
+        if: steps.gate.outputs.run == 'true'
         continue-on-error: true
         run: node pipeline/build-edition.js --out data-branch
 
@@ -57,29 +68,34 @@ jobs:
       # If this fails, the edition keeps today's data without the written parts, and status.json says why.
       - name: Write the brief with Claude
         id: brief
-        if: github.event_name == 'workflow_dispatch' && steps.edition.outcome == 'success'
+        if: steps.gate.outputs.run == 'true' && steps.edition.outcome == 'success'
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node pipeline/write-brief.js --out data-branch
 
       - name: Save the edition to the data branch
-        if: github.event_name == 'workflow_dispatch'
+        if: steps.gate.outputs.run == 'true'
         run: bash scripts/data-branch.sh save data-branch
 
+      # A scheduled run that skipped has nothing new to publish.
       - name: Build the site
+        if: github.event_name != 'schedule' || steps.gate.outputs.run == 'true'
         run: node scripts/build-site.js data-branch
 
       - name: Prepare GitHub Pages
+        if: github.event_name != 'schedule' || steps.gate.outputs.run == 'true'
         uses: actions/configure-pages@v6
 
       - name: Upload the site
+        if: github.event_name != 'schedule' || steps.gate.outputs.run == 'true'
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
       - name: Publish to GitHub Pages
         id: deploy
+        if: github.event_name != 'schedule' || steps.gate.outputs.run == 'true'
         uses: actions/deploy-pages@v5
 
       # The last good edition is still published above; this just makes a failed edition show as a red run.
