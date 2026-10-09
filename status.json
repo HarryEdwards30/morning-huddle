@@ -1,17 +1,17 @@
 {
   "ok": true,
-  "lastAttempt": "2026-10-09T17:27:00+11:00",
-  "lastSuccess": "2026-10-09T17:27:00+11:00",
+  "lastAttempt": "2026-10-10T08:16:00+11:00",
+  "lastSuccess": "2026-10-10T08:16:00+11:00",
   "error": null,
   "sources": {
-    "total": 57,
-    "ok": 57,
+    "total": 33,
+    "ok": 33,
     "failed": []
   },
   "brief": {
     "ok": true,
     "error": null,
-    "at": "2026-10-09T17:28:00+11:00",
+    "at": "2026-10-10T08:17:00+11:00",
     "droppedItems": 1,
     "rejectedRequests": []
   }

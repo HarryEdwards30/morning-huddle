@@ -1,175 +1,101 @@
 {
   "edition": {
-    "date": "2026-10-09",
-    "generatedAt": "2026-10-09T17:27:00+11:00",
-    "type": "wednesday",
+    "date": "2026-10-10",
+    "generatedAt": "2026-10-10T08:16:00+11:00",
+    "type": "daily",
     "written": true,
-    "pretendWednesday": true,
     "window": {
-      "since": 1791395317109,
+      "since": 1791527220000,
       "shownBefore": {
-        "nba": [],
-        "nfl": []
+        "nba": [
+          "401898717",
+          "401898394",
+          "401898393",
+          "401901823",
+          "401906508",
+          "401898392",
+          "401914129",
+          "401898391",
+          "401908620",
+          "401908939",
+          "401914123"
+        ],
+        "nfl": [
+          "401872980"
+        ]
       }
     },
     "writtenBy": "claude-haiku-5-5"
   },
   "nfl": {
-    "oneThing": "Tampa Bay beat Dallas 24–16 on Thursday Night Football for their first win of the season, and the Cowboys drop to 2–3.",
-    "wrap": {
-      "weekLabel": "Week 5",
-      "summary": "Week 5 was led by Tampa Bay's first win of the season over Dallas, but the week's biggest result for the table was Kansas City staying unbeaten after beating Las Vegas. Minnesota and San Francisco also stayed unbeaten, and Carolina and Atlanta made their own moves.",
-      "storylines": [
-        {
-          "text": "The Raiders lost 27–30 to the Chiefs in Week 4. Kirk Cousins threw for 365 yards and 2 touchdowns, but Las Vegas couldn't hold on to the lead.",
-          "sources": []
-        },
-        {
-          "text": "The Buccaneers got their first win of the season with a third-quarter surge against Dallas, with Bucky Irving the standout runner.",
-          "sources": []
-        },
-        {
-          "text": "Minnesota, San Francisco and Kansas City are all unbeaten after four games, and the NFC's top seeds are separating from the field.",
-          "sources": []
-        },
-        {
-          "text": "Atlanta beat New Orleans 45–24 to move to 2–2, and the Saints fell to 1–3.",
-          "sources": []
-        }
-      ],
-      "biggestResults": [
-        {
-          "id": "401872980",
-          "start": "2026-10-09T00:15Z",
-          "status": "Final",
-          "note": "Week 5",
-          "home": {
-            "abbr": "DAL",
-            "name": "Cowboys",
-            "score": 16,
-            "id": "6"
-          },
-          "away": {
-            "abbr": "TB",
-            "name": "Buccaneers",
-            "score": 24,
-            "id": "27"
-          }
-        },
-        {
-          "id": "401872976",
-          "start": "2026-10-04T20:25Z",
-          "status": "Final",
-          "note": "Week 4",
-          "home": {
-            "abbr": "LV",
-            "name": "Raiders",
-            "score": 27,
-            "id": "13"
-          },
-          "away": {
-            "abbr": "KC",
-            "name": "Chiefs",
-            "score": 30,
-            "id": "12"
-          }
-        },
-        {
-          "id": "401872979",
-          "start": "2026-10-06T00:15Z",
-          "status": "Final",
-          "note": "Week 4",
-          "home": {
-            "abbr": "NO",
-            "name": "Saints",
-            "score": 24,
-            "id": "18"
-          },
-          "away": {
-            "abbr": "ATL",
-            "name": "Falcons",
-            "score": 45,
-            "id": "1"
-          }
-        }
-      ],
-      "standouts": [
-        {
-          "name": "Tetairoa McMillan",
-          "team": "CAR",
-          "note": "14 catches for 192 yards and 2 touchdowns against Detroit."
-        },
-        {
-          "name": "Kenneth Walker III",
-          "team": "KC",
-          "note": "22 carries for 177 yards and 2 touchdowns against Las Vegas."
-        },
-        {
-          "name": "Bijan Robinson",
-          "team": "ATL",
-          "note": "19 carries for 145 yards and 2 touchdowns against New Orleans."
-        }
-      ]
-    },
+    "offSeason": false,
+    "oneThing": "Mike Ditka, the Hall of Fame tight end and former Bears coach, has died at 86, and the league is paying tribute to one of its most recognised figures.",
+    "wrap": null,
     "headlines": [
       {
-        "title": "Buccaneers beat Cowboys on Thursday night",
-        "summary": "Tampa Bay pulled away in the third quarter to beat Dallas 24–16 on Thursday Night Football. Jerry Jones called the loss \"extraordinarily disappointing\".",
-        "whyItMatters": "The Buccaneers move to 1–4 with their first win, and the Cowboys drop to 2–3 and third in the NFC East.",
+        "title": "Mike Ditka dies at 86",
+        "summary": "Ditka, a Hall of Fame tight end who became a league legend as coach of the Bears, has died at 86.",
+        "whyItMatters": "It won't change the standings, but it's a significant loss for the Bears and for the league's history.",
         "teams": [
-          "DAL",
-          "TB"
+          "CHI",
+          "NO",
+          "PHI"
         ],
         "sources": [
-          "espn-14",
-          "yahoosports-15"
+          "espn-19"
         ]
       },
       {
-        "title": "Prescott irked by stadium worker's comment",
-        "summary": "Dak Prescott took exception to a stadium worker who yelled \"embarrassing\" at him as he walked to the locker room after the loss. He has since addressed the comment.",
-        "whyItMatters": "This is a sideline story rather than a standings one, but it adds to a tough week for Dallas.",
+        "title": "Chargers put Rashawn Slater on injured reserve",
+        "summary": "The Chargers have placed left tackle Rashawn Slater on injured reserve after ankle surgery for a high ankle sprain. Los Angeles will be without three starting offensive linemen against the Broncos on Sunday.",
+        "whyItMatters": "The Chargers are 0–4 and on a four-game losing streak, and losing three starting linemen makes their offensive line a bigger problem.",
         "teams": [
-          "DAL"
+          "LAC"
         ],
         "sources": [
-          "espn-12",
-          "espn-13"
+          "espn-18"
         ]
       },
       {
-        "title": "Swift says fumble problems are behind him",
-        "summary": "D'Andre Swift fumbled twice in Chicago's first four games. He said Thursday that the turnover problem is \"over with now\". He is listed as questionable with a hip issue.",
-        "whyItMatters": "The Bears are 3–1 and 5th in the NFC, and ball security will matter in their next game against the Packers.",
+        "title": "Eagles release Andy Dalton",
+        "summary": "Dalton has been released after losing the Eagles' backup quarterback spot following a costly interception against the Bears.",
+        "whyItMatters": "The move clears the way for a new backup, and the Eagles are 2–2 and seventh in the NFC on the playoff list.",
         "teams": [
-          "CHI"
+          "PHI"
         ],
         "sources": [
-          "espn-17"
+          "espn-14"
+        ]
+      },
+      {
+        "title": "Leonard Williams will play for Seahawks against 49ers",
+        "summary": "The Seahawks' defence will be at full strength on Sunday, with Williams cleared to play against San Francisco.",
+        "whyItMatters": "The 49ers are 4–0 and the Seahawks are 3–1, so a healthy defence matters for Seattle's bid to stay in the NFC West race.",
+        "teams": [
+          "SF",
+          "SEA"
+        ],
+        "sources": [
+          "yahoosports-13"
+        ]
+      },
+      {
+        "title": "Davis Webb says 'not ideal' to lose play-calling duties",
+        "summary": "Broncos offensive coordinator Davis Webb has said losing play-calling duties is not ideal, but he plans to be the best offensive coordinator he can be.",
+        "whyItMatters": "Denver is 2–2 and sits just outside the AFC playoff seeds, so changes on offence are being watched closely.",
+        "teams": [
+          "DEN"
+        ],
+        "sources": [
+          "espn-12"
         ]
       }
     ],
-    "results": [
-      {
-        "id": "401872980",
-        "start": "2026-10-09T00:15Z",
-        "status": "Final",
-        "note": "Week 5",
-        "home": {
-          "abbr": "DAL",
-          "name": "Cowboys",
-          "score": 16,
-          "id": "6"
-        },
-        "away": {
-          "abbr": "TB",
-          "name": "Buccaneers",
-          "score": 24,
-          "id": "27"
-        }
-      }
-    ],
-    "contextCard": null,
+    "results": [],
+    "contextCard": {
+      "title": "How injured reserve works",
+      "body": "Players placed on injured reserve are out for a minimum set number of games and can't play until they're activated. Teams use IR to free up a roster spot, and a player who is designated to return can come back after serving that minimum period."
+    },
     "followedPlayers": [],
     "pulse": {
       "hot": {
@@ -199,23 +125,7 @@
             "note": "3 straight wins, now 3–1."
           }
         ],
-        "players": [
-          {
-            "name": "Bucky Irving",
-            "team": "TB",
-            "note": "21 CAR, 165 YDS, 1 TD against the Cowboys."
-          },
-          {
-            "name": "George Pickens",
-            "team": "DAL",
-            "note": "9 REC, 130 YDS, 1 TD against the Buccaneers."
-          },
-          {
-            "name": "Dak Prescott",
-            "team": "DAL",
-            "note": "24/42, 316 YDS, 1 TD, 2 INT against the Buccaneers."
-          }
-        ]
+        "players": []
       },
       "cold": {
         "teams": [
@@ -905,19 +815,34 @@
         "award": "MVP",
         "contenders": [
           {
-            "name": "Kenneth Walker III",
-            "team": "KC",
-            "note": "Leads the league with 537 rushing yards, and the Chiefs are 4–0."
+            "name": "Brock Purdy",
+            "team": "SF",
+            "note": "11 passing touchdowns, tied for the league lead, with the 49ers 4–0."
+          },
+          {
+            "name": "Kirk Cousins",
+            "team": "LV",
+            "note": "11 passing touchdowns, tied for the league lead, with the Raiders 3–1."
           },
           {
             "name": "Dak Prescott",
             "team": "DAL",
-            "note": "Leads the league with 1381 passing yards, though Dallas is 2–3."
+            "note": "Leads the league with 1381 passing yards and has 9 touchdown passes."
+          }
+        ]
+      },
+      {
+        "award": "Offensive Player of the Year",
+        "contenders": [
+          {
+            "name": "Kenneth Walker III",
+            "team": "KC",
+            "note": "Leads the league with 537 rushing yards, with the Chiefs 4–0."
           },
           {
-            "name": "Brock Purdy",
-            "team": "SF",
-            "note": "Tied for the lead with 11 passing touchdowns, and the 49ers are 4–0."
+            "name": "CeeDee Lamb",
+            "team": "DAL",
+            "note": "Leads the league with 507 receiving yards."
           }
         ]
       },
@@ -932,17 +857,60 @@
           {
             "name": "Dallas Turner",
             "team": "MIN",
-            "note": "Tied for the lead with 6 sacks, and the Vikings are 4–0."
-          },
-          {
-            "name": "Jevon Holland",
-            "team": "NYG",
-            "note": "Leads the league with 3 interceptions."
+            "note": "Also has 6 sacks, with the Vikings 4–0."
           }
         ]
       }
     ],
     "majorInjuries": [
+      {
+        "player": "Lamar Jackson",
+        "position": "QB",
+        "team": "BAL",
+        "status": "Out",
+        "injury": "Left ankle (sprain)",
+        "about": "Jackson (ankle) has been ruled out for Sunday night's game against the Falcons, Cordell Woodland of 105.7 The Fan Baltimore reports.",
+        "timeline": {
+          "text": "Around Sun 18 Oct (estimate)",
+          "basis": "media"
+        }
+      },
+      {
+        "player": "Kyle Monangai",
+        "position": "RB",
+        "team": "CHI",
+        "status": "Out",
+        "injury": "Toe (sprain)",
+        "about": "Monangai (toe) has been ruled out for Sunday's game against the Packers, Patrick Finley of the Chicago Sun-Times reports.",
+        "timeline": {
+          "text": "Around Sun 18 Oct (estimate)",
+          "basis": "media"
+        }
+      },
+      {
+        "player": "Mason Graham",
+        "position": "DT",
+        "team": "CLE",
+        "status": "Out",
+        "injury": "Knee - mcl (sprain)",
+        "about": null,
+        "timeline": {
+          "text": "Around Sun 18 Oct (estimate)",
+          "basis": "media"
+        }
+      },
+      {
+        "player": "Mike Hall Jr.",
+        "position": "DT",
+        "team": "CLE",
+        "status": "Out",
+        "injury": "Ankle",
+        "about": null,
+        "timeline": {
+          "text": "Around Sun 18 Oct (estimate)",
+          "basis": "media"
+        }
+      },
       {
         "player": "Joey Porter Jr.",
         "position": "CB",
@@ -956,91 +924,83 @@
         }
       },
       {
-        "player": "Michael Pittman Jr.",
+        "player": "Pat Bryant",
         "position": "WR",
-        "team": "PIT",
+        "team": "DEN",
         "status": "Out",
-        "injury": "Left foot (plantar fasciitis)",
-        "about": "Pittman is expected to miss multiple weeks after aggravating his foot injury, Ray Fittipaldo of the Pittsburgh Post-Gazette reports Thursday.",
+        "injury": "Right ankle (sprain)",
+        "about": "The Broncos plan to place Bryant (ankle) on injured reserve, Ian Rapoport of NFL Network reports.",
+        "timeline": {
+          "text": "Around Sun 8 Nov (estimate)",
+          "basis": "media"
+        }
+      },
+      {
+        "player": "Brian Branch",
+        "position": "S",
+        "team": "DET",
+        "status": "Out",
+        "injury": "Achilles (surgery)",
+        "about": "Branch (Achilles) had his 21-day practice window opened by the Lions on Sunday, Richard Silva of The Detroit News reports.",
+        "timeline": {
+          "text": "Around Sun 11 Oct (estimate)",
+          "basis": "media"
+        }
+      },
+      {
+        "player": "Tank Dell",
+        "position": "WR",
+        "team": "HOU",
+        "status": "Out",
+        "injury": "Left knee - acl + mcl (surgery)",
+        "about": "Dell (knee) was a limited participant in Thursday's practice.",
         "timeline": {
           "text": "Around Sun 18 Oct (estimate)",
-          "basis": "media"
-        }
-      },
-      {
-        "player": "Kyle Juszczyk",
-        "position": "FB",
-        "team": "SF",
-        "status": "Out",
-        "injury": "Right knee (sprain)",
-        "about": "San Francisco head coach Kyle Shanahan said Monday that Juszczyk will miss multiple weeks after hyperextending and sustaining a bone bruise to his right knee in Sunday's 24-14 win over the Broncos, Matt Barrows of The At",
-        "timeline": {
-          "text": "Around Mon 19 Oct (estimate)",
-          "basis": "media"
-        }
-      },
-      {
-        "player": "Jake Matthews",
-        "position": "OT",
-        "team": "ATL",
-        "status": "Questionable",
-        "injury": "Groin",
-        "about": "Matthews (groin) was limited during Thursday's practice, Tori McElhaney of the team's official site reports.",
-        "timeline": {
-          "text": "Around Sun 11 Oct (estimate)",
-          "basis": "media"
-        }
-      },
-      {
-        "player": "Lamar Jackson",
-        "position": "QB",
-        "team": "BAL",
-        "status": "Questionable",
-        "injury": "Left ankle (sprain)",
-        "about": "Jackson (ankle) remained absent from practice Thursday, Sam Cohn of the Baltimore Sun reports.",
-        "timeline": {
-          "text": "Around Sun 11 Oct (estimate)",
-          "basis": "media"
-        }
-      },
-      {
-        "player": "Cam Jurgens",
-        "position": "C",
-        "team": "BAL",
-        "status": "Questionable",
-        "injury": "Concussion",
-        "about": "The Ravens acquired Jurgens (concussion) and a 2027 seventh-round pick from the Eagles on Wednesday in exchange for a 2027 fifth-round pick and a 2028 second-round pick, Jamison Hensley of ESPN.com reports.",
-        "timeline": {
-          "text": "Around Sun 11 Oct (estimate)",
-          "basis": "media"
-        }
-      },
-      {
-        "player": "Christian Benford",
-        "position": "CB",
-        "team": "BUF",
-        "status": "Questionable",
-        "injury": "Right toe",
-        "about": "Benford (toe) practiced in a limited capacity Thursday.",
-        "timeline": {
-          "text": "Around Mon 12 Oct (estimate)",
-          "basis": "media"
-        }
-      },
-      {
-        "player": "D'Andre Swift",
-        "position": "RB",
-        "team": "CHI",
-        "status": "Questionable",
-        "injury": "Hip",
-        "about": "Swift (hip/knee) returned to practice on a limited basis Thursday, Sean Hammond of the Chicago Tribune reports.",
-        "timeline": {
-          "text": "Around Sun 11 Oct (estimate)",
           "basis": "media"
         }
       }
     ],
     "transactions": [
+      {
+        "type": "Signing",
+        "teams": [
+          "DEN"
+        ],
+        "date": "2026-10-09T07:00Z",
+        "text": "Denver Broncos: Signed WR Lil'Jordan Humphrey to the active roster. Placed WR Pat Bryant on injured reserve. Signed DB Ugo Amadi to the practice squad."
+      },
+      {
+        "type": "Roster",
+        "teams": [
+          "MIA"
+        ],
+        "date": "2026-10-09T07:00Z",
+        "text": "Miami Dolphins: Claimed RB Kaytron Allen off waivers from Washington."
+      },
+      {
+        "type": "Activated",
+        "teams": [
+          "NE"
+        ],
+        "date": "2026-10-09T07:00Z",
+        "text": "New England Patriots: Activated S Brenden Schooler from the NFI list."
+      },
+      {
+        "type": "Release",
+        "teams": [
+          "PHI"
+        ],
+        "date": "2026-10-09T07:00Z",
+        "text": "Philadelphia Eagles: Released QB Andy Dalton. Signed C Jake Majors and RB Carson Steele to the active roster. Placed DT Uar Bernard on the practice squad injured list."
+      },
+      {
+        "type": "Release",
+        "teams": [
+          "SF"
+        ],
+        "date": "2026-10-09T07:00Z",
+        "text": "San Francisco 49ers: Released DL Ogbo Okoronkwo."
+      },
       {
         "type": "Activated",
         "teams": [
@@ -1080,398 +1040,70 @@
         ],
         "date": "2026-10-08T07:00Z",
         "text": "New England Patriots: SIgned S Mike Scott to the active roster. Signed LB Jose ramirez to the practice squad."
-      },
-      {
-        "type": "Move",
-        "teams": [
-          "PIT"
-        ],
-        "date": "2026-10-08T07:00Z",
-        "text": "Pittsburgh Steelers: Designated DeShon Elliott to return from injured reserve."
-      },
-      {
-        "type": "Release",
-        "teams": [
-          "SF"
-        ],
-        "date": "2026-10-08T07:00Z",
-        "text": "San Francisco 49ers: Released WR Dante Pettis from the practice squad with an injury settlement."
-      },
-      {
-        "type": "Signing",
-        "teams": [
-          "SEA"
-        ],
-        "date": "2026-10-08T07:00Z",
-        "text": "Seattle Seahawks: Signed DB A.J. Finley to the practice squad."
-      },
-      {
-        "type": "Release",
-        "teams": [
-          "WSH"
-        ],
-        "date": "2026-10-08T07:00Z",
-        "text": "Washington Commanders: Waived RB Kaytron Allen."
-      },
-      {
-        "type": "Signing",
-        "teams": [
-          "CAR"
-        ],
-        "date": "2026-10-08T07:00Z",
-        "text": "Carolina Panthers: Signed RB Anthony Tyus III to the practice squad."
       }
     ]
   },
   "nba": {
-    "oneThing": "LeBron James made his 76ers debut in a preseason loss to the Nets, 114–108.",
-    "wrap": {
-      "weekLabel": "2 to 8 Oct",
-      "summary": "Preseason week, so no standings changed. LeBron James made his 76ers debut in a loss, and the Lakers and Spurs had mixed results.",
-      "storylines": [
-        {
-          "text": "LeBron James made his 76ers debut in a 114–108 loss to the Nets, scoring 10 points in 18 minutes.",
-          "sources": [
-            "yahoosports-1",
-            "espn-2"
-          ]
-        },
-        {
-          "text": "The Lakers beat the Kings 114–110, with Doncic and Reaves combining well.",
-          "sources": [
-            "yahoosports-3"
-          ]
-        },
-        {
-          "text": "The Spurs lost 116–123 to the Hawks in their first preseason game, with Dylan Harper starting well.",
-          "sources": [
-            "yahoosports-6"
-          ]
-        }
-      ],
-      "biggestResults": [
-        {
-          "id": "401901823",
-          "start": "2026-10-08T23:30Z",
-          "status": "Final",
-          "note": "Preseason",
-          "home": {
-            "abbr": "BKN",
-            "name": "Nets",
-            "score": 114,
-            "id": "17"
-          },
-          "away": {
-            "abbr": "PHI",
-            "name": "76ers",
-            "score": 108,
-            "id": "20"
-          }
-        },
-        {
-          "id": "401898394",
-          "start": "2026-10-09T00:00Z",
-          "status": "Final",
-          "note": "Preseason",
-          "home": {
-            "abbr": "SAS",
-            "name": "Spurs",
-            "score": 116,
-            "id": "24"
-          },
-          "away": {
-            "abbr": "ATL",
-            "name": "Hawks",
-            "score": 123,
-            "id": "1"
-          }
-        },
-        {
-          "id": "401898393",
-          "start": "2026-10-08T23:30Z",
-          "status": "Final",
-          "note": "Preseason",
-          "home": {
-            "abbr": "MIA",
-            "name": "Heat",
-            "score": 128,
-            "id": "14"
-          },
-          "away": {
-            "abbr": "NO",
-            "name": "Pelicans",
-            "score": 118,
-            "id": "3"
-          }
-        }
-      ],
-      "standouts": []
-    },
+    "offSeason": false,
+    "oneThing": "The Knicks have paused contract extension talks with four players who are eligible, including starters Karl-Anthony Towns and Josh Hart, coming off their title.",
+    "wrap": null,
     "headlines": [
       {
-        "title": "LeBron's 76ers debut ends in defeat",
-        "summary": "LeBron James scored 10 points in 18 minutes in his first game for Philadelphia, but the 76ers lost 114–108 to the Nets. He said it is \"going to take some time\" for the new team-mates to gel.",
-        "whyItMatters": "It's a preseason result, so the standings are still 0–0 across both conferences.",
-        "teams": [
-          "PHI",
-          "BKN"
-        ],
-        "sources": [
-          "yahoosports-1",
-          "espn-2",
-          "yahoosports-8"
-        ]
-      },
-      {
-        "title": "Doncic and Reaves show chemistry in Lakers win",
-        "summary": "Luka Doncic and Austin Reaves combined well in the Lakers' 114–110 win over the Kings in a preseason game.",
-        "whyItMatters": "The Lakers are leaning on their two guards this season, and the early signs are positive.",
-        "teams": [
-          "LAL"
-        ],
-        "sources": [
-          "yahoosports-3"
-        ]
-      },
-      {
-        "title": "Spurs start strong but lose to Hawks",
-        "summary": "San Antonio lost its first preseason game 116–123 to Atlanta at home. Dylan Harper stood out in the starting lineup.",
-        "whyItMatters": "The Spurs are 0–1 in the preseason, and the regular season hasn't started yet.",
-        "teams": [
-          "ATL",
-          "SAS"
-        ],
-        "sources": [
-          "yahoosports-6"
-        ]
-      },
-      {
-        "title": "Cavs' defence under scrutiny in opening loss",
-        "summary": "Cleveland lost its preseason opener 113–124 to the Celtics. The defence was the main concern in the post-game takeaways.",
-        "whyItMatters": "It's an early test for the Cavaliers, but preseason results don't count towards the standings.",
-        "teams": [
-          "BOS"
-        ],
-        "sources": [
-          "yahoosports-5"
-        ]
-      },
-      {
-        "title": "Bruce Brown keeps pushing for a Knicks roster spot",
-        "summary": "Bruce Brown had another solid preseason showing in the Knicks' 109–111 loss to the Wizards.",
-        "whyItMatters": "The preseason is his best chance to show he belongs on the roster.",
+        "title": "Knicks pause extension talks",
+        "summary": "Four Knicks players are eligible for contract extensions, including Towns and Hart, and talks have been paused.",
+        "whyItMatters": "Those decisions will shape the Knicks' roster beyond this season, and the pause raises questions about Hart's future in New York.",
         "teams": [
           "NY"
         ],
         "sources": [
-          "yahoosports-4"
+          "cbssports-3"
+        ]
+      },
+      {
+        "title": "Ranking every NBA team's defence for 2026-27",
+        "summary": "The Thunder and Spurs are competing for the top spot in a ranking of every team's defence heading into the new season.",
+        "whyItMatters": "These are projections, and the regular season hasn't started yet, with every team still 0–0.",
+        "teams": [
+          "OKC",
+          "SAS"
+        ],
+        "sources": [
+          "cbssports-7"
+        ]
+      },
+      {
+        "title": "Joel Embiid denies tardiness report",
+        "summary": "Embiid has denied a report that he was late to practice and questioned why it happened, saying 'It feels like I'm an easy target'. ESPN's Mike Breen had earlier apologised for recounting a story that has since been refuted.",
+        "whyItMatters": "It's a sideshow rather than a season-shaping story, but it keeps attention on the 76ers before the season starts.",
+        "teams": [
+          "PHI"
+        ],
+        "sources": [
+          "yahoosports-6"
         ]
       }
     ],
     "results": [
       {
-        "id": "401898717",
-        "start": "2026-10-09T02:45Z",
+        "id": "401898395",
+        "start": "2026-10-09T12:00Z",
         "status": "Final",
         "note": "Preseason",
         "home": {
-          "abbr": "LAL",
-          "name": "Lakers",
-          "score": 114,
-          "id": "13"
-        },
-        "away": {
-          "abbr": "SAC",
-          "name": "Kings",
-          "score": 110,
-          "id": "23"
-        }
-      },
-      {
-        "id": "401898394",
-        "start": "2026-10-09T00:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "SAS",
-          "name": "Spurs",
-          "score": 116,
-          "id": "24"
-        },
-        "away": {
-          "abbr": "ATL",
-          "name": "Hawks",
-          "score": 123,
-          "id": "1"
-        }
-      },
-      {
-        "id": "401898393",
-        "start": "2026-10-08T23:30Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "MIA",
-          "name": "Heat",
-          "score": 128,
-          "id": "14"
-        },
-        "away": {
-          "abbr": "NO",
-          "name": "Pelicans",
-          "score": 118,
-          "id": "3"
-        }
-      },
-      {
-        "id": "401901823",
-        "start": "2026-10-08T23:30Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "BKN",
-          "name": "Nets",
-          "score": 114,
-          "id": "17"
-        },
-        "away": {
-          "abbr": "PHI",
-          "name": "76ers",
-          "score": 108,
-          "id": "20"
-        }
-      },
-      {
-        "id": "401906508",
-        "start": "2026-10-08T23:30Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "NY",
-          "name": "Knicks",
-          "score": 109,
-          "id": "18"
-        },
-        "away": {
-          "abbr": "WSH",
-          "name": "Wizards",
-          "score": 111,
-          "id": "27"
-        }
-      },
-      {
-        "id": "401898392",
-        "start": "2026-10-08T23:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "CLE",
-          "name": "Cavaliers",
-          "score": 113,
-          "id": "5"
-        },
-        "away": {
-          "abbr": "BOS",
-          "name": "Celtics",
-          "score": 124,
-          "id": "2"
-        }
-      },
-      {
-        "id": "401914129",
-        "start": "2026-10-08T02:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "POR",
-          "name": "Trail Blazers",
-          "score": 123,
-          "id": "22"
-        },
-        "away": {
-          "abbr": "GS",
-          "name": "Warriors",
-          "score": 118,
-          "id": "9"
-        }
-      },
-      {
-        "id": "401898391",
-        "start": "2026-10-08T00:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "MEM",
-          "name": "Grizzlies",
-          "score": 118,
-          "id": "29"
-        },
-        "away": {
-          "abbr": "ORL",
-          "name": "Magic",
-          "score": 122,
-          "id": "19"
-        }
-      },
-      {
-        "id": "401908620",
-        "start": "2026-10-08T00:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "OKC",
-          "name": "Thunder",
-          "score": 126,
-          "id": "25"
-        },
-        "away": {
-          "abbr": "MIL",
-          "name": "Bucks",
-          "score": 128,
-          "id": "15"
-        }
-      },
-      {
-        "id": "401908939",
-        "start": "2026-10-08T00:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "CHI",
-          "name": "Bulls",
-          "score": 124,
-          "id": "4"
-        },
-        "away": {
-          "abbr": "PHX",
-          "name": "Suns",
+          "abbr": "DAL",
+          "name": "Mavericks",
           "score": 117,
-          "id": "21"
-        }
-      },
-      {
-        "id": "401914123",
-        "start": "2026-10-07T23:00Z",
-        "status": "Final",
-        "note": "Preseason",
-        "home": {
-          "abbr": "IND",
-          "name": "Pacers",
-          "score": 123,
-          "id": "11"
+          "id": "6"
         },
         "away": {
-          "abbr": "MIN",
-          "name": "Timberwolves",
-          "score": 112,
-          "id": "16"
+          "abbr": "HOU",
+          "name": "Rockets",
+          "score": 135,
+          "id": "10"
         }
       }
     ],
-    "contextCard": {
-      "title": "What counts in the preseason",
-      "body": "Preseason games don't count towards the standings or the playoff race. Every team's record stays at 0–0 until the regular season starts. Preseason results can show rotations and early form, but they don't change the table."
-    },
+    "contextCard": null,
     "followedPlayers": [],
     "pulse": {
       "hot": {
@@ -1934,53 +1566,17 @@
         }
       }
     ],
-    "transactions": [
-      {
-        "type": "Release",
-        "teams": [
-          "UTAH"
-        ],
-        "date": "2026-10-06T07:00Z",
-        "text": "Utah Jazz: Waived G Terrell Brown Jr."
-      },
-      {
-        "type": "Release",
-        "teams": [
-          "OKC"
-        ],
-        "date": "2026-10-06T07:00Z",
-        "text": "Oklahoma City Thunder: Waived G Robert McCray V."
-      },
-      {
-        "type": "Release",
-        "teams": [
-          "ORL"
-        ],
-        "date": "2026-10-06T07:00Z",
-        "text": "Orlando Magic: Waived G Johnell Davis."
-      },
-      {
-        "type": "Release",
-        "teams": [
-          "LAC"
-        ],
-        "date": "2026-10-06T07:00Z",
-        "text": "LA Clippers: Waived G Fletcher Loyer."
-      }
-    ]
+    "transactions": []
   },
   "myTeams": {
     "nba": {
       "league": "NBA",
+      "offSeason": false,
       "name": "San Antonio Spurs",
       "abbr": "SAS",
       "sinceLast": [
         {
-          "text": "The Spurs are 0–1 in the preseason after losing 116–123 to the Hawks at home. They play at the Suns next.",
-          "sources": []
-        },
-        {
-          "text": "Fox (soreness), Brown (back) and Williams (undisclosed) were all out for the Hawks game.",
+          "text": "Lost 116–123 to the Hawks in a preseason game on Thursday.",
           "sources": []
         },
         {
@@ -1992,7 +1588,7 @@
       ],
       "record": {
         "summary": "0-1",
-        "standing": "5th in Southwest Division"
+        "standing": "4th in Southwest Division"
       },
       "lastResult": {
         "start": "2026-10-09T00:00Z",
@@ -2075,7 +1671,7 @@
             "text": "Around Tue 20 Oct (estimate)",
             "basis": "media"
           },
-          "typical": "Typical recovery: calf strains usually take 2 to 6 weeks, depending on severity."
+          "typical": "Usually 1 to 3 weeks for a mild calf strain. Coach Mitch Johnson says the Spurs won't rush him back."
         }
       ],
       "form": [],
@@ -2144,23 +1740,24 @@
     },
     "nfl": {
       "league": "NFL",
+      "offSeason": false,
       "name": "Las Vegas Raiders",
       "abbr": "LV",
       "sinceLast": [
         {
-          "text": "The Raiders are 3–1 and 2nd in the AFC West, and they visit the Patriots next. They lost 27–30 to the Chiefs in Week 4.",
+          "text": "Lost 30–27 to the Chiefs in Week 4, dropping the Raiders to 3–1.",
           "sources": []
         },
         {
-          "text": "WR Dont'e Thornton has been designated to return from injured reserve. He was a full participant at practice Wednesday.",
+          "text": "Jalen Nailor (concussion) has been ruled out for Sunday's game at New England.",
           "sources": []
         },
         {
-          "text": "Cody White (ankle) and Ashton Jeanty (ankle and foot) were both limited in Thursday's practice.",
+          "text": "Ashton Jeanty (ankle/foot) is questionable for Sunday. Coach Klint Kubiak says he will 'do his best to go'.",
           "sources": []
         },
         {
-          "text": "Jalen Nailor (concussion) didn't practise Thursday.",
+          "text": "Dont'e Thornton is designated to return from injured reserve. He is not yet back on the active roster.",
           "sources": []
         }
       ],
@@ -2191,66 +1788,14 @@
       },
       "injuries": [
         {
-          "player": "Dont'e Thornton Jr.",
-          "position": "WR",
-          "team": "LV",
-          "status": "Out",
-          "injury": "Hamstring",
-          "about": "Thornton (hamstring) was a full participant at practice Wednesday, Anthony Galaviz of The Fresno Bee reports.",
-          "timeline": {
-            "text": "Around Sun 11 Oct (estimate)",
-            "basis": "media"
-          },
-          "typical": "Typical recovery: hamstring strains usually take 2 to 4 weeks for a mild to moderate strain."
-        },
-        {
-          "player": "Cody White",
-          "position": "WR",
-          "team": "LV",
-          "status": "Questionable",
-          "injury": "Ankle",
-          "about": "White (ankle) was a limited participant at practice Thursday.",
-          "timeline": {
-            "text": "Around Sun 11 Oct (estimate)",
-            "basis": "media"
-          },
-          "typical": "Typical recovery: a mild ankle sprain usually takes 1 to 3 weeks."
-        },
-        {
-          "player": "Ashton Jeanty",
-          "position": "RB",
-          "team": "LV",
-          "status": "Questionable",
-          "injury": "Ankle",
-          "about": "Jeanty was listed as a limited participant in Thursday's practice due to ankle and foot injuries, Anthony Galaviz of The Fresno Bee reports.",
-          "timeline": {
-            "text": "Around Sun 11 Oct (estimate)",
-            "basis": "media"
-          },
-          "typical": "Typical recovery: a mild ankle sprain usually takes 1 to 3 weeks."
-        },
-        {
           "player": "Jalen Nailor",
           "position": "WR",
           "team": "LV",
-          "status": "Questionable",
+          "status": "Out",
           "injury": "Concussion",
-          "about": "Nailor (concussion) isn't practicing Thursday, Sam Warren of The Athletic reports.",
+          "about": "Nailor (concussion) has been ruled out for Sunday's game at New England, ESPN's Paul Gutierrez reports.",
           "timeline": {
-            "text": "Around Sun 11 Oct (estimate)",
-            "basis": "media"
-          },
-          "typical": "Typical recovery: concussion recovery usually takes 1 to 3 weeks, but it varies a lot between players."
-        },
-        {
-          "player": "Spencer Burford",
-          "position": "G",
-          "team": "LV",
-          "status": "Questionable",
-          "injury": "Knee",
-          "about": null,
-          "timeline": {
-            "text": "Around Sun 11 Oct (estimate)",
+            "text": "Around Sun 18 Oct (estimate)",
             "basis": "media"
           }
         },
@@ -2258,14 +1803,38 @@
           "player": "Trey Zuhn III",
           "position": "C",
           "team": "LV",
-          "status": "Questionable",
+          "status": "Out",
           "injury": "Knee (abrasion)",
-          "about": "Zuhn (knee) is questionable to return to Sunday's contest against the Chiefs, Sam Warren of The Athletic reports.",
+          "about": null,
+          "timeline": {
+            "text": "Around Sun 18 Oct (estimate)",
+            "basis": "media"
+          }
+        },
+        {
+          "player": "Dont'e Thornton Jr.",
+          "position": "WR",
+          "team": "LV",
+          "status": "Out",
+          "injury": "Hamstring",
+          "about": "Thornton (hamstring) was a full participant at practice Wednesday, Anthony Galaviz of The Fresno Bee reports.",
+          "timeline": {
+            "text": "Around Sun 18 Oct (estimate)",
+            "basis": "media"
+          },
+          "typical": "Usually 2 to 4 weeks for a mild to moderate hamstring strain."
+        },
+        {
+          "player": "Ashton Jeanty",
+          "position": "RB",
+          "team": "LV",
+          "status": "Questionable",
+          "injury": "Ankle",
+          "about": "Jeanty (ankle/foot) is questionable for Sunday's game against the Patriots, with Raiders coach Klint Kubiak saying Friday that the running back will \"do his best to go,\"Levi Edwards of the Raiders' official site reports.",
           "timeline": {
             "text": "Around Sun 11 Oct (estimate)",
             "basis": "media"
-          },
-          "typical": "Typical recovery: a knee abrasion usually heals within 1 to 2 weeks."
+          }
         }
       ],
       "form": [
@@ -2273,7 +1842,7 @@
           "player": "Kirk Cousins",
           "position": "QB",
           "trend": "steady",
-          "note": "Steady, with 256.5 passing yards and 2.8 touchdowns over his last five games, the same as his season average. Four games is too early to read a trend.",
+          "note": "Steady, with 256.5 passing yards and 2.8 touchdowns per game both over the last five and for the season, so the comparison says little four games in.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2297,7 +1866,7 @@
           "player": "Ashton Jeanty",
           "position": "RB",
           "trend": "steady",
-          "note": "Steady, with 66 rushing yards at 3.4 per carry, matching his season figures. He hasn't scored yet.",
+          "note": "Steady at 3.4 yards per carry and 66 rushing yards, with no touchdowns, so the numbers match over the last five and the season.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2321,7 +1890,7 @@
           "player": "Tre Tucker",
           "position": "WR",
           "trend": "steady",
-          "note": "Steady, averaging 3.8 catches and 58.3 yards, the same as his season average.",
+          "note": "Steady at 3.8 catches and 58.3 receiving yards per game, identical over the last five and the season, which is too early to read much into.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2345,7 +1914,7 @@
           "player": "Malcolm Koonce",
           "position": "DE",
           "trend": "steady",
-          "note": "Steady, with 1.8 tackles and 0.6 sacks per game, matching his season average.",
+          "note": "Steady at 1.8 tackles and 0.6 sacks per game, identical over the last five and the season, so it's too early to call a trend.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2369,40 +1938,40 @@
       "news": [
         {
           "type": "News",
-          "date": "2026-10-08T23:22:56Z",
-          "text": "DJ Glaze putting together career year",
+          "date": "2026-10-09T19:34:09Z",
+          "text": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats",
           "sources": [
             "espn-20"
           ]
         },
         {
           "type": "News",
-          "date": "2026-10-08T22:30:28Z",
-          "text": "Kirk Cousins and Raiders look to build on fast start against Patriots defense dealing with injuries",
-          "sources": [
-            "espn-21"
-          ]
-        },
-        {
-          "type": "News",
-          "date": "2026-10-08T20:10:45Z",
-          "text": "Why Stephen A. trusts the Patriots more than the Raiders",
+          "date": "2026-10-09T17:31:51Z",
+          "text": "Inside the NFL's wild endings and why coaches need to adapt",
           "sources": [
             "espn-22"
           ]
         },
         {
           "type": "News",
-          "date": "2026-10-08T16:04:16Z",
-          "text": "2026 NFL quarter-season awards: MVP picks, top rookies, OPOY, DPOY, best coaches",
+          "date": "2026-10-09T10:00:20Z",
+          "text": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty",
+          "sources": [
+            "espn-21"
+          ]
+        },
+        {
+          "type": "News",
+          "date": "2026-10-08T23:22:56Z",
+          "text": "DJ Glaze putting together career year",
           "sources": [
             "espn-23"
           ]
         },
         {
           "type": "News",
-          "date": "2026-10-07T19:17:02Z",
-          "text": "Countdown to Super Bowl LXI: Top-10 lists, projections, rankings, more coverage",
+          "date": "2026-10-08T22:30:28Z",
+          "text": "Kirk Cousins and Raiders look to build on fast start against Patriots defense dealing with injuries",
           "sources": [
             "espn-24"
           ]
@@ -2720,51 +2289,51 @@
   "sources": {
     "yahoosports-1": {
       "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/james-suffers-defeat-76ers-debut-061717333.html",
-      "title": "James suffers defeat on 76ers debut in pre-season",
-      "published": "2026-10-09T06:17:17.000Z"
+      "url": "https://sports.yahoo.com/articles/tyrese-haliburton-hopes-squash-damian-202622538.html",
+      "title": "Tyrese Haliburton hopes to squash Damian Lillard beef over signature celebration",
+      "published": "2026-10-09T20:26:22.000Z"
     },
     "espn-2": {
       "publisher": "ESPN",
-      "url": "https://www.espn.com/nba/story/_/id/50137673/lebron-james-scores-10-points-18-minutes-76ers-debut",
-      "title": "LeBron James scores 10 points in 18 minutes in 76ers debut",
-      "published": "2026-10-09T05:49:34Z"
+      "url": "https://www.espn.com/olympics/basketball/story/_/id/50142422/russell-westbrook-wants-carry-torch-la-olympics",
+      "title": "Russell Westbrook wants to carry torch for L.A. Olympics",
+      "published": "2026-10-09T20:22:42Z"
     },
-    "yahoosports-3": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/luka-doncic-austin-reaves-show-054529827.html",
-      "title": "Luka Doncic and Austin Reaves show why they click in Lakers' preseason win",
-      "published": "2026-10-09T05:45:29.000Z"
+    "cbssports-3": {
+      "publisher": "CBS Sports",
+      "url": "https://www.cbssports.com/nba/news/knicks-pause-contract-extension-talks-karl-anthony-towns-josh-hart-deuce-mcbride/",
+      "title": "Takeaways from Knicks pausing contract extension talks: Is Josh Hart's time in New York running out?",
+      "published": "2026-10-09T19:22:19.000Z"
     },
     "yahoosports-4": {
       "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/bruce-brown-continues-fight-strong-052732371.html",
-      "title": "Bruce Brown continues to fight and make a strong case to crack Knicks roster this preseason",
-      "published": "2026-10-09T05:27:32.000Z"
+      "url": "https://sports.yahoo.com/articles/jordan-goodwin-one-most-underrated-190000436.html",
+      "title": "Jordan Goodwin is one of the most underrated players in the NBA",
+      "published": "2026-10-09T19:00:00.000Z"
     },
     "yahoosports-5": {
       "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/8-takeaways-cavs-loss-celtics-033348269.html",
-      "title": "8 Takeaways from Cavs loss to Celtics: Defense leaves much to be desired in preseason opener",
-      "published": "2026-10-09T03:33:48.000Z"
+      "url": "https://sports.yahoo.com/articles/jabari-walker-appears-ready-play-185737920.html",
+      "title": "Jabari Walker appears ready to play his role",
+      "published": "2026-10-09T18:57:37.000Z"
     },
     "yahoosports-6": {
       "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/spurs-start-strong-lose-first-030301619.html",
-      "title": "Spurs start strong but lose first preseason game to the Hawks",
-      "published": "2026-10-09T03:03:01.000Z"
+      "url": "https://sports.yahoo.com/nba/article/76ers-joel-embiid-denies-tardiness-report-questions-why-it-happened-it-feels-like-im-an-easy-target-191017824.html",
+      "title": "76ers' Joel Embiid denies tardiness report, questions why it happened: 'It feels like I'm an easy target'",
+      "published": "2026-10-09T18:53:50.000Z"
     },
-    "yahoosports-7": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/sixers-bell-ringer-starting-five-030000649.html",
-      "title": "Sixers Bell Ringer: Starting five flashes dominance vs. Nets",
-      "published": "2026-10-09T03:00:00.000Z"
+    "cbssports-7": {
+      "publisher": "CBS Sports",
+      "url": "https://www.cbssports.com/nba/news/ranking-every-nba-defense-2026-27-season-thunder-spurs/",
+      "title": "Ranking every NBA team's defense entering the 2026-27 season: Thunder and Spurs competing for top spot",
+      "published": "2026-10-09T18:36:57.000Z"
     },
     "yahoosports-8": {
       "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/takeaways-nets-spoil-76ers-super-023327396.html",
-      "title": "Takeaways: Nets spoil 76ers Super Team Debut in Preseason, win 114-108",
-      "published": "2026-10-09T02:33:27.000Z"
+      "url": "https://sports.yahoo.com/nba/article/pacific-division-preview--wnba-semifinals-game-2-reactions-183315263.html",
+      "title": "Pacific Division preview + WNBA Semifinals Game 2 reactions",
+      "published": "2026-10-09T18:33:15.000Z"
     },
     "espn-9": {
       "publisher": "ESPN",
@@ -2786,81 +2355,81 @@
     },
     "espn-12": {
       "publisher": "ESPN",
-      "url": "https://www.espn.com/nfl/story/_/id/50138082/cowboys-prescott-irked-stadium-worker-call-loss",
-      "title": "Cowboys' Prescott irked by stadium worker's callout after loss",
-      "published": "2026-10-09T06:24:35Z"
+      "url": "https://www.espn.com/nfl/story/_/id/50142757/broncos-oc-davis-webb-says-not-ideal-lose-play-calling-duties",
+      "title": "Broncos OC Davis Webb says 'not ideal' to lose play-calling duties",
+      "published": "2026-10-09T21:14:00Z"
     },
-    "espn-13": {
-      "publisher": "ESPN",
-      "url": "https://www.espn.com/video/clip/_/id/50138071/dak-addresses-embarrassing-comment-made-att-stadium-tunnel",
-      "title": "Dak addresses 'embarrassing' comment made in AT&T Stadium tunnel",
-      "published": "2026-10-09T05:58:38Z"
+    "yahoosports-13": {
+      "publisher": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/seahawks-49ers-game-designations-leonard-210216758.html",
+      "title": "Seahawks-49ers game designations: Leonard Williams WILL play!",
+      "published": "2026-10-09T21:02:16.000Z"
     },
     "espn-14": {
       "publisher": "ESPN",
-      "url": "https://www.espn.com/nfl/story/_/id/50136406/buccaneers-explode-first-win-cowboys-tnf",
-      "title": "Buccaneers explode in third quarter against Cowboys to get first win",
-      "published": "2026-10-09T05:23:16Z"
+      "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion",
+      "title": "Eagles release QB Andy Dalton after costly pick, demotion",
+      "published": "2026-10-09T21:01:42Z"
     },
-    "yahoosports-15": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/jerry-jones-calls-cowboys-tnf-051940860.html",
-      "title": "Jerry Jones calls Cowboys' TNF loss to Buccaneers 'extraordinarily disappointing'",
-      "published": "2026-10-09T05:19:40.000Z"
+    "cbssports-15": {
+      "publisher": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/news/injury-news-saquon-barkley-eagles-jaguars-london/",
+      "title": "More alarming injury news for Eagles as they prepare to face Jaguars in London",
+      "published": "2026-10-09T21:00:37.000Z"
     },
     "yahoosports-16": {
       "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/jerry-jones-expresses-confidence-christian-045700716.html",
-      "title": "Jerry Jones expresses confidence in Christian Parker",
-      "published": "2026-10-09T04:57:00.000Z"
+      "url": "https://sports.yahoo.com/articles/2-very-important-cowboys-players-210000396.html",
+      "title": "2 very important Cowboys players suffered injury vs Bucs",
+      "published": "2026-10-09T21:00:00.000Z"
     },
-    "espn-17": {
+    "yahoosports-17": {
+      "publisher": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/defense-vs-offense-minnesota-vikings-210000300.html",
+      "title": "Our defense vs. their offense: Minnesota Vikings",
+      "published": "2026-10-09T21:00:00.000Z"
+    },
+    "espn-18": {
       "publisher": "ESPN",
-      "url": "https://www.espn.com/nfl/story/_/id/50135427/that-aint-bears-dandre-swift-laments-early-season-fumbles",
-      "title": "'That ain't me': Bears' D'Andre Swift laments early fumble issues",
-      "published": "2026-10-09T04:33:14Z"
+      "url": "https://www.espn.com/nfl/story/_/id/50142241/chargers-lt-rashawn-slater-ir-following-ankle-surgery",
+      "title": "Chargers LT Rashawn Slater on IR following ankle surgery",
+      "published": "2026-10-09T20:59:14Z"
     },
-    "yahoosports-18": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/mac-read-talk-bears-vs-035809149.html",
-      "title": "Mac & Read Talk Bears vs. Packers!",
-      "published": "2026-10-09T03:58:09.000Z"
-    },
-    "yahoosports-19": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/bucky-irving-shreds-dallas-defense-035414672.html",
-      "title": "Bucky Irving shreds Dallas' defense on Thursday night",
-      "published": "2026-10-09T03:54:14.000Z"
+    "espn-19": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/story/_/id/50140701/legendary-coach-hall-fame-te-mike-ditka-dies-age-86",
+      "title": "Legendary coach, Hall of Fame TE Mike Ditka dies at age 86",
+      "published": "2026-10-09T20:56:57Z"
     },
     "espn-20": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/story/_/id/50142192/raiders-rb-ashton-jeanty-ankle-foot-questionable-vs-pats",
+      "title": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats",
+      "published": "2026-10-09T19:34:09Z"
+    },
+    "espn-21": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/story/_/id/50129469/las-vegas-raiders-struggling-running-game-ashton-jeanty",
+      "title": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty",
+      "published": "2026-10-09T10:00:20Z"
+    },
+    "espn-22": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/story/_/id/50135925/wild-endings-cowboys-ravens-touchback",
+      "title": "Inside the NFL's wild endings and why coaches need to adapt",
+      "published": "2026-10-09T17:31:51Z"
+    },
+    "espn-23": {
       "publisher": "ESPN",
       "url": "https://www.espn.com/video/clip/_/id/50136013/dj-glaze-putting-together-career-year",
       "title": "DJ Glaze putting together career year",
       "published": "2026-10-08T23:22:56Z"
     },
-    "espn-21": {
+    "espn-24": {
       "publisher": "ESPN",
       "url": "http://www.espn.com/nfl/preview?gameId=401872986",
       "title": "Kirk Cousins and Raiders look to build on fast start against Patriots defense dealing with injuries",
       "published": "2026-10-08T22:30:28Z"
-    },
-    "espn-22": {
-      "publisher": "ESPN",
-      "url": "https://www.espn.com/video/clip/_/id/50134846/why-stephen-trusts-patriots-more-raiders",
-      "title": "Why Stephen A. trusts the Patriots more than the Raiders",
-      "published": "2026-10-08T20:10:45Z"
-    },
-    "espn-23": {
-      "publisher": "ESPN",
-      "url": "https://www.espn.com/nfl/story/_/id/50118698/2026-early-awards-ranking-mvp-rookies-coaches-barnwell",
-      "title": "2026 NFL quarter-season awards: MVP picks, top rookies, OPOY, DPOY, best coaches",
-      "published": "2026-10-08T16:04:16Z"
-    },
-    "espn-24": {
-      "publisher": "ESPN",
-      "url": "https://www.espn.com/nfl/story/_/id/50119009/super-bowl-2027-lxi-countdown-top-10-lists-rankings",
-      "title": "Countdown to Super Bowl LXI: Top-10 lists, projections, rankings, more coverage",
-      "published": "2026-10-07T19:17:02Z"
     }
   }
 }
