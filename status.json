@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "lastAttempt": "2026-10-09T16:48:00+11:00",
+  "lastSuccess": "2026-10-09T16:48:00+11:00",
+  "error": null,
+  "sources": {
+    "total": 33,
+    "ok": 33,
+    "failed": []
+  },
+  "brief": {
+    "ok": false,
+    "error": "The Claude API returned an error (400).",
+    "at": "2026-10-09T16:48:00+11:00"
+  }
+}

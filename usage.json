@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "date": "2026-10-09",
+      "at": "2026-10-09T16:48:00+11:00",
+      "model": "claude-haiku-5-5",
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "costUsd": 0,
+      "ok": false
+    }
+  ],
+  "monthToDate": {
+    "month": "2026-10",
+    "costUsd": 0
+  }
+}
