@@ -1,4 +1,5 @@
 // Writes the brief with Claude: one API call per edition, covering both leagues.
+// On Wednesdays the same call also writes each league's Wednesday Wrap and ranks the watch guide.
 //
 // Usage: node pipeline/write-brief.js --out <folder>
 //   Reads <folder>/latest.json and facts.json (written by build-edition.js), sends Claude a compact
@@ -20,8 +21,10 @@ import Anthropic from '@anthropic-ai/sdk';
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { buildInput, forClaude, idIndex, estimateTokens, DEFAULT_LIMITS, TRIM_STEPS } from './brief/input.js';
-import { DAILY_BRIEF_SCHEMA, checkBrief } from './brief/schema.js';
+import { DAILY_BRIEF_SCHEMA, WEDNESDAY_SCHEMA, checkBrief } from './brief/schema.js';
 import { melbourneIso } from './lib/time.js';
+import { writeArchiveIndex } from './lib/archive.js';
+import { watchEntry } from './shape/week.js';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 
@@ -68,7 +71,11 @@ async function main() {
 
   const model = settings.ai.model;
   const maxInputTokens = settings.ai.maxInputTokens;
-  const system = ['style.md', 'daily-brief.md'].map(f => readFileSync(join(ROOT, 'prompts', f), 'utf8')).join('\n\n---\n\n');
+  const wednesday = edition.edition.type === 'wednesday' && Boolean(facts.week);
+  const promptFiles = ['style.md', 'daily-brief.md', ...(wednesday ? ['wednesday-wrap.md', 'watch-guide.md'] : [])];
+  const system = promptFiles.map(f => readFileSync(join(ROOT, 'prompts', f), 'utf8')).join('\n\n---\n\n');
+  const schema = wednesday ? WEDNESDAY_SCHEMA : DAILY_BRIEF_SCHEMA;
+  if (wednesday) console.log('Wednesday edition: the brief, the Wrap and the watch guide in one call.');
 
   // Build the input, trimming lower-priority items if it's over budget.
   const cards = recentContextCards(out);
@@ -82,7 +89,7 @@ async function main() {
   const sent = forClaude(input);
   writeJson(join(out, 'brief-input.json'), sent);
   const inputText = JSON.stringify(sent);
-  const index = idIndex(input, edition);
+  const index = idIndex(input, edition, facts, limits);
 
   let result = null;
   let usage = { input_tokens: 0, output_tokens: 0 };
@@ -94,7 +101,8 @@ async function main() {
     if (!process.env.ANTHROPIC_API_KEY) throw new Error('missing key');
     const client = new Anthropic(); // reads ANTHROPIC_API_KEY from the environment
 
-    const userMessage = { role: 'user', content: `Here is today's data (JSON). Write today's brief.\n\n${inputText}` };
+    const ask = wednesday ? "Write today's brief, both Wednesday Wraps and the watch guide." : "Write today's brief.";
+    const userMessage = { role: 'user', content: `Here is today's data (JSON). ${ask}\n\n${inputText}` };
 
     // Cost guard: the cheap Haiku rate only applies under 100k input tokens.
     const counted = await client.messages.countTokens({ model, system, messages: [userMessage] });
@@ -105,7 +113,7 @@ async function main() {
     // (Structured output isn't used: the API rejects this schema with "The compiled grammar is too large".)
     // If the API rejects a request (HTTP 400), the next variant drops the effort setting.
     // The API's explanation is always logged.
-    const schemaNote = `\n\n---\n\nReply with only one JSON object (no other text) that matches this JSON schema:\n${JSON.stringify(DAILY_BRIEF_SCHEMA)}`;
+    const schemaNote = `\n\n---\n\nReply with only one JSON object (no other text) that matches this JSON schema:\n${JSON.stringify(schema)}`;
     const variants = [
       { label: 'JSON by instruction', request: { model, max_tokens: 16000, system: system + schemaNote, output_config: { effort: 'low' }, messages: [userMessage] } },
       { label: 'JSON by instruction, default effort', request: { model, max_tokens: 16000, system: system + schemaNote, messages: [userMessage] } },
@@ -137,7 +145,7 @@ async function main() {
       try {
         // Without structured output the JSON can arrive wrapped in a code fence; take the outermost object.
         const json = text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
-        const checked = checkBrief(JSON.parse(json), index, inputText);
+        const checked = checkBrief(JSON.parse(json), index, inputText, { wednesday });
         result = checked.brief;
         dropped = checked.dropped;
         error = null;
@@ -170,17 +178,23 @@ async function main() {
     return;
   }
 
-  merge(edition, result, index, model);
+  merge(edition, result, index, model, facts);
   writeJson(join(out, 'latest.json'), edition);
   writeJson(join(out, 'editions', `${edition.edition.date}.json`), edition, false);
+  writeArchiveIndex(out);
   status.brief = { ok: true, error: null, at: melbourneIso(), droppedItems: dropped.length, rejectedRequests: rejected };
   writeJson(statusPath, status);
   if (dropped.length) console.log(`Dropped ${dropped.length} item(s) that failed the checks:\n - ${dropped.join('\n - ')}`);
+  if (wednesday) for (const league of ['nfl', 'nba']) {
+    const w = edition[league].wrap;
+    console.log(`${league.toUpperCase()} Wrap: ${w ? `${w.storylines.length} storylines, ${w.biggestResults.length} results, ${w.standouts.length} standouts` : 'not written'}; watch: ${edition.watchGuide[league].picks.map(p => `${p.away.abbr}@${p.home.abbr}`).join(', ') || 'none'}`);
+  }
   console.log('Brief written.');
 }
 
 // Put Claude's writing into the edition. Sources for each story come from the items it cited.
-function merge(edition, brief, index, model) {
+function merge(edition, brief, index, model, facts) {
+  const sourcesOf = refs => [...new Set(refs.flatMap(r => index.get(r)?.sources || []))];
   for (const league of ['nfl', 'nba']) {
     const b = brief[league];
     const section = edition[league];
@@ -200,13 +214,33 @@ function merge(edition, brief, index, model) {
     section.contextCard = b.contextCard;
     section.awardRaces = b.awardRaces.map(a => ({ award: a.award, contenders: a.contenders.map(({ refs, ...c }) => c) }));
 
+    if (b.wrap !== undefined) {
+      section.wrap = b.wrap && {
+        weekLabel: facts.week[league].label,
+        summary: b.wrap.summary,
+        storylines: b.wrap.storylines.map(s => ({ text: s.text, sources: sourcesOf(s.refs) })),
+        biggestResults: b.wrap.biggestResults.map(id => index.get(id).item),
+        standouts: b.wrap.standouts.map(({ refs, ...p }) => p),
+      };
+    }
+
+    // Claude's ranking replaces the one worked out from the data, if it picked enough games.
+    const guide = edition.watchGuide?.[league];
+    const games = facts?.week?.[league]?.games || [];
+    if (b.watch && guide && games.length && b.watch.picks.length >= Math.min(3, games.length)) {
+      const chosen = b.watch.picks.map(p => index.get(p.game).item);
+      guide.picks = b.watch.picks.map((p, i) => watchEntry(chosen[i], { rank: i + 1, ...(p.reason ? { reason: p.reason } : {}) }));
+      guide.yourTeam = games.filter(g => g.mine && !chosen.includes(g))
+        .sort((x, y) => Date.parse(x.start) - Date.parse(y.start)).map(g => watchEntry(g));
+    }
+
     const team = edition.myTeams?.[league];
     const t = brief.myTeams[league];
     if (team) {
       if (t.sinceLast.length) {
         team.sinceLast = t.sinceLast.map(s => ({
           text: s.text,
-          sources: [...new Set(s.refs.flatMap(r => index.get(r)?.sources || []))],
+          sources: sourcesOf(s.refs),
         }));
       }
       for (const p of team.form || []) p.note = t.formNotes.find(f => f.player === p.player)?.note || null;

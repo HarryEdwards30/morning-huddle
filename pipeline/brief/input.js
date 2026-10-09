@@ -2,12 +2,15 @@
 // Every item gets an id (like "nfl-h3") so Claude can say which items each sentence came from,
 // and so the app can link each written story back to its sources.
 
+import { describeForClaude } from '../shape/week.js';
+
 const clip = (text, n) => (text && text.length > n ? `${text.slice(0, n - 1)}…` : text || null);
 
 // Rough token estimate for the cost guard (about 3.5 characters per token for this kind of JSON).
 export const estimateTokens = obj => Math.ceil(JSON.stringify(obj).length / 3.5);
 
 function leagueInput(league, section, facts, limits) {
+  const week = facts?.week?.[league];
   const id = (kind, i) => `${league}-${kind}${i + 1}`;
   const headlines = (section.headlines || []).slice(0, limits.headlines).map((h, i) => ({
     id: id('h', i), title: h.title, summary: clip(h.summary, limits.summaryChars), teams: h.teams,
@@ -39,8 +42,33 @@ function leagueInput(league, section, facts, limits) {
     category: c.category,
     leaders: c.leaders.slice(0, limits.leadersPer).map(l => `${l.name} (${l.team}) ${l.value}`).join('; '),
   }));
-  return { headlines, results, standings, ...(playoffPicture ? { playoffPicture } : {}), hotAndCold: pulse, majorInjuries: injuries, transactions: moves, statLeaders };
+  return {
+    headlines, results, standings, ...(playoffPicture ? { playoffPicture } : {}), hotAndCold: pulse, majorInjuries: injuries, transactions: moves, statLeaders,
+    ...(week ? { week: weekInput(league, week, limits), watchCandidates: watchInput(league, week, limits) } : {}),
+  };
 }
+
+// Wednesdays: the past seven days, for the Wrap.
+function weekInput(league, week, limits) {
+  const id = (kind, i) => `${league}-${kind}${i + 1}`;
+  return {
+    label: week.label,
+    results: week.results.slice(0, limits.weekResults).map((g, i) => ({
+      id: id('w', i), game: `${g.away.name} ${g.away.score} at ${g.home.name} ${g.home.score}`, note: g.note || undefined, date: g.start,
+    })),
+    standouts: week.standouts.map((p, i) => ({ id: id('s', i), line: `${p.name} (${p.team}): ${p.note}` })),
+    headlines: week.headlines.slice(0, limits.weekHeadlines).map((h, i) => ({
+      id: id('wh', i), title: h.title, summary: clip(h.summary, limits.summaryChars), teams: h.teams,
+    })),
+    transactions: week.moves.slice(0, limits.weekMoves).map((t, i) => ({ id: id('wt', i), type: t.type, text: t.text })),
+  };
+}
+
+// Wednesdays: the games in the coming week, already ranked on paper, plus all of Jack's team's games.
+function watchInput(league, week, limits) {
+  return watchGames(week, limits).map((g, i) => ({ id: `${league}-g${i + 1}`, ...describeForClaude(league, g) }));
+}
+const watchGames = (week, limits) => week.games.filter((g, i) => i < limits.watchGames || g.mine);
 
 function teamInput(league, team, limits) {
   if (!team) return null;
@@ -70,13 +98,14 @@ function teamInput(league, team, limits) {
 export const DEFAULT_LIMITS = {
   headlines: 10, summaryChars: 260, results: 16, injuries: 8, moves: 8,
   leaderCategories: 8, leadersPer: 5, teamNews: 6,
+  weekResults: 60, weekHeadlines: 14, weekMoves: 10, watchGames: 12,
 };
 
 // Smaller limits, tried in order if the input is over the token budget.
 export const TRIM_STEPS = [
-  { headlines: 8, summaryChars: 180, results: 12, moves: 6, leadersPer: 4 },
-  { headlines: 6, summaryChars: 120, results: 10, injuries: 6, moves: 4, leaderCategories: 6, leadersPer: 3, teamNews: 4 },
-  { headlines: 5, summaryChars: 80, results: 8, injuries: 4, moves: 3, leaderCategories: 4, leadersPer: 3, teamNews: 3 },
+  { headlines: 8, summaryChars: 180, results: 12, moves: 6, leadersPer: 4, weekResults: 45, weekHeadlines: 12, weekMoves: 8 },
+  { headlines: 6, summaryChars: 120, results: 10, injuries: 6, moves: 4, leaderCategories: 6, leadersPer: 3, teamNews: 4, weekResults: 30, weekHeadlines: 10, weekMoves: 6, watchGames: 10 },
+  { headlines: 5, summaryChars: 80, results: 8, injuries: 4, moves: 3, leaderCategories: 4, leadersPer: 3, teamNews: 3, weekResults: 20, weekHeadlines: 8, weekMoves: 4, watchGames: 8 },
 ];
 
 export function buildInput(edition, facts, recentContextCards, limits = DEFAULT_LIMITS) {
@@ -94,11 +123,20 @@ export function buildInput(edition, facts, recentContextCards, limits = DEFAULT_
 }
 
 // Every id in the input, mapped to what it points at (for checking refs and finding sources).
-export function idIndex(input, edition) {
+export function idIndex(input, edition, facts, limits = DEFAULT_LIMITS) {
   const index = new Map();
   for (const league of ['nfl', 'nba']) {
     const data = input[league];
-    data.headlines.forEach((h, i) => index.set(h.id, { kind: 'headline', league, item: edition[league].headlines[i] }));
+    const week = facts?.week?.[league];
+    if (data.week) {
+      data.week.results.forEach((r, i) => index.set(r.id, { kind: 'weekResult', league, item: week.results[i] }));
+      data.week.standouts.forEach(r => index.set(r.id, { kind: 'standout', league }));
+      data.week.headlines.forEach((h, i) => index.set(h.id, { kind: 'weekHeadline', league, item: week.headlines[i], sources: week.headlines[i].sources || [] }));
+      data.week.transactions.forEach(r => index.set(r.id, { kind: 'weekMove', league }));
+      const games = watchGames(week, limits);
+      data.watchCandidates.forEach((g, i) => index.set(g.id, { kind: 'watchGame', league, item: games[i] }));
+    }
+    data.headlines.forEach((h, i) => index.set(h.id, { kind: 'headline', league, item: edition[league].headlines[i], sources: edition[league].headlines[i].sources || [] }));
     data.results.forEach(r => index.set(r.id, { kind: 'result', league }));
     data.majorInjuries.forEach(r => index.set(r.id, { kind: 'injury', league }));
     data.transactions.forEach(r => index.set(r.id, { kind: 'move', league }));

@@ -1,6 +1,7 @@
 // Morning Huddle: loads the settings and the latest edition, then shows the tab picked in the bottom bar.
 // Tabs: NFL, NBA, My Teams, Watch. Each lives in js/tabs/ and only reads its own part of the edition.
 // The app opens on the tab you used last (My Teams the first time).
+// Past editions (the last 60 days) can be opened from the info button; see data/editions/index.json.
 
 import { el, setMyTeams, setSources } from './ui.js';
 import { formatCalendarDate, formatGameDateTime, melbourneToday, melbourneHour } from './time.js';
@@ -106,23 +107,54 @@ function showNotices(edition, status, now = new Date()) {
   }
 }
 
-function setUpInfoDialog(edition) {
+function setUpInfoDialog(ctx) {
   const dialog = document.getElementById('info-dialog');
   const body = document.getElementById('info-body');
   document.getElementById('info-button').addEventListener('click', () => {
+    const edition = ctx.edition;
     const e = edition.edition || {};
-    body.replaceChildren(
+    const past = (ctx.archive || []).filter(a => a.date !== e.date).slice(0, 14);
+    body.replaceChildren(...[
       el('dl', {},
         el('dt', {}, 'Edition'), el('dd', {}, e.date ? formatCalendarDate(e.date) : 'Unknown'),
-        el('dt', {}, 'Type'), el('dd', {}, e.type === 'wednesday' ? 'Wednesday edition (with the Wrap and watch guide)' : 'Daily brief'),
+        el('dt', {}, 'Type'), el('dd', {}, e.type === 'wednesday' ? `Wednesday edition (with the Wrap and watch guide)${e.pretendWednesday ? ', made on a test run' : ''}` : 'Daily brief'),
         el('dt', {}, 'Updated'), el('dd', {}, e.generatedAt ? formatGameDateTime(e.generatedAt) : 'Unknown'),
         el('dt', {}, 'Written by'), el('dd', {}, e.written ? `Claude (${e.writtenBy || 'AI'}) from the day’s data` : 'Not written yet: data only'),
         el('dt', {}, 'Times'), el('dd', {}, 'All times are Melbourne time.'),
       ),
       edition.sample ? el('p', { class: 'muted small' }, 'This edition is sample data.') : null,
-    );
+      past.length ? el('h3', { class: 'subhead' }, 'Past editions') : null,
+      past.length ? el('ul', { class: 'past-editions' }, past.map(a => el('li', {},
+        el('button', { class: 'button-small', type: 'button', onclick: () => { dialog.close(); openPastEdition(ctx, a.date); } },
+          formatCalendarDate(a.date, { long: false }) + (a.type === 'wednesday' ? ' · Wrap' : ''))))) : null,
+    ].filter(Boolean));
     dialog.showModal();
   });
+}
+
+// Shows a past edition from the archive, with a banner to get back to today's.
+async function openPastEdition(ctx, date) {
+  let past;
+  try {
+    past = await loadJson(`data/editions/${date}.json`);
+  } catch (error) {
+    console.error(error);
+    return;
+  }
+  ctx.edition = past;
+  setSources(past.sources);
+  notices.replaceChildren(el('div', { class: 'notice notice-info', role: 'note' },
+    el('strong', {}, 'PAST EDITION. '),
+    `You’re reading the edition from ${formatCalendarDate(date)}.`,
+    el('button', { class: 'button-small', type: 'button', onclick: () => backToToday(ctx) }, 'Back to today')));
+  showTab(ctx);
+}
+
+function backToToday(ctx) {
+  ctx.edition = ctx.latest;
+  setSources(ctx.latest.sources);
+  showNotices(ctx.latest, ctx.status);
+  showTab(ctx);
 }
 
 async function start() {
@@ -136,15 +168,18 @@ async function start() {
     return;
   }
 
-  // The run status is optional: if it can't be loaded, the app works without the banners.
-  const status = await loadJson('data/status.json').catch(() => null);
+  // The run status and the archive list are optional: the app works without them.
+  const [status, archive] = await Promise.all([
+    loadJson('data/status.json').catch(() => null),
+    loadJson('data/editions/index.json').catch(() => []),
+  ]);
 
   setMyTeams(settings.teams);
   setSources(edition.sources);
   showNotices(edition, status);
-  setUpInfoDialog(edition);
 
-  const ctx = { settings, edition, now: new Date() };
+  const ctx = { settings, edition, latest: edition, status, archive, now: new Date() };
+  setUpInfoDialog(ctx);
   showTab(ctx);
   window.addEventListener('hashchange', () => showTab(ctx));
 }

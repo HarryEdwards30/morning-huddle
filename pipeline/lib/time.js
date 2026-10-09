@@ -36,3 +36,13 @@ export function recentUsDates(days, now = new Date()) {
   }
   return [...new Set(out)];
 }
+
+// ESPN scoreboard dates for today and the next `days` days (US calendar), oldest first.
+export function upcomingUsDates(days, now = new Date()) {
+  return recentUsDates(days + 1, new Date(now.getTime() + days * 86400000)).reverse();
+}
+
+// "2026-10-14" plus a number of days (calendar arithmetic, no time zone).
+export function addDays(ymd, days) {
+  return new Date(Date.parse(`${ymd}T00:00:00Z`) + days * 86400000).toISOString().slice(0, 10);
+}

@@ -6,17 +6,23 @@
 //
 // Usage: node pipeline/build-edition.js --out <folder>
 //
-// Phase 2: real data only. The written parts (one thing, "Why it matters", award races, context card,
-// notes on player form) come from Claude in Phase 3, so they are empty for now.
+// Real data only. The written parts (one thing, "Why it matters", award races, context card, notes on
+// player form, the Wednesday Wrap) are added by pipeline/write-brief.js, so they are empty here.
+//
+// On Wednesdays (Melbourne date), or when PRETEND_WEDNESDAY=true (the "Pretend it's Wednesday" box on a
+// manual run), it also gathers the past week for the Wrap and the games coming up for the watch guide.
+// That week data goes in facts.json for Claude; the watch guide is ranked here first so it's never empty.
 
 import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { SourceLog } from './lib/http.js';
-import { melbourneDate, melbourneIso, recentUsDates } from './lib/time.js';
+import { melbourneDate, melbourneIso, melbourneParts, recentUsDates, upcomingUsDates, addDays } from './lib/time.js';
+import { recentEditions, writeArchiveIndex } from './lib/archive.js';
 import { espn } from './sources/espn.js';
 import { fetchFeeds } from './sources/rss.js';
 import { teamIndex } from './shape/teams.js';
-import { resultsFrom, lastAndNext, weekAhead } from './shape/games.js';
+import { resultsFrom, lastAndNext, weekAhead, standoutLines } from './shape/games.js';
+import { weekLabel, upcomingGames, rankedGuide } from './shape/week.js';
 import { nbaStandings, nflStandings, nflPlayoffPicture, playoffRace, hotAndCold } from './shape/standings.js';
 import { teamInjuries, majorInjuries } from './shape/injuries.js';
 import { Sources, espnArticles, headlines, transactions } from './shape/news.js';
@@ -46,16 +52,16 @@ const ordinal = n => {
 
 // Everything for one league: its brief section, its "around the league" section, and Jack's team hub.
 async function buildLeague(league, settingsTeam, ctx) {
-  const { log, sources, since, shownBefore, now } = ctx;
+  const { log, sources, since, shownBefore, now, wednesday } = ctx;
   console.log(`\n${league.toUpperCase()}`);
 
   const teams = await espn.teams(log, league);
   const idx = teamIndex(teams, settingsTeam);
   if (!idx.myId) console.warn(`  ! Couldn't find "${settingsTeam.name}" in ESPN's ${league.toUpperCase()} team list. Check the name in config/settings.json.`);
 
-  // Scores: the last three US dates covers everything since yesterday's edition.
+  // Scores: the last three US dates covers everything since yesterday's edition (eight on Wednesdays, for the week).
   const boards = [];
-  for (const date of recentUsDates(3, now)) boards.push(await espn.scoreboard(log, league, date));
+  for (const date of recentUsDates(wednesday ? 8 : 3, now)) boards.push(await espn.scoreboard(log, league, date));
   const results = resultsFrom(boards, idx, { excludeIds: new Set(shownBefore[league] || []), since });
 
   // Standings (NBA by conference; NFL by division, plus conference standings for the playoff seeds).
@@ -99,7 +105,45 @@ async function buildLeague(league, settingsTeam, ctx) {
     ...ctx, results, confJson, injuriesJson, transactionsJson, teamNewsSince: since,
   }) : null;
 
-  return { leagueSection, myTeam, idx, leaders };
+  const week = wednesday ? await buildWeek(league, idx, {
+    ...ctx, boards, standings, leagueHeadlines, transactionsJson,
+  }) : null;
+
+  return { leagueSection, myTeam, idx, leaders, week };
+}
+
+// The Wednesday extras for one league: the past seven days (for the Wrap) and the games in the coming
+// Wednesday-to-Tuesday week (for the watch guide).
+async function buildWeek(league, idx, ctx) {
+  const { log, sources, now, today, weekEnd, boards, standings, leagueHeadlines, transactionsJson, pastEditions } = ctx;
+  const weekStart = now.getTime() - 7 * DAY;
+  const results = resultsFrom(boards, idx, { since: weekStart });
+
+  // The week's news: today's headlines, then the ones from this week's daily editions (newest first).
+  const seen = new Set();
+  const headlines = [
+    ...leagueHeadlines,
+    ...pastEditions.slice().reverse().flatMap(e => (e[league]?.headlines || []).map(h => ({
+      title: h.title, summary: h.summary, teams: h.teams,
+      sources: (h.sources || []).map(id => e.sources?.[id]).filter(Boolean).map(s => sources.add(s)),
+    }))),
+  ].filter(h => {
+    const key = h.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return !seen.has(key) && seen.add(key);
+  }).slice(0, 16);
+
+  const ahead = [];
+  for (const date of upcomingUsDates(7, now)) ahead.push(await espn.scoreboard(log, league, date));
+  const games = upcomingGames(league, ahead, idx, standings, { fromMs: now.getTime(), lastDate: weekEnd });
+
+  return {
+    label: weekLabel(league, results, addDays(today, -7), addDays(today, -1)),
+    results: results.map(({ leaders, ...g }) => g),
+    standouts: standoutLines(league, results, 10),
+    headlines,
+    moves: transactions(transactionsJson, idx, { since: weekStart, limit: 15 }).map(({ plainText, ...t }) => t),
+    games,
+  };
 }
 
 // The top five in each stat category this season, for Claude's award races.
@@ -119,21 +163,6 @@ function statLeaders(json, idx) {
       value: l.displayValue,
     })).filter(l => l.name),
   })).filter(c => c.leaders.length);
-}
-
-// The best single-game lines from the latest results, for the "Hot" column.
-function standoutLines(league, results) {
-  const THRESHOLDS = league === 'nba'
-    ? { points: 30, rebounds: 15, assists: 12 }
-    : { passingYards: 300, rushingYards: 120, receivingYards: 120 };
-  const lines = results.flatMap(g => g.leaders.map(l => ({ ...l, game: g })))
-    .filter(l => THRESHOLDS[l.category] !== undefined && l.value >= THRESHOLDS[l.category])
-    .sort((a, b) => b.value / THRESHOLDS[b.category] - a.value / THRESHOLDS[a.category]);
-  const seen = new Set();
-  return lines.filter(l => !seen.has(l.name) && seen.add(l.name)).slice(0, 4).map(l => {
-    const opp = l.game.home.abbr === l.team ? l.game.away : l.game.home;
-    return { name: l.name, team: l.team, note: `${l.line} against the ${opp.name}.` };
-  });
 }
 
 async function buildTeamHub(league, settingsTeam, idx, ctx) {
@@ -247,17 +276,25 @@ async function main() {
   const shownBefore = sameDay ? realPrevious.edition.window.shownBefore
     : { nba: (realPrevious?.nba?.results || []).map(g => g.id), nfl: (realPrevious?.nfl?.results || []).map(g => g.id) };
 
+  // The Wednesday edition adds the Wrap and the watch guide. A manual run can pretend it's Wednesday.
+  const isWrapDay = melbourneParts(now).weekday === (settings.schedule?.wrapDay || 'Wednesday');
+  const pretend = process.env.PRETEND_WEDNESDAY === 'true' && !isWrapDay;
+  const wednesday = isWrapDay || pretend;
+  const weekEnd = addDays(today, 6);
+  if (wednesday) console.log(pretend ? 'Pretending it\'s Wednesday: building the Wrap and the watch guide.' : 'Wednesday: building the Wrap and the watch guide.');
+
   const log = new SourceLog();
   const sources = new Sources();
-  const ctx = { log, sources, since, shownBefore, now };
+  const pastEditions = wednesday ? recentEditions(out, today, 7).filter(e => !e.sample) : [];
+  const ctx = { log, sources, since, shownBefore, now, today, weekEnd, wednesday, pastEditions };
 
   const nba = await buildLeague('nba', settings.teams.nba, ctx);
   const nfl = await buildLeague('nfl', settings.teams.nfl, ctx);
 
-  const weekEnd = melbourneDate(new Date(now.getTime() + 6 * DAY));
   const edition = {
     edition: {
-      date: today, generatedAt: melbourneIso(now), type: 'daily', written: false,
+      date: today, generatedAt: melbourneIso(now), type: wednesday ? 'wednesday' : 'daily', written: false,
+      ...(pretend ? { pretendWednesday: true } : {}),
       // What "since the last edition" meant for this edition (used if today's edition is rebuilt).
       window: { since, shownBefore },
     },
@@ -267,14 +304,7 @@ async function main() {
       nba: nba.myTeam && { ...nba.myTeam, weekAhead: undefined },
       nfl: nfl.myTeam && { ...nfl.myTeam, weekAhead: undefined },
     },
-    // Ranked picks come with the Wednesday edition (Phase 5). Until then, your teams' games this week.
-    watchGuide: {
-      weekOf: today,
-      weekEnd,
-      note: 'Ranked picks start with the Wednesday edition. For now, here are your teams’ games this week.',
-      nba: { picks: [], yourTeam: nba.myTeam?.weekAhead || [] },
-      nfl: { picks: [], yourTeam: nfl.myTeam?.weekAhead || [] },
-    },
+    watchGuide: watchGuide({ wednesday, today, weekEnd, previous: realPrevious?.watchGuide, nba, nfl }),
     sources: sources.map,
   };
 
@@ -293,10 +323,12 @@ async function main() {
 
   if (ok) {
     // Extra facts for Claude's brief that the app doesn't show (see pipeline/write-brief.js).
-    writeFileSync(join(out, 'facts.json'), JSON.stringify({ date: today, leaders: { nba: nba.leaders, nfl: nfl.leaders } }, null, 2) + '\n');
+    const week = wednesday ? { nba: nba.week, nfl: nfl.week } : null;
+    writeFileSync(join(out, 'facts.json'), JSON.stringify({ date: today, leaders: { nba: nba.leaders, nfl: nfl.leaders }, week }, null, 2) + '\n');
     writeFileSync(join(out, 'latest.json'), JSON.stringify(edition, null, 2) + '\n');
     writeFileSync(join(out, 'editions', `${today}.json`), JSON.stringify(edition) + '\n');
     pruneArchive(join(out, 'editions'), today);
+    writeArchiveIndex(out);
   }
   writeFileSync(join(out, 'status.json'), JSON.stringify(status, null, 2) + '\n');
 
@@ -308,7 +340,28 @@ async function main() {
     const t = edition.myTeams[l];
     if (t) console.log(`  ${t.name}: ${t.record.summary} (${t.record.standing}); last ${t.lastResult ? `${t.lastResult.result} ${t.lastResult.teamScore}-${t.lastResult.oppScore}` : 'none'}; next ${t.nextGame?.start || 'none'}; ${t.injuries.length} injuries; ${t.form.length} form; ${t.news.length} news; ${t.sinceLast.length} since-last`);
   }
+  if (wednesday) for (const l of ['nfl', 'nba']) {
+    const w = (l === 'nfl' ? nfl : nba).week;
+    console.log(`${l.toUpperCase()} week (${w.label}): ${w.results.length} results, ${w.headlines.length} headlines, ${w.moves.length} moves, ${w.games.length} games ahead; watch picks: ${edition.watchGuide[l].picks.map(p => `${p.away.abbr}@${p.home.abbr}`).join(', ') || 'none'}`);
+  }
   if (!ok) process.exitCode = 1;
+}
+
+// The Watch tab. Wednesday: ranked picks for the coming week (Claude re-ranks them and writes the reasons).
+// Other days: last Wednesday's guide while it still covers today, otherwise just your teams' games this week.
+function watchGuide({ wednesday, today, weekEnd, previous, nba, nfl }) {
+  if (wednesday) {
+    const guide = data => (data.week.games.length ? rankedGuide(data.week.games) : { picks: [], yourTeam: data.myTeam?.weekAhead || [] });
+    return { weekOf: today, weekEnd, ranked: true, nba: guide(nba), nfl: guide(nfl) };
+  }
+  if (previous?.ranked && previous.weekEnd >= today) return previous;
+  return {
+    weekOf: today,
+    weekEnd,
+    note: 'Ranked picks arrive with the Wednesday edition. Until then, here are your teams’ games this week.',
+    nba: { picks: [], yourTeam: nba.myTeam?.weekAhead || [] },
+    nfl: { picks: [], yourTeam: nfl.myTeam?.weekAhead || [] },
+  };
 }
 
 main().catch(error => {

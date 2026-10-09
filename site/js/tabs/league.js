@@ -3,17 +3,18 @@
 //   Today's brief:      Wednesday Wrap (Wednesdays only), one thing, players you follow, headlines,
 //                       results, context card (if it's about this league)
 //   Around the league:  pulse (hot and cold), standings, playoff picture (NFL), award races,
-//                       major injuries, transactions, season timeline
+//                       major injuries, transactions, season timeline, past Wednesday Wraps
 
 import { el } from '../ui.js';
 import { formatCalendarDate, formatTime } from '../time.js';
 import * as brief from '../sections/brief.js';
 import * as info from '../sections/league-info.js';
+import { pastWraps } from '../sections/archive.js';
 
 export const renderNfl = ctx => renderLeague('nfl', ctx);
 export const renderNba = ctx => renderLeague('nba', ctx);
 
-function renderLeague(league, { settings, edition, now }) {
+function renderLeague(league, { settings, edition, now, archive }) {
   const e = edition.edition || {};
   const data = edition[league] || {};
   const sections = settings.sections || {};
@@ -43,5 +44,6 @@ function renderLeague(league, { settings, edition, now }) {
     info.majorInjuries(data.majorInjuries),
     info.transactions(data.transactions),
     sections.seasonTimeline === false ? null : info.seasonTimeline(settings.seasonDates?.[league], now),
+    pastWraps(league, archive, e.date),
   );
 }

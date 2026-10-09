@@ -4,7 +4,8 @@
 # When it runs:
 #   - Every morning: scheduled at 21:00 and 22:00 UTC. Whichever lands at 8am or later in Melbourne
 #     (AEDT or AEST) builds the day's edition; the other skips (see scripts/should-run.js).
-#   - "Run workflow" on the Actions tab: always builds a fresh edition.
+#   - "Run workflow" on the Actions tab: always builds a fresh edition. Tick "Pretend it's Wednesday" to
+#     build the Wednesday edition (the Wrap and the ranked watch guide) on any day, for testing.
 #   - A change merged into main: publishes the app with the latest edition already on the data branch.
 #
 # The app shows the sample edition only if the data branch has no real edition yet.
@@ -18,6 +19,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      wednesday:
+        description: "Pretend it's Wednesday (builds the Wrap and the watch guide)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # to save editions to the data branch
@@ -62,6 +68,8 @@ jobs:
         id: edition
         if: steps.gate.outputs.run == 'true'
         continue-on-error: true
+        env:
+          PRETEND_WEDNESDAY: ${{ github.event_name == 'workflow_dispatch' && inputs.wednesday }}
         run: node pipeline/build-edition.js --out data-branch
 
       # One Claude call writes the brief. The key comes from the repo's ANTHROPIC_API_KEY secret and is never printed.
