@@ -42,7 +42,12 @@ function leagueInput(league, section, facts, limits) {
     category: c.category,
     leaders: c.leaders.slice(0, limits.leadersPer).map(l => `${l.name} (${l.team}) ${l.value}`).join('; '),
   }));
+  const followed = (section.followedPlayers || []).map((p, i) => ({
+    id: id('p', i), player: `${p.name}${p.team ? ` (${p.team})` : ''}`, facts: p.facts.map(f => f.text),
+  }));
   return {
+    ...(section.offSeason ? { offSeason: true } : {}),
+    ...(followed.length ? { followedPlayers: followed } : {}),
     headlines, results, standings, ...(playoffPicture ? { playoffPicture } : {}), hotAndCold: pulse, majorInjuries: injuries, transactions: moves, statLeaders,
     ...(week ? { week: weekInput(league, week, limits), watchCandidates: watchInput(league, week, limits) } : {}),
   };
@@ -141,6 +146,7 @@ export function idIndex(input, edition, facts, limits = DEFAULT_LIMITS) {
     data.majorInjuries.forEach(r => index.set(r.id, { kind: 'injury', league }));
     data.transactions.forEach(r => index.set(r.id, { kind: 'move', league }));
     data.statLeaders.forEach(r => index.set(r.id, { kind: 'leaders', league }));
+    (data.followedPlayers || []).forEach((p, i) => index.set(p.id, { kind: 'followed', league, item: edition[league].followedPlayers[i] }));
     input.myTeams[league]?.facts.forEach(f => index.set(f.id, { kind: 'teamfact', league, sources: f._sources || [] }));
   }
   return index;

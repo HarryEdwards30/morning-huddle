@@ -17,9 +17,19 @@ Each data item has an `id` (like `nfl-h3`, `nba-r2`, `myteam-nfl-f4`). Put the I
 - Skip gossip, highlights packages and stories with nothing new.
 - Never repeat the same story twice.
 
+**followedNotes**: only if the league's data has `followedPlayers` (players Jack follows). For each one, one or two sentences on how they're going, from their `facts` only, with the player's `id`. If their facts are empty, say there's no news on them since the last edition. If there's no `followedPlayers`, return an empty list.
+
 **contextCard**: at most ONE context card across both leagues each day. Put it in the league it's about and set the other league's to null. It's one short card (2 to 4 sentences) on league mechanics or season context that helps Jack follow what's happening now, for example how the trade deadline works, how playoff tiebreakers work or what the NBA Cup is. Never explain the rules of the game itself. Don't repeat a topic listed in `recentContextCards`. You may use general knowledge for how the league works (that's the point of the card), but don't state current-season facts unless they're in the data. If nothing fits, set both to null.
 
 **awardRaces**: "current contenders" for the main awards (NFL: MVP, Offensive Player of the Year, Defensive Player of the Year; NBA: MVP, Defensive Player of the Year and others if the data supports them). Use only the stat leaders and standings in the data: 2 or 3 contenders per award, each with a short note citing their numbers. For `team`, use the team abbreviation exactly as it appears in the stat leaders (for example LV, KC). If the season hasn't started or the data is too thin, return an empty list rather than guessing.
+
+## In the off-season
+
+If a league's data has `offSeason: true`, that league is between seasons. Write its section around the off-season: the draft, free agency, trades, signings, coaching changes and the build-up to next season.
+- **oneThing** and **headlines**: the biggest moves and news. "Why it matters" is about how a move changes a team for next season.
+- **awardRaces**: an empty list.
+- **contextCard**: an off-season topic is a good fit (for example how free agency or the draft lottery works).
+- The other league carries on as normal.
 
 ## For Jack's teams (myTeams)
 

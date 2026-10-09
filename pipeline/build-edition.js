@@ -23,6 +23,7 @@ import { fetchFeeds } from './sources/rss.js';
 import { teamIndex } from './shape/teams.js';
 import { resultsFrom, lastAndNext, weekAhead, standoutLines } from './shape/games.js';
 import { weekLabel, upcomingGames, rankedGuide } from './shape/week.js';
+import { followedPlayers } from './shape/followed.js';
 import { nbaStandings, nflStandings, nflPlayoffPicture, playoffRace, hotAndCold } from './shape/standings.js';
 import { teamInjuries, majorInjuries } from './shape/injuries.js';
 import { Sources, espnArticles, headlines, transactions } from './shape/news.js';
@@ -52,7 +53,7 @@ const ordinal = n => {
 
 // Everything for one league: its brief section, its "around the league" section, and Jack's team hub.
 async function buildLeague(league, settingsTeam, ctx) {
-  const { log, sources, since, shownBefore, now, wednesday } = ctx;
+  const { log, sources, since, shownBefore, now, wednesday, settings } = ctx;
   console.log(`\n${league.toUpperCase()}`);
 
   const teams = await espn.teams(log, league);
@@ -63,6 +64,12 @@ async function buildLeague(league, settingsTeam, ctx) {
   const boards = [];
   for (const date of recentUsDates(wednesday ? 8 : 3, now)) boards.push(await espn.scoreboard(log, league, date));
   const results = resultsFrom(boards, idx, { excludeIds: new Set(shownBefore[league] || []), since });
+
+  // Off-season: ESPN says so (season type 4), or it's switched on in settings ("offSeason": true).
+  // The league's sections then focus on the draft, free agency, trades and coaching changes.
+  const offSeasonSetting = settings.offSeason?.[league] ?? 'auto';
+  const offSeason = offSeasonSetting === true || (offSeasonSetting !== false && espnSeasonType(boards[0]) === 4);
+  if (offSeason) console.log(`  ${league.toUpperCase()} is in its off-season.`);
 
   // Standings (NBA by conference; NFL by division, plus conference standings for the playoff seeds).
   const standingsJson = await espn.standings(log, league);
@@ -82,27 +89,29 @@ async function buildLeague(league, settingsTeam, ctx) {
   const newsText = allNews.map(n => `${n.title} ${n.description}`).join(' ');
 
   // Hot and cold: teams on a streak, and the best individual lines from the latest games.
-  const streaks = hotAndCold(league, standings.groups);
-  const hotPlayers = standoutLines(league, results);
+  const streaks = offSeason ? { hot: [], cold: [] } : hotAndCold(league, standings.groups);
+  const hotPlayers = offSeason ? [] : standoutLines(league, results);
 
   const leagueSection = {
+    offSeason,
     oneThing: null,
     wrap: null,
     headlines: leagueHeadlines,
     results: results.map(({ leaders, ...game }) => game),
     contextCard: null,
-    followedPlayers: [],
+    followedPlayers: followedPlayers(settings.followedPlayers, league, { results, leaders, injuriesJson, news: allNews, sources, idx }),
     pulse: { hot: { teams: streaks.hot, players: hotPlayers }, cold: { teams: streaks.cold, players: [] } },
     standings,
     ...(league === 'nfl' ? { playoffPicture } : {}),
     awardRaces: [],
     majorInjuries: majorInjuries(injuriesJson, idx, newsText),
-    transactions: transactions(transactionsJson, idx, { since: now.getTime() - 3 * DAY, limit: 10 })
+    // The off-season is mostly moves, so show a week of them rather than three days.
+    transactions: transactions(transactionsJson, idx, offSeason ? { since: now.getTime() - 7 * DAY, limit: 20 } : { since: now.getTime() - 3 * DAY, limit: 10 })
       .map(({ plainText, ...t }) => t),
   };
 
   const myTeam = idx.myId ? await buildTeamHub(league, settingsTeam, idx, {
-    ...ctx, results, confJson, injuriesJson, transactionsJson, teamNewsSince: since,
+    ...ctx, results, confJson, injuriesJson, transactionsJson, teamNewsSince: since, offSeason,
   }) : null;
 
   const week = wednesday ? await buildWeek(league, idx, {
@@ -146,6 +155,12 @@ async function buildWeek(league, idx, ctx) {
   };
 }
 
+// ESPN's season type from a scoreboard: 1 preseason, 2 regular season, 3 playoffs, 4 off-season.
+function espnSeasonType(board) {
+  const type = board?.leagues?.[0]?.season?.type;
+  return Number(typeof type === 'object' ? type?.type ?? type?.id : type) || null;
+}
+
 // The top five in each stat category this season, for Claude's award races.
 // Before a season starts ESPN returns last season's leaders, so those are ignored.
 function statLeaders(json, idx) {
@@ -166,7 +181,7 @@ function statLeaders(json, idx) {
 }
 
 async function buildTeamHub(league, settingsTeam, idx, ctx) {
-  const { log, sources, now, results, confJson, injuriesJson, transactionsJson, teamNewsSince } = ctx;
+  const { log, sources, now, results, confJson, injuriesJson, transactionsJson, teamNewsSince, offSeason } = ctx;
   const id = idx.myId;
 
   const teamJson = await espn.team(log, league, id);
@@ -195,11 +210,11 @@ async function buildTeamHub(league, settingsTeam, idx, ctx) {
   // Player form for the team's statistical leaders (regular season, or preseason before it starts).
   const season = Number(schedule?.season?.year || now.getUTCFullYear());
   const seasonType = Number(schedule?.season?.type || 2);
-  let ids = leaderIds(await espn.teamLeaders(log, league, season, seasonType, id), league);
-  if (!ids.length) ids = leaderIds(await espn.teamLeaders(log, league, season, seasonType === 2 ? 1 : 2, id), league);
+  let ids = offSeason ? [] : leaderIds(await espn.teamLeaders(log, league, season, seasonType, id), league);
+  if (!ids.length && !offSeason) ids = leaderIds(await espn.teamLeaders(log, league, season, seasonType === 2 ? 1 : 2, id), league);
   const roster = rosterIndex(await espn.roster(log, league, id));
   const form = [];
-  for (const athleteId of ids.slice(0, 4)) {
+  for (const athleteId of offSeason ? [] : ids.slice(0, 4)) {
     const row = playerForm(league, athleteId, roster.get(athleteId), await espn.gamelog(log, league, athleteId));
     if (row) form.push(row);
   }
@@ -232,6 +247,7 @@ async function buildTeamHub(league, settingsTeam, idx, ctx) {
 
   return {
     league: league.toUpperCase(),
+    offSeason,
     name: settingsTeam.name,
     abbr: settingsTeam.abbr,
     sinceLast: sinceLast.slice(0, 6),
@@ -244,7 +260,7 @@ async function buildTeamHub(league, settingsTeam, idx, ctx) {
     injuries: injuries.map(({ onInjuredReserve, date, ...rest }) => rest),
     form: form.map(({ athleteId, games: played, ...rest }) => rest),
     news: news.slice(0, 8),
-    playoffRace: race && { ...race, seedsById: undefined, keyGames },
+    playoffRace: offSeason ? null : race && { ...race, seedsById: undefined, keyGames },
     weekAhead: weekAhead(games.upcoming, idx, now.getTime()),
   };
 }
@@ -286,7 +302,7 @@ async function main() {
   const log = new SourceLog();
   const sources = new Sources();
   const pastEditions = wednesday ? recentEditions(out, today, 7).filter(e => !e.sample) : [];
-  const ctx = { log, sources, since, shownBefore, now, today, weekEnd, wednesday, pastEditions };
+  const ctx = { log, sources, since, shownBefore, now, today, weekEnd, wednesday, pastEditions, settings };
 
   const nba = await buildLeague('nba', settings.teams.nba, ctx);
   const nfl = await buildLeague('nfl', settings.teams.nfl, ctx);
@@ -309,8 +325,8 @@ async function main() {
   };
 
   const summary = log.summary;
-  // The run counts as a failure only if the core data is missing (no scores or standings for either league).
-  const coreMissing = ['nba', 'nfl'].filter(l => !edition[l].standings.groups.length);
+  // The run counts as a failure only if the core data is missing (no standings for a league in season).
+  const coreMissing = ['nba', 'nfl'].filter(l => !edition[l].offSeason && !edition[l].standings.groups.length);
   const ok = coreMissing.length === 0;
 
   const status = {

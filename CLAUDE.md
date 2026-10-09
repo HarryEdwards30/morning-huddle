@@ -8,7 +8,7 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - Phase 3 (the Claude-written brief) is done: `pipeline/write-brief.js`.
 - Phase 4 (the 8am schedule and the error banner) is done.
 - Phase 5 (the Wednesday Wrap, the ranked watch guide and the edition archive) is done.
-- Phase 6 (polish: offline, off-season mode, install instructions) is still to do. See SPEC.md Section 14.
+- Phase 6 (offline use, the icon, install steps, off-season mode, followed players, final docs) is done. All of SPEC.md Section 14 is built; changes from here are Jack's requests.
 
 ## Layout of the app
 - Tabs: **NFL · NBA · My Teams · Watch**. The app opens on the last tab used (saved in `localStorage` as `huddle:lastTab`), or My Teams the first time.
@@ -21,10 +21,16 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - Past editions: the info button lists the last 14 (from `data/editions/index.json`); opening one swaps `ctx.edition` and shows a "Past edition" banner with "Back to today".
 - Shared helpers in `site/js/ui.js`: `el()` builds elements as text only (never innerHTML); `card({ type, title })` makes a section card with a coloured header strip. The card types are plain, injury, hot, cold, results, news, moves, watch and lead.
 - Times are formatted in `site/js/time.js` and are always shown in Melbourne time with AEDT/AEST.
+- Offline: `site/sw.js` (network first, falling back to the copy on the phone after 6 seconds or when offline; fonts cache first). `scripts/build-site.js` fills in its version and file list on every build, so a deploy replaces the old copy. `app.js` registers it, shows an "Offline" banner, and reloads when the app comes back to the front and a newer edition is out.
+- Install steps for iPhone and Android are in the info dialog (hidden when opened from the home screen) and the README.
+- Icons: `site/icons/icon.svg` (rounded) plus PNGs rendered from it (square for 192, 512 and apple-touch-icon; `icon-maskable-512.png` is scaled into the safe zone).
+- Off-season (`edition.<league>.offSeason`): the league tab shows an off-season card (next key date from `seasonDates`), "Trades, signings and coaching", major injuries, the timeline and last season's final standings, instead of pulse, playoff picture and award races. The team hub drops player form and the playoff race; Watch says there are no games.
+- Players you follow: `settings.followedPlayers` (`[{ "name", "league" }]`). `pipeline/shape/followed.js` gathers their lines in the latest games, stat-leader ranks, injury status and news naming them; Claude writes `followedNotes` (checked like everything else), and the card falls back to the facts.
 
 ## Data pipeline (`pipeline/`)
 - `build-edition.js --out <folder>` fetches everything, shapes it and writes `latest.json`, `editions/YYYY-MM-DD.json` (kept 60 days) and `status.json` into the folder (normally the checked-out `data` branch).
 - `sources/espn.js` and `sources/rss.js` are the only files that know URLs. Each call goes through `lib/http.js`, which never throws: a failed source is logged in `status.json` and the run carries on. The run only fails (keeping the last edition) if standings are missing for a league.
+- Off-season: `settings.offSeason.<league>` is `"auto"` (ESPN's scoreboard season type 4), `true` or `false`. Off-season leagues skip hot and cold, player form and the playoff race, show a week of transactions (up to 20), and don't fail the run if standings are missing. Claude gets `offSeason: true` in that league's input (see `prompts/daily-brief.md`).
 - `shape/*.js` turn raw responses into the edition: teams (Jack's team uses the settings abbreviation, e.g. SAS not ESPN's SA), games, standings and playoff picture, injuries, news and transactions, player form.
 - ESPN quirks: its firewall rejects some user agents (keep `MorningHuddle/1.0 (personal news app)`); its RSS feeds return nothing to scripts, so ESPN news comes from the JSON news endpoint; NBA standings need `seasontype=2` or preseason games are counted.
 - `npm run check-sources` prints what every endpoint returns. The development workspace can't reach these sites, so test on GitHub (Actions).

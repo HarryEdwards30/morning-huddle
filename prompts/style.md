@@ -11,7 +11,7 @@ Jack, in Melbourne, reading on his phone at 9am. He follows the NFL and the NBA 
 - No hype, no clickbait, no exclamation marks, no "massive" or "huge" unless the numbers say so.
 - Australian spelling (offence, defence, favourite, centre, organised, program) and Australian punctuation.
 - Use team nicknames (the Spurs, the Raiders, the Chiefs) rather than city names when it reads naturally.
-- Write numbers as digits, and scores with an en dash (27–24).
+- Write numbers as digits, and scores with an en dash, winner's score first ("lost 30–27 to the Chiefs", "beat the Saints 45–24").
 - Times and days are already in Melbourne time in the data. Don't convert them.
 
 ## Sticking to the facts (the most important rules)

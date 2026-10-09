@@ -44,8 +44,10 @@ export function followedPlayers(players) {
   if (!players?.length) return null;
   return card({ type: 'plain', title: 'Players you follow', iconName: 'mine' },
     players.map(p => el('div', { class: 'entry' },
-      el('div', { class: 'entry-head' }, teamChip(p.team), p.name),
-      el('p', { class: 'small' }, p.note),
+      el('div', { class: 'entry-head' }, p.team ? teamChip(p.team) : null, p.name),
+      p.note ? el('p', { class: 'small' }, p.note)
+        : p.facts?.length ? el('ul', { class: 'bullets small' }, p.facts.map(f => el('li', {}, f.text)))
+          : el('p', { class: 'small muted' }, 'No news since the last edition.'),
       sourceLinks(p.sources))));
 }
 

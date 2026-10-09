@@ -4,6 +4,22 @@ Jack's daily NFL and NBA brief, built around the Spurs and the Raiders. It's a p
 
 **Open it:** https://harryedwards30.github.io/morning-huddle/
 
+## Put it on your phone
+
+**iPhone (Safari):**
+1. Open https://harryedwards30.github.io/morning-huddle/ in **Safari** (other browsers on iPhone can't add apps).
+2. Tap the **Share** button (the square with an arrow pointing up) at the bottom of the screen.
+3. Scroll down and tap **Add to Home Screen**, then **Add**.
+
+**Android (Chrome):**
+1. Open the link in **Chrome**.
+2. Tap the **⋮** menu at the top right.
+3. Tap **Add to Home screen** (or **Install app**), then **Install**.
+
+It then opens full screen like any other app, with the MH icon. The same steps are in the app: tap the **i** button at the top right.
+
+**Offline:** the app keeps a copy of itself and the latest edition on your phone, so it opens straight away and still works with no signal (a blue **Offline** banner shows). **New editions:** when you come back to the app and a newer edition is out, it reloads by itself.
+
 ## The tabs
 
 | Tab | What's on it |
@@ -18,6 +34,8 @@ The app opens on the tab you used last (My Teams the first time).
 **Wednesdays** bring the Wednesday Wrap: a look back at each league's week (main storylines, biggest results, who stood out) at the top of the NFL and NBA tabs. Older Wraps are listed at the bottom of each league tab under **Past Wednesday Wraps**; tap one to open it.
 
 **Past editions:** tap the **i** button at the top right, then a date under **Past editions**. A banner shows you're reading an old edition, with a **Back to today** button. Editions are kept for 60 days.
+
+**Off-season:** when a league's season is over (the NFL from about February to August, the NBA from about June to October), its tab switches to off-season mode: the draft, free agency, trades, signings and coaching changes, the next key date, and last season's final standings. Hot and cold, the playoff picture, award races and player form are left out until the new season. The other league carries on as normal. The app works this out from ESPN each morning; see "Off-season" under "Changing things" to switch it yourself.
 
 ## When it updates
 
@@ -41,6 +59,8 @@ Each edition is saved to the separate **data** branch, so your `main` history on
 | **Today's brief didn't update.** Reason: Couldn't get … from ESPN | A data source was down. The app shows the last good edition. Usually fixes itself the next morning, or do a manual run later. |
 | **Today's brief didn't update.** Reason: The 8am update didn't run | It's after 10am and there's no edition for today. Check the Actions tab: GitHub may be running very late, or the schedule may have been switched off (see below). A manual run fixes it for today. |
 | **Today's written brief didn't update.** | The scores and news are current, but Claude couldn't write the brief. The reason is shown; see "If the brief doesn't appear" below. |
+| **Offline** (blue) | Your phone has no connection. You're seeing the last edition saved on the phone. |
+| **Past edition** (blue) | You opened an old edition from the **i** button. Tap **Back to today**. |
 
 **If the schedule ever stops:** GitHub switches off scheduled runs in a repo that has had no activity for 60 days, and emails you when it does. To switch it back on: **Actions → Morning Huddle → Enable workflow**.
 
@@ -50,7 +70,7 @@ Each edition makes **one** call to Claude (Haiku 5.5), which writes "If you only
 
 - **Edit the writing instructions** in [prompts/](prompts/): `style.md` is the voice (tone, spelling, the "facts only" rules), `daily-brief.md` says what to write each day, and `wednesday-wrap.md` and `watch-guide.md` cover the Wednesday Wrap and the watch guide. They're plain English, so edit them like a document, then do a manual run to see the effect.
 - **See what Claude was given**: open `brief-input.json` on the **data** branch.
-- **Check API usage**: open `usage.json` on the **data** branch (or https://harryedwards30.github.io/morning-huddle/data/usage.json). It lists the tokens and estimated cost of every run and the total for the month. A run costs about US$0.004, a little more on Wednesdays. You can also see usage in the Claude Console.
+- **Check API usage**: open `usage.json` on the **data** branch (or https://harryedwards30.github.io/morning-huddle/data/usage.json). It lists the tokens and estimated cost of every run and the total for the month. A daily run costs about US$0.004 and a Wednesday run about US$0.009, so a month comes to roughly US$0.15 (about A$0.25). You can also see usage in the Claude Console.
 
 ## If the brief doesn't appear
 
@@ -66,8 +86,30 @@ The app still shows the day's data, and the run on the Actions tab turns red. Cl
 
 ## Changing things
 
-- **Settings** (teams, sections on or off, season dates): [config/settings.json](config/settings.json)
-- **Card colours:** the top of [site/css/app.css](site/css/app.css). Each card type has two lines: `-bg` is the background tint and `-accent` is the header strip colour. For example, to change the injury cards, edit `--card-injury-bg` and `--card-injury-accent`. Keep the backgrounds dark so the text stays easy to read.
-- **Spec:** [SPEC.md](SPEC.md)
+### How to edit a file on GitHub
+1. Open the repo on GitHub and click the file (for example `config` → `settings.json`).
+2. Click the **pencil** icon (Edit this file) at the top right of the file.
+3. Make your change. Keep the quote marks, commas and brackets exactly as they are around it.
+4. Click **Commit changes…**, then **Commit changes** again.
 
-The full guide (editing the writing instructions, running a manual update, fixing problems and installing on your phone) arrives in Phase 6.
+The app republishes by itself in about a minute. Changes to what goes **into** the edition (teams, followed players, off-season, prompts) show from the next morning's edition, or do a manual run (see "When it updates") to see them straight away. If a run turns red straight after an edit, the edit probably broke the file's layout (a missing comma or quote): open the file's **History**, compare, and fix it, or ask Claude Code.
+
+### Settings ([config/settings.json](config/settings.json))
+
+| To… | Change |
+|---|---|
+| **Follow a player** | `"followedPlayers"`. Add each player's full name as ESPN writes it, and their league: `"followedPlayers": [{ "name": "Victor Wembanyama", "league": "nba" }, { "name": "Maxx Crosby", "league": "nfl" }]`. A **Players you follow** card then appears in that league's tab with their latest game, stat rankings, injury status and news. Set it back to `[]` to turn it off. |
+| **Change a team** | Under `"teams"`: `"name"` must match ESPN's full team name exactly (for example `"Golden State Warriors"`); `"shortName"` is the button label; `"abbr"` is the chip (for example `"GSW"`); `"accent"` is the hub colour. |
+| **Turn a section off or on** | Under `"sections"`: `"contextCard"`, `"awardRaces"` and `"seasonTimeline"` can each be `true` or `false`. |
+| **Fix or add a season date** | Under `"seasonDates"`, each league has a list of `{ "label": "...", "date": "YYYY-MM-DD" }` (add `"endDate"` for a range). Use US dates. These drive the season timeline and the off-season's "Next up". Add next season's dates (the draft, free agency, opening night) once they're announced. |
+| **Off-season** | `"offSeason": { "nba": "auto", "nfl": "auto" }`. `"auto"` follows ESPN. Use `true` to force a league into off-season mode, or `false` to keep it in season mode. |
+| **Wednesday edition day** | `"schedule"` → `"wrapDay"` (for example `"Thursday"`). |
+| **The Claude model** | `"ai"` → `"model"`. Leave it as `"claude-haiku-5-5"` unless you want to try another model (others cost more). |
+
+Leave `"runLocalHour"` at 8: GitHub only starts the run between 7am and 9am Melbourne time.
+
+### Other things
+- **Writing instructions:** [prompts/](prompts/), described under "The written brief" above.
+- **Card colours:** the top of [site/css/app.css](site/css/app.css). Each card type has two lines: `-bg` is the background tint and `-accent` is the header strip colour. For example, to change the injury cards, edit `--card-injury-bg` and `--card-injury-accent`. Keep the backgrounds dark so the text stays easy to read.
+- **Undoing a change:** every change is kept in the repo's history. Open the file, click **History**, and you can see (and copy back) any earlier version.
+- **Bigger changes** (a new section, a new data source): ask Claude Code. It reads [CLAUDE.md](CLAUDE.md) and [SPEC.md](SPEC.md) first.

@@ -95,7 +95,7 @@ The League tab's content now lives in the "Around the league" part of the NFL an
 - Each is a short summary of that league's past week: the main storylines, key or breaking news, the biggest results and who stood out.
 
 ### 4.6 Follow players (optional, off by default)
-- Jack can add players he wants to follow in the settings file (`followedPlayers`).
+- Jack can add players he wants to follow in the settings file (`followedPlayers`), as `{ "name": "Victor Wembanyama", "league": "nba" }`.
 - When the list has players, their recent form and news are added to the brief in their league's tab.
 - Empty by default.
 
@@ -296,6 +296,7 @@ Keep daily editions in `data/editions/` and delete ones older than 60 days so th
     "seasonTimeline": true
   },
   "schedule": { "dailyBriefLocalTime": "09:00", "runLocalHour": 8, "wrapDay": "Wednesday" },
+  "offSeason": { "nba": "auto", "nfl": "auto" },
   "ai": { "model": "claude-haiku-5-5", "maxInputTokens": 90000 },
   "seasonDates": { "nba": [], "nfl": [] }
 }
@@ -359,6 +360,7 @@ Stop after each phase and check in with Jack.
 - Done when: a manual "pretend it's Wednesday" run produces both.
 
 **Phase 6: Polish and handover**
+- (Built.) Service worker (`site/sw.js`, network first with the phone's copy as fallback), a redrawn icon with a maskable version, install steps in the info dialog and the README, off-season mode (from ESPN's season type, or forced in `settings.offSeason`), players you follow (4.6, from the day's data), and the final README and CLAUDE.md.
 - Offline caching, the icon, home-screen install instructions, off-season mode, and the `CLAUDE.md` and `README.md`.
 - Test on a phone-sized screen.
 - Done when: Jack has it on his home screen and knows how to change things.
