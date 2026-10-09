@@ -46,19 +46,33 @@ The goal is to grow Jack's interest in both leagues by giving him a quick, well-
 
 ## 4. Features (version 1)
 
-### 4.1 Today tab: the daily brief
-Built each morning from the overnight data.
+The app has four tabs: **NFL · NBA · My Teams · Watch** (changed in October 2026 from Today · My Teams · League · Watch). It opens on the tab Jack used last, or **My Teams** the first time.
 
-1. **"If you only read one thing"**: one sentence with the single most important story.
-2. **Your teams first**: Spurs and Raiders news since the last edition (result, injuries, roster moves, notable performances). If nothing happened, say so in one line.
-3. **League headlines**: the key NBA and NFL stories, each with a 1 to 2 sentence summary plus a **"Why it matters"** line about its effect on the season (standings, playoff race, awards, a team's direction).
-4. **Results**: compact scoreboard of completed games since the last edition, with Spurs and Raiders games highlighted.
-5. **Context card** (can be turned off in settings): one short card a day on league mechanics or season context, for example how the trade deadline works or how playoff tiebreakers work. **Not** game rules.
-6. Edition date and "updated at" time, in Melbourne time.
+### 4.1 NFL and NBA tabs
+The two league tabs share one layout. Each shows only its own league, in two parts with a clear label strip between them.
+
+**Today's brief** (built each morning from the overnight data):
+1. **Wednesday Wrap** for this league (Wednesdays only, see 4.5).
+2. **"If you only read one thing"**: one sentence with this league's single most important story.
+3. **Players you follow** in this league (only if `followedPlayers` has any, see 4.6).
+4. **Headlines**: the key stories, each with a 1 to 2 sentence summary plus a **"Why it matters"** line about its effect on the season (standings, playoff race, awards, a team's direction). "Why it matters" is shown as a highlighted callout inside each story.
+5. **Results**: compact scoreboard of completed games since the last edition, with Spurs and Raiders games highlighted.
+6. **Context card** (can be turned off in settings): one short card a day on league mechanics or season context, for example how the trade deadline works or how playoff tiebreakers work. **Not** game rules. It appears in the tab of the league it's about.
+7. Edition date and "updated at" time, in Melbourne time.
+
+**Around the league:**
+- **League pulse**: a split layout with a **Hot** column (teams and players in form, warm colour, up arrow) and a **Cold** column (out of form, cool colour, down arrow).
+- **Standings** (NBA by conference; NFL by division, with an AFC/NFC switch). For the NBA, this card is titled **Standings and playoff race** and marks the top-6 and play-in (7 to 10) lines.
+- **Playoff picture** (NFL only): the 7 seeds in each conference and the first teams out, with games back.
+- **Award races**: short lists for the main awards (NBA: MVP, Rookie of the Year, DPOY and so on; NFL: MVP, Offensive and Defensive Player of the Year, rookies). Based only on data and news in the feeds; label them as "current contenders".
+- **Major injuries** around the league (stars and starters only).
+- **Transactions**: notable trades, signings and coaching changes.
+- **Season timeline**: countdowns to key dates for the league (for example the NBA Cup, trade deadlines, All-Star, playoffs, the drafts, the Super Bowl). Dates live in the settings file so they're easy to fix (see Section 16).
 
 ### 4.2 My Teams tab (Spurs, Raiders)
 One hub per team, switchable at the top.
 
+- **Since the last edition**: the team's news since the previous edition (result, injuries, roster moves, notable performances). If nothing happened, say so in one line.
 - **Last result** and **next game** (date and time in Melbourne time, opponent, home or away).
 - **Record and standing** (conference or division position).
 - **Injury report**: each player with a status chip (Out / Doubtful / Questionable / Probable / Day-to-day), **what the injury is**, and the **expected return timeline**. Keep it to what and when, no deep medical detail. Clearly label whether a timeline was reported by the team or media, or is a typical recovery time for that injury.
@@ -66,13 +80,8 @@ One hub per team, switchable at the top.
 - **Roster moves and news**: signings, trades, releases, coach comments, rotation or depth chart changes.
 - **Playoff race**: where the team sits, the teams around them, games back, and their next few key games.
 
-### 4.3 League tab
-- **League pulse**: hot and cold teams (recent form), and players having standout stretches.
-- **Standings** for both leagues (NBA by conference; NFL by division and conference).
-- **Award races**: short lists for the main awards (NBA: MVP, Rookie of the Year, DPOY and so on; NFL: MVP, Offensive and Defensive Player of the Year, rookies). Based only on data and news in the feeds; label them as "current contenders".
-- **Major injuries** around the league (stars and starters only).
-- **Transactions**: notable trades, signings and coaching changes.
-- **Season timeline**: countdowns to key dates for each league (for example the NBA Cup, trade deadlines, All-Star, playoffs, the drafts, the Super Bowl). Dates live in the settings file so they're easy to fix (see Section 16).
+### 4.3 (Removed) League tab
+The League tab's content now lives in the "Around the league" part of the NFL and NBA tabs (4.1).
 
 ### 4.4 Watch tab: the watch guide
 - Refreshed **every Wednesday** at 9am Melbourne time, covering the coming week (Wednesday to Tuesday).
@@ -82,12 +91,12 @@ One hub per team, switchable at the top.
 - No streaming links needed.
 
 ### 4.5 Wednesday Wrap
-- Part of the Wednesday edition, shown at the top of the Today tab on Wednesdays and kept in an archive.
-- A short summary of the past week in each league: the main storylines, key or breaking news, the biggest results and who stood out.
+- Part of the Wednesday edition, **split by league**: the NFL wrap sits at the top of the NFL tab and the NBA wrap at the top of the NBA tab on Wednesdays. Both are kept in an archive.
+- Each is a short summary of that league's past week: the main storylines, key or breaking news, the biggest results and who stood out.
 
 ### 4.6 Follow players (optional, off by default)
 - Jack can add players he wants to follow in the settings file (`followedPlayers`).
-- When the list has players, their recent form and news are added to the daily brief.
+- When the list has players, their recent form and news are added to the brief in their league's tab.
 - Empty by default.
 
 ### 4.7 Off-season mode
@@ -192,7 +201,8 @@ Always keep the **source URL** for each news item so the app can link "Read more
   - If something is unclear or missing, leave it out.
   - Every story references the source item ID(s) it came from.
   - For injuries, Claude may give a plain-English description of what the injury is and a *typical* recovery range from general knowledge, but it must label that as typical and keep it separate from reported timelines.
-- **Structured output:** Claude returns JSON matching a defined schema (one schema each for the daily brief, the wrap and the watch guide). Validate it; if it fails, retry once; if it fails again, keep the last edition and set the error status.
+- **One call per morning, split by league:** the daily brief comes from **one** Claude API call that returns separate `nfl` and `nba` sections (each with its own "one thing", headlines with "Why it matters", context card if relevant, and Spurs or Raiders "since the last edition" notes), not one combined summary. Splitting the output doesn't add a call, so the cost and the token limits stay as above. On Wednesdays the same rule applies to the wrap (an NFL wrap and an NBA wrap).
+- **Structured output:** Claude returns JSON matching a defined schema (one schema each for the daily brief, the wrap and the watch guide, each with `nfl` and `nba` sections). Validate it; if it fails, retry once; if it fails again, keep the last edition and set the error status.
 - **Prompts live in `/prompts/*.md`** as plain English so Jack can edit the tone, length and focus without touching code. `style.md` holds the shared voice rules:
   - Clear, conversational, confident. Written for a fan who knows the game.
   - Short paragraphs. Lead with what happened, then why it matters.
@@ -201,21 +211,32 @@ Always keep the **source URL** for each news item so the app can link "Read more
 
 ## 10. Data shape (suggested)
 
-`data/latest.json`, roughly:
+`data/latest.json`, roughly. Each league has its own section, and the NFL and NBA tabs each read only their own:
 ```json
 {
   "edition": { "date": "2026-10-21", "generatedAt": "2026-10-21T08:04:00+11:00", "type": "daily | wednesday" },
-  "oneThing": "…",
-  "myTeams": { "spurs": { … }, "raiders": { … } },
-  "headlines": [ { "league": "NBA", "title": "…", "summary": "…", "whyItMatters": "…", "sources": ["…"] } ],
-  "results": [ … ],
-  "contextCard": { "title": "…", "body": "…" },
-  "league": { "pulse": …, "standings": …, "awardRaces": …, "majorInjuries": …, "transactions": … },
-  "watchGuide": { "weekOf": "…", "nba": [ … ], "nfl": [ … ] },
-  "wrap": { … },
-  "timeline": [ … ]
+  "nfl": {
+    "oneThing": "…",
+    "wrap": { "weekLabel": "Week 11", "summary": "…", "storylines": [ … ], "standouts": [ … ] },
+    "headlines": [ { "title": "…", "summary": "…", "whyItMatters": "…", "teams": ["PHI", "DAL"], "sources": ["…"] } ],
+    "results": [ … ],
+    "contextCard": { "title": "…", "body": "…" },
+    "followedPlayers": [ … ],
+    "pulse": { "hot": { "teams": [ … ], "players": [ … ] }, "cold": { "teams": [ … ], "players": [ … ] } },
+    "standings": { "groups": [ … ] },
+    "playoffPicture": { "conferences": [ { "name": "AFC", "seeds": [ … ], "outside": [ … ] } ] },
+    "awardRaces": [ … ],
+    "majorInjuries": [ … ],
+    "transactions": [ … ]
+  },
+  "nba": { "…same as nfl, without playoffPicture…" },
+  "myTeams": { "nba": { "sinceLast": [ … ], "…": "…" }, "nfl": { … } },
+  "watchGuide": { "weekOf": "…", "weekEnd": "…", "nba": { "picks": [ … ], "yourTeam": [ … ] }, "nfl": { … } },
+  "sources": { "source-id": { "publisher": "…", "url": "…", "title": "…" } }
 }
 ```
+`contextCard` and `wrap` are `null` in a league that doesn't have one that day. The season timeline is read straight from `config/settings.json`. `sample/latest.json` is a complete worked example.
+
 `data/status.json`: `{ "ok": true, "lastSuccess": "…", "error": null }`
 
 Keep daily editions in `data/editions/` and delete ones older than 60 days so the repo stays small.
@@ -230,7 +251,21 @@ Keep daily editions in `data/editions/` and delete ones older than 60 days so th
   - Highly readable body face at 17 to 18px on mobile (for example Source Sans 3 or IBM Plex Sans).
   - Tabular numbers for scores, records and countdowns.
 - **Layout:** one card per section, generous spacing, short paragraphs. Readable one-handed on a phone.
-- **Navigation:** fixed bottom tab bar: **Today · My Teams · League · Watch**. A small settings or info button in the header.
+- **Section breaks:** every card starts with a coloured header strip (bold uppercase heading and a small icon), and cards have generous space between them. In the league tabs, a label strip separates "Today's brief" from "Around the league".
+- **Colour-coded cards:** each card type has its own dark background tint and accent colour, all defined as CSS variables at the top of `site/css/app.css`:
+  - Injuries: red
+  - Hot (in form): warm amber
+  - Cold (out of form): cool blue
+  - Results, scores, standings and playoff tables: neutral silver-grey
+  - Headlines, news and the Wednesday Wrap: slate blue-grey
+  - Transactions and roster moves: purple
+  - Watch guide games: green
+  - Everything else (awards, timeline, player form, context): plain charcoal
+  - Text must stay easy to read on every tint (at least WCAG AA contrast, 4.5:1).
+- **Your teams:** Spurs and Raiders items (games, rows, stories, moves, injuries) get a silver highlight border so they always stand out, plus a "Your team" label where it fits.
+- **"Why it matters":** a small highlighted callout inside each story, with its own background, accent bar and label.
+- **League pulse:** a split layout, Hot on the left and Cold on the right, each with its own coloured header and an up or down arrow.
+- **Navigation:** fixed bottom tab bar: **NFL · NBA · My Teams · Watch**. The app opens on the last tab used (My Teams the first time). A small info button in the header.
 - **Status chips:** Out = red, Doubtful = orange, Questionable = amber, Probable or Day-to-day = green-ish. Always include the text label too, not only the colour.
 - **Team identity:** team abbreviation in a small chip (SAS, LV). Use the team's silver/black accent in their hub header. No logos.
 - **Scores:** scoreboard style, with the winner in bold and Jack's team highlighted.
@@ -299,7 +334,7 @@ Stop after each phase and check in with Jack.
 - Confirm the plan and stack.
 
 **Phase 1: App shell with sample data**
-- Build the four tabs, the design system and the PWA basics using a realistic, clearly marked **sample** `latest.json`.
+- Build the four tabs, the design system and the PWA basics using a realistic, clearly marked **sample** `latest.json`. (Done. The tabs were then reworked to NFL · NBA · My Teams · Watch, with colour-coded cards.)
 - Done when: Jack can open the site on his phone and see the layout.
 
 **Phase 2: Real data (no AI yet)**
@@ -308,7 +343,7 @@ Stop after each phase and check in with Jack.
 - Done when: the app shows real, current data, with times correct in Melbourne time.
 
 **Phase 3: AI-written brief**
-- Add the Claude Haiku generation, prompts, schema validation, the cost guard and usage logging.
+- Add the Claude Haiku generation, prompts, schema validation, the cost guard and usage logging. The prompts and schema produce separate NFL and NBA sections from one call (see Section 9).
 - Done when: a manual run produces a sensible daily brief, the logged token counts are within budget, and nothing is invented.
 
 **Phase 4: Schedule and deploy**

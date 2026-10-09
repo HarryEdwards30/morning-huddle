@@ -1,19 +1,32 @@
 // Morning Huddle: loads the settings and the latest edition, then shows the tab picked in the bottom bar.
-// Each tab lives in its own file in js/tabs/ and only reads its own part of the edition.
+// Tabs: NFL, NBA, My Teams, Watch. Each lives in js/tabs/ and only reads its own part of the edition.
+// The app opens on the tab you used last (My Teams the first time).
 
 import { el, setMyTeams, setSources } from './ui.js';
 import { formatCalendarDate, formatGameDateTime } from './time.js';
-import { renderToday } from './tabs/today.js';
+import { renderNfl, renderNba } from './tabs/league.js';
 import { renderTeams } from './tabs/teams.js';
-import { renderLeague } from './tabs/league.js';
 import { renderWatch } from './tabs/watch.js';
 
 const TABS = {
-  today: renderToday,
+  nfl: renderNfl,
+  nba: renderNba,
   teams: renderTeams,
-  league: renderLeague,
   watch: renderWatch,
 };
+const DEFAULT_TAB = 'teams';
+const LAST_TAB_KEY = 'huddle:lastTab';
+
+// Remembering the last tab is a convenience only: if the phone blocks storage, the app still works.
+function rememberTab(route) {
+  try { localStorage.setItem(LAST_TAB_KEY, route); } catch { /* storage unavailable */ }
+}
+function lastTab() {
+  try { return localStorage.getItem(LAST_TAB_KEY); } catch { return null; }
+}
+function isKnownRoute(route) {
+  return Boolean(route && TABS[route.split('/')[0]]);
+}
 
 const view = document.getElementById('view');
 const notices = document.getElementById('notices');
@@ -24,13 +37,22 @@ async function loadJson(path) {
   return response.json();
 }
 
+function currentRoute() {
+  return location.hash.replace('#', '');
+}
 function currentTab() {
-  const name = location.hash.replace('#', '').split('/')[0];
-  return TABS[name] ? name : 'today';
+  const name = currentRoute().split('/')[0];
+  return TABS[name] ? name : DEFAULT_TAB;
 }
 
 function showTab(ctx) {
+  // No tab in the address (opening from the home screen) or an old one (Today, League): go to the last tab used.
+  if (!isKnownRoute(currentRoute())) {
+    const saved = lastTab();
+    history.replaceState(null, '', `#${isKnownRoute(saved) ? saved : DEFAULT_TAB}`);
+  }
   const name = currentTab();
+  rememberTab(currentRoute());
   for (const link of document.querySelectorAll('.tab-bar a')) {
     if (link.dataset.tab === name) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');

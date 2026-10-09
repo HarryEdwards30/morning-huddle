@@ -1,8 +1,8 @@
 // My Teams tab: one hub per team (NBA team and NFL team from settings), switchable at the top.
-// Sections: header with record, last result and next game, injury report, player form, roster moves and news,
-// playoff race.
+// Sections: header with record, since the last edition, last result and next game, injury report,
+// player form, roster moves and news, playoff race.
 
-import { el, card, teamChip, statusChip, sourceLinks, emptyNote, returnTimeline } from '../ui.js';
+import { el, card, icon, teamChip, statusChip, sourceLinks, emptyNote, returnTimeline } from '../ui.js';
 import { formatGameDateTime, formatShortDate } from '../time.js';
 
 const LEAGUES = ['nba', 'nfl'];
@@ -33,6 +33,7 @@ export function renderTeams({ settings, edition }) {
   return el('div', { style: `--team-accent: ${info.accent || 'var(--silver)'}` },
     switcher,
     hero(team, info),
+    sinceLast(team.sinceLast),
     lastAndNext(team),
     injuries(team.injuries),
     playerForm(team.form),
@@ -44,10 +45,17 @@ export function renderTeams({ settings, edition }) {
 function hero(team, info) {
   return el('section', { class: 'team-hero' },
     el('div', { class: 'story-meta' }, teamChip(info.abbr || team.abbr), el('span', { class: 'chip chip-league' }, team.league)),
-    el('h1', { style: 'margin-top:10px' }, info.name || team.name),
+    el('h1', {}, info.name || team.name),
     team.record ? el('div', { class: 'record num' }, team.record.summary) : null,
     team.record?.standing ? el('div', { class: 'standing' }, team.record.standing) : null,
   );
+}
+
+// The team's news since the previous edition (it used to sit on the Today tab).
+function sinceLast(items) {
+  return card({ type: 'news', title: 'Since the last edition', mine: true },
+    !items?.length ? emptyNote('Nothing new since the last edition.') :
+      el('ul', { class: 'bullets' }, items.map(item => el('li', {}, item.text, sourceLinks(item.sources)))));
 }
 
 function versus(game) {
@@ -58,7 +66,7 @@ function lastAndNext(team) {
   const last = team.lastResult;
   const next = team.nextGame;
   if (!last && !next) return null;
-  return el('div', { class: 'pair', style: 'margin-bottom:16px' },
+  return el('div', { class: 'pair', style: 'margin-bottom:var(--card-gap)' },
     el('div', {},
       el('div', { class: 'label' }, 'Last result'),
       last ? [
@@ -79,7 +87,7 @@ function lastAndNext(team) {
 }
 
 function injuries(list) {
-  return card('Injury report',
+  return card({ type: 'injury', title: 'Injury report' },
     !list?.length ? emptyNote('No injuries listed.') :
       list.map(i => el('div', { class: 'injury' },
         el('div', { class: 'injury-head' },
@@ -99,20 +107,21 @@ function statPair(last5, season) {
 }
 
 const TREND = {
-  up: { cls: 'trend-up', label: '▲ Trending up' },
-  down: { cls: 'trend-down', label: '▼ Trending down' },
-  steady: { cls: 'trend-steady', label: '■ Steady' },
+  up: { cls: 'trend-up', label: 'Trending up' },
+  down: { cls: 'trend-down', label: 'Trending down' },
+  steady: { cls: 'trend-steady', label: 'Steady' },
 };
 
 function playerForm(list) {
   if (!list?.length) return null;
-  return card('Player form · last 5 vs season',
+  return card({ type: 'plain', title: 'Player form', extra: 'Last 5 vs season', iconName: 'up' },
     list.map(p => {
-      const trend = TREND[p.trend] || TREND.steady;
+      const key = TREND[p.trend] ? p.trend : 'steady';
+      const trend = TREND[key];
       return el('div', { class: 'form-row' },
         el('div', { class: 'form-head' },
           el('span', { class: 'player' }, p.player, p.position ? el('span', { class: 'muted' }, ` · ${p.position}`) : null),
-          el('span', { class: `trend ${trend.cls}` }, trend.label)),
+          el('span', { class: `trend ${trend.cls}` }, icon(key, ''), trend.label)),
         el('div', { class: 'stat-grid' },
           (p.stats || []).map(s => {
             const [last5, season] = statPair(s.last5, s.season);
@@ -127,11 +136,11 @@ function playerForm(list) {
 }
 
 function rosterNews(list) {
-  return card('Roster moves and news',
+  return card({ type: 'moves', title: 'Roster moves and news' },
     !list?.length ? emptyNote('No roster moves or news this week.') :
       list.map(n => el('div', { class: 'entry' },
         el('div', { class: 'entry-head' },
-          n.type ? el('span', { class: 'chip' }, n.type) : null,
+          n.type ? el('span', { class: 'chip chip-type' }, n.type) : null,
           n.date ? el('span', { class: 'muted small' }, formatShortDate(n.date)) : null),
         el('p', { style: 'margin-top:4px' }, n.text),
         sourceLinks(n.sources),
@@ -141,7 +150,7 @@ function rosterNews(list) {
 function playoffRace(race, myAbbr) {
   if (!race) return null;
   const rows = race.rows || [];
-  return card('Playoff race',
+  return card({ type: 'results', title: 'Playoff race' },
     race.summary ? el('p', {}, race.summary) : null,
     rows.length ? el('div', { class: 'table-wrap' },
       el('table', { class: 'standings' },
@@ -156,8 +165,8 @@ function playoffRace(race, myAbbr) {
           el('td', {}, r.record),
           el('td', {}, r.gb))))),
     ) : null,
-    race.keyGames?.length ? el('div', {},
-      el('p', { class: 'league-label', style: 'margin-top:16px' }, 'Key games ahead'),
+    race.keyGames?.length ? el('div', { class: 'group' },
+      el('p', { class: 'label-strip' }, 'Key games ahead'),
       race.keyGames.map(g => el('div', { class: 'entry' },
         el('div', { class: 'entry-head' }, versus(g), el('span', { class: 'muted small num' }, formatGameDateTime(g.start))),
         g.why ? el('p', { class: 'small' }, g.why) : null))) : null,

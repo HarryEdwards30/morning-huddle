@@ -22,13 +22,14 @@ export function renderWatch({ edition }) {
 function leagueGuide(label, data) {
   const picks = data?.picks || [];
   const yours = data?.yourTeam || [];
-  if (!picks.length && !yours.length) return card(`${label} · games to watch`, emptyNote('No games this week.'));
-  return card(`${label} · games to watch`,
+  const title = `${label} games to watch`;
+  if (!picks.length && !yours.length) return card({ type: 'watch', title }, emptyNote('No games this week.'));
+  return card({ type: 'watch', title },
     picks.map(g => gameEntry(g, g.rank)),
-    yours.length ? [
-      el('p', { class: 'league-label', style: 'margin-top:16px' }, 'Also your team'),
+    yours.length ? el('div', { class: 'group' },
+      el('p', { class: 'label-strip' }, 'Also your team'),
       yours.map(g => gameEntry(g, '·')),
-    ] : null,
+    ) : null,
   );
 }
 
