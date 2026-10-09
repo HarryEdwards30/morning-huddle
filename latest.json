@@ -1,7 +1,7 @@
 {
   "edition": {
     "date": "2026-10-09",
-    "generatedAt": "2026-10-09T16:54:00+11:00",
+    "generatedAt": "2026-10-09T17:07:00+11:00",
     "type": "daily",
     "written": true,
     "window": {
@@ -14,55 +14,57 @@
     "writtenBy": "claude-haiku-5-5"
   },
   "nfl": {
-    "oneThing": "Tampa Bay beat Dallas 24–16 on Thursday Night Football, their first win of the season, after pulling away in the third quarter.",
+    "oneThing": "Kansas City, Minnesota and San Francisco are the only unbeaten teams at 4–0 after Week 5, while Tampa Bay's 24–16 win over Dallas on Thursday night was the biggest result of the week.",
     "wrap": null,
     "headlines": [
       {
-        "title": "Buccaneers upset Cowboys on Thursday night",
-        "summary": "Tampa Bay beat Dallas 24–16 on Thursday Night Football. Bucky Irving was the main threat for the Bucs, and Dak Prescott threw two interceptions for Dallas.",
-        "whyItMatters": "The win lifts Tampa Bay to 1–4, while Dallas drops to 2–3 and sits 1 game back of the NFC East lead... Dallas is at 2–3 in a division where the Giants are 3–1.",
+        "title": "Bucs beat Cowboys on Thursday night",
+        "summary": "Tampa Bay beat Dallas 24–16 on Thursday night. Bucky Irving had 165 yards from 21 carries and a touchdown, and Dak Prescott threw two interceptions in a 24-of-42, 316-yard game.",
+        "whyItMatters": "Dallas drops to 2–3 and sits 1st in the NFC East only on record, with the NFC East still wide open at 3–1 for the Giants.",
         "teams": [
           "DAL",
           "TB"
         ],
         "sources": [
-          "espn-12",
-          "yahoosports-18",
-          "yahoosports-19"
+          "espn-14",
+          "yahoosports-19",
+          "yahoosports-15"
         ]
       },
       {
-        "title": "Jones calls the loss 'extraordinarily disappointing'",
-        "summary": "Cowboys owner Jerry Jones described the Thursday night loss to Tampa Bay as \"extraordinarily disappointing.\" George Pickens had 9 catches for 130 yards and a touchdown for Dallas.",
-        "whyItMatters": "Dallas is 2–3 and third in the NFC East standings, so the loss adds pressure on a team that has already dropped three games.",
-        "teams": [
-          "DAL",
-          "TB"
-        ],
-        "sources": [
-          "yahoosports-13"
-        ]
-      },
-      {
-        "title": "Swift says his fumbling is 'over with now'",
-        "summary": "Bears running back D'Andre Swift fumbled twice in Chicago's first four games and said the problem is \"over with now.\" He is listed as questionable with a hip injury.",
-        "whyItMatters": "Chicago is 3–1 and in the NFC playoff picture as the fifth seed, so ball security matters for a team in the mix.",
-        "teams": [
-          "CHI"
-        ],
-        "sources": [
-          "espn-16"
-        ]
-      },
-      {
-        "title": "Prescott heckled after the loss",
-        "summary": "Reporters who saw it said a worker called out \"embarrassing\" as Dak Prescott walked past after the Cowboys' loss.",
-        "whyItMatters": "It is a team-culture story rather than a standings one, and the Cowboys' record is the bigger issue.",
+        "title": "Dak Prescott hears a stadium worker's call-out",
+        "summary": "Prescott took exception to a stadium worker who yelled \"embarrassing\" at him as he walked to the locker room after the loss, and he addressed the comment afterwards.",
+        "whyItMatters": "It is a minor off-field story, but it adds to a difficult week for Dallas after a 2–3 start.",
         "teams": [
           "DAL"
         ],
         "sources": [
-          "yahoosports-15"
+          "espn-12",
+          "espn-13"
+        ]
+      },
+      {
+        "title": "Jerry Jones calls the loss 'extraordinarily disappointing'",
+        "summary": "The Cowboys owner said the Thursday night loss to Tampa Bay was \"extraordinarily disappointing.\"",
+        "whyItMatters": "Dallas is 2–3 and in the NFC East, so the loss matters for the division race.",
+        "teams": [
+          "DAL",
+          "TB"
+        ],
+        "sources": [
+          "yahoosports-15",
+          "espn-14"
+        ]
+      },
+      {
+        "title": "D'Andre Swift says fumbling is 'over with now'",
+        "summary": "Swift fumbled twice in the Bears' first four games. He said on Thursday that the turnover problem is \"over with now.\" He is listed as questionable with a hip injury.",
+        "whyItMatters": "Chicago is 3–1 and 5th in the NFC playoff picture, so ball security from its running back matters.",
+        "teams": [
+          "CHI"
+        ],
+        "sources": [
+          "espn-17"
         ]
       }
     ],
@@ -86,7 +88,10 @@
         }
       }
     ],
-    "contextCard": null,
+    "contextCard": {
+      "title": "How the playoff seeds are set",
+      "body": "Each conference has seven playoff spots: the four division winners and three wild-card teams. Division winners are seeded first to fourth by record, and the wild cards take the next three places. Tiebreakers decide close cases, so a 3–1 start counts for more the further into the season a team stays there."
+    },
     "followedPlayers": [],
     "pulse": {
       "hot": {
@@ -823,18 +828,18 @@
         "contenders": [
           {
             "name": "Kirk Cousins",
-            "team": "Raiders",
-            "note": "11 passing touchdowns, tied with Brock Purdy for the league lead."
+            "team": "LV",
+            "note": "Leads the league with 11 passing touchdowns."
           },
           {
             "name": "Brock Purdy",
-            "team": "49ers",
-            "note": "11 passing touchdowns, tied for the league lead, with San Francisco 4–0."
+            "team": "SF",
+            "note": "Also has 11 passing touchdowns for the unbeaten 49ers."
           },
           {
-            "name": "Kenneth Walker III",
-            "team": "Chiefs",
-            "note": "537 rushing yards, the most in the league, for a Chiefs team that is 4–0."
+            "name": "Bryce Young",
+            "team": "CAR",
+            "note": "Leads the league with 1268 passing yards."
           }
         ]
       },
@@ -843,18 +848,18 @@
         "contenders": [
           {
             "name": "Kenneth Walker III",
-            "team": "Chiefs",
+            "team": "KC",
             "note": "Leads the league with 537 rushing yards."
           },
           {
             "name": "CeeDee Lamb",
-            "team": "Cowboys",
+            "team": "DAL",
             "note": "Leads the league with 498 receiving yards."
           },
           {
-            "name": "Jaxon Smith-Njigba",
-            "team": "Seahawks",
-            "note": "481 receiving yards, third in the league."
+            "name": "Chris Olave",
+            "team": "NO",
+            "note": "Has 491 receiving yards."
           }
         ]
       },
@@ -863,18 +868,18 @@
         "contenders": [
           {
             "name": "Greg Rousseau",
-            "team": "Bills",
-            "note": "6 sacks, tied for the league lead."
+            "team": "BUF",
+            "note": "Shares the league lead with 6 sacks."
           },
           {
             "name": "Dallas Turner",
-            "team": "Vikings",
-            "note": "6 sacks, tied for the league lead, with Minnesota 4–0."
+            "team": "MIN",
+            "note": "Shares the league lead with 6 sacks."
           },
           {
-            "name": "Jevon Holland",
-            "team": "Giants",
-            "note": "3 interceptions, tied for the league lead."
+            "name": "Alex Singleton",
+            "team": "DEN",
+            "note": "Leads the league with 47 total tackles."
           }
         ]
       }
@@ -1061,67 +1066,54 @@
     ]
   },
   "nba": {
-    "oneThing": "LeBron James made his 76ers debut in a 114–108 preseason loss to the Nets, and the new-look Sixers have plenty to work on.",
+    "oneThing": "LeBron James made his 76ers debut in a preseason game, scoring 10 points with five assists and four rebounds in the first half.",
     "wrap": null,
     "headlines": [
       {
-        "title": "LeBron's 76ers debut",
-        "summary": "LeBron James had 10 points, five assists and four rebounds in the first half of his first game with Philadelphia. The 76ers lost 114–108 to the Nets.",
-        "whyItMatters": "Preseason results don't count in the standings, but the early look at the new roster is what fans will track.",
-        "teams": [
-          "PHI",
-          "BKN"
-        ],
-        "sources": [
-          "espn-1",
-          "yahoosports-7"
-        ]
-      },
-      {
-        "title": "Embiid says LeBron report 'not true'",
-        "summary": "Joel Embiid called a report that LeBron James criticised him for being late to practice \"not true\" and said it made him wonder why he was targeted.",
-        "whyItMatters": "It is a team-harmony story with no effect on the standings yet.",
+        "title": "LeBron James's 76ers debut",
+        "summary": "LeBron James had 10 points, five assists and four rebounds in the first half of his first game with Philadelphia. He played 18 minutes.",
+        "whyItMatters": "It is preseason, but the Sixers' new lineup is now on the court and the regular season has not started.",
         "teams": [
           "PHI"
         ],
         "sources": [
-          "espn-3"
+          "espn-1"
         ]
       },
       {
-        "title": "Spurs lose first preseason game to the Hawks",
-        "summary": "San Antonio lost 116–123 to Atlanta. Dylan Harper was a bright spot in the starting lineup.",
-        "whyItMatters": "The result is preseason only, but the Spurs have dropped their first game of the year.",
+        "title": "Nets beat the 76ers 114–108",
+        "summary": "Brooklyn beat Philadelphia 114–108 in preseason, spoiling the Sixers' first look at their full starting group together.",
+        "whyItMatters": "Preseason results carry little weight, and every team in the East is still 0–0.",
+        "teams": [
+          "BKN",
+          "PHI"
+        ],
+        "sources": [
+          "yahoosports-8",
+          "yahoosports-7"
+        ]
+      },
+      {
+        "title": "Spurs drop their preseason opener to the Hawks",
+        "summary": "San Antonio lost 116–123 to Atlanta at home. Dylan Harper shone in the starting lineup.",
+        "whyItMatters": "It is a preseason loss, and the Spurs are 0–1 with the regular season yet to start.",
         "teams": [
           "ATL",
           "SAS"
         ],
         "sources": [
-          "yahoosports-5"
+          "yahoosports-6"
         ]
       },
       {
-        "title": "Wizards edge Knicks 111–109",
-        "summary": "Washington beat New York 111–109 at Madison Square Garden in its first preseason game. Bruce Brown kept pushing for a spot on the Knicks roster in a loss.",
-        "whyItMatters": "Preseason results don't affect the standings, but Brown's push for a roster spot is a real story for New York.",
+        "title": "Lakers beat the Kings in preseason",
+        "summary": "Los Angeles won 114–110 over Sacramento. Luka Doncic and Austin Reaves showed their on-court chemistry in the win.",
+        "whyItMatters": "Doncic and Reaves are expected to lead the Lakers this season, and the early on-court pairing is the main takeaway.",
         "teams": [
-          "NY",
-          "WSH"
+          "LAL"
         ],
         "sources": [
-          "yahoosports-8",
           "yahoosports-2"
-        ]
-      },
-      {
-        "title": "Celtics beat Cavaliers 124–113",
-        "summary": "Boston beat Cleveland in the Cavaliers' preseason opener. Defence was the main concern in the takeaways.",
-        "whyItMatters": "Defence is the early question for Cleveland after a preseason loss.",
-        "teams": [
-          "BOS"
-        ],
-        "sources": [
-          "yahoosports-4"
         ]
       }
     ],
@@ -1325,10 +1317,7 @@
         }
       }
     ],
-    "contextCard": {
-      "title": "Why preseason results don't count",
-      "body": "Preseason games don't count towards the standings or the playoff race. That's why every team is still 0–0 and why the Spurs' opening loss doesn't change their position yet. The regular season is where records start to matter."
-    },
+    "contextCard": null,
     "followedPlayers": [],
     "pulse": {
       "hot": {
@@ -1845,15 +1834,15 @@
       "abbr": "SAS",
       "sinceLast": [
         {
-          "text": "Spurs lost 116–123 to the Hawks in their preseason opener at home.",
+          "text": "The Spurs lost their preseason opener 116–123 to the Hawks at home.",
           "sources": []
         },
         {
-          "text": "De'Aaron Fox, Malik Williams and Maliq Brown were all out for Thursday's game, with Fox listed as sore and the other two day-to-day.",
+          "text": "Malik Williams, De'Aaron Fox and Maliq Brown were all ruled out of the Hawks game. Williams has an undisclosed injury, Fox has soreness and Brown has a back injury.",
           "sources": []
         },
         {
-          "text": "Tobias Harris will miss the preseason with a left calf strain, and coach Mitch Johnson says they won't rush him back.",
+          "text": "Tobias Harris will miss the preseason with a left calf strain. Coach Mitch Johnson said they will not rush him back.",
           "sources": [
             "espn-11"
           ]
@@ -1944,7 +1933,7 @@
             "text": "Around Tue 20 Oct (estimate)",
             "basis": "media"
           },
-          "typical": "Typically 2 to 6 weeks for a calf strain. The Spurs say they won't rush him, and the reported timeline is around Tue 20 Oct."
+          "typical": "Typical recovery: usually 2 to 4 weeks for a mild calf strain, and longer for more severe ones. The reported timeline is around Tue 20 Oct, which is an estimate."
         }
       ],
       "form": [],
@@ -2017,19 +2006,23 @@
       "abbr": "LV",
       "sinceLast": [
         {
-          "text": "Raiders lost 30–27 to the Chiefs in Week 4 and are 3–1 overall, 2nd in the AFC West.",
+          "text": "Dont'e Thornton has been designated to return from injured reserve, but he is still listed as out. He was a full participant at practice on Wednesday.",
           "sources": []
         },
         {
-          "text": "Dont'e Thornton returned from injured reserve and was a full participant at Wednesday's practice.",
+          "text": "Cody White (ankle) and Ashton Jeanty (ankle and foot) were both limited in Thursday's practice.",
           "sources": []
         },
         {
-          "text": "Cody White and Ashton Jeanty were limited at Thursday's practice with ankle injuries.",
+          "text": "Jalen Nailor (concussion) did not practise on Thursday.",
           "sources": []
         },
         {
-          "text": "Jalen Nailor isn't practising after a concussion.",
+          "text": "Trey Zuhn III (knee abrasion) is questionable for Sunday's game against the Chiefs.",
+          "sources": []
+        },
+        {
+          "text": "The Raiders are 3–1 and 6th in the AFC after losing 27–30 to Kansas City in Week 4. Next they play at New England on Sunday.",
           "sources": []
         }
       ],
@@ -2070,7 +2063,7 @@
             "text": "Around Sun 11 Oct (estimate)",
             "basis": "media"
           },
-          "typical": "Typically 1 to 3 weeks for a mild hamstring strain. The reported timeline of around Sun 11 Oct is an estimate."
+          "typical": "Typical recovery: usually 1 to 3 weeks for a mild hamstring strain, and longer for more severe ones. The reported timeline is around Sun 11 Oct, which is an estimate."
         },
         {
           "player": "Cody White",
@@ -2106,7 +2099,8 @@
           "timeline": {
             "text": "Around Sun 11 Oct (estimate)",
             "basis": "media"
-          }
+          },
+          "typical": "Typical recovery: most concussions settle within 1 to 2 weeks, but timing varies a lot between players. The reported timeline is around Sun 11 Oct, which is an estimate."
         },
         {
           "player": "Spencer Burford",
@@ -2130,8 +2124,7 @@
           "timeline": {
             "text": "Around Sun 11 Oct (estimate)",
             "basis": "media"
-          },
-          "typical": "Typically a few days to 2 weeks for a knee abrasion. Zuhn is questionable for Sunday."
+          }
         }
       ],
       "form": [
@@ -2139,7 +2132,7 @@
           "player": "Kirk Cousins",
           "position": "QB",
           "trend": "steady",
-          "note": "Steady, with 256.5 passing yards and 2.8 touchdowns a game, same as his season average. The sample is only four games, so it's early to read much into it.",
+          "note": "Steady, with 256.5 passing yards, 2.8 touchdowns and 1 interception a game in both his last five and the season so far. Four games is too early to read a trend.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2163,7 +2156,7 @@
           "player": "Ashton Jeanty",
           "position": "RB",
           "trend": "steady",
-          "note": "Steady, with 66 rushing yards at 3.4 a carry and no touchdowns. Level with his season numbers, but still early.",
+          "note": "Steady at 66 rushing yards and 3.4 yards a carry over his last five and the season. Still early in the year, so the sample is small.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2187,7 +2180,7 @@
           "player": "Tre Tucker",
           "position": "WR",
           "trend": "steady",
-          "note": "Steady, with 3.8 catches for 58.3 yards a game. His last-five numbers match his season, so there's no clear trend yet.",
+          "note": "Steady, averaging 3.8 catches and 58.3 yards in both his last five and the season.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2211,7 +2204,7 @@
           "player": "Malcolm Koonce",
           "position": "DE",
           "trend": "steady",
-          "note": "Steady, with 1.8 tackles and 0.6 sacks a game. The season is too young for the comparison to mean much.",
+          "note": "Steady, with 1.8 tackles and 0.6 sacks a game in both windows. The season is too young to read much into it.",
           "seasonLabel": "2026 Regular Season",
           "stats": [
             {
@@ -2460,45 +2453,45 @@
     },
     "yahoosports-2": {
       "publisher": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/articles/luka-doncic-austin-reaves-show-054529827.html",
+      "title": "Luka Doncic and Austin Reaves show why they click in Lakers' preseason win",
+      "published": "2026-10-09T05:45:29.000Z"
+    },
+    "yahoosports-3": {
+      "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/bruce-brown-continues-fight-strong-052732371.html",
       "title": "Bruce Brown continues to fight and make a strong case to crack Knicks roster this preseason",
       "published": "2026-10-09T05:27:32.000Z"
     },
-    "espn-3": {
+    "espn-4": {
       "publisher": "ESPN",
       "url": "https://www.espn.com/nba/story/_/id/50137826/76ers-embiid-calls-not-true-lebron-report-unfortunate",
       "title": "76ers' Embiid calls 'not true' LeBron report 'unfortunate'",
       "published": "2026-10-09T05:27:05Z"
     },
-    "yahoosports-4": {
+    "yahoosports-5": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/8-takeaways-cavs-loss-celtics-033348269.html",
       "title": "8 Takeaways from Cavs loss to Celtics: Defense leaves much to be desired in preseason opener",
       "published": "2026-10-09T03:33:48.000Z"
     },
-    "yahoosports-5": {
+    "yahoosports-6": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/spurs-start-strong-lose-first-030301619.html",
       "title": "Spurs start strong but lose first preseason game to the Hawks",
       "published": "2026-10-09T03:03:01.000Z"
     },
-    "yahoosports-6": {
+    "yahoosports-7": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/sixers-bell-ringer-starting-five-030000649.html",
       "title": "Sixers Bell Ringer: Starting five flashes dominance vs. Nets",
       "published": "2026-10-09T03:00:00.000Z"
     },
-    "yahoosports-7": {
+    "yahoosports-8": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/takeaways-nets-spoil-76ers-super-023327396.html",
       "title": "Takeaways: Nets spoil 76ers Super Team Debut in Preseason, win 114-108",
       "published": "2026-10-09T02:33:27.000Z"
-    },
-    "yahoosports-8": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/recap-wizards-beat-knicks-1st-020912640.html",
-      "title": "Recap: Wizards beat Knicks in 1st preseason game, 111-109",
-      "published": "2026-10-09T02:09:12.000Z"
     },
     "espn-9": {
       "publisher": "ESPN",
@@ -2520,51 +2513,51 @@
     },
     "espn-12": {
       "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/story/_/id/50138082/cowboys-prescott-irked-stadium-worker-call-loss",
+      "title": "Cowboys' Prescott irked by stadium worker's call-out after loss",
+      "published": "2026-10-09T06:00:48Z"
+    },
+    "espn-13": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/video/clip/_/id/50138071/dak-addresses-embarrassing-comment-made-att-stadium-tunnel",
+      "title": "Dak addresses 'embarrassing' comment made in AT&T Stadium tunnel",
+      "published": "2026-10-09T05:58:38Z"
+    },
+    "espn-14": {
+      "publisher": "ESPN",
       "url": "https://www.espn.com/nfl/story/_/id/50136406/buccaneers-explode-first-win-cowboys-tnf",
       "title": "Buccaneers explode in third quarter against Cowboys to get first win",
       "published": "2026-10-09T05:23:16Z"
     },
-    "yahoosports-13": {
+    "yahoosports-15": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/jerry-jones-calls-cowboys-tnf-051940860.html",
       "title": "Jerry Jones calls Cowboys' TNF loss to Buccaneers 'extraordinarily disappointing'",
       "published": "2026-10-09T05:19:40.000Z"
     },
-    "yahoosports-14": {
+    "yahoosports-16": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/jerry-jones-expresses-confidence-christian-045700716.html",
       "title": "Jerry Jones expresses confidence in Christian Parker",
       "published": "2026-10-09T04:57:00.000Z"
     },
-    "yahoosports-15": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/embarrassing-team-employee-heckles-cowboys-044714181.html",
-      "title": "'Embarrassing': Worker heckles Cowboys QB Dak Prescott after loss",
-      "published": "2026-10-09T04:47:14.000Z"
-    },
-    "espn-16": {
+    "espn-17": {
       "publisher": "ESPN",
       "url": "https://www.espn.com/nfl/story/_/id/50135427/that-aint-bears-dandre-swift-laments-early-season-fumbles",
       "title": "'That ain't me': Bears' D'Andre Swift laments early fumble issues",
       "published": "2026-10-09T04:33:14Z"
     },
-    "yahoosports-17": {
+    "yahoosports-18": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/mac-read-talk-bears-vs-035809149.html",
       "title": "Mac & Read Talk Bears vs. Packers!",
       "published": "2026-10-09T03:58:09.000Z"
     },
-    "yahoosports-18": {
+    "yahoosports-19": {
       "publisher": "Yahoo Sports",
       "url": "https://sports.yahoo.com/articles/week-5-game-recap-buccaneers-035749146.html",
       "title": "Week 5 Game Recap: Buccaneers pull off the upset",
       "published": "2026-10-09T03:57:49.000Z"
-    },
-    "yahoosports-19": {
-      "publisher": "Yahoo Sports",
-      "url": "https://sports.yahoo.com/articles/bucky-irving-shreds-dallas-defense-035414672.html",
-      "title": "Bucky Irving shreds Dallas' defense on Thursday night",
-      "published": "2026-10-09T03:54:14.000Z"
     },
     "espn-20": {
       "publisher": "ESPN",

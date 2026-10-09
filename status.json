@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "lastAttempt": "2026-10-09T16:54:00+11:00",
-  "lastSuccess": "2026-10-09T16:54:00+11:00",
+  "lastAttempt": "2026-10-09T17:07:00+11:00",
+  "lastSuccess": "2026-10-09T17:07:00+11:00",
   "error": null,
   "sources": {
     "total": 33,
@@ -11,10 +11,8 @@
   "brief": {
     "ok": true,
     "error": null,
-    "at": "2026-10-09T16:54:00+11:00",
-    "droppedItems": 1,
-    "rejectedRequests": [
-      "structured output: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.\"},\"request_id\":\"req_011Cfr9PG6iAAB3zDLYpedCD\"}"
-    ]
+    "at": "2026-10-09T17:08:00+11:00",
+    "droppedItems": 0,
+    "rejectedRequests": []
   }
 }

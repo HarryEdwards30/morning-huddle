@@ -6,6 +6,22 @@
     "headlines": [
       {
         "id": "nfl-h1",
+        "title": "Cowboys' Prescott irked by stadium worker's call-out after loss",
+        "summary": "Cowboys quarterback Dak Prescott took exception to a stadium worker who yelled \"embarrassing\" to him as he walked to the locker room following Thursday night's 24-16 loss to the Bucs.",
+        "teams": [
+          "DAL"
+        ]
+      },
+      {
+        "id": "nfl-h2",
+        "title": "Dak addresses 'embarrassing' comment made in AT&T Stadium tunnel",
+        "summary": "Dak addresses 'embarrassing' comment made in AT&T Stadium tunnel",
+        "teams": [
+          "DAL"
+        ]
+      },
+      {
+        "id": "nfl-h3",
         "title": "Buccaneers explode in third quarter against Cowboys to get first win",
         "summary": "Undrafted rookie Jalon Daniels and Tampa Bay held off Dallas on \"Thursday Night Football.\"",
         "teams": [
@@ -14,7 +30,7 @@
         ]
       },
       {
-        "id": "nfl-h2",
+        "id": "nfl-h4",
         "title": "Jerry Jones calls Cowboys' TNF loss to Buccaneers 'extraordinarily disappointing'",
         "summary": "Jerry Jones said the Cowboys' loss to the Buccaneers on \"Thursday Night Football\" was \"extraordinarily disappointing.\"",
         "teams": [
@@ -23,21 +39,13 @@
         ]
       },
       {
-        "id": "nfl-h3",
+        "id": "nfl-h5",
         "title": "Jerry Jones expresses confidence in Christian Parker",
         "summary": "Dan Quinn left as the Cowboys' defense coordinator after the 2023 season to become the Commanders' head coach.",
         "teams": []
       },
       {
-        "id": "nfl-h4",
-        "title": "'Embarrassing': Worker heckles Cowboys QB Dak Prescott after loss",
-        "summary": "A worker, according to reporters who witnessed the incident, uttered the word \"embarrassing\" as Cowboys QB Dak Prescott passed by.",
-        "teams": [
-          "DAL"
-        ]
-      },
-      {
-        "id": "nfl-h5",
+        "id": "nfl-h6",
         "title": "'That ain't me': Bears' D'Andre Swift laments early fumble issues",
         "summary": "After fumbling twice in the Bears first four games, running back D'Andre Swift said Thursday that his turnover problem is \"over with now.\"",
         "teams": [
@@ -45,7 +53,7 @@
         ]
       },
       {
-        "id": "nfl-h6",
+        "id": "nfl-h7",
         "title": "Mac & Read Talk Bears vs. Packers!",
         "summary": "The latest Mac & Read Show is available everywhere you get your podcasts @2ndCityGridiron!",
         "teams": [
@@ -54,18 +62,12 @@
         ]
       },
       {
-        "id": "nfl-h7",
+        "id": "nfl-h8",
         "title": "Week 5 Game Recap: Buccaneers pull off the upset",
         "summary": "Bucs at Cowboys week five game recap.",
         "teams": [
           "TB"
         ]
-      },
-      {
-        "id": "nfl-h8",
-        "title": "Bucky Irving shreds Dallas' defense on Thursday night",
-        "summary": "Bucky Irving had a dominant performance in Week 5, racking up 175 yards and scoring twice in an upset win over Dallas.",
-        "teams": []
       }
     ],
     "results": [
@@ -295,6 +297,14 @@
       },
       {
         "id": "nba-h2",
+        "title": "Luka Doncic and Austin Reaves show why they click in Lakers' preseason win",
+        "summary": "The Lakers will lean on Luka Doncic and Austin Reaves to lead the team this season, and they showed their on-court chemistry in a 114-110 win over the Kings.",
+        "teams": [
+          "LAL"
+        ]
+      },
+      {
+        "id": "nba-h3",
         "title": "Bruce Brown continues to fight and make a strong case to crack Knicks roster this preseason",
         "summary": "Bruce Brown had another solid showing in the Knicks' preseason loss to the Wizards on Thursday and continued to make a strong case to crack the roster.",
         "teams": [
@@ -302,7 +312,7 @@
         ]
       },
       {
-        "id": "nba-h3",
+        "id": "nba-h4",
         "title": "76ers' Embiid calls 'not true' LeBron report 'unfortunate'",
         "summary": "Joel Embiid said a recent report about LeBron James getting on him about being late to practice \"is not true\" and caused him to wonder why he was targeted.",
         "teams": [
@@ -310,7 +320,7 @@
         ]
       },
       {
-        "id": "nba-h4",
+        "id": "nba-h5",
         "title": "8 Takeaways from Cavs loss to Celtics: Defense leaves much to be desired in preseason opener",
         "summary": "Cleveland’s preseason opener was somewhat of a mixed bag.",
         "teams": [
@@ -318,7 +328,7 @@
         ]
       },
       {
-        "id": "nba-h5",
+        "id": "nba-h6",
         "title": "Spurs start strong but lose first preseason game to the Hawks",
         "summary": "Dylan Harper shines in the starting lineup.",
         "teams": [
@@ -327,7 +337,7 @@
         ]
       },
       {
-        "id": "nba-h6",
+        "id": "nba-h7",
         "title": "Sixers Bell Ringer: Starting five flashes dominance vs. Nets",
         "summary": "See who showed out int he first appearance from the full Sixers starting five.",
         "teams": [
@@ -335,21 +345,12 @@
         ]
       },
       {
-        "id": "nba-h7",
+        "id": "nba-h8",
         "title": "Takeaways: Nets spoil 76ers Super Team Debut in Preseason, win 114-108",
         "summary": "Everyone wanted to see the Sixers put on a 48-minute highlight reel. The Nets popped a different disc into the player.",
         "teams": [
           "BKN",
           "PHI"
-        ]
-      },
-      {
-        "id": "nba-h8",
-        "title": "Recap: Wizards beat Knicks in 1st preseason game, 111-109",
-        "summary": "The Washington Wizards defeated the New York Knicks, 111-109 on Thursday night at Madison Square Garden. The win gives Washington a 1-0 record in the preseason. As you might have expected, the Wizards started their Big Three of AJ Dybantsa, Trae Young and Ant…",
-        "teams": [
-          "NY",
-          "WSH"
         ]
       }
     ],
