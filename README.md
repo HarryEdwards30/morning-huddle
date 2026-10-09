@@ -11,9 +11,13 @@ Jack's daily NFL and NBA brief, built around the Spurs and the Raiders. It's a p
 | **NFL** | Today's NFL brief (Wednesday Wrap on Wednesdays, "If you only read one thing", headlines with "Why it matters", results, context card), then around the NFL: hot and cold, standings, playoff picture, award races, major injuries, transactions, season timeline |
 | **NBA** | The same layout for the NBA. Its standings card doubles as the playoff race |
 | **My Teams** | Spurs and Raiders hubs (switch at the top): since the last edition, last result and next game, injuries, player form, roster moves, playoff race |
-| **Watch** | The week's best games in each league, refreshed every Wednesday, with your teams' games flagged |
+| **Watch** | The week's best games in each league (Wednesday to Tuesday), ranked with a reason for each and refreshed every Wednesday. Your teams' games are always listed. Games already played are marked "Played" |
 
 The app opens on the tab you used last (My Teams the first time).
+
+**Wednesdays** bring the Wednesday Wrap: a look back at each league's week (main storylines, biggest results, who stood out) at the top of the NFL and NBA tabs. Older Wraps are listed at the bottom of each league tab under **Past Wednesday Wraps**; tap one to open it.
+
+**Past editions:** tap the **i** button at the top right, then a date under **Past editions**. A banner shows you're reading an old edition, with a **Back to today** button. Editions are kept for 60 days.
 
 ## When it updates
 
@@ -25,6 +29,8 @@ A new edition is built automatically **every morning at 8am Melbourne time**, re
 2. Click **Morning Huddle** in the list on the left.
 3. Click **Run workflow** (on the right), then the green **Run workflow** button.
 4. Wait about a minute for the run to turn green, then refresh the app.
+
+**To see the Wednesday edition on another day** (for testing): in step 3, tick **Pretend it's Wednesday** before clicking the green button. The app then shows the Wrap and a freshly ranked watch guide. The next morning's normal edition goes back to a daily brief, and the watch guide stays until the real Wednesday.
 
 Each edition is saved to the separate **data** branch, so your `main` history only shows real changes to the app. On the Actions tab you'll see two scheduled runs each morning: one builds the edition, the other finishes in seconds having skipped. Both are green.
 
@@ -40,11 +46,11 @@ Each edition is saved to the separate **data** branch, so your `main` history on
 
 ## The written brief
 
-Each edition makes **one** call to Claude (Haiku 5.5), which writes "If you only read one thing", "Why it matters", your teams' updates, player-form notes, typical recovery times, award races and the daily context card. Claude is only given the day's data and is told not to add anything that isn't in it. Every item it writes has to point back to the data it came from, and any item with a number that isn't in the data is dropped.
+Each edition makes **one** call to Claude (Haiku 5.5), which writes "If you only read one thing", "Why it matters", your teams' updates, player-form notes, typical recovery times, award races and the daily context card, and on Wednesdays the Wrap and the watch guide's ranking and reasons. Claude is only given the day's data and is told not to add anything that isn't in it. Every item it writes has to point back to the data it came from, and any item with a number that isn't in the data is dropped.
 
-- **Edit the writing instructions** in [prompts/](prompts/): `style.md` is the voice (tone, spelling, the "facts only" rules) and `daily-brief.md` says what to write. They're plain English, so edit them like a document, then do a manual run to see the effect.
+- **Edit the writing instructions** in [prompts/](prompts/): `style.md` is the voice (tone, spelling, the "facts only" rules), `daily-brief.md` says what to write each day, and `wednesday-wrap.md` and `watch-guide.md` cover the Wednesday Wrap and the watch guide. They're plain English, so edit them like a document, then do a manual run to see the effect.
 - **See what Claude was given**: open `brief-input.json` on the **data** branch.
-- **Check API usage**: open `usage.json` on the **data** branch (or https://harryedwards30.github.io/morning-huddle/data/usage.json). It lists the tokens and estimated cost of every run and the total for the month. A run costs about US$0.002. You can also see usage in the Claude Console.
+- **Check API usage**: open `usage.json` on the **data** branch (or https://harryedwards30.github.io/morning-huddle/data/usage.json). It lists the tokens and estimated cost of every run and the total for the month. A run costs about US$0.004, a little more on Wednesdays. You can also see usage in the Claude Console.
 
 ## If the brief doesn't appear
 

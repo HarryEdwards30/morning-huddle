@@ -7,15 +7,18 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - Phase 2 (real data, no AI) is done: the pipeline in `pipeline/` builds an edition from ESPN, CBS and Yahoo and saves it to the `data` branch.
 - Phase 3 (the Claude-written brief) is done: `pipeline/write-brief.js`.
 - Phase 4 (the 8am schedule and the error banner) is done.
-- Phases 5 and 6 (Wednesday edition, polish) are still to do. See SPEC.md Section 14.
+- Phase 5 (the Wednesday Wrap, the ranked watch guide and the edition archive) is done.
+- Phase 6 (polish: offline, off-season mode, install instructions) is still to do. See SPEC.md Section 14.
 
 ## Layout of the app
 - Tabs: **NFL · NBA · My Teams · Watch**. The app opens on the last tab used (saved in `localStorage` as `huddle:lastTab`), or My Teams the first time.
 - NFL and NBA tabs share one layout (`site/js/tabs/league.js`):
   - Today's brief: Wednesday Wrap (Wednesdays), one thing, followed players, headlines with "Why it matters", results, context card. These are in `site/js/sections/brief.js`.
   - Around the league: pulse (Hot | Cold split), standings (the NBA card doubles as the playoff race), playoff picture (NFL only), award races, major injuries, transactions, season timeline. These are in `site/js/sections/league-info.js`.
+  - Past Wednesday Wraps at the bottom (`site/js/sections/archive.js`), read from `data/editions/index.json`; each Wrap's edition is only fetched when opened.
 - My Teams: `site/js/tabs/teams.js`, with the "Since the last edition" card at the top of each hub.
-- Watch: `site/js/tabs/watch.js`.
+- Watch: `site/js/tabs/watch.js`. Games more than four hours past their start are marked "Played".
+- Past editions: the info button lists the last 14 (from `data/editions/index.json`); opening one swaps `ctx.edition` and shows a "Past edition" banner with "Back to today".
 - Shared helpers in `site/js/ui.js`: `el()` builds elements as text only (never innerHTML); `card({ type, title })` makes a section card with a coloured header strip. The card types are plain, injury, hot, cold, results, news, moves, watch and lead.
 - Times are formatted in `site/js/time.js` and are always shown in Melbourne time with AEDT/AEST.
 
@@ -28,8 +31,15 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - `scripts/data-branch.sh checkout|save <folder>` gets and saves the `data` branch.
 - `build-edition.js` also writes `facts.json` (league stat leaders for the award races; not shown in the app).
 
+## The Wednesday edition
+- `build-edition.js` makes a Wednesday edition (`edition.type: 'wednesday'`) when the Melbourne weekday is `schedule.wrapDay`, or when `PRETEND_WEDNESDAY=true` (the "Pretend it's Wednesday" box on a manual run; the edition gets `pretendWednesday: true`).
+- It also fetches the last eight US scoreboard dates (the week's results) and the next eight (the games ahead), and puts the week in `facts.json` under `week.<league>`: `label` ("Week 6" for the NFL, "7 to 13 Oct" for the NBA), `results`, `standouts`, `headlines` (today's plus the week's daily editions, with sources re-added), `moves` and `games` (candidates, scored in `shape/week.js`).
+- The watch guide is ranked in `shape/week.js` first (records, standings, US national TV or NFL prime time, division games), with factual reasons, so it's never empty. On other days the last ranked guide is kept until its `weekEnd`; with none, the guide falls back to your teams' games.
+- `write-brief.js` adds `prompts/wednesday-wrap.md` and `prompts/watch-guide.md` and uses `WEDNESDAY_SCHEMA`: each league gets `wrap` (summary, storylines with refs, `biggestResults` as week-result ids that become real game rows, standouts) and `watch.picks` (candidate ids with reasons). Claude's ranking replaces the pipeline's only if it picked at least three valid games.
+- `pipeline/lib/archive.js` rewrites `editions/index.json` (date, type, written, Wrap labels) after every build and brief.
+
 ## The written brief (`pipeline/write-brief.js`, `pipeline/brief/`, `prompts/`)
-- One Claude call per edition (model and token limit from `config/settings.json`, effort `low`). The JSON shape is given in the instructions (`DAILY_BRIEF_SCHEMA`), not as structured output: the API rejects that schema with "The compiled grammar is too large". `brief/input.js` builds a compact input (about 5k tokens) with an id on every item and trims it if it's over budget; `brief/schema.js` holds the output schema and the checks.
+- One Claude call per edition, including Wednesdays (model and token limit from `config/settings.json`, effort `low`). The JSON shape is given in the instructions (`DAILY_BRIEF_SCHEMA`), not as structured output: the API rejects that schema with "The compiled grammar is too large". `brief/input.js` builds a compact input (about 5k tokens) with an id on every item and trims it if it's over budget; `brief/schema.js` holds the output schema and the checks.
 - Checks on the reply: items must cite real input ids (headlines must cite a headline, whose sources become the story's "Read more" links); any number in the text that isn't in the input is dropped (small numbers 0 to 10 are allowed); award contenders must appear in the input; at most one context card a day. Typical recovery times are general knowledge and labelled "Typical recovery".
 - If the API rejects the request (HTTP 400), it retries without the effort setting; the API's message is logged and kept in `status.json` (`brief.rejectedRequests` or `brief.detail`). Retries once if a reply can't be used. On failure the edition keeps its data without the written parts (`edition.written: false`, "Live data" notice) and `status.json` gets `brief: { ok: false, error }` in plain English; the script exits 2 so the run shows red.
 - Writes `brief-input.json` (exactly what Claude saw) and `usage.json` (tokens and cost per run, month total) to the data folder.

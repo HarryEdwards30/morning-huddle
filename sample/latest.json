@@ -27,6 +27,53 @@
           "text": "The Raiders lost 27–20 to the Chargers and are two games out of the last AFC wild card spot."
         }
       ],
+      "biggestResults": [
+        {
+          "start": "2026-11-16T21:25:00Z",
+          "status": "Final",
+          "away": {
+            "abbr": "KC",
+            "name": "Chiefs",
+            "score": 24
+          },
+          "home": {
+            "abbr": "BUF",
+            "name": "Bills",
+            "score": 27
+          },
+          "note": "Week 11"
+        },
+        {
+          "start": "2026-11-17T01:15:00Z",
+          "status": "Final",
+          "away": {
+            "abbr": "PHI",
+            "name": "Eagles",
+            "score": 24
+          },
+          "home": {
+            "abbr": "DAL",
+            "name": "Cowboys",
+            "score": 21
+          },
+          "note": "Monday Night Football"
+        },
+        {
+          "start": "2026-11-16T21:05:00Z",
+          "status": "Final",
+          "away": {
+            "abbr": "LV",
+            "name": "Raiders",
+            "score": 20
+          },
+          "home": {
+            "abbr": "LAC",
+            "name": "Chargers",
+            "score": 27
+          },
+          "note": "Week 11"
+        }
+      ],
       "standouts": [
         {
           "name": "Josh Allen",
@@ -747,6 +794,22 @@
         },
         {
           "text": "The Pelicans have lost five straight and sit last in the West at 2–12."
+        }
+      ],
+      "biggestResults": [
+        {
+          "start": "2026-11-17T01:00:00Z",
+          "status": "Final",
+          "away": {
+            "abbr": "DEN",
+            "name": "Nuggets",
+            "score": 112
+          },
+          "home": {
+            "abbr": "SAS",
+            "name": "Spurs",
+            "score": 121
+          }
         }
       ],
       "standouts": [
@@ -1870,6 +1933,7 @@
   "watchGuide": {
     "weekOf": "2026-11-18",
     "weekEnd": "2026-11-24",
+    "ranked": true,
     "nba": {
       "picks": [
         {

@@ -11,18 +11,26 @@ function bulletList(items) {
       typeof item === 'string' ? null : sourceLinks(item.sources))));
 }
 
-// Wednesday Wrap for one league: the week's storylines and who stood out.
+// Wednesday Wrap for one league: the week's storylines, biggest results and who stood out.
 export function wednesdayWrap(wrap) {
   if (!wrap) return null;
-  return card({ type: 'news', title: 'Wednesday Wrap', extra: wrap.weekLabel, iconName: 'lead' },
+  return card({ type: 'news', title: 'Wednesday Wrap', extra: wrap.weekLabel, iconName: 'lead' }, wrapBody(wrap));
+}
+
+// The inside of a Wrap (also used for past Wraps in the archive).
+export function wrapBody(wrap) {
+  return [
     wrap.summary ? el('p', {}, wrap.summary) : null,
     wrap.storylines?.length ? bulletList(wrap.storylines) : null,
+    wrap.biggestResults?.length ? el('div', { class: 'group' },
+      el('p', { class: 'label-strip' }, 'Biggest results'),
+      wrap.biggestResults.map(gameRow)) : null,
     wrap.standouts?.length ? el('div', { class: 'group' },
       el('p', { class: 'label-strip' }, 'Who stood out'),
       wrap.standouts.map(s => el('div', { class: `entry${isMyTeam(s.team) ? ' mine' : ''}` },
         el('div', { class: 'entry-head' }, teamChip(s.team), s.name),
         el('p', { class: 'small' }, s.note)))) : null,
-  );
+  ];
 }
 
 export function oneThing(text) {

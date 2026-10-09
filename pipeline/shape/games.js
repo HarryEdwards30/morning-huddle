@@ -10,7 +10,7 @@ const competition = event => event?.competitions?.[0] || {};
 const isCompleted = event => Boolean((competition(event).status || event.status)?.type?.completed);
 const isUpcoming = event => (competition(event).status || event.status)?.type?.state === 'pre';
 
-function seasonNote(event) {
+export function seasonNote(event) {
   const type = event.season?.type ?? event.seasonType?.type;
   if (type === 1) return 'Preseason';
   if (type === 3) return 'Playoffs';
@@ -103,4 +103,19 @@ export function weekAhead(upcoming, idx, fromMs, days = 7) {
       const away = g.homeAway === 'home' ? g.opponent : mineSide;
       return { start: g.start, home, away, reason: g.note };
     });
+}
+
+// The best single-game lines from a set of results (the "Hot" column each day, and the Wrap's standouts).
+export function standoutLines(league, results, limit = 4) {
+  const THRESHOLDS = league === 'nba'
+    ? { points: 30, rebounds: 15, assists: 12 }
+    : { passingYards: 300, rushingYards: 120, receivingYards: 120 };
+  const lines = results.flatMap(g => (g.leaders || []).map(l => ({ ...l, game: g })))
+    .filter(l => THRESHOLDS[l.category] !== undefined && l.value >= THRESHOLDS[l.category])
+    .sort((a, b) => b.value / THRESHOLDS[b.category] - a.value / THRESHOLDS[a.category]);
+  const seen = new Set();
+  return lines.filter(l => !seen.has(l.name) && seen.add(l.name)).slice(0, limit).map(l => {
+    const opp = l.game.home.abbr === l.team ? l.game.away : l.game.home;
+    return { name: l.name, team: l.team, note: `${l.line} against the ${opp.name}.` };
+  });
 }

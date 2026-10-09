@@ -1,18 +1,34 @@
-// The shape Claude's daily brief must come back in (sent as a JSON schema, so the API enforces it),
-// plus our own checks on top: every item must cite real input ids, and every number it states must
-// appear in the input. Items that fail are dropped rather than shown.
+// The shape Claude's brief must come back in (given to Claude as a JSON schema in its instructions),
+// plus our own checks: every item must cite real input ids, and every number it states must appear in
+// the input. Items that fail are dropped rather than shown.
+//
+// Three parts, each with an NFL and an NBA section: the daily brief (every day), and on Wednesdays the
+// Wrap and the watch guide as well. All of it comes back in one reply.
 
 const str = { type: 'string' };
 const refs = { type: 'array', items: str };
 const obj = (properties) => ({ type: 'object', properties, required: Object.keys(properties), additionalProperties: false });
 const nullable = schema => ({ anyOf: [schema, { type: 'null' }] });
 
-const leagueSchema = obj({
+const person = obj({ name: str, team: str, note: str, refs });
+
+const dailyLeague = {
   oneThing: nullable(obj({ text: str, refs })),
   headlines: { type: 'array', items: obj({ title: str, summary: str, whyItMatters: str, refs }) },
   contextCard: nullable(obj({ title: str, body: str })),
-  awardRaces: { type: 'array', items: obj({ award: str, contenders: { type: 'array', items: obj({ name: str, team: str, note: str, refs }) } }) },
-});
+  awardRaces: { type: 'array', items: obj({ award: str, contenders: { type: 'array', items: person } }) },
+};
+
+// Wednesday Wrap: the league's past week. biggestResults are ids of the week's results (the app shows the scores).
+export const WRAP_SCHEMA = nullable(obj({
+  summary: str,
+  storylines: { type: 'array', items: obj({ text: str, refs }) },
+  biggestResults: refs,
+  standouts: { type: 'array', items: person },
+}));
+
+// Watch guide: 3 to 5 games from the candidates, best first. `game` is a candidate id.
+export const WATCH_SCHEMA = obj({ picks: { type: 'array', items: obj({ game: str, reason: str }) } });
 
 const teamSchema = obj({
   sinceLast: { type: 'array', items: obj({ text: str, refs }) },
@@ -21,8 +37,15 @@ const teamSchema = obj({
 });
 
 export const DAILY_BRIEF_SCHEMA = obj({
-  nfl: leagueSchema,
-  nba: leagueSchema,
+  nfl: obj(dailyLeague),
+  nba: obj(dailyLeague),
+  myTeams: obj({ nfl: teamSchema, nba: teamSchema }),
+});
+
+const wednesdayLeague = obj({ ...dailyLeague, wrap: WRAP_SCHEMA, watch: WATCH_SCHEMA });
+export const WEDNESDAY_SCHEMA = obj({
+  nfl: wednesdayLeague,
+  nba: wednesdayLeague,
   myTeams: obj({ nfl: teamSchema, nba: teamSchema }),
 });
 
@@ -38,7 +61,7 @@ export function unsupportedNumbers(text, inputText) {
 }
 
 // Checks the parsed reply, returning the cleaned brief and a list of what was dropped and why.
-export function checkBrief(brief, index, inputText) {
+export function checkBrief(brief, index, inputText, { wednesday = false } = {}) {
   const dropped = [];
   const validRefs = (list, where) => {
     const good = (list || []).filter(r => index.has(r));
@@ -49,6 +72,13 @@ export function checkBrief(brief, index, inputText) {
     const bad = unsupportedNumbers(text, inputText);
     if (bad.length) dropped.push(`${where}: numbers not in the data (${bad.join(', ')})`);
     return bad.length === 0;
+  };
+  // A named player must be in the data. The data reads "Name (ABBR) ..."; use that abbreviation for the team chip.
+  const personOk = (p, where) => {
+    if (!p?.name || !inputText.includes(p.name)) { dropped.push(`${where}: ${p?.name} isn't in the data`); return false; }
+    const abbr = new RegExp(`${p.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} \\(([A-Z]{2,4})\\)`).exec(inputText)?.[1];
+    if (abbr) p.team = abbr;
+    return numbersOk(p.note, where);
   };
 
   const out = { nfl: {}, nba: {}, myTeams: {} };
@@ -73,14 +103,7 @@ export function checkBrief(brief, index, inputText) {
 
     out[league].awardRaces = (l.awardRaces || []).map(a => ({
       award: a.award,
-      contenders: (a.contenders || []).filter((c, i) => {
-        const where = `${league} ${a.award} contender ${i + 1}`;
-        if (!inputText.includes(c.name)) { dropped.push(`${where}: ${c.name} isn't in the data`); return false; }
-        // The leaders data reads "Name (ABBR) value"; use that abbreviation for the team chip.
-        const abbr = new RegExp(`${c.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} \\(([A-Z]{2,4})\\)`).exec(inputText)?.[1];
-        if (abbr) c.team = abbr;
-        return numbersOk(c.note, where);
-      }),
+      contenders: (a.contenders || []).filter((c, i) => personOk(c, `${league} ${a.award} contender ${i + 1}`)),
     })).filter(a => a.contenders.length);
 
     const t = brief.myTeams?.[league] || {};
@@ -91,6 +114,38 @@ export function checkBrief(brief, index, inputText) {
       // Typical recovery ranges are general knowledge (allowed by the rules), so their numbers aren't checked.
       typicalRecovery: t.typicalRecovery || [],
     };
+
+    if (wednesday) {
+      out[league].wrap = checkWrap(l.wrap, league);
+      out[league].watch = checkWatch(l.watch, league);
+    }
   }
   return { brief: out, dropped };
+
+  function checkWrap(w, league) {
+    if (!w?.summary) return null;
+    if (!numbersOk(w.summary, `${league} wrap summary`)) return null;
+    return {
+      summary: w.summary,
+      storylines: (w.storylines || []).filter((s, i) => s.text && numbersOk(s.text, `${league} wrap storyline ${i + 1}`))
+        .map(s => ({ text: s.text, refs: validRefs(s.refs, `${league} wrap storyline`) })),
+      biggestResults: [...new Set(validRefs(w.biggestResults, `${league} wrap results`))]
+        .filter(id => index.get(id).kind === 'weekResult' && index.get(id).league === league).slice(0, 4),
+      standouts: (w.standouts || []).filter((p, i) => personOk(p, `${league} wrap standout ${i + 1}`)),
+    };
+  }
+
+  // Picks must be candidate games from this league, each once. A reason with a number that isn't in the
+  // data is dropped (the game keeps its place with the plain reason from the data).
+  function checkWatch(w, league) {
+    const picks = [];
+    for (const [i, p] of (w?.picks || []).entries()) {
+      const where = `${league} watch pick ${i + 1}`;
+      const entry = index.get(p.game);
+      if (!entry || entry.kind !== 'watchGame' || entry.league !== league) { dropped.push(`${where}: ${p.game} isn't a candidate game`); continue; }
+      if (picks.some(x => x.game === p.game)) continue;
+      picks.push({ game: p.game, reason: p.reason && numbersOk(p.reason, where) ? p.reason : null });
+    }
+    return { picks: picks.slice(0, 5) };
+  }
 }

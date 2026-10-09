@@ -217,7 +217,7 @@ Always keep the **source URL** for each news item so the app can link "Read more
   "edition": { "date": "2026-10-21", "generatedAt": "2026-10-21T08:04:00+11:00", "type": "daily | wednesday" },
   "nfl": {
     "oneThing": "…",
-    "wrap": { "weekLabel": "Week 11", "summary": "…", "storylines": [ … ], "standouts": [ … ] },
+    "wrap": { "weekLabel": "Week 11", "summary": "…", "storylines": [ … ], "biggestResults": [ …games… ], "standouts": [ … ] },
     "headlines": [ { "title": "…", "summary": "…", "whyItMatters": "…", "teams": ["PHI", "DAL"], "sources": ["…"] } ],
     "results": [ … ],
     "contextCard": { "title": "…", "body": "…" },
@@ -231,7 +231,7 @@ Always keep the **source URL** for each news item so the app can link "Read more
   },
   "nba": { "…same as nfl, without playoffPicture…" },
   "myTeams": { "nba": { "sinceLast": [ … ], "…": "…" }, "nfl": { … } },
-  "watchGuide": { "weekOf": "…", "weekEnd": "…", "nba": { "picks": [ … ], "yourTeam": [ … ] }, "nfl": { … } },
+  "watchGuide": { "weekOf": "…", "weekEnd": "…", "ranked": true, "nba": { "picks": [ … ], "yourTeam": [ … ] }, "nfl": { … } },
   "sources": { "source-id": { "publisher": "…", "url": "…", "title": "…" } }
 }
 ```
@@ -354,6 +354,7 @@ Stop after each phase and check in with Jack.
 - Done when: it runs on schedule and the app updates by itself.
 
 **Phase 5: Wednesday edition**
+- (Built.) On Wednesdays the one Claude call also writes each league's Wrap and ranks the watch guide from candidate games the pipeline has already ranked on records, standings and TV slot (that ranking is kept if Claude can't write). The guide stays up until the next Wednesday, with played games marked. Past Wraps are listed at the bottom of each league tab, and past editions (60 days) open from the info button. A manual run has a "Pretend it's Wednesday" box.
 - Build the Wednesday Wrap and the watch guide, plus the edition archive.
 - Done when: a manual "pretend it's Wednesday" run produces both.
 

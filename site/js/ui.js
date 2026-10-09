@@ -105,6 +105,12 @@ export function statusChip(status) {
 // "Read more" links for a story. `ids` point into the edition's `sources` list.
 let sourceIndex = {};
 export function setSources(sources) { sourceIndex = sources || {}; }
+// Builds something using another edition's sources (for past Wraps from the archive).
+export function withSources(sources, build) {
+  const saved = sourceIndex;
+  sourceIndex = sources || {};
+  try { return build(); } finally { sourceIndex = saved; }
+}
 export function sourceLinks(ids) {
   const links = (ids || [])
     .map(id => sourceIndex[id])
