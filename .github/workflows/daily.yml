@@ -1,0 +1,52 @@
+# Builds the Morning Huddle website and publishes it to GitHub Pages.
+#
+# Phase 1: runs whenever main changes, or by hand from the Actions tab ("Run workflow").
+# It publishes the app with the SAMPLE edition. Later phases add the 8am Melbourne schedule,
+# the data fetch, the AI-written brief, and saving editions to the separate "data" branch.
+
+name: Morning Huddle
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one publish at a time; a newer run waits rather than cancelling one that's halfway through.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Build the site
+        run: node scripts/build-site.js
+
+      - name: Prepare GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Publish to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v5
