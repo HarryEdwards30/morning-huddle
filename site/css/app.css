@@ -202,6 +202,8 @@ main {
 .notice-sample { background: rgba(242, 194, 48, 0.12); border: 1px solid var(--sample); color: var(--text); }
 .notice-sample strong { color: var(--sample); letter-spacing: 0.05em; }
 .notice-error { background: var(--warning-bg); border: 1px solid var(--warning-line); }
+.notice-info { background: rgba(140, 200, 255, 0.10); border: 1px solid var(--why-accent); color: var(--text); }
+.notice-info strong { color: var(--why-accent); letter-spacing: 0.05em; }
 
 /* ---------- Cards ---------- */
 /* Each card has a coloured header strip, then its content. The type class picks the colours. */

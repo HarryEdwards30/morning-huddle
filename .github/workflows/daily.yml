@@ -1,8 +1,12 @@
-# Builds the Morning Huddle website and publishes it to GitHub Pages.
+# Morning Huddle: builds the edition and publishes the app to GitHub Pages, all in one workflow
+# (commits made by a workflow don't start other workflows, so the publish has to happen here too).
 #
-# Phase 1: runs whenever main changes, or by hand from the Actions tab ("Run workflow").
-# It publishes the app with the SAMPLE edition. Later phases add the 8am Melbourne schedule,
-# the data fetch, the AI-written brief, and saving editions to the separate "data" branch.
+# When it runs:
+#   - "Run workflow" on the Actions tab: fetches fresh data, saves the edition to the "data" branch, publishes.
+#   - A change merged into main: publishes the app with the latest edition already on the data branch.
+#   (Phase 4 adds the 8am Melbourne schedule.)
+#
+# The app shows the sample edition only if the data branch has no real edition yet.
 
 name: Morning Huddle
 
@@ -12,11 +16,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # to save editions to the data branch
   pages: write
   id-token: write
 
-# Only one publish at a time; a newer run waits rather than cancelling one that's halfway through.
+# Only one run at a time; a newer run waits rather than cancelling one that's halfway through.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -36,8 +40,21 @@ jobs:
         with:
           node-version: 22
 
+      - name: Get the data branch
+        run: bash scripts/data-branch.sh checkout data-branch
+
+      - name: Build today's edition
+        id: edition
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: node pipeline/build-edition.js --out data-branch
+
+      - name: Save the edition to the data branch
+        if: github.event_name == 'workflow_dispatch'
+        run: bash scripts/data-branch.sh save data-branch
+
       - name: Build the site
-        run: node scripts/build-site.js
+        run: node scripts/build-site.js data-branch
 
       - name: Prepare GitHub Pages
         uses: actions/configure-pages@v6
@@ -50,3 +67,11 @@ jobs:
       - name: Publish to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v5
+
+      # The last good edition is still published above; this just makes a failed edition show as a red run.
+      - name: Report a failed edition
+        if: steps.edition.outcome == 'failure'
+        run: |
+          echo "Today's edition couldn't be built. The app is still showing the last good edition."
+          echo "See the 'Build today's edition' step above for the reason."
+          exit 1

@@ -7,7 +7,7 @@
 // With no data folder (or an empty one), it uses the clearly marked sample edition in sample/.
 
 import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 
 const root = new URL('..', import.meta.url).pathname;
 const out = join(root, '_site');
@@ -19,6 +19,7 @@ rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 cpSync(join(root, 'site'), out, { recursive: true });
 cpSync(join(root, 'config', 'settings.json'), join(out, 'settings.json'));
-cpSync(dataDir, join(out, 'data'), { recursive: true });
+// Copy the edition files only (not git's bookkeeping or the data branch's README).
+cpSync(dataDir, join(out, 'data'), { recursive: true, filter: src => !['.git', 'README.md'].includes(basename(src)) });
 
 console.log(`Built _site/ using ${hasData ? `edition data from ${requested}` : 'the SAMPLE edition'}.`);

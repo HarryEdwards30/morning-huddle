@@ -73,10 +73,15 @@ function showTab(ctx) {
 
 function showNotices(edition) {
   notices.replaceChildren();
+  // The sample edition only appears when there's no real edition yet (see scripts/build-site.js).
   if (edition.sample) {
     notices.append(el('div', { class: 'notice notice-sample', role: 'note' },
       el('strong', {}, 'SAMPLE DATA. '),
       'This is made-up content to show the layout. Real news arrives in a later phase.'));
+  } else if (edition.edition?.written === false) {
+    notices.append(el('div', { class: 'notice notice-info', role: 'note' },
+      el('strong', {}, 'LIVE DATA. '),
+      'Real scores, standings, injuries and news. The written brief (one thing, "Why it matters", award races and player notes) arrives in the next update.'));
   }
 }
 

@@ -4,7 +4,8 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 
 ## Status
 - Phase 1 (app shell with sample data) is done, then reworked to the four tabs below with colour-coded cards.
-- Phases 2 to 6 (real data, AI brief, schedule, Wednesday edition, polish) are still to do. See SPEC.md Section 14.
+- Phase 2 (real data, no AI) is done: the pipeline in `pipeline/` builds an edition from ESPN, CBS and Yahoo and saves it to the `data` branch.
+- Phases 3 to 6 (AI brief, schedule, Wednesday edition, polish) are still to do. See SPEC.md Section 14.
 
 ## Layout of the app
 - Tabs: **NFL · NBA · My Teams · Watch**. The app opens on the last tab used (saved in `localStorage` as `huddle:lastTab`), or My Teams the first time.
@@ -16,8 +17,17 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - Shared helpers in `site/js/ui.js`: `el()` builds elements as text only (never innerHTML); `card({ type, title })` makes a section card with a coloured header strip. The card types are plain, injury, hot, cold, results, news, moves, watch and lead.
 - Times are formatted in `site/js/time.js` and are always shown in Melbourne time with AEDT/AEST.
 
+## Data pipeline (`pipeline/`)
+- `build-edition.js --out <folder>` fetches everything, shapes it and writes `latest.json`, `editions/YYYY-MM-DD.json` (kept 60 days) and `status.json` into the folder (normally the checked-out `data` branch).
+- `sources/espn.js` and `sources/rss.js` are the only files that know URLs. Each call goes through `lib/http.js`, which never throws: a failed source is logged in `status.json` and the run carries on. The run only fails (keeping the last edition) if standings are missing for a league.
+- `shape/*.js` turn raw responses into the edition: teams (Jack's team uses the settings abbreviation, e.g. SAS not ESPN's SA), games, standings and playoff picture, injuries, news and transactions, player form.
+- ESPN quirks: its firewall rejects some user agents (keep `MorningHuddle/1.0 (personal news app)`); its RSS feeds return nothing to scripts, so ESPN news comes from the JSON news endpoint; NBA standings need `seasontype=2` or preseason games are counted.
+- `npm run check-sources` prints what every endpoint returns. The development workspace can't reach these sites, so test on GitHub (Actions).
+- `scripts/data-branch.sh checkout|save <folder>` gets and saves the `data` branch.
+- Fields left empty until Phase 3 (Claude writes them): `oneThing`, `whyItMatters`, `contextCard`, `awardRaces`, form `note`. `edition.written` is `false` until then, and the app shows a "Live data" notice.
+
 ## Data
-- The app reads `data/latest.json` and `settings.json`. Both are copied into `_site/` by `scripts/build-site.js`.
+- The app reads `data/latest.json` and `settings.json`. Both are copied into `_site/` by `scripts/build-site.js`, which uses the `data` branch's edition, or the sample only if there is no real edition.
 - Each edition has an `nfl` section and an `nba` section, and each tab reads only its own (see SPEC.md Section 10). `sample/latest.json` is the worked example and is clearly marked `"sample": true`.
 - Season timeline dates come from `config/settings.json` (`seasonDates`), not from the edition.
 
@@ -31,8 +41,8 @@ Jack's personal NFL and NBA news app (Spurs and Raiders), installed on his phone
 - No dependencies yet. Node 20 or later.
 
 ## Publishing
-- `.github/workflows/daily.yml` builds and publishes to GitHub Pages on every push to `main`, and can be run by hand from the Actions tab.
-- Later phases add the 8am Melbourne schedule, and keep the daily data on a separate `data` branch so `main` only shows real changes.
+- `.github/workflows/daily.yml`: a manual run (Actions tab, "Run workflow") fetches fresh data, saves the edition to the `data` branch and publishes. A push to `main` republishes with the latest edition already on the `data` branch.
+- Daily data lives on the `data` branch so `main` only shows real changes. Phase 4 adds the 8am Melbourne schedule.
 
 ## AI brief (Phase 3, not built yet): the rules
 - One Claude API call per morning (model ID from `config/settings.json`, `claude-haiku-5-5`), returning separate `nfl` and `nba` sections.

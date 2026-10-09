@@ -12,6 +12,7 @@ export function renderWatch({ edition }) {
       guide?.weekOf ? el('div', { class: 'meta' },
         `${formatCalendarDate(guide.weekOf, { long: false })} to ${formatCalendarDate(guide.weekEnd, { long: false })}`) : null),
     !guide ? el('p', { class: 'empty-state' }, 'The watch guide arrives on Wednesday morning.') : [
+      guide.note ? el('p', { class: 'muted small', style: 'margin:0 0 16px' }, guide.note) : null,
       leagueGuide('NBA', guide.nba),
       leagueGuide('NFL', guide.nfl),
       el('p', { class: 'muted small', style: 'text-align:center' }, 'All times are Melbourne time.'),
@@ -27,7 +28,7 @@ function leagueGuide(label, data) {
   return card({ type: 'watch', title },
     picks.map(g => gameEntry(g, g.rank)),
     yours.length ? el('div', { class: 'group' },
-      el('p', { class: 'label-strip' }, 'Also your team'),
+      el('p', { class: 'label-strip' }, picks.length ? 'Also your team' : 'Your team this week'),
       yours.map(g => gameEntry(g, '·')),
     ) : null,
   );
