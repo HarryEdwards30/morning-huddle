@@ -6,8 +6,8 @@
     "headlines": [
       {
         "id": "nfl-h1",
-        "title": "Cowboys' Prescott irked by stadium worker's call-out after loss",
-        "summary": "Cowboys quarterback Dak Prescott took exception to a stadium worker who yelled \"embarrassing\" to him as he walked to the locker room following Thursday night's 24-16 loss to the Bucs.",
+        "title": "Cowboys' Prescott irked by stadium worker's callout after loss",
+        "summary": "Cowboys quarterback Dak Prescott took exception to a stadium worker who yelled \"embarrassing\" to him as he walked to the locker room after Thursday night's 24-16 loss to the Bucs.",
         "teams": [
           "DAL"
         ]
@@ -63,11 +63,9 @@
       },
       {
         "id": "nfl-h8",
-        "title": "Week 5 Game Recap: Buccaneers pull off the upset",
-        "summary": "Bucs at Cowboys week five game recap.",
-        "teams": [
-          "TB"
-        ]
+        "title": "Bucky Irving shreds Dallas' defense on Thursday night",
+        "summary": "Bucky Irving had a dominant performance in Week 5, racking up 175 yards and scoring twice in an upset win over Dallas.",
+        "teams": []
       }
     ],
     "results": [
@@ -246,22 +244,22 @@
       {
         "id": "nfl-l1",
         "category": "Passing Yards",
-        "leaders": "Bryce Young (CAR) 1268; Jared Goff (DET) 1214; Tyler Shough (NO) 1203; Matthew Stafford (LAR) 1189; Joe Burrow (CIN) 1171"
+        "leaders": "Dak Prescott (DAL) 1381; Bryce Young (CAR) 1268; Jared Goff (DET) 1214; Tyler Shough (NO) 1203; Matthew Stafford (LAR) 1189"
       },
       {
         "id": "nfl-l2",
         "category": "Rushing Yards",
-        "leaders": "Kenneth Walker III (KC) 537; Bijan Robinson (ATL) 494; James Cook III (BUF) 421; Derrick Henry (BAL) 374; Jonathan Taylor (IND) 353"
+        "leaders": "Kenneth Walker III (KC) 537; Bijan Robinson (ATL) 494; James Cook III (BUF) 421; Bucky Irving (TB) 406; Derrick Henry (BAL) 374"
       },
       {
         "id": "nfl-l3",
         "category": "Receiving Yards",
-        "leaders": "CeeDee Lamb (DAL) 498; Chris Olave (NO) 491; Jaxon Smith-Njigba (SEA) 481; Tee Higgins (CIN) 401; Davante Adams (LAR) 390"
+        "leaders": "CeeDee Lamb (DAL) 507; Chris Olave (NO) 491; Jaxon Smith-Njigba (SEA) 481; Tee Higgins (CIN) 401; Davante Adams (LAR) 390"
       },
       {
         "id": "nfl-l4",
         "category": "Total Tackles",
-        "leaders": "Alex Singleton (DEN) 47; Jacob Rodriguez (MIA) 46; Anthony Hill Jr. (TEN) 42; Ernest Jones IV (SEA) 41; Fred Warner (SF) 40"
+        "leaders": "Alex Singleton (DEN) 47; Jacob Rodriguez (MIA) 46; Anthony Hill Jr. (TEN) 42; Ernest Jones IV (SEA) 41; Josiah Trotter (TB) 41"
       },
       {
         "id": "nfl-l5",
@@ -271,7 +269,7 @@
       {
         "id": "nfl-l6",
         "category": "Kickoff Yards",
-        "leaders": "Ryan Fitzgerald (CAR) 1642; Tyler Bass (BUF) 1593; Harrison Butker (KC) 1494; Brandon Aubrey (DAL) 1486; Evan McPherson (CIN) 1430"
+        "leaders": "Brandon Aubrey (DAL) 1729; Ryan Fitzgerald (CAR) 1642; Tyler Bass (BUF) 1593; Chase McLaughlin (TB) 1544; Harrison Butker (KC) 1494"
       },
       {
         "id": "nfl-l7",
@@ -281,7 +279,360 @@
       {
         "id": "nfl-l8",
         "category": "Passing Touchdowns",
-        "leaders": "Kirk Cousins (LV) 11; Brock Purdy (SF) 11; Jared Goff (DET) 9; Patrick Mahomes (KC) 9; Tyler Shough (NO) 9"
+        "leaders": "Kirk Cousins (LV) 11; Brock Purdy (SF) 11; Dak Prescott (DAL) 9; Jared Goff (DET) 9; Patrick Mahomes (KC) 9"
+      }
+    ],
+    "week": {
+      "label": "Week 5",
+      "results": [
+        {
+          "id": "nfl-w1",
+          "game": "Buccaneers 24 at Cowboys 16",
+          "note": "Week 5",
+          "date": "2026-10-09T00:15Z"
+        },
+        {
+          "id": "nfl-w2",
+          "game": "Falcons 45 at Saints 24",
+          "note": "Week 4",
+          "date": "2026-10-06T00:15Z"
+        },
+        {
+          "id": "nfl-w3",
+          "game": "Lions 26 at Panthers 32",
+          "note": "Week 4",
+          "date": "2026-10-05T00:20Z"
+        },
+        {
+          "id": "nfl-w4",
+          "game": "Chiefs 30 at Raiders 27",
+          "note": "Week 4",
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "id": "nfl-w5",
+          "game": "Broncos 14 at 49ers 24",
+          "note": "Week 4",
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "id": "nfl-w6",
+          "game": "Chargers 23 at Seahawks 30",
+          "note": "Week 4",
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "id": "nfl-w7",
+          "game": "Dolphins 10 at Vikings 15",
+          "note": "Week 4",
+          "date": "2026-10-04T20:05Z"
+        },
+        {
+          "id": "nfl-w8",
+          "game": "Patriots 29 at Bills 26",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w9",
+          "game": "Jets 12 at Bears 23",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w10",
+          "game": "Jaguars 22 at Bengals 17",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w11",
+          "game": "Cardinals 24 at Giants 36",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w12",
+          "game": "Rams 24 at Eagles 20",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w13",
+          "game": "Packers 17 at Buccaneers 14",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w14",
+          "game": "Titans 18 at Ravens 24",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w15",
+          "game": "Cowboys 34 at Texans 30",
+          "note": "Week 4",
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "id": "nfl-w16",
+          "game": "Colts 30 at Commanders 13",
+          "note": "Week 4",
+          "date": "2026-10-04T13:30Z"
+        }
+      ],
+      "standouts": [
+        {
+          "id": "nfl-s1",
+          "line": "Tetairoa McMillan (CAR): 14 REC, 192 YDS, 2 TD against the Lions."
+        },
+        {
+          "id": "nfl-s2",
+          "line": "CeeDee Lamb (DAL): 17 REC, 189 YDS, 1 TD against the Texans."
+        },
+        {
+          "id": "nfl-s3",
+          "line": "Kenneth Walker III (KC): 22 CAR, 177 YDS, 2 TD against the Raiders."
+        },
+        {
+          "id": "nfl-s4",
+          "line": "Joe Burrow (CIN): 39/54, 428 YDS, 1 TD, 2 INT against the Jaguars."
+        },
+        {
+          "id": "nfl-s5",
+          "line": "Bucky Irving (TB): 21 CAR, 165 YDS, 1 TD against the Cowboys."
+        },
+        {
+          "id": "nfl-s6",
+          "line": "Jared Goff (DET): 32/52, 412 YDS, 1 TD against the Panthers."
+        },
+        {
+          "id": "nfl-s7",
+          "line": "Tee Higgins (CIN): 11 REC, 157 YDS against the Jaguars."
+        },
+        {
+          "id": "nfl-s8",
+          "line": "Kirk Cousins (LV): 31/52, 365 YDS, 2 TD, 1 INT against the Chiefs."
+        },
+        {
+          "id": "nfl-s9",
+          "line": "Kyle Monangai (CHI): 30 CAR, 146 YDS, 2 TD against the Jets."
+        },
+        {
+          "id": "nfl-s10",
+          "line": "Bijan Robinson (ATL): 19 CAR, 145 YDS, 2 TD against the Saints."
+        }
+      ],
+      "headlines": [
+        {
+          "id": "nfl-wh1",
+          "title": "Cowboys' Prescott irked by stadium worker's callout after loss",
+          "summary": "Cowboys quarterback Dak Prescott took exception to a stadium worker who yelled \"embarrassing\" to him as he walked to the locker room after Thursday night's 24-16 loss to the Bucs.",
+          "teams": [
+            "DAL"
+          ]
+        },
+        {
+          "id": "nfl-wh2",
+          "title": "Dak addresses 'embarrassing' comment made in AT&T Stadium tunnel",
+          "summary": "Dak addresses 'embarrassing' comment made in AT&T Stadium tunnel",
+          "teams": [
+            "DAL"
+          ]
+        },
+        {
+          "id": "nfl-wh3",
+          "title": "Buccaneers explode in third quarter against Cowboys to get first win",
+          "summary": "Undrafted rookie Jalon Daniels and Tampa Bay held off Dallas on \"Thursday Night Football.\"",
+          "teams": [
+            "DAL",
+            "TB"
+          ]
+        },
+        {
+          "id": "nfl-wh4",
+          "title": "Jerry Jones calls Cowboys' TNF loss to Buccaneers 'extraordinarily disappointing'",
+          "summary": "Jerry Jones said the Cowboys' loss to the Buccaneers on \"Thursday Night Football\" was \"extraordinarily disappointing.\"",
+          "teams": [
+            "DAL",
+            "TB"
+          ]
+        },
+        {
+          "id": "nfl-wh5",
+          "title": "Jerry Jones expresses confidence in Christian Parker",
+          "summary": "Dan Quinn left as the Cowboys' defense coordinator after the 2023 season to become the Commanders' head coach.",
+          "teams": []
+        },
+        {
+          "id": "nfl-wh6",
+          "title": "'That ain't me': Bears' D'Andre Swift laments early fumble issues",
+          "summary": "After fumbling twice in the Bears first four games, running back D'Andre Swift said Thursday that his turnover problem is \"over with now.\"",
+          "teams": [
+            "CHI"
+          ]
+        },
+        {
+          "id": "nfl-wh7",
+          "title": "Mac & Read Talk Bears vs. Packers!",
+          "summary": "The latest Mac & Read Show is available everywhere you get your podcasts @2ndCityGridiron!",
+          "teams": [
+            "CHI",
+            "GB"
+          ]
+        },
+        {
+          "id": "nfl-wh8",
+          "title": "Bucky Irving shreds Dallas' defense on Thursday night",
+          "summary": "Bucky Irving had a dominant performance in Week 5, racking up 175 yards and scoring twice in an upset win over Dallas.",
+          "teams": []
+        }
+      ],
+      "transactions": [
+        {
+          "id": "nfl-wt1",
+          "type": "Activated",
+          "text": "Dallas Cowboys: Activated G Tyler Smith from injured reserve. Waived RB Emari Demercado."
+        },
+        {
+          "id": "nfl-wt2",
+          "type": "Signing",
+          "text": "Detroit Lions: Signed DL Jeffrey M'ba to the practice squad."
+        },
+        {
+          "id": "nfl-wt3",
+          "type": "Signing",
+          "text": "Green Bay Packers: Signed RB Pierre Strong Jr. to the active roster. Signed LB Jack Dingle to the practice squad."
+        },
+        {
+          "id": "nfl-wt4",
+          "type": "Signing",
+          "text": "Miami Dolphins: Signed EDGE Amari Gainer to the practice squad. Released DL Keith Cooper Jr. from the practice squad."
+        },
+        {
+          "id": "nfl-wt5",
+          "type": "Signing",
+          "text": "New England Patriots: SIgned S Mike Scott to the active roster. Signed LB Jose ramirez to the practice squad."
+        },
+        {
+          "id": "nfl-wt6",
+          "type": "Move",
+          "text": "Pittsburgh Steelers: Designated DeShon Elliott to return from injured reserve."
+        },
+        {
+          "id": "nfl-wt7",
+          "type": "Release",
+          "text": "San Francisco 49ers: Released WR Dante Pettis from the practice squad with an injury settlement."
+        },
+        {
+          "id": "nfl-wt8",
+          "type": "Signing",
+          "text": "Seattle Seahawks: Signed DB A.J. Finley to the practice squad."
+        },
+        {
+          "id": "nfl-wt9",
+          "type": "Release",
+          "text": "Washington Commanders: Waived RB Kaytron Allen."
+        },
+        {
+          "id": "nfl-wt10",
+          "type": "Signing",
+          "text": "Carolina Panthers: Signed RB Anthony Tyus III to the practice squad."
+        }
+      ]
+    },
+    "watchCandidates": [
+      {
+        "id": "nfl-g1",
+        "game": "49ers (SF, 4–0, 2nd in the NFC, streak W4) at Seahawks (SEA, 3–1, 6th in the NFC, streak W1)",
+        "start": "2026-10-11T20:25Z",
+        "tv": "Fox",
+        "note": "Week 5",
+        "divisionGame": true
+      },
+      {
+        "id": "nfl-g2",
+        "game": "Bills (BUF, 3–1, 3rd in the AFC, streak L1) at Rams (LAR, 2–2, 7th in the NFC, streak W1)",
+        "start": "2026-10-13T00:15Z",
+        "tv": "ESPN/ABC",
+        "slot": "Prime time",
+        "note": "Week 5"
+      },
+      {
+        "id": "nfl-g3",
+        "game": "Ravens (BAL, 3–1, 5th in the AFC, streak W2) at Falcons (ATL, 2–2, 8th in the NFC, streak W2)",
+        "start": "2026-10-12T00:20Z",
+        "tv": "NBC",
+        "slot": "Prime time",
+        "note": "Week 5"
+      },
+      {
+        "id": "nfl-g4",
+        "game": "Raiders (LV, 3–1, 6th in the AFC, streak L1) at Patriots (NE, 2–2, 7th in the AFC, streak W1)",
+        "start": "2026-10-11T17:00Z",
+        "tv": "CBS",
+        "note": "Week 5",
+        "jacksTeam": true
+      },
+      {
+        "id": "nfl-g5",
+        "game": "Bears (CHI, 3–1, 5th in the NFC, streak W2) at Packers (GB, 2–2, 10th in the NFC, streak W1)",
+        "start": "2026-10-11T17:00Z",
+        "tv": "Fox",
+        "note": "Week 5",
+        "divisionGame": true
+      },
+      {
+        "id": "nfl-g6",
+        "game": "Eagles (PHI, 2–2, 11th in the NFC, streak L2) at Jaguars (JAX, 3–1, 2nd in the AFC, streak W2)",
+        "start": "2026-10-11T13:30Z",
+        "tv": "NFL Net",
+        "note": "NFL London Games"
+      },
+      {
+        "id": "nfl-g7",
+        "game": "Colts (IND, 2–2, 10th in the AFC, streak W2) at Steelers (PIT, 2–2, 9th in the AFC, streak L1)",
+        "start": "2026-10-11T17:00Z",
+        "tv": "CBS",
+        "note": "Week 5"
+      },
+      {
+        "id": "nfl-g8",
+        "game": "Giants (NYG, 3–1, 3rd in the NFC, streak W2) at Commanders (WSH, 1–3, 13th in the NFC, streak L1)",
+        "start": "2026-10-11T17:00Z",
+        "tv": "Fox",
+        "note": "Week 5",
+        "divisionGame": true
+      },
+      {
+        "id": "nfl-g9",
+        "game": "Vikings (MIN, 4–0, 1st in the NFC, streak W4) at Saints (NO, 1–3, 14th in the NFC, streak L2)",
+        "start": "2026-10-11T17:00Z",
+        "tv": "Fox",
+        "note": "Week 5"
+      },
+      {
+        "id": "nfl-g10",
+        "game": "Browns (CLE, 3–1, 4th in the AFC, streak W3) at Jets (NYJ, 1–3, 12th in the AFC, streak L3)",
+        "start": "2026-10-11T17:00Z",
+        "tv": "CBS",
+        "note": "Week 5"
+      },
+      {
+        "id": "nfl-g11",
+        "game": "Lions (DET, 2–2, 9th in the NFC, streak L1) at Cardinals (ARI, 1–3, 15th in the NFC, streak L3)",
+        "start": "2026-10-11T20:25Z",
+        "tv": "Fox",
+        "note": "Week 5"
+      },
+      {
+        "id": "nfl-g12",
+        "game": "Broncos (DEN, 2–2, 8th in the AFC, streak L1) at Chargers (LAC, 0–4, 14th in the AFC, streak L4)",
+        "start": "2026-10-11T20:05Z",
+        "tv": "CBS",
+        "note": "Week 5",
+        "divisionGame": true
       }
     ]
   },
@@ -289,6 +640,14 @@
     "headlines": [
       {
         "id": "nba-h1",
+        "title": "James suffers defeat on 76ers debut in pre-season",
+        "summary": "LeBron James says it's \"going to take some time\" for his new team-mates to gel after suffering defeat on his debut for the Philadelphia 76ers in a pre-season game.",
+        "teams": [
+          "PHI"
+        ]
+      },
+      {
+        "id": "nba-h2",
         "title": "LeBron James scores 10 points in 18 minutes in 76ers debut",
         "summary": "LeBron James, who joined the 76ers this summer, had 10 points, five assists and four rebounds in the first half of his debut with Philadelphia.",
         "teams": [
@@ -296,7 +655,7 @@
         ]
       },
       {
-        "id": "nba-h2",
+        "id": "nba-h3",
         "title": "Luka Doncic and Austin Reaves show why they click in Lakers' preseason win",
         "summary": "The Lakers will lean on Luka Doncic and Austin Reaves to lead the team this season, and they showed their on-court chemistry in a 114-110 win over the Kings.",
         "teams": [
@@ -304,19 +663,11 @@
         ]
       },
       {
-        "id": "nba-h3",
+        "id": "nba-h4",
         "title": "Bruce Brown continues to fight and make a strong case to crack Knicks roster this preseason",
         "summary": "Bruce Brown had another solid showing in the Knicks' preseason loss to the Wizards on Thursday and continued to make a strong case to crack the roster.",
         "teams": [
           "NY"
-        ]
-      },
-      {
-        "id": "nba-h4",
-        "title": "76ers' Embiid calls 'not true' LeBron report 'unfortunate'",
-        "summary": "Joel Embiid said a recent report about LeBron James getting on him about being late to practice \"is not true\" and caused him to wonder why he was targeted.",
-        "teams": [
-          "PHI"
         ]
       },
       {
@@ -454,13 +805,6 @@
         "team": "PHI",
         "status": "Out",
         "injury": "Right achilles (ruptured)"
-      },
-      {
-        "id": "nba-i2",
-        "player": "Jusuf Nurkic",
-        "team": "UTAH",
-        "status": "Out",
-        "injury": "Right foot"
       }
     ],
     "transactions": [
@@ -485,7 +829,384 @@
         "text": "LA Clippers: Waived G Fletcher Loyer."
       }
     ],
-    "statLeaders": []
+    "statLeaders": [],
+    "week": {
+      "label": "2 to 8 Oct",
+      "results": [
+        {
+          "id": "nba-w1",
+          "game": "Kings 110 at Lakers 114",
+          "note": "Preseason",
+          "date": "2026-10-09T02:45Z"
+        },
+        {
+          "id": "nba-w2",
+          "game": "Hawks 123 at Spurs 116",
+          "note": "Preseason",
+          "date": "2026-10-09T00:00Z"
+        },
+        {
+          "id": "nba-w3",
+          "game": "Pelicans 118 at Heat 128",
+          "note": "Preseason",
+          "date": "2026-10-08T23:30Z"
+        },
+        {
+          "id": "nba-w4",
+          "game": "76ers 108 at Nets 114",
+          "note": "Preseason",
+          "date": "2026-10-08T23:30Z"
+        },
+        {
+          "id": "nba-w5",
+          "game": "Wizards 111 at Knicks 109",
+          "note": "Preseason",
+          "date": "2026-10-08T23:30Z"
+        },
+        {
+          "id": "nba-w6",
+          "game": "Celtics 124 at Cavaliers 113",
+          "note": "Preseason",
+          "date": "2026-10-08T23:00Z"
+        },
+        {
+          "id": "nba-w7",
+          "game": "Warriors 118 at Trail Blazers 123",
+          "note": "Preseason",
+          "date": "2026-10-08T02:00Z"
+        },
+        {
+          "id": "nba-w8",
+          "game": "Magic 122 at Grizzlies 118",
+          "note": "Preseason",
+          "date": "2026-10-08T00:00Z"
+        },
+        {
+          "id": "nba-w9",
+          "game": "Bucks 128 at Thunder 126",
+          "note": "Preseason",
+          "date": "2026-10-08T00:00Z"
+        },
+        {
+          "id": "nba-w10",
+          "game": "Suns 117 at Bulls 124",
+          "note": "Preseason",
+          "date": "2026-10-08T00:00Z"
+        },
+        {
+          "id": "nba-w11",
+          "game": "Timberwolves 112 at Pacers 123",
+          "note": "Preseason",
+          "date": "2026-10-07T23:00Z"
+        },
+        {
+          "id": "nba-w12",
+          "game": "Lakers 98 at Warriors 124",
+          "note": "Preseason",
+          "date": "2026-10-07T02:00Z"
+        },
+        {
+          "id": "nba-w13",
+          "game": "Nuggets 117 at Jazz 106",
+          "note": "Preseason",
+          "date": "2026-10-07T01:00Z"
+        },
+        {
+          "id": "nba-w14",
+          "game": "Pelicans 116 at Thunder 110",
+          "note": "Preseason",
+          "date": "2026-10-07T00:00Z"
+        },
+        {
+          "id": "nba-w15",
+          "game": "Nets 124 at Hornets 90",
+          "note": "Preseason",
+          "date": "2026-10-06T23:00Z"
+        },
+        {
+          "id": "nba-w16",
+          "game": "Lakers 127 at Kings 103",
+          "note": "Preseason",
+          "date": "2026-10-06T02:00Z"
+        },
+        {
+          "id": "nba-w17",
+          "game": "Timberwolves 116 at Bucks 97",
+          "note": "Preseason",
+          "date": "2026-10-06T00:00Z"
+        },
+        {
+          "id": "nba-w18",
+          "game": "Grizzlies 132 at Hawks 123",
+          "note": "Preseason",
+          "date": "2026-10-05T23:00Z"
+        },
+        {
+          "id": "nba-w19",
+          "game": "Suns 107 at Pistons 109",
+          "note": "Preseason",
+          "date": "2026-10-05T23:00Z"
+        },
+        {
+          "id": "nba-w20",
+          "game": "Knicks 97 at 76ers 120",
+          "note": "Preseason",
+          "date": "2026-10-05T23:00Z"
+        },
+        {
+          "id": "nba-w21",
+          "game": "Jazz 109 at Nuggets 97",
+          "note": "Preseason",
+          "date": "2026-10-04T23:00Z"
+        },
+        {
+          "id": "nba-w22",
+          "game": "Warriors 101 at Clippers 104",
+          "note": "Preseason",
+          "date": "2026-10-04T23:00Z"
+        },
+        {
+          "id": "nba-w23",
+          "game": "Heat 129 at Raptors 105",
+          "note": "Preseason",
+          "date": "2026-10-03T23:00Z"
+        }
+      ],
+      "standouts": [],
+      "headlines": [
+        {
+          "id": "nba-wh1",
+          "title": "James suffers defeat on 76ers debut in pre-season",
+          "summary": "LeBron James says it's \"going to take some time\" for his new team-mates to gel after suffering defeat on his debut for the Philadelphia 76ers in a pre-season game.",
+          "teams": [
+            "PHI"
+          ]
+        },
+        {
+          "id": "nba-wh2",
+          "title": "LeBron James scores 10 points in 18 minutes in 76ers debut",
+          "summary": "LeBron James, who joined the 76ers this summer, had 10 points, five assists and four rebounds in the first half of his debut with Philadelphia.",
+          "teams": [
+            "PHI"
+          ]
+        },
+        {
+          "id": "nba-wh3",
+          "title": "Luka Doncic and Austin Reaves show why they click in Lakers' preseason win",
+          "summary": "The Lakers will lean on Luka Doncic and Austin Reaves to lead the team this season, and they showed their on-court chemistry in a 114-110 win over the Kings.",
+          "teams": [
+            "LAL"
+          ]
+        },
+        {
+          "id": "nba-wh4",
+          "title": "Bruce Brown continues to fight and make a strong case to crack Knicks roster this preseason",
+          "summary": "Bruce Brown had another solid showing in the Knicks' preseason loss to the Wizards on Thursday and continued to make a strong case to crack the roster.",
+          "teams": [
+            "NY"
+          ]
+        },
+        {
+          "id": "nba-wh5",
+          "title": "8 Takeaways from Cavs loss to Celtics: Defense leaves much to be desired in preseason opener",
+          "summary": "Cleveland’s preseason opener was somewhat of a mixed bag.",
+          "teams": [
+            "BOS"
+          ]
+        },
+        {
+          "id": "nba-wh6",
+          "title": "Spurs start strong but lose first preseason game to the Hawks",
+          "summary": "Dylan Harper shines in the starting lineup.",
+          "teams": [
+            "ATL",
+            "SAS"
+          ]
+        },
+        {
+          "id": "nba-wh7",
+          "title": "Sixers Bell Ringer: Starting five flashes dominance vs. Nets",
+          "summary": "See who showed out int he first appearance from the full Sixers starting five.",
+          "teams": [
+            "BKN"
+          ]
+        },
+        {
+          "id": "nba-wh8",
+          "title": "Takeaways: Nets spoil 76ers Super Team Debut in Preseason, win 114-108",
+          "summary": "Everyone wanted to see the Sixers put on a 48-minute highlight reel. The Nets popped a different disc into the player.",
+          "teams": [
+            "BKN",
+            "PHI"
+          ]
+        }
+      ],
+      "transactions": [
+        {
+          "id": "nba-wt1",
+          "type": "Release",
+          "text": "Utah Jazz: Waived G Terrell Brown Jr."
+        },
+        {
+          "id": "nba-wt2",
+          "type": "Release",
+          "text": "Oklahoma City Thunder: Waived G Robert McCray V."
+        },
+        {
+          "id": "nba-wt3",
+          "type": "Release",
+          "text": "Orlando Magic: Waived G Johnell Davis."
+        },
+        {
+          "id": "nba-wt4",
+          "type": "Release",
+          "text": "LA Clippers: Waived G Fletcher Loyer."
+        },
+        {
+          "id": "nba-wt5",
+          "type": "Release",
+          "text": "Toronto Raptors: Waived G Andre Jackson Jr."
+        },
+        {
+          "id": "nba-wt6",
+          "type": "Release",
+          "text": "Washington Wizards: Waived G Jazian Gortman."
+        },
+        {
+          "id": "nba-wt7",
+          "type": "Release",
+          "text": "Orlando Magic: Waived G Mike Sharavjamts."
+        },
+        {
+          "id": "nba-wt8",
+          "type": "Release",
+          "text": "Chicago Bulls: Waived G Isaiah Stevens."
+        },
+        {
+          "id": "nba-wt9",
+          "type": "Signing",
+          "text": "Detroit Pistons: Re-signed C Jalen Duren to a contract."
+        }
+      ]
+    },
+    "watchCandidates": [
+      {
+        "id": "nba-g1",
+        "game": "Rockets (HOU) at Mavericks (DAL)",
+        "start": "2026-10-09T12:00Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "NBA China Game"
+      },
+      {
+        "id": "nba-g2",
+        "game": "Mavericks (DAL) at Rockets (HOU)",
+        "start": "2026-10-11T10:00Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "NBA China Game"
+      },
+      {
+        "id": "nba-g3",
+        "game": "Grizzlies (MEM) at Bulls (CHI)",
+        "start": "2026-10-10T00:00Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g4",
+        "game": "76ers (PHI) at Celtics (BOS)",
+        "start": "2026-10-11T00:00Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g5",
+        "game": "Magic (ORL) at Cavaliers (CLE)",
+        "start": "2026-10-11T22:30Z",
+        "tv": "ESPN",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g6",
+        "game": "Bulls (CHI) at Nuggets (DEN)",
+        "start": "2026-10-12T01:00Z",
+        "tv": "ESPN",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g7",
+        "game": "Timberwolves (MIN) at Knicks (NY)",
+        "start": "2026-10-12T23:30Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g8",
+        "game": "Cavaliers (CLE) at Magic (ORL)",
+        "start": "2026-10-13T23:00Z",
+        "tv": "Peacock/NBCSN",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g9",
+        "game": "Warriors (GS) at Lakers (LAL)",
+        "start": "2026-10-14T02:00Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g10",
+        "game": "Pelicans (NO) at Mavericks (DAL)",
+        "start": "2026-10-15T00:00Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g11",
+        "game": "Nuggets (DEN) at Clippers (LAC)",
+        "start": "2026-10-15T02:30Z",
+        "tv": "NBA TV",
+        "slot": "National TV",
+        "note": "Preseason"
+      },
+      {
+        "id": "nba-g12",
+        "game": "Clippers (LAC) at Raptors (TOR)",
+        "start": "2026-10-10T22:30Z",
+        "note": "NBA Canada Games 2026"
+      },
+      {
+        "id": "nba-g13",
+        "game": "Spurs (SAS) at Suns (PHX)",
+        "start": "2026-10-11T02:30Z",
+        "tv": "ESPN2",
+        "note": "Preseason",
+        "jacksTeam": true
+      },
+      {
+        "id": "nba-g14",
+        "game": "Spurs (SAS) at Jazz (UTAH)",
+        "start": "2026-10-13T01:00Z",
+        "note": "Preseason",
+        "jacksTeam": true
+      },
+      {
+        "id": "nba-g15",
+        "game": "Suns (PHX) at Spurs (SAS)",
+        "start": "2026-10-15T00:00Z",
+        "note": "Preseason",
+        "jacksTeam": true
+      }
+    ]
   },
   "myTeams": {
     "nfl": {
