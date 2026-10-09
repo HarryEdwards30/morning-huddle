@@ -1,0 +1,26 @@
+{
+  "appName": "Morning Huddle",
+  "timezone": "Australia/Melbourne",
+  "teams": {
+    "nba": { "name": "San Antonio Spurs", "shortName": "Spurs", "abbr": "SAS", "accent": "#C4CED4" },
+    "nfl": { "name": "Las Vegas Raiders", "shortName": "Raiders", "abbr": "LV", "accent": "#A5ACAF" }
+  },
+  "followedPlayers": [],
+  "sections": {
+    "contextCard": true,
+    "awardRaces": true,
+    "seasonTimeline": true
+  },
+  "schedule": { "dailyBriefLocalTime": "09:00", "runLocalHour": 8, "wrapDay": "Wednesday" },
+  "ai": { "model": "claude-haiku-5-5", "maxInputTokens": 90000 },
+  "seasonDates": {
+    "nba": [
+      { "label": "Opening night", "date": "2026-10-20" },
+      { "label": "NBA Cup group stage", "date": "2026-10-30", "endDate": "2026-12-11" },
+      { "label": "All-Star Game (Phoenix)", "date": "2027-02-21" },
+      { "label": "Regular season ends", "date": "2027-04-11" },
+      { "label": "Play-in tournament", "date": "2027-04-13", "endDate": "2027-04-16" }
+    ],
+    "nfl": []
+  }
+}

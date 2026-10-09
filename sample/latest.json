@@ -1,0 +1,1882 @@
+{
+  "sample": true,
+  "edition": {
+    "date": "2026-11-18",
+    "generatedAt": "2026-11-18T08:04:00+11:00",
+    "type": "wednesday"
+  },
+  "oneThing": "Victor Wembanyama's 41 points and seven blocks beat the Nuggets for the Spurs' sixth straight win, leaving them a game behind the Thunder for first in the West.",
+  "wrap": {
+    "weekLabel": "11 to 17 Nov",
+    "nba": {
+      "summary": "The West has a two-team race at the top. The Spurs went 4–0 for the week and the Thunder haven't lost at home.",
+      "storylines": [
+        {
+          "text": "Giannis Antetokounmpo has the Heat at 10–4, a big jump from last season's play-in finish.",
+          "sources": [
+            "cbs-nba-1"
+          ]
+        },
+        {
+          "text": "The 76ers are 8–6 and still finding the right minutes for LeBron James, Jaylen Brown and Joel Embiid together.",
+          "sources": [
+            "yahoo-nba-1"
+          ]
+        },
+        {
+          "text": "The Pelicans have lost five straight and sit last in the West at 2–12."
+        }
+      ],
+      "standouts": [
+        {
+          "name": "Victor Wembanyama",
+          "team": "SAS",
+          "note": "33.5 points, 13.8 rebounds and 5.3 blocks across four wins."
+        },
+        {
+          "name": "Cade Cunningham",
+          "team": "DET",
+          "note": "Three straight double-doubles as Detroit won all three games."
+        }
+      ]
+    },
+    "nfl": {
+      "summary": "Week 11 tightened the AFC. Buffalo beat Kansas City, so the two now share the best record in the conference at 8–2.",
+      "storylines": [
+        {
+          "text": "The Bills beat the Chiefs 27–24, and both teams are now in the race for the AFC's only first-round bye.",
+          "sources": [
+            "cbs-nfl-1"
+          ]
+        },
+        {
+          "text": "The Eagles held off the Cowboys 24–21 on Monday night to go two games clear in the NFC East.",
+          "sources": [
+            "espn-nfl-1"
+          ]
+        },
+        {
+          "text": "The Raiders lost 27–20 to the Chargers and are two games out of the last AFC wild card spot."
+        }
+      ],
+      "standouts": [
+        {
+          "name": "Josh Allen",
+          "team": "BUF",
+          "note": "Three total touchdowns and the game-winning drive against Kansas City."
+        },
+        {
+          "name": "Ashton Jeanty",
+          "team": "LV",
+          "note": "140 scrimmage yards in a losing effort against the Chargers."
+        }
+      ]
+    }
+  },
+  "myTeams": {
+    "nba": {
+      "league": "NBA",
+      "name": "San Antonio Spurs",
+      "abbr": "SAS",
+      "sinceLast": [
+        {
+          "text": "Beat Denver 121–112 at home. Wembanyama had 41 points, 14 rebounds and 7 blocks, and De'Aaron Fox added 22 points and 9 assists.",
+          "sources": [
+            "espn-nba-1"
+          ]
+        },
+        {
+          "text": "Devin Vassell (right hamstring) is questionable for Thursday's game in Phoenix.",
+          "sources": [
+            "espn-nba-2"
+          ]
+        },
+        {
+          "text": "That's six straight wins. At 11–3 they're a game behind OKC."
+        }
+      ],
+      "record": {
+        "summary": "11–3",
+        "standing": "2nd in the Western Conference · 1 game behind OKC"
+      },
+      "lastResult": {
+        "start": "2026-11-17T01:00:00Z",
+        "opponent": {
+          "abbr": "DEN",
+          "name": "Nuggets"
+        },
+        "homeAway": "home",
+        "teamScore": 121,
+        "oppScore": 112,
+        "result": "W"
+      },
+      "nextGame": {
+        "start": "2026-11-19T02:00:00Z",
+        "opponent": {
+          "abbr": "PHX",
+          "name": "Suns"
+        },
+        "homeAway": "away",
+        "note": "NBA Cup group game"
+      },
+      "injuries": [
+        {
+          "player": "Devin Vassell",
+          "position": "G",
+          "status": "Questionable",
+          "injury": "Right hamstring tightness",
+          "about": "Left Monday's game in the third quarter",
+          "timeline": {
+            "text": "Day-to-day",
+            "basis": "team"
+          },
+          "sources": [
+            "espn-nba-2"
+          ]
+        },
+        {
+          "player": "Julian Champagnie",
+          "position": "F",
+          "status": "Out",
+          "injury": "Grade 2 left ankle sprain",
+          "about": "Ligament sprain, no fracture",
+          "timeline": {
+            "text": "Usually 2 to 4 weeks",
+            "basis": "typical"
+          }
+        },
+        {
+          "player": "Jeremy Sochan",
+          "position": "F",
+          "status": "Day-to-day",
+          "injury": "Sore left wrist",
+          "timeline": {
+            "text": "Could play Thursday",
+            "basis": "media"
+          }
+        }
+      ],
+      "form": [
+        {
+          "player": "Victor Wembanyama",
+          "position": "C",
+          "trend": "up",
+          "note": "Three 30-point games in his last five, and he's finishing better at the rim.",
+          "stats": [
+            {
+              "label": "PTS",
+              "last5": 31.4,
+              "season": 26.8
+            },
+            {
+              "label": "REB",
+              "last5": 13.2,
+              "season": 12.1
+            },
+            {
+              "label": "BLK",
+              "last5": 4.6,
+              "season": 3.9
+            }
+          ]
+        },
+        {
+          "player": "De'Aaron Fox",
+          "position": "G",
+          "trend": "steady",
+          "note": "Running the offence much as he has all season.",
+          "stats": [
+            {
+              "label": "PTS",
+              "last5": 22,
+              "season": 21.5
+            },
+            {
+              "label": "AST",
+              "last5": 8.4,
+              "season": 7.6
+            },
+            {
+              "label": "FG%",
+              "last5": 47.1,
+              "season": 46.3
+            }
+          ]
+        },
+        {
+          "player": "Stephon Castle",
+          "position": "G",
+          "trend": "up",
+          "note": "More time with the ball while Vassell has been limited.",
+          "stats": [
+            {
+              "label": "PTS",
+              "last5": 15.8,
+              "season": 14.2
+            },
+            {
+              "label": "REB",
+              "last5": 5.1,
+              "season": 4.8
+            },
+            {
+              "label": "AST",
+              "last5": 4.2,
+              "season": 4
+            }
+          ]
+        },
+        {
+          "player": "Dylan Harper",
+          "position": "G",
+          "trend": "down",
+          "note": "He has shot 31% from the field over his last five games.",
+          "stats": [
+            {
+              "label": "PTS",
+              "last5": 9.6,
+              "season": 12.9
+            },
+            {
+              "label": "AST",
+              "last5": 2.8,
+              "season": 3.5
+            },
+            {
+              "label": "FG%",
+              "last5": 31,
+              "season": 42.4
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "type": "Coach",
+          "date": "2026-11-17T09:00:00Z",
+          "text": "Mitch Johnson said the starting five will stay the same while Vassell is day-to-day.",
+          "sources": [
+            "espn-nba-2"
+          ]
+        },
+        {
+          "type": "Rotation",
+          "date": "2026-11-16T09:00:00Z",
+          "text": "Harper has averaged 18 minutes over the last three games, with Castle taking on more of the ball-handling."
+        }
+      ],
+      "playoffRace": {
+        "groupName": "West",
+        "summary": "Second in the West, a game behind OKC and three games clear of fifth.",
+        "cutoffAfter": 6,
+        "cutoffLabel": "Top 6 go straight to the playoffs. 7 to 10 play in.",
+        "rows": [
+          {
+            "seed": 1,
+            "abbr": "OKC",
+            "name": "Thunder",
+            "record": "12–2",
+            "gb": "–"
+          },
+          {
+            "seed": 2,
+            "abbr": "SAS",
+            "name": "Spurs",
+            "record": "11–3",
+            "gb": "NaN"
+          },
+          {
+            "seed": 3,
+            "abbr": "DEN",
+            "name": "Nuggets",
+            "record": "10–4",
+            "gb": "NaN"
+          },
+          {
+            "seed": 4,
+            "abbr": "HOU",
+            "name": "Rockets",
+            "record": "9–5",
+            "gb": "NaN"
+          },
+          {
+            "seed": 5,
+            "abbr": "MIN",
+            "name": "Timberwolves",
+            "record": "9–6",
+            "gb": "NaN"
+          },
+          {
+            "seed": 6,
+            "abbr": "LAL",
+            "name": "Lakers",
+            "record": "8–6",
+            "gb": "NaN"
+          },
+          {
+            "seed": 7,
+            "abbr": "GS",
+            "name": "Warriors",
+            "record": "8–7",
+            "gb": "NaN"
+          },
+          {
+            "seed": 8,
+            "abbr": "DAL",
+            "name": "Mavericks",
+            "record": "7–7",
+            "gb": "NaN"
+          }
+        ],
+        "keyGames": [
+          {
+            "start": "2026-11-27T01:00:00Z",
+            "opponent": {
+              "abbr": "OKC",
+              "name": "Thunder"
+            },
+            "homeAway": "away",
+            "why": "First against second in the West."
+          },
+          {
+            "start": "2026-11-24T01:00:00Z",
+            "opponent": {
+              "abbr": "HOU",
+              "name": "Rockets"
+            },
+            "homeAway": "home",
+            "why": "Houston is fourth, two games back."
+          }
+        ]
+      }
+    },
+    "nfl": {
+      "league": "NFL",
+      "name": "Las Vegas Raiders",
+      "abbr": "LV",
+      "sinceLast": [
+        {
+          "text": "Pete Carroll said Ashton Jeanty will get more work in the passing game after his 140-yard day against the Chargers.",
+          "sources": [
+            "espn-nfl-2"
+          ]
+        },
+        {
+          "text": "Placed left tackle Kolton Miller on injured reserve and promoted an offensive lineman from the practice squad.",
+          "sources": [
+            "espn-nfl-3"
+          ]
+        }
+      ],
+      "record": {
+        "summary": "4–6",
+        "standing": "4th in the AFC West · 2 games out of the last wild card spot"
+      },
+      "lastResult": {
+        "start": "2026-11-15T21:25:00Z",
+        "opponent": {
+          "abbr": "LAC",
+          "name": "Chargers"
+        },
+        "homeAway": "away",
+        "teamScore": 20,
+        "oppScore": 27,
+        "result": "L"
+      },
+      "nextGame": {
+        "start": "2026-11-22T21:05:00Z",
+        "opponent": {
+          "abbr": "DEN",
+          "name": "Broncos"
+        },
+        "homeAway": "home",
+        "note": "Week 12 · division game"
+      },
+      "injuries": [
+        {
+          "player": "Kolton Miller",
+          "position": "T",
+          "status": "Out",
+          "injury": "Knee (MCL sprain)",
+          "about": "Placed on injured reserve",
+          "timeline": {
+            "text": "Usually 4 to 6 weeks for a grade 2 MCL sprain",
+            "basis": "typical"
+          },
+          "sources": [
+            "espn-nfl-3"
+          ]
+        },
+        {
+          "player": "Maxx Crosby",
+          "position": "DE",
+          "status": "Questionable",
+          "injury": "Right ankle sprain",
+          "timeline": {
+            "text": "Expected to play this week",
+            "basis": "media"
+          }
+        },
+        {
+          "player": "Jakobi Meyers",
+          "position": "WR",
+          "status": "Probable",
+          "injury": "Shoulder soreness",
+          "timeline": {
+            "text": "Expected to play",
+            "basis": "team"
+          }
+        }
+      ],
+      "form": [
+        {
+          "player": "Geno Smith",
+          "position": "QB",
+          "trend": "up",
+          "note": "Fewer turnovers over the last month.",
+          "stats": [
+            {
+              "label": "PASS YDS",
+              "last5": 248,
+              "season": 231
+            },
+            {
+              "label": "TD",
+              "last5": 1.8,
+              "season": 1.4
+            },
+            {
+              "label": "INT",
+              "last5": 0.6,
+              "season": 0.9
+            }
+          ]
+        },
+        {
+          "player": "Ashton Jeanty",
+          "position": "RB",
+          "trend": "up",
+          "note": "At least 90 scrimmage yards in four of his last five games.",
+          "stats": [
+            {
+              "label": "RUSH YDS",
+              "last5": 94,
+              "season": 81
+            },
+            {
+              "label": "YPC",
+              "last5": 4.9,
+              "season": 4.4
+            },
+            {
+              "label": "TD",
+              "last5": 0.8,
+              "season": 0.6
+            }
+          ]
+        },
+        {
+          "player": "Brock Bowers",
+          "position": "TE",
+          "trend": "down",
+          "note": "Fewer targets since his return from a knee issue.",
+          "stats": [
+            {
+              "label": "REC",
+              "last5": 5.2,
+              "season": 6.1
+            },
+            {
+              "label": "YDS",
+              "last5": 58,
+              "season": 67
+            },
+            {
+              "label": "TD",
+              "last5": 0.2,
+              "season": 0.4
+            }
+          ]
+        },
+        {
+          "player": "Maxx Crosby",
+          "position": "DE",
+          "trend": "steady",
+          "note": "Steady pressure despite the ankle.",
+          "stats": [
+            {
+              "label": "SACKS",
+              "last5": 0.8,
+              "season": 0.7
+            },
+            {
+              "label": "TFL",
+              "last5": 1.2,
+              "season": 1.3
+            },
+            {
+              "label": "QB HITS",
+              "last5": 2,
+              "season": 2.1
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "type": "Injury list",
+          "date": "2026-11-17T18:00:00Z",
+          "text": "Kolton Miller to injured reserve. He must miss at least four games.",
+          "sources": [
+            "espn-nfl-3"
+          ]
+        },
+        {
+          "type": "Coach",
+          "date": "2026-11-17T20:00:00Z",
+          "text": "Carroll on Jeanty: \"He's earned more touches, and we'll find them.\"",
+          "sources": [
+            "espn-nfl-2"
+          ]
+        },
+        {
+          "type": "Depth chart",
+          "date": "2026-11-17T20:00:00Z",
+          "text": "A backup tackle moves into the starting line-up at left tackle."
+        }
+      ],
+      "playoffRace": {
+        "groupName": "AFC",
+        "summary": "The Raiders are 11th in the AFC, two games behind Denver for the last wild card spot, with two division games in the next three weeks.",
+        "cutoffAfter": 7,
+        "cutoffLabel": "Top 7 make the playoffs: 4 division winners and 3 wild cards. GB is games behind 7th.",
+        "rows": [
+          {
+            "seed": 1,
+            "abbr": "KC",
+            "name": "Chiefs",
+            "record": "8–2",
+            "gb": "–"
+          },
+          {
+            "seed": 2,
+            "abbr": "BUF",
+            "name": "Bills",
+            "record": "8–2",
+            "gb": "–"
+          },
+          {
+            "seed": 3,
+            "abbr": "BAL",
+            "name": "Ravens",
+            "record": "7–3",
+            "gb": "–"
+          },
+          {
+            "seed": 4,
+            "abbr": "HOU",
+            "name": "Texans",
+            "record": "6–4",
+            "gb": "–"
+          },
+          {
+            "seed": 5,
+            "abbr": "LAC",
+            "name": "Chargers",
+            "record": "7–3",
+            "gb": "–"
+          },
+          {
+            "seed": 6,
+            "abbr": "PIT",
+            "name": "Steelers",
+            "record": "6–4",
+            "gb": "–"
+          },
+          {
+            "seed": 7,
+            "abbr": "DEN",
+            "name": "Broncos",
+            "record": "6–4",
+            "gb": "–"
+          },
+          {
+            "seed": 8,
+            "abbr": "IND",
+            "name": "Colts",
+            "record": "5–5",
+            "gb": "1.0"
+          },
+          {
+            "seed": 9,
+            "abbr": "MIA",
+            "name": "Dolphins",
+            "record": "5–5",
+            "gb": "1.0"
+          },
+          {
+            "seed": 10,
+            "abbr": "CIN",
+            "name": "Bengals",
+            "record": "5–5",
+            "gb": "1.0"
+          },
+          {
+            "seed": 11,
+            "abbr": "LV",
+            "name": "Raiders",
+            "record": "4–6",
+            "gb": "2.0"
+          }
+        ],
+        "keyGames": [
+          {
+            "start": "2026-11-22T21:05:00Z",
+            "opponent": {
+              "abbr": "DEN",
+              "name": "Broncos"
+            },
+            "homeAway": "home",
+            "why": "Denver currently holds the last wild card spot."
+          },
+          {
+            "start": "2026-12-06T21:25:00Z",
+            "opponent": {
+              "abbr": "KC",
+              "name": "Chiefs"
+            },
+            "homeAway": "away",
+            "why": "Division leaders, and a chance to gain ground in the AFC West."
+          }
+        ]
+      }
+    }
+  },
+  "followedPlayers": [],
+  "headlines": [
+    {
+      "league": "NBA",
+      "title": "Thunder stay perfect at home",
+      "summary": "Shai Gilgeous-Alexander scored 34 as OKC beat Sacramento 118–101 to move to 8–0 at home.",
+      "whyItMatters": "Their home form keeps them a game clear of the Spurs for the West's top seed.",
+      "sources": [
+        "espn-nba-3"
+      ]
+    },
+    {
+      "league": "NBA",
+      "title": "Giannis has the Heat rolling",
+      "summary": "Antetokounmpo had 31 points and 12 rebounds in a 109–104 win over Boston, Miami's eighth win in ten games.",
+      "whyItMatters": "Miami has gone from a play-in team to second in the East, a game behind the Knicks.",
+      "sources": [
+        "cbs-nba-1"
+      ]
+    },
+    {
+      "league": "NBA",
+      "title": "76ers drop a close one to the Knicks",
+      "summary": "LeBron James scored 28, but New York pulled away late to win 115–112.",
+      "whyItMatters": "Philadelphia's new stars are still learning to play together, and the 76ers are sixth in a crowded East.",
+      "sources": [
+        "yahoo-nba-1"
+      ]
+    },
+    {
+      "league": "NFL",
+      "title": "Eagles hold off Cowboys on Monday night",
+      "summary": "Jalen Hurts threw for two touchdowns and Philadelphia stopped a late Dallas drive to win 24–21.",
+      "whyItMatters": "The Eagles are now two games clear in the NFC East with six games left.",
+      "sources": [
+        "espn-nfl-1"
+      ]
+    },
+    {
+      "league": "NFL",
+      "title": "Bills edge Chiefs in AFC heavyweight game",
+      "summary": "Josh Allen led a late field-goal drive for a 27–24 win in Buffalo.",
+      "whyItMatters": "Buffalo now holds the head-to-head tiebreaker over Kansas City in the race for the AFC's only bye.",
+      "sources": [
+        "cbs-nfl-1"
+      ]
+    }
+  ],
+  "results": {
+    "nba": [
+      {
+        "start": "2026-11-17T01:00:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "DEN",
+          "name": "Nuggets",
+          "score": 112
+        },
+        "home": {
+          "abbr": "SAS",
+          "name": "Spurs",
+          "score": 121
+        }
+      },
+      {
+        "start": "2026-11-17T01:00:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "SAC",
+          "name": "Kings",
+          "score": 101
+        },
+        "home": {
+          "abbr": "OKC",
+          "name": "Thunder",
+          "score": 118
+        }
+      },
+      {
+        "start": "2026-11-17T00:30:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "BOS",
+          "name": "Celtics",
+          "score": 104
+        },
+        "home": {
+          "abbr": "MIA",
+          "name": "Heat",
+          "score": 109
+        }
+      },
+      {
+        "start": "2026-11-17T00:30:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "PHI",
+          "name": "76ers",
+          "score": 112
+        },
+        "home": {
+          "abbr": "NY",
+          "name": "Knicks",
+          "score": 115
+        }
+      },
+      {
+        "start": "2026-11-17T03:30:00Z",
+        "status": "Final/OT",
+        "away": {
+          "abbr": "MEM",
+          "name": "Grizzlies",
+          "score": 103
+        },
+        "home": {
+          "abbr": "LAL",
+          "name": "Lakers",
+          "score": 99
+        }
+      }
+    ],
+    "nfl": [
+      {
+        "start": "2026-11-17T01:15:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "PHI",
+          "name": "Eagles",
+          "score": 24
+        },
+        "home": {
+          "abbr": "DAL",
+          "name": "Cowboys",
+          "score": 21
+        },
+        "note": "Monday Night Football"
+      }
+    ]
+  },
+  "contextCard": {
+    "league": "NBA",
+    "title": "How the NBA Cup group stage works",
+    "body": "Each team plays four Cup group games, and they also count in the regular-season standings. The six group winners and one wild card from each conference go through to the quarter-finals in December."
+  },
+  "league": {
+    "pulse": {
+      "nba": {
+        "hot": [
+          {
+            "abbr": "SAS",
+            "name": "Spurs",
+            "form": "W6",
+            "note": "Six straight wins, the last four by double digits on average."
+          },
+          {
+            "abbr": "MIA",
+            "name": "Heat",
+            "form": "8–2 L10",
+            "note": "Second-best defence over the last ten games."
+          }
+        ],
+        "cold": [
+          {
+            "abbr": "NO",
+            "name": "Pelicans",
+            "form": "L5",
+            "note": "Lost five straight, three of them by 15 or more."
+          },
+          {
+            "abbr": "BKN",
+            "name": "Nets",
+            "form": "L4",
+            "note": "Bottom three in offence for the season."
+          }
+        ],
+        "players": [
+          {
+            "name": "Victor Wembanyama",
+            "team": "SAS",
+            "note": "31.4 points and 4.6 blocks a game over his last five."
+          },
+          {
+            "name": "Cade Cunningham",
+            "team": "DET",
+            "note": "Three straight double-doubles."
+          }
+        ]
+      },
+      "nfl": {
+        "hot": [
+          {
+            "abbr": "BUF",
+            "name": "Bills",
+            "form": "W4",
+            "note": "Four straight wins, including Kansas City."
+          },
+          {
+            "abbr": "LAC",
+            "name": "Chargers",
+            "form": "W3",
+            "note": "Allowed 17 points or fewer in all three wins."
+          }
+        ],
+        "cold": [
+          {
+            "abbr": "NYJ",
+            "name": "Jets",
+            "form": "L4",
+            "note": "Eight turnovers in their last four games."
+          },
+          {
+            "abbr": "CAR",
+            "name": "Panthers",
+            "form": "L4",
+            "note": "Fewest points scored in the NFC."
+          }
+        ],
+        "players": [
+          {
+            "name": "Josh Allen",
+            "team": "BUF",
+            "note": "11 total touchdowns in his last four games."
+          },
+          {
+            "name": "Ja'Marr Chase",
+            "team": "CIN",
+            "note": "Leads the league in receiving yards."
+          }
+        ]
+      }
+    },
+    "standings": {
+      "nba": {
+        "groups": [
+          {
+            "name": "Western Conference",
+            "rows": [
+              {
+                "abbr": "OKC",
+                "name": "Thunder",
+                "w": 12,
+                "l": 2,
+                "pct": ".857",
+                "gb": "–",
+                "streak": "W3"
+              },
+              {
+                "abbr": "SAS",
+                "name": "Spurs",
+                "w": 11,
+                "l": 3,
+                "pct": ".786",
+                "gb": "NaN",
+                "streak": "W6"
+              },
+              {
+                "abbr": "DEN",
+                "name": "Nuggets",
+                "w": 10,
+                "l": 4,
+                "pct": ".714",
+                "gb": "NaN",
+                "streak": "L1"
+              },
+              {
+                "abbr": "HOU",
+                "name": "Rockets",
+                "w": 9,
+                "l": 5,
+                "pct": ".643",
+                "gb": "NaN",
+                "streak": "W2"
+              },
+              {
+                "abbr": "MIN",
+                "name": "Timberwolves",
+                "w": 9,
+                "l": 6,
+                "pct": ".600",
+                "gb": "NaN",
+                "streak": "L2"
+              },
+              {
+                "abbr": "LAL",
+                "name": "Lakers",
+                "w": 8,
+                "l": 6,
+                "pct": ".571",
+                "gb": "NaN",
+                "streak": "W1"
+              },
+              {
+                "abbr": "GS",
+                "name": "Warriors",
+                "w": 8,
+                "l": 7,
+                "pct": ".533",
+                "gb": "NaN",
+                "streak": "L1"
+              },
+              {
+                "abbr": "DAL",
+                "name": "Mavericks",
+                "w": 7,
+                "l": 7,
+                "pct": ".500",
+                "gb": "NaN",
+                "streak": "W2"
+              },
+              {
+                "abbr": "LAC",
+                "name": "Clippers",
+                "w": 7,
+                "l": 8,
+                "pct": ".467",
+                "gb": "NaN",
+                "streak": "L3"
+              },
+              {
+                "abbr": "MEM",
+                "name": "Grizzlies",
+                "w": 6,
+                "l": 8,
+                "pct": ".429",
+                "gb": "NaN",
+                "streak": "W1"
+              },
+              {
+                "abbr": "PHX",
+                "name": "Suns",
+                "w": 6,
+                "l": 9,
+                "pct": ".400",
+                "gb": "NaN",
+                "streak": "L2"
+              },
+              {
+                "abbr": "SAC",
+                "name": "Kings",
+                "w": 5,
+                "l": 9,
+                "pct": ".357",
+                "gb": "NaN",
+                "streak": "L1"
+              },
+              {
+                "abbr": "POR",
+                "name": "Trail Blazers",
+                "w": 4,
+                "l": 10,
+                "pct": ".286",
+                "gb": "NaN",
+                "streak": "W1"
+              },
+              {
+                "abbr": "UTAH",
+                "name": "Jazz",
+                "w": 3,
+                "l": 11,
+                "pct": ".214",
+                "gb": "NaN",
+                "streak": "L4"
+              },
+              {
+                "abbr": "NO",
+                "name": "Pelicans",
+                "w": 2,
+                "l": 12,
+                "pct": ".143",
+                "gb": "NaN",
+                "streak": "L5"
+              }
+            ]
+          },
+          {
+            "name": "Eastern Conference",
+            "rows": [
+              {
+                "abbr": "NY",
+                "name": "Knicks",
+                "w": 11,
+                "l": 3,
+                "pct": ".786",
+                "gb": "–",
+                "streak": "W1"
+              },
+              {
+                "abbr": "MIA",
+                "name": "Heat",
+                "w": 10,
+                "l": 4,
+                "pct": ".714",
+                "gb": "NaN",
+                "streak": "W4"
+              },
+              {
+                "abbr": "CLE",
+                "name": "Cavaliers",
+                "w": 10,
+                "l": 5,
+                "pct": ".667",
+                "gb": "NaN",
+                "streak": "L1"
+              },
+              {
+                "abbr": "ORL",
+                "name": "Magic",
+                "w": 9,
+                "l": 5,
+                "pct": ".643",
+                "gb": "NaN",
+                "streak": "W2"
+              },
+              {
+                "abbr": "DET",
+                "name": "Pistons",
+                "w": 9,
+                "l": 6,
+                "pct": ".600",
+                "gb": "NaN",
+                "streak": "W3"
+              },
+              {
+                "abbr": "PHI",
+                "name": "76ers",
+                "w": 8,
+                "l": 6,
+                "pct": ".571",
+                "gb": "NaN",
+                "streak": "L1"
+              },
+              {
+                "abbr": "ATL",
+                "name": "Hawks",
+                "w": 7,
+                "l": 7,
+                "pct": ".500",
+                "gb": "NaN",
+                "streak": "L2"
+              },
+              {
+                "abbr": "BOS",
+                "name": "Celtics",
+                "w": 7,
+                "l": 8,
+                "pct": ".467",
+                "gb": "NaN",
+                "streak": "L1"
+              },
+              {
+                "abbr": "IND",
+                "name": "Pacers",
+                "w": 6,
+                "l": 8,
+                "pct": ".429",
+                "gb": "NaN",
+                "streak": "W1"
+              },
+              {
+                "abbr": "MIL",
+                "name": "Bucks",
+                "w": 6,
+                "l": 8,
+                "pct": ".429",
+                "gb": "NaN",
+                "streak": "L3"
+              },
+              {
+                "abbr": "TOR",
+                "name": "Raptors",
+                "w": 5,
+                "l": 9,
+                "pct": ".357",
+                "gb": "NaN",
+                "streak": "W1"
+              },
+              {
+                "abbr": "CHI",
+                "name": "Bulls",
+                "w": 5,
+                "l": 10,
+                "pct": ".333",
+                "gb": "NaN",
+                "streak": "L2"
+              },
+              {
+                "abbr": "CHA",
+                "name": "Hornets",
+                "w": 4,
+                "l": 10,
+                "pct": ".286",
+                "gb": "NaN",
+                "streak": "W1"
+              },
+              {
+                "abbr": "WSH",
+                "name": "Wizards",
+                "w": 3,
+                "l": 11,
+                "pct": ".214",
+                "gb": "NaN",
+                "streak": "L2"
+              },
+              {
+                "abbr": "BKN",
+                "name": "Nets",
+                "w": 2,
+                "l": 12,
+                "pct": ".143",
+                "gb": "NaN",
+                "streak": "L4"
+              }
+            ]
+          }
+        ]
+      },
+      "nfl": {
+        "groups": [
+          {
+            "conference": "AFC",
+            "name": "AFC East",
+            "rows": [
+              {
+                "abbr": "BUF",
+                "name": "Bills",
+                "w": 8,
+                "l": 2,
+                "t": 0,
+                "pct": ".800",
+                "streak": "W4"
+              },
+              {
+                "abbr": "MIA",
+                "name": "Dolphins",
+                "w": 5,
+                "l": 5,
+                "t": 0,
+                "pct": ".500",
+                "streak": "W1"
+              },
+              {
+                "abbr": "NE",
+                "name": "Patriots",
+                "w": 4,
+                "l": 6,
+                "t": 0,
+                "pct": ".400",
+                "streak": "L2"
+              },
+              {
+                "abbr": "NYJ",
+                "name": "Jets",
+                "w": 2,
+                "l": 8,
+                "t": 0,
+                "pct": ".200",
+                "streak": "L4"
+              }
+            ]
+          },
+          {
+            "conference": "AFC",
+            "name": "AFC North",
+            "rows": [
+              {
+                "abbr": "BAL",
+                "name": "Ravens",
+                "w": 7,
+                "l": 3,
+                "t": 0,
+                "pct": ".700",
+                "streak": "W2"
+              },
+              {
+                "abbr": "PIT",
+                "name": "Steelers",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "L1"
+              },
+              {
+                "abbr": "CIN",
+                "name": "Bengals",
+                "w": 5,
+                "l": 5,
+                "t": 0,
+                "pct": ".500",
+                "streak": "W1"
+              },
+              {
+                "abbr": "CLE",
+                "name": "Browns",
+                "w": 3,
+                "l": 7,
+                "t": 0,
+                "pct": ".300",
+                "streak": "L1"
+              }
+            ]
+          },
+          {
+            "conference": "AFC",
+            "name": "AFC South",
+            "rows": [
+              {
+                "abbr": "HOU",
+                "name": "Texans",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "W1"
+              },
+              {
+                "abbr": "IND",
+                "name": "Colts",
+                "w": 5,
+                "l": 5,
+                "t": 0,
+                "pct": ".500",
+                "streak": "L2"
+              },
+              {
+                "abbr": "JAX",
+                "name": "Jaguars",
+                "w": 4,
+                "l": 6,
+                "t": 0,
+                "pct": ".400",
+                "streak": "W1"
+              },
+              {
+                "abbr": "TEN",
+                "name": "Titans",
+                "w": 2,
+                "l": 8,
+                "t": 0,
+                "pct": ".200",
+                "streak": "L3"
+              }
+            ]
+          },
+          {
+            "conference": "AFC",
+            "name": "AFC West",
+            "rows": [
+              {
+                "abbr": "KC",
+                "name": "Chiefs",
+                "w": 8,
+                "l": 2,
+                "t": 0,
+                "pct": ".800",
+                "streak": "L1"
+              },
+              {
+                "abbr": "LAC",
+                "name": "Chargers",
+                "w": 7,
+                "l": 3,
+                "t": 0,
+                "pct": ".700",
+                "streak": "W3"
+              },
+              {
+                "abbr": "DEN",
+                "name": "Broncos",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "W1"
+              },
+              {
+                "abbr": "LV",
+                "name": "Raiders",
+                "w": 4,
+                "l": 6,
+                "t": 0,
+                "pct": ".400",
+                "streak": "L1"
+              }
+            ]
+          },
+          {
+            "conference": "NFC",
+            "name": "NFC East",
+            "rows": [
+              {
+                "abbr": "PHI",
+                "name": "Eagles",
+                "w": 8,
+                "l": 3,
+                "t": 0,
+                "pct": ".727",
+                "streak": "W2"
+              },
+              {
+                "abbr": "WSH",
+                "name": "Commanders",
+                "w": 5,
+                "l": 5,
+                "t": 0,
+                "pct": ".500",
+                "streak": "L1"
+              },
+              {
+                "abbr": "DAL",
+                "name": "Cowboys",
+                "w": 5,
+                "l": 6,
+                "t": 0,
+                "pct": ".455",
+                "streak": "L2"
+              },
+              {
+                "abbr": "NYG",
+                "name": "Giants",
+                "w": 3,
+                "l": 7,
+                "t": 0,
+                "pct": ".300",
+                "streak": "W1"
+              }
+            ]
+          },
+          {
+            "conference": "NFC",
+            "name": "NFC North",
+            "rows": [
+              {
+                "abbr": "DET",
+                "name": "Lions",
+                "w": 8,
+                "l": 2,
+                "t": 0,
+                "pct": ".800",
+                "streak": "W3"
+              },
+              {
+                "abbr": "GB",
+                "name": "Packers",
+                "w": 7,
+                "l": 3,
+                "t": 0,
+                "pct": ".700",
+                "streak": "W1"
+              },
+              {
+                "abbr": "MIN",
+                "name": "Vikings",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "L1"
+              },
+              {
+                "abbr": "CHI",
+                "name": "Bears",
+                "w": 4,
+                "l": 6,
+                "t": 0,
+                "pct": ".400",
+                "streak": "L2"
+              }
+            ]
+          },
+          {
+            "conference": "NFC",
+            "name": "NFC South",
+            "rows": [
+              {
+                "abbr": "TB",
+                "name": "Buccaneers",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "W2"
+              },
+              {
+                "abbr": "ATL",
+                "name": "Falcons",
+                "w": 5,
+                "l": 5,
+                "t": 0,
+                "pct": ".500",
+                "streak": "W1"
+              },
+              {
+                "abbr": "NO",
+                "name": "Saints",
+                "w": 3,
+                "l": 7,
+                "t": 0,
+                "pct": ".300",
+                "streak": "L1"
+              },
+              {
+                "abbr": "CAR",
+                "name": "Panthers",
+                "w": 2,
+                "l": 8,
+                "t": 0,
+                "pct": ".200",
+                "streak": "L4"
+              }
+            ]
+          },
+          {
+            "conference": "NFC",
+            "name": "NFC West",
+            "rows": [
+              {
+                "abbr": "SF",
+                "name": "49ers",
+                "w": 7,
+                "l": 3,
+                "t": 0,
+                "pct": ".700",
+                "streak": "W1"
+              },
+              {
+                "abbr": "LAR",
+                "name": "Rams",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "W2"
+              },
+              {
+                "abbr": "SEA",
+                "name": "Seahawks",
+                "w": 6,
+                "l": 4,
+                "t": 0,
+                "pct": ".600",
+                "streak": "L1"
+              },
+              {
+                "abbr": "ARI",
+                "name": "Cardinals",
+                "w": 4,
+                "l": 6,
+                "t": 0,
+                "pct": ".400",
+                "streak": "L1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "awardRaces": {
+      "nba": [
+        {
+          "award": "MVP",
+          "contenders": [
+            {
+              "name": "Shai Gilgeous-Alexander",
+              "team": "OKC",
+              "note": "Best team in the league and the top scorer among contenders."
+            },
+            {
+              "name": "Victor Wembanyama",
+              "team": "SAS",
+              "note": "Leads the league in blocks while scoring a career high."
+            },
+            {
+              "name": "Nikola Jokić",
+              "team": "DEN",
+              "note": "Near triple-double averages again."
+            }
+          ]
+        },
+        {
+          "award": "Defensive Player of the Year",
+          "contenders": [
+            {
+              "name": "Victor Wembanyama",
+              "team": "SAS",
+              "note": "4.2 blocks a game, and the Spurs have a top-three defence."
+            },
+            {
+              "name": "Evan Mobley",
+              "team": "CLE",
+              "note": "Anchors a top-five defence."
+            }
+          ]
+        }
+      ],
+      "nfl": [
+        {
+          "award": "MVP",
+          "contenders": [
+            {
+              "name": "Josh Allen",
+              "team": "BUF",
+              "note": "8–2, with the win over Kansas City."
+            },
+            {
+              "name": "Lamar Jackson",
+              "team": "BAL",
+              "note": "Leads all quarterbacks in total yards."
+            },
+            {
+              "name": "Patrick Mahomes",
+              "team": "KC",
+              "note": "Joint-best record in the AFC."
+            }
+          ]
+        },
+        {
+          "award": "Offensive Player of the Year",
+          "contenders": [
+            {
+              "name": "Ja'Marr Chase",
+              "team": "CIN",
+              "note": "League leader in receiving yards."
+            },
+            {
+              "name": "Ashton Jeanty",
+              "team": "LV",
+              "note": "Top five in scrimmage yards."
+            }
+          ]
+        },
+        {
+          "award": "Defensive Player of the Year",
+          "contenders": [
+            {
+              "name": "Myles Garrett",
+              "team": "CLE",
+              "note": "Leads the league in sacks."
+            },
+            {
+              "name": "Maxx Crosby",
+              "team": "LV",
+              "note": "Top three in pressures."
+            }
+          ]
+        }
+      ]
+    },
+    "majorInjuries": [
+      {
+        "league": "NBA",
+        "player": "Ja Morant",
+        "team": "MEM",
+        "status": "Out",
+        "injury": "Left ankle sprain",
+        "timeline": {
+          "text": "1 to 2 weeks",
+          "basis": "media"
+        }
+      },
+      {
+        "league": "NBA",
+        "player": "Anthony Davis",
+        "team": "DAL",
+        "status": "Out",
+        "injury": "Left calf strain",
+        "timeline": {
+          "text": "Re-evaluated in 2 weeks",
+          "basis": "team"
+        }
+      },
+      {
+        "league": "NFL",
+        "player": "Christian McCaffrey",
+        "team": "SF",
+        "status": "Questionable",
+        "injury": "Hamstring",
+        "timeline": {
+          "text": "Game-time decision this week",
+          "basis": "media"
+        }
+      },
+      {
+        "league": "NFL",
+        "player": "Kolton Miller",
+        "team": "LV",
+        "status": "Out",
+        "injury": "Knee (MCL sprain)",
+        "timeline": {
+          "text": "Usually 4 to 6 weeks",
+          "basis": "typical"
+        }
+      }
+    ],
+    "transactions": [
+      {
+        "league": "NBA",
+        "type": "Trade",
+        "teams": [
+          "ATL",
+          "UTAH"
+        ],
+        "date": "2026-11-16T20:00:00Z",
+        "text": "The Hawks sent a future second-round pick to the Jazz for a backup centre."
+      },
+      {
+        "league": "NBA",
+        "type": "Signing",
+        "teams": [
+          "MIA"
+        ],
+        "date": "2026-11-15T20:00:00Z",
+        "text": "The Heat signed a veteran guard to a one-year deal."
+      },
+      {
+        "league": "NFL",
+        "type": "Injured reserve",
+        "teams": [
+          "LV"
+        ],
+        "date": "2026-11-17T18:00:00Z",
+        "text": "The Raiders placed Kolton Miller on injured reserve.",
+        "sources": [
+          "espn-nfl-3"
+        ]
+      },
+      {
+        "league": "NFL",
+        "type": "Release",
+        "teams": [
+          "NYJ"
+        ],
+        "date": "2026-11-17T18:00:00Z",
+        "text": "The Jets released a veteran receiver."
+      }
+    ]
+  },
+  "watchGuide": {
+    "weekOf": "2026-11-18",
+    "weekEnd": "2026-11-24",
+    "nba": {
+      "picks": [
+        {
+          "rank": 1,
+          "start": "2026-11-21T00:30:00Z",
+          "away": {
+            "abbr": "MIA",
+            "name": "Heat"
+          },
+          "home": {
+            "abbr": "NY",
+            "name": "Knicks"
+          },
+          "reason": "First against second in the East, and Giannis's first game at Madison Square Garden for Miami."
+        },
+        {
+          "rank": 2,
+          "start": "2026-11-22T00:00:00Z",
+          "away": {
+            "abbr": "MIN",
+            "name": "Timberwolves"
+          },
+          "home": {
+            "abbr": "SAS",
+            "name": "Spurs"
+          },
+          "reason": "The Spurs go for an eighth straight win against a top-five West team."
+        },
+        {
+          "rank": 3,
+          "start": "2026-11-22T02:00:00Z",
+          "away": {
+            "abbr": "OKC",
+            "name": "Thunder"
+          },
+          "home": {
+            "abbr": "DEN",
+            "name": "Nuggets"
+          },
+          "reason": "The league's best defence against its best offence."
+        },
+        {
+          "rank": 4,
+          "start": "2026-11-23T00:30:00Z",
+          "away": {
+            "abbr": "PHI",
+            "name": "76ers"
+          },
+          "home": {
+            "abbr": "BOS",
+            "name": "Celtics"
+          },
+          "reason": "Jaylen Brown's first game back in Boston."
+        }
+      ],
+      "yourTeam": [
+        {
+          "start": "2026-11-19T02:00:00Z",
+          "away": {
+            "abbr": "SAS",
+            "name": "Spurs"
+          },
+          "home": {
+            "abbr": "PHX",
+            "name": "Suns"
+          },
+          "reason": "NBA Cup group game. The Spurs go for seven straight."
+        },
+        {
+          "start": "2026-11-24T01:00:00Z",
+          "away": {
+            "abbr": "HOU",
+            "name": "Rockets"
+          },
+          "home": {
+            "abbr": "SAS",
+            "name": "Spurs"
+          },
+          "reason": "Houston is two games back in fourth."
+        }
+      ]
+    },
+    "nfl": {
+      "picks": [
+        {
+          "rank": 1,
+          "start": "2026-11-23T01:20:00Z",
+          "away": {
+            "abbr": "BUF",
+            "name": "Bills"
+          },
+          "home": {
+            "abbr": "BAL",
+            "name": "Ravens"
+          },
+          "reason": "Two of the AFC's top three on Sunday Night Football."
+        },
+        {
+          "rank": 2,
+          "start": "2026-11-22T21:25:00Z",
+          "away": {
+            "abbr": "DET",
+            "name": "Lions"
+          },
+          "home": {
+            "abbr": "GB",
+            "name": "Packers"
+          },
+          "reason": "The NFC North lead is on the line."
+        },
+        {
+          "rank": 3,
+          "start": "2026-11-24T01:15:00Z",
+          "away": {
+            "abbr": "KC",
+            "name": "Chiefs"
+          },
+          "home": {
+            "abbr": "LAC",
+            "name": "Chargers"
+          },
+          "reason": "The Chargers can draw level with Kansas City in the AFC West."
+        }
+      ],
+      "yourTeam": [
+        {
+          "start": "2026-11-22T21:05:00Z",
+          "away": {
+            "abbr": "DEN",
+            "name": "Broncos"
+          },
+          "home": {
+            "abbr": "LV",
+            "name": "Raiders"
+          },
+          "reason": "Denver holds the last wild card spot, two games ahead of the Raiders."
+        }
+      ]
+    }
+  },
+  "sources": {
+    "espn-nba-1": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nba/",
+      "title": "Spurs beat Nuggets for sixth straight win"
+    },
+    "espn-nba-2": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nba/",
+      "title": "Spurs injury update"
+    },
+    "espn-nba-3": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nba/",
+      "title": "Thunder stay unbeaten at home"
+    },
+    "cbs-nba-1": {
+      "publisher": "CBS Sports",
+      "url": "https://www.cbssports.com/nba/",
+      "title": "Giannis and the Heat are rolling"
+    },
+    "yahoo-nba-1": {
+      "publisher": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/nba/",
+      "title": "76ers still searching for rhythm"
+    },
+    "espn-nfl-1": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/",
+      "title": "Eagles hold off Cowboys on Monday night"
+    },
+    "espn-nfl-2": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/",
+      "title": "Raiders coach on Jeanty usage"
+    },
+    "cbs-nfl-1": {
+      "publisher": "CBS Sports",
+      "url": "https://www.cbssports.com/nfl/",
+      "title": "Bills top Chiefs in AFC showdown"
+    },
+    "espn-nfl-3": {
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/nfl/",
+      "title": "Raiders roster moves"
+    }
+  }
+}
