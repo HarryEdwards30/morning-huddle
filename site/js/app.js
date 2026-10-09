@@ -3,7 +3,7 @@
 // The app opens on the tab you used last (My Teams the first time).
 
 import { el, setMyTeams, setSources } from './ui.js';
-import { formatCalendarDate, formatGameDateTime } from './time.js';
+import { formatCalendarDate, formatGameDateTime, melbourneToday, melbourneHour } from './time.js';
 import { renderNfl, renderNba } from './tabs/league.js';
 import { renderTeams } from './tabs/teams.js';
 import { renderWatch } from './tabs/watch.js';
@@ -71,17 +71,38 @@ function showTab(ctx) {
   window.scrollTo(0, 0);
 }
 
-function showNotices(edition) {
+// Banners, most serious first:
+//   1. Sample data (no real edition exists yet).
+//   2. Today's brief didn't update: the morning run failed, or (from 10am) it hasn't happened.
+//   3. Today's data updated but Claude's writing didn't.
+function showNotices(edition, status, now = new Date()) {
   notices.replaceChildren();
+  const e = edition.edition || {};
+  const lastUpdated = e.generatedAt ? formatGameDateTime(e.generatedAt) : 'unknown';
+  const errorBanner = (title, reason) => notices.append(el('div', { class: 'notice notice-error', role: 'alert' },
+    el('strong', {}, title), ` Last updated ${lastUpdated}. Reason: ${reason}`));
+
   // The sample edition only appears when there's no real edition yet (see scripts/build-site.js).
   if (edition.sample) {
     notices.append(el('div', { class: 'notice notice-sample', role: 'note' },
       el('strong', {}, 'SAMPLE DATA. '),
       'This is made-up content to show the layout. Real news arrives in a later phase.'));
-  } else if (edition.edition?.written === false) {
+    return;
+  }
+
+  const stale = e.date && e.date < melbourneToday(now);
+  if (status?.ok === false) {
+    errorBanner('Today’s brief didn’t update.', status.error || 'The morning run couldn’t get the data it needs.');
+  } else if (stale && melbourneHour(now) >= 10) {
+    errorBanner('Today’s brief didn’t update.', 'The 8am update didn’t run. GitHub sometimes starts late; if this is still here later, check the Actions tab.');
+  } else if (status?.brief?.ok === false && !stale) {
+    notices.append(el('div', { class: 'notice notice-error', role: 'alert' },
+      el('strong', {}, 'Today’s written brief didn’t update.'),
+      ` Scores, standings and news are up to date. Reason: ${status.brief.error}`));
+  } else if (e.written === false) {
     notices.append(el('div', { class: 'notice notice-info', role: 'note' },
       el('strong', {}, 'LIVE DATA. '),
-      'Real scores, standings, injuries and news. The written brief (one thing, "Why it matters", award races and player notes) arrives in the next update.'));
+      'Real scores, standings, injuries and news. Claude\u2019s written brief (one thing, "Why it matters", award races and player notes) isn\u2019t in this edition.'));
   }
 }
 
@@ -115,9 +136,12 @@ async function start() {
     return;
   }
 
+  // The run status is optional: if it can't be loaded, the app works without the banners.
+  const status = await loadJson('data/status.json').catch(() => null);
+
   setMyTeams(settings.teams);
   setSources(edition.sources);
-  showNotices(edition);
+  showNotices(edition, status);
   setUpInfoDialog(edition);
 
   const ctx = { settings, edition, now: new Date() };
