@@ -1,76 +1,70 @@
 {
-  "today": "2026-10-10",
+  "today": "2026-10-11",
   "note": "All times are UTC ISO strings unless stated. Records are wins-losses(-ties). GB means games behind.",
   "recentContextCards": [
-    "What counts in the preseason"
+    "What counts in the preseason",
+    "How injured reserve works"
   ],
   "nfl": {
     "headlines": [
       {
         "id": "nfl-h1",
-        "title": "Broncos OC Davis Webb says 'not ideal' to lose play-calling duties",
-        "summary": "Broncos offensive coordinator Davis Webb said that \"it's not deal to have been stripped of play-calling duties, but said he plans to \"be the best offensive coordinator I can be.\"",
+        "title": "Rams: Myles Garrett making 'good progress,' but no return timeline",
+        "summary": "Los Angeles Rams defensive end Myles Garrett is \"making good progress\" in his recovery from knee surgery, coach Sean McVay said, but the team is unlikely to open his 21-day practice window next week.",
         "teams": [
-          "DEN"
+          "LAR"
         ]
       },
       {
         "id": "nfl-h2",
-        "title": "Seahawks-49ers game designations: Leonard Williams WILL play!",
-        "summary": "Take a deep breath, the Seahawks' defense will be at full strength on Sunday.",
+        "title": "Chicago Bears activate Noah Sewell from the PUP list",
+        "summary": "The Bears have activated a player from the PUP list! No, not that one… @wiltfongjr has the details here.",
         "teams": [
-          "SF",
-          "SEA"
+          "CHI"
         ]
       },
       {
         "id": "nfl-h3",
-        "title": "Eagles release QB Andy Dalton after costly pick, demotion",
-        "summary": "Andy Dalton, who lost his spot as the Eagles' backup quarterback following a costly interception against the Bears, has been released.",
+        "title": "Patriots put WR Mack Hollins on injured reserve",
+        "summary": "The Patriots could get A.J.",
         "teams": [
-          "PHI"
+          "NE"
         ]
       },
       {
         "id": "nfl-h4",
-        "title": "More alarming injury news for Eagles as they prepare to face Jaguars in London",
-        "summary": "Philadelphia's offense could be stuck in the mud once again on Sunday",
-        "teams": [
-          "JAX",
-          "PHI"
-        ]
+        "title": "Grading Arizona football’s performance in win at West Virginia",
+        "summary": "The RichRod Bowl felt like a true Rich Rodriguez type of game, and fortunately for Brent Brennan’s squad it caught a case of the explosive offensive plays. Arizona handled West Virginia 52-31 to head into its bye week on a four game winning streak. The Wildca…",
+        "teams": []
       },
       {
         "id": "nfl-h5",
-        "title": "2 very important Cowboys players suffered injury vs Bucs",
-        "summary": "A quick update on some Cowboys injuries",
-        "teams": [
-          "DAL"
-        ]
+        "title": "Jack Campbell hit with ‘major’ fine, could result in suspension if repeated",
+        "summary": "Detroit Lions LB Jack Campbell received a fine that could result in suspension if repeated three times.",
+        "teams": []
       },
       {
         "id": "nfl-h6",
-        "title": "Our defense vs. their offense: Minnesota Vikings",
-        "summary": "Previewing the Saints’ defensive matchup in Week 5",
+        "title": "Patriots place veteran WR Mack Hollins on IR with calf injury",
+        "summary": "The Patriots placed veteran wide receiver Mack Hollins on injured reserve Saturday with a calf injury.",
         "teams": [
-          "MIN"
+          "NE"
         ]
       },
       {
         "id": "nfl-h7",
-        "title": "Chargers LT Rashawn Slater on IR following ankle surgery",
-        "summary": "The Chargers are placing Rashawn Slater on injured reserve after the left tackle had surgery for a high ankle sprain. Los Angeles will be without three of its starting offensive linemen against the Broncos on Sunday.",
+        "title": "Dolphins activate Kenneth Grant from injured reserve",
+        "summary": "Dolphins defensive lineman Kenneth Grant is set to make his 2026 debut.",
         "teams": [
-          "LAC"
+          "MIA"
         ]
       },
       {
         "id": "nfl-h8",
-        "title": "Legendary coach, Hall of Fame TE Mike Ditka dies at age 86",
-        "summary": "Mike Ditka, a Hall of Fame tight end who became an NFL legend for his time as coach of the Bears, has died at the age of 86.",
+        "title": "Marvin Harrison Jr. trade rumors: Eagles NOT interested in Cardinals wide receiver",
+        "summary": "Shouldn’t be a surprise.",
         "teams": [
-          "CHI",
-          "NO",
+          "ARI",
           "PHI"
         ]
       }
@@ -139,66 +133,66 @@
     "majorInjuries": [
       {
         "id": "nfl-i1",
+        "player": "Marvin Harrison Jr.",
+        "team": "ARI",
+        "status": "Out",
+        "injury": "Coach's decision"
+      },
+      {
+        "id": "nfl-i2",
+        "player": "Yasir Abdullah",
+        "team": "ATL",
+        "status": "Out",
+        "injury": "Hamstring"
+      },
+      {
+        "id": "nfl-i3",
+        "player": "Cam Jurgens",
+        "team": "BAL",
+        "status": "Out",
+        "injury": "Concussion"
+      },
+      {
+        "id": "nfl-i4",
         "player": "Lamar Jackson",
         "team": "BAL",
         "status": "Out",
         "injury": "Left ankle (sprain)"
       },
       {
-        "id": "nfl-i2",
+        "id": "nfl-i5",
+        "player": "Ed Oliver",
+        "team": "BUF",
+        "status": "Out",
+        "injury": "Knee"
+      },
+      {
+        "id": "nfl-i6",
+        "player": "Joshua Palmer",
+        "team": "BUF",
+        "status": "Out",
+        "injury": "Shoulder"
+      },
+      {
+        "id": "nfl-i7",
         "player": "Kyle Monangai",
         "team": "CHI",
         "status": "Out",
         "injury": "Toe (sprain)"
       },
       {
-        "id": "nfl-i3",
-        "player": "Mason Graham",
-        "team": "CLE",
-        "status": "Out",
-        "injury": "Knee - mcl (sprain)"
-      },
-      {
-        "id": "nfl-i4",
+        "id": "nfl-i8",
         "player": "Mike Hall Jr.",
         "team": "CLE",
         "status": "Out",
         "injury": "Ankle"
-      },
-      {
-        "id": "nfl-i5",
-        "player": "Joey Porter Jr.",
-        "team": "DAL",
-        "status": "Out",
-        "injury": "Illness"
-      },
-      {
-        "id": "nfl-i6",
-        "player": "Pat Bryant",
-        "team": "DEN",
-        "status": "Out",
-        "injury": "Right ankle (sprain)"
-      },
-      {
-        "id": "nfl-i7",
-        "player": "Brian Branch",
-        "team": "DET",
-        "status": "Out",
-        "injury": "Achilles (surgery)"
-      },
-      {
-        "id": "nfl-i8",
-        "player": "Tank Dell",
-        "team": "HOU",
-        "status": "Out",
-        "injury": "Left knee - acl + mcl (surgery)"
       }
     ],
     "transactions": [
       {
         "id": "nfl-t1",
         "type": "Signing",
-        "text": "Denver Broncos: Signed WR Lil'Jordan Humphrey to the active roster. Placed WR Pat Bryant on injured reserve. Signed DB Ugo Amadi to the practice squad."
+        "text": "Denver Broncos: Signed WR Lil'Jordan Humphrey to the active roster. Placed WR Pat Bryant on injured reserve. Signed DB Amadi Ugochukwu to the practice squad."
       },
       {
         "id": "nfl-t2",
@@ -217,23 +211,23 @@
       },
       {
         "id": "nfl-t5",
+        "type": "Injured reserve",
+        "text": "Los Angeles Chargers: Placed T Rashawn Slater on injured reserve."
+      },
+      {
+        "id": "nfl-t6",
         "type": "Release",
         "text": "San Francisco 49ers: Released DL Ogbo Okoronkwo."
       },
       {
-        "id": "nfl-t6",
+        "id": "nfl-t7",
         "type": "Activated",
         "text": "Dallas Cowboys: Activated G Tyler Smith from injured reserve. Waived RB Emari Demercado."
       },
       {
-        "id": "nfl-t7",
-        "type": "Signing",
-        "text": "Detroit Lions: Signed DL Jeffrey M'ba to the practice squad."
-      },
-      {
         "id": "nfl-t8",
         "type": "Signing",
-        "text": "Green Bay Packers: Signed RB Pierre Strong Jr. to the active roster. Signed LB Jack Dingle to the practice squad."
+        "text": "Detroit Lions: Signed DL Jeffrey M'ba to the practice squad."
       }
     ],
     "statLeaders": [
@@ -283,67 +277,76 @@
     "headlines": [
       {
         "id": "nba-h1",
-        "title": "Tyrese Haliburton hopes to squash Damian Lillard beef over signature celebration",
-        "summary": "Indiana Pacers star Tyrese Haliburton addressed his multi-year rift with current Portland Trail Blazers icon Damian Lillard.",
-        "teams": []
-      },
-      {
-        "id": "nba-h2",
-        "title": "Russell Westbrook wants to carry torch for L.A. Olympics",
-        "summary": "Retired NBA player and Olympic gold medal winner Russell Westbrook said he wants to carry the torch when his native Los Angeles hosts the 2028 Games.",
-        "teams": []
-      },
-      {
-        "id": "nba-h3",
-        "title": "Takeaways from Knicks pausing contract extension talks: Is Josh Hart's time in New York running out?",
-        "summary": "Coming off a title, four Knicks players are eligible for contract extensions, including starters Karl-Anthony Towns and Josh Hart",
+        "title": "Game Preview: Suns host Spurs in preseason home opener",
+        "summary": "Phoenix will host their first home game of the 2026-27 preseason.",
         "teams": [
-          "NY"
-        ]
-      },
-      {
-        "id": "nba-h4",
-        "title": "Jordan Goodwin is one of the most underrated players in the NBA",
-        "summary": "It’s time to show Jordan Goodwin a little more love.",
-        "teams": []
-      },
-      {
-        "id": "nba-h5",
-        "title": "Jabari Walker appears ready to play his role",
-        "summary": "Much of the conversation around the Philadelphia 76ers this past offseason rightfully surrounded the pair of high-profile additions entering the starting lineup. However, the depth of the roster will also play a critical role in the Sixers achieving their goa…",
-        "teams": []
-      },
-      {
-        "id": "nba-h6",
-        "title": "76ers' Joel Embiid denies tardiness report, questions why it happened: 'It feels like I'm an easy target'",
-        "summary": "ESPN announcer Mike Breen previously apologized for recounting a since-refuted story in which LeBron James was depicted reprimanding Embiid for being late to practice.",
-        "teams": [
-          "PHI"
-        ]
-      },
-      {
-        "id": "nba-h7",
-        "title": "Ranking every NBA team's defense entering the 2026-27 season: Thunder and Spurs competing for top spot",
-        "summary": "Who will be the best -- and worst -- on defense this season? We're projecting each team",
-        "teams": [
-          "OKC",
+          "PHX",
           "SAS"
         ]
       },
       {
+        "id": "nba-h2",
+        "title": "2026 NBA free agency: Grades for offseason signings, extensions",
+        "summary": "We're grading the biggest free agent signings and extensions, including Jalen Duren's new five-year deal.",
+        "teams": [
+          "PHX",
+          "ATL",
+          "WSH"
+        ]
+      },
+      {
+        "id": "nba-h3",
+        "title": "NBA preseason buzz: Latest on trades, news and intel",
+        "summary": "The NBA regular season is just a few weeks away, and we're tracking all the news, deals, and trades across the league.",
+        "teams": []
+      },
+      {
+        "id": "nba-h4",
+        "title": "With Brandin Podziemski's extension, Warriors maintain flexibility for one last title pursuit with Steph Curry",
+        "summary": "Podziemski's new $110 million deal only eats into $2 million of the cap space the Warriors created for next summer",
+        "teams": [
+          "GS"
+        ]
+      },
+      {
+        "id": "nba-h5",
+        "title": "Warriors sign Brandin Podziemski to extension worth $110M over five years",
+        "summary": "The Golden State Warriors are giving Stephen Curry more stability by signing Brandin Podziemski to a contract extension worth a reported $110 million.",
+        "teams": [
+          "GS"
+        ]
+      },
+      {
+        "id": "nba-h6",
+        "title": "Pistons vs Wizards preview: Get better during preseason",
+        "summary": "The NBA preseason is a great time to work out some kinks, give reserves more opportunities to thrive, and for players to get their legs back under them. The Detroit Pistons did most of that in their first preseason win over the Phoenix Suns. Detroit travels t…",
+        "teams": [
+          "DET",
+          "WSH"
+        ]
+      },
+      {
+        "id": "nba-h7",
+        "title": "The good, the bad and the murky of the Lakers preseason so far",
+        "summary": "Although the sample size is small, there are still emerging trends and choices worth taking note of.",
+        "teams": [
+          "LAL"
+        ]
+      },
+      {
         "id": "nba-h8",
-        "title": "Pacific Division preview + WNBA Semifinals Game 2 reactions",
-        "summary": "Nekias Duncan and Steve Jones preview the Pacific Division and the WNBA Semifinals.",
+        "title": "Sixers head to Boston for penultimate preseason game",
+        "summary": "We’ll see how Nick Nurse handles his roster as the Sixers travel to Boston for a preseason tilt.",
         "teams": []
       }
     ],
     "results": [
       {
         "id": "nba-r1",
-        "game": "Rockets 135 at Mavericks 117",
+        "game": "Grizzlies 104 at Bulls 100",
         "status": "Final",
         "note": "Preseason",
-        "date": "2026-10-09T12:00Z"
+        "date": "2026-10-10T00:00Z"
       }
     ],
     "standings": [
@@ -367,6 +370,20 @@
         "team": "PHI",
         "status": "Out",
         "injury": "Right achilles (ruptured)"
+      },
+      {
+        "id": "nba-i2",
+        "player": "Tristan Vukcevic",
+        "team": "WSH",
+        "status": "Out",
+        "injury": "Left hip"
+      },
+      {
+        "id": "nba-i3",
+        "player": "Jamir Watkins",
+        "team": "WSH",
+        "status": "Out",
+        "injury": "Left knee"
       }
     ],
     "transactions": [],
@@ -393,37 +410,37 @@
         {
           "id": "myteam-nfl-f3",
           "kind": "since last edition",
-          "text": "Nailor (concussion) has been ruled out for Sunday's game at New England, ESPN's Paul Gutierrez reports."
+          "text": "Zuhn (knee) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports."
         },
         {
           "id": "myteam-nfl-f4",
           "kind": "since last edition",
-          "text": "Jeanty (ankle/foot) is questionable for Sunday's game against the Patriots, with Raiders coach Klint Kubiak saying Friday that the running back will \"do his best to go,\"Levi Edwards of the Raiders' official site reports."
+          "text": "Thornton (hamstring) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports."
         },
         {
           "id": "myteam-nfl-f5",
           "kind": "since last edition",
-          "text": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats"
+          "text": "Could Ashton Jeanty play against the Patriots this Sunday?"
         },
         {
           "id": "myteam-nfl-f6",
-          "kind": "since last edition",
-          "text": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty"
+          "kind": "news headline",
+          "text": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats"
         },
         {
           "id": "myteam-nfl-f7",
-          "kind": "since last edition",
+          "kind": "news headline",
           "text": "Inside the NFL's wild endings and why coaches need to adapt"
         },
         {
           "id": "myteam-nfl-f8",
           "kind": "news headline",
-          "text": "DJ Glaze putting together career year"
+          "text": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty"
         },
         {
           "id": "myteam-nfl-f9",
           "kind": "news headline",
-          "text": "Kirk Cousins and Raiders look to build on fast start against Patriots defense dealing with injuries"
+          "text": "DJ Glaze putting together career year"
         },
         {
           "id": "myteam-nfl-f10",
@@ -438,18 +455,11 @@
       ],
       "injuries": [
         {
-          "player": "Jalen Nailor",
-          "position": "WR",
-          "status": "Out",
-          "injury": "Concussion",
-          "note": "Nailor (concussion) has been ruled out for Sunday's game at New England, ESPN's Paul Gutierrez reports.",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
-        },
-        {
           "player": "Trey Zuhn III",
           "position": "C",
           "status": "Out",
           "injury": "Knee (abrasion)",
+          "note": "Zuhn (knee) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports.",
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
@@ -457,7 +467,15 @@
           "position": "WR",
           "status": "Out",
           "injury": "Hamstring",
-          "note": "Thornton (hamstring) was a full participant at practice Wednesday, Anthony Galaviz of The Fresno Bee reports.",
+          "note": "Thornton (hamstring) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports.",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
+        {
+          "player": "Jalen Nailor",
+          "position": "WR",
+          "status": "Out",
+          "injury": "Concussion",
+          "note": "Nailor (concussion) has been ruled out for Sunday's game at New England, Paul Gutierrez of ESPN.com reports.",
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
@@ -465,7 +483,7 @@
           "position": "RB",
           "status": "Questionable",
           "injury": "Ankle",
-          "note": "Jeanty (ankle/foot) is questionable for Sunday's game against the Patriots, with Raiders coach Klint Kubiak saying Friday that the running back will \"do his best to go,\"Levi Edwards of the Raiders' official site reports.",
+          "note": "Jeanty (ankle/foot) is questionable for Sunday's game against the Patriots, with Raiders coach Klint Kubiak saying Friday that the running back will \"do his best to go,\" Levi Edwards of the team's official site reports.",
           "reportedTimeline": "Around Sun 11 Oct (estimate)"
         }
       ],
@@ -519,21 +537,31 @@
         },
         {
           "id": "myteam-nba-f3",
-          "kind": "news headline",
-          "text": "What does your NBA team need? The biggest hole on all 30 rosters"
+          "kind": "since last edition",
+          "text": "Fox (undisclosed) won't play in Saturday's preseason game against the Suns, Duane Rankin of The Arizona Republic reports."
         },
         {
           "id": "myteam-nba-f4",
-          "kind": "news headline",
-          "text": "Basketball Power Index: NBA projections, playoff chances for 2026-27 season"
+          "kind": "since last edition",
+          "text": "2026 NBA free agency: Grades for offseason signings, extensions"
         },
         {
           "id": "myteam-nba-f5",
           "kind": "news headline",
-          "text": "Spurs' Tobias Harris to miss preseason with left calf strain"
+          "text": "What does your NBA team need? The biggest hole on all 30 rosters"
         },
         {
           "id": "myteam-nba-f6",
+          "kind": "news headline",
+          "text": "Basketball Power Index: NBA projections, playoff chances for 2026-27 season"
+        },
+        {
+          "id": "myteam-nba-f7",
+          "kind": "news headline",
+          "text": "Spurs' Tobias Harris to miss preseason with left calf strain"
+        },
+        {
+          "id": "myteam-nba-f8",
           "kind": "playoff race",
           "text": "The regular season hasn't started yet. Every team in the West is 0–0."
         }
@@ -548,19 +576,19 @@
           "reportedTimeline": "Around Tue 1 Dec (estimate)"
         },
         {
+          "player": "De'Aaron Fox",
+          "position": "G",
+          "status": "Day-to-day",
+          "injury": "Undisclosed (soreness)",
+          "note": "Fox (undisclosed) won't play in Saturday's preseason game against the Suns, Duane Rankin of The Arizona Republic reports.",
+          "reportedTimeline": "Around Mon 12 Oct (estimate)"
+        },
+        {
           "player": "Malik Williams",
           "position": "C",
           "status": "Day-to-day",
           "injury": "Undisclosed",
           "note": "Williams (undisclosed) is out for Thursday's preseason game against the Hawks, Matt Guzman of SI.com reports.",
-          "reportedTimeline": "Around Sat 10 Oct (estimate)"
-        },
-        {
-          "player": "De'Aaron Fox",
-          "position": "G",
-          "status": "Day-to-day",
-          "injury": "Undisclosed (soreness)",
-          "note": "Fox won't play in Thursday's preseason game against the Hawks due to soreness, Jeff McDonald of the San Antonio Express-News reports.",
           "reportedTimeline": "Around Sat 10 Oct (estimate)"
         },
         {
