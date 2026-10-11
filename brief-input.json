@@ -1,103 +1,176 @@
 {
-  "today": "2026-10-11",
+  "today": "2026-10-12",
   "note": "All times are UTC ISO strings unless stated. Records are wins-losses(-ties). GB means games behind.",
   "recentContextCards": [
     "What counts in the preseason",
-    "How injured reserve works"
+    "How injured reserve works",
+    "How playoff tiebreakers work"
   ],
   "nfl": {
     "headlines": [
       {
         "id": "nfl-h1",
-        "title": "Rams: Myles Garrett making 'good progress,' but no return timeline",
-        "summary": "Los Angeles Rams defensive end Myles Garrett is \"making good progress\" in his recovery from knee surgery, coach Sean McVay said, but the team is unlikely to open his 21-day practice window next week.",
-        "teams": [
-          "LAR"
-        ]
+        "title": "Will the Marvin Harrison Jr. trade unlock his potential? History offers hope, and a warning",
+        "summary": "Harrison's time in Arizona is over. Here's what his trade value could look like, what history says about a fresh start and three teams that could be on the other end of the deal",
+        "teams": []
       },
       {
         "id": "nfl-h2",
-        "title": "Chicago Bears activate Noah Sewell from the PUP list",
-        "summary": "The Bears have activated a player from the PUP list! No, not that one… @wiltfongjr has the details here.",
+        "title": "Browns WR KC Concepcion suffers concussion after illegal hit",
+        "summary": "Browns rookie wide receiver KC Concepcion sustained a concussion in the first quarter of the team's game against the Jets and was ruled out.",
         "teams": [
-          "CHI"
+          "CLE",
+          "NYJ"
         ]
       },
       {
         "id": "nfl-h3",
-        "title": "Patriots put WR Mack Hollins on injured reserve",
-        "summary": "The Patriots could get A.J.",
+        "title": "Jayden Daniels and Commanders settle for 27-27 tie with Giants after botching final play of OT",
+        "summary": "— Jayden Daniels took off on an ill-advised scramble in the closing seconds of overtime with the Commanders in field goal range and Washington was unable to stop the clock before time...",
         "teams": [
-          "NE"
+          "WSH",
+          "NYG"
         ]
       },
       {
         "id": "nfl-h4",
-        "title": "Grading Arizona football’s performance in win at West Virginia",
-        "summary": "The RichRod Bowl felt like a true Rich Rodriguez type of game, and fortunately for Brent Brennan’s squad it caught a case of the explosive offensive plays. Arizona handled West Virginia 52-31 to head into its bye week on a four game winning streak. The Wildca…",
-        "teams": []
+        "title": "Falcons vs Ravens live updates: Sunday Night Football start time, how to watch, stream",
+        "summary": "Bijan Robinson and the Falcons host the Baltimore Ravens on \"Sunday Night Football\" in Week 5. USA TODAY Sports is providing live updates here:",
+        "teams": [
+          "ATL",
+          "BAL"
+        ]
       },
       {
         "id": "nfl-h5",
-        "title": "Jack Campbell hit with ‘major’ fine, could result in suspension if repeated",
-        "summary": "Detroit Lions LB Jack Campbell received a fine that could result in suspension if repeated three times.",
-        "teams": []
+        "title": "Allen has late 22-yard TD run and Jets' defense, special teams come up big in 17-12 win over Browns",
+        "summary": "— Braelon Allen ran 22 yards for the go-ahead touchdown late in the fourth quarter after New York recovered a fumbled punt snap and the Jets ended a three-game skid with a 17-12 victory over the Cleveland Browns on a rain-soaked Sunday.",
+        "teams": [
+          "NYJ",
+          "CLE"
+        ]
       },
       {
         "id": "nfl-h6",
-        "title": "Patriots place veteran WR Mack Hollins on IR with calf injury",
-        "summary": "The Patriots placed veteran wide receiver Mack Hollins on injured reserve Saturday with a calf injury.",
+        "title": "Jaguars' emergency long snapper plays unlikely hero in win over Eagles",
+        "summary": "Jaguars nose tackle DaVon Hamilton delivered the crucial snap on Cam Little's game-winning 57-yard field goal.",
         "teams": [
-          "NE"
+          "JAX"
         ]
       },
       {
         "id": "nfl-h7",
-        "title": "Dolphins activate Kenneth Grant from injured reserve",
-        "summary": "Dolphins defensive lineman Kenneth Grant is set to make his 2026 debut.",
+        "title": "2026 NFL trade deadline updates: Marvin Harrison Jr., Cam Jurgens on the move",
+        "summary": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including the Cards sending Marvin Harrison Jr. to the Texans.",
         "teams": [
-          "MIA"
+          "MIN",
+          "NYG",
+          "DAL"
         ]
       },
       {
         "id": "nfl-h8",
-        "title": "Marvin Harrison Jr. trade rumors: Eagles NOT interested in Cardinals wide receiver",
-        "summary": "Shouldn’t be a surprise.",
+        "title": "NFL Week 5 Winners and Losers: Commanders have game-management gaffe for the ages in tie to Giants",
+        "summary": "The Giants were quite pleased at the end to get the tie.",
         "teams": [
-          "ARI",
-          "PHI"
+          "NYG",
+          "WSH"
         ]
       }
     ],
-    "results": [],
+    "results": [
+      {
+        "id": "nfl-r1",
+        "game": "Bears 7 at Packers 31",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r2",
+        "game": "Texans 26 at Titans 3",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r3",
+        "game": "Bengals 31 at Dolphins 24",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r4",
+        "game": "Raiders 17 at Patriots 45",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r5",
+        "game": "Vikings 23 at Saints 13",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r6",
+        "game": "Browns 12 at Jets 17",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r7",
+        "game": "Colts 22 at Steelers 34",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r8",
+        "game": "Giants 27 at Commanders 27",
+        "status": "Final/OT",
+        "note": "Week 5",
+        "date": "2026-10-11T17:00Z"
+      },
+      {
+        "id": "nfl-r9",
+        "game": "Eagles 17 at Jaguars 19",
+        "status": "Final",
+        "note": "Week 5",
+        "date": "2026-10-11T13:30Z"
+      }
+    ],
     "standings": [
       {
         "group": "AFC East",
-        "teams": "BUF 3-1 L1, NE 2-2 W1, NYJ 1-3 L3, MIA 0-4 L4"
+        "teams": "BUF 3-1 L1, NE 3-2 W2, NYJ 2-3 W1, MIA 0-5 L5"
       },
       {
         "group": "AFC North",
-        "teams": "BAL 3-1 W2, CLE 3-1 W3, CIN 2-2 L2, PIT 2-2 L1"
+        "teams": "BAL 3-1 W2, CIN 3-2 W1, PIT 3-2 W1, CLE 3-2 L1"
       },
       {
         "group": "AFC South",
-        "teams": "JAX 3-1 W2, IND 2-2 W2, HOU 0-4 L4, TEN 0-4 L4"
+        "teams": "JAX 4-1 W3, IND 2-3 L1, HOU 1-4 W1, TEN 0-5 L5"
       },
       {
         "group": "AFC West",
-        "teams": "KC 4-0 W4, LV 3-1 L1, DEN 2-2 L1, LAC 0-4 L4"
+        "teams": "KC 4-0 W4, LV 3-2 L2, DEN 2-2 L1, LAC 0-4 L4"
       },
       {
         "group": "NFC East",
-        "teams": "NYG 3-1 W2, PHI 2-2 L2, DAL 2-3 L1, WSH 1-3 L1"
+        "teams": "NYG 3-1-1 -, DAL 2-3 L1, PHI 2-3 L3, WSH 1-3-1 -"
       },
       {
         "group": "NFC North",
-        "teams": "MIN 4-0 W4, CHI 3-1 W2, DET 2-2 L1, GB 2-2 W1"
+        "teams": "MIN 5-0 W5, CHI 3-2 L1, GB 3-2 W2, DET 2-2 L1"
       },
       {
         "group": "NFC South",
-        "teams": "CAR 2-2 W1, ATL 2-2 W2, NO 1-3 L2, TB 1-4 W1"
+        "teams": "CAR 2-2 W1, ATL 2-2 W2, TB 1-4 W1, NO 1-4 L3"
       },
       {
         "group": "NFC West",
@@ -107,127 +180,131 @@
     "playoffPicture": [
       {
         "conference": "AFC",
-        "seeds": "1. KC 4–0, 2. JAX 3–1, 3. BUF 3–1, 4. CLE 3–1, 5. BAL 3–1, 6. LV 3–1, 7. NE 2–2",
-        "outside": "DEN 2–2 (– GB), PIT 2–2 (– GB), IND 2–2 (– GB)"
+        "seeds": "1. KC 4–0, 2. JAX 4–1, 3. BAL 3–1, 4. BUF 3–1, 5. NE 3–2, 6. LV 3–2, 7. CLE 3–2",
+        "outside": "PIT 3–2 (– GB), CIN 3–2 (– GB), DEN 2–2 (0.5 GB)"
       },
       {
         "conference": "NFC",
-        "seeds": "1. MIN 4–0, 2. SF 4–0, 3. NYG 3–1, 4. CAR 2–2, 5. CHI 3–1, 6. SEA 3–1, 7. LAR 2–2",
-        "outside": "ATL 2–2 (– GB), DET 2–2 (– GB), GB 2–2 (– GB)"
+        "seeds": "1. MIN 5–0, 2. SF 4–0, 3. NYG 3–1–1, 4. CAR 2–2, 5. SEA 3–1, 6. GB 3–2, 7. CHI 3–2",
+        "outside": "LAR 2–2 (0.5 GB), ATL 2–2 (0.5 GB), DET 2–2 (0.5 GB)"
       }
     ],
     "hotAndCold": {
       "hot": [
+        "MIN W5: 5 straight wins, now 5–0.",
         "KC W4: 4 straight wins, now 4–0.",
-        "MIN W4: 4 straight wins, now 4–0.",
         "SF W4: 4 straight wins, now 4–0.",
-        "CLE W3: 3 straight wins, now 3–1."
+        "JAX W3: 3 straight wins, now 4–1.",
+        "Drake Maye (NE): 26/34, 374 YDS, 4 TD against the Raiders.",
+        "Jordan Love (GB): 25/31, 367 YDS, 2 TD against the Bears.",
+        "Christian Watson (GB): 6 REC, 143 YDS, 2 TD against the Bears.",
+        "Trevor Lawrence (JAX): 24/39, 331 YDS, 2 TD, 1 INT against the Eagles."
       ],
       "cold": [
-        "MIA L4: 4 straight losses, now 0–4.",
-        "HOU L4: 4 straight losses, now 0–4.",
-        "TEN L4: 4 straight losses, now 0–4.",
-        "LAC L4: 4 straight losses, now 0–4."
+        "MIA L5: 5 straight losses, now 0–5.",
+        "TEN L5: 5 straight losses, now 0–5.",
+        "LAC L4: 4 straight losses, now 0–4.",
+        "PHI L3: 3 straight losses, now 2–3."
       ]
     },
     "majorInjuries": [
       {
         "id": "nfl-i1",
-        "player": "Marvin Harrison Jr.",
-        "team": "ARI",
-        "status": "Out",
-        "injury": "Coach's decision"
-      },
-      {
-        "id": "nfl-i2",
-        "player": "Yasir Abdullah",
-        "team": "ATL",
-        "status": "Out",
-        "injury": "Hamstring"
-      },
-      {
-        "id": "nfl-i3",
         "player": "Cam Jurgens",
         "team": "BAL",
         "status": "Out",
         "injury": "Concussion"
       },
       {
-        "id": "nfl-i4",
-        "player": "Lamar Jackson",
-        "team": "BAL",
+        "id": "nfl-i2",
+        "player": "Caleb Williams",
+        "team": "CHI",
         "status": "Out",
-        "injury": "Left ankle (sprain)"
+        "injury": "Right hamstring (strain)"
+      },
+      {
+        "id": "nfl-i3",
+        "player": "KC Concepcion",
+        "team": "CLE",
+        "status": "Questionable",
+        "injury": "Concussion"
+      },
+      {
+        "id": "nfl-i4",
+        "player": "David Montgomery",
+        "team": "HOU",
+        "status": "Questionable",
+        "injury": "Groin"
       },
       {
         "id": "nfl-i5",
-        "player": "Ed Oliver",
-        "team": "BUF",
-        "status": "Out",
+        "player": "Anton Harrison",
+        "team": "JAX",
+        "status": "Questionable",
         "injury": "Knee"
       },
       {
         "id": "nfl-i6",
-        "player": "Joshua Palmer",
-        "team": "BUF",
-        "status": "Out",
-        "injury": "Shoulder"
+        "player": "Quentin Lake",
+        "team": "LAR",
+        "status": "Questionable",
+        "injury": "Hip"
       },
       {
         "id": "nfl-i7",
-        "player": "Kyle Monangai",
-        "team": "CHI",
-        "status": "Out",
-        "injury": "Toe (sprain)"
+        "player": "T.J. Hockenson",
+        "team": "MIN",
+        "status": "Questionable",
+        "injury": "Concussion"
       },
       {
         "id": "nfl-i8",
-        "player": "Mike Hall Jr.",
-        "team": "CLE",
-        "status": "Out",
-        "injury": "Ankle"
+        "player": "Will Campbell",
+        "team": "NE",
+        "status": "Questionable",
+        "injury": "Right knee"
       }
     ],
     "transactions": [
       {
         "id": "nfl-t1",
-        "type": "Signing",
-        "text": "Denver Broncos: Signed WR Lil'Jordan Humphrey to the active roster. Placed WR Pat Bryant on injured reserve. Signed DB Amadi Ugochukwu to the practice squad."
+        "type": "Injured reserve",
+        "text": "Atlanta Falcons: Placed LB Yasir Abdullah on injured reserve. Signed S Jammie Robinson from the practice squad. Elevated LBs Drake Jackson and Bralen Trice from the practice squad."
       },
       {
         "id": "nfl-t2",
-        "type": "Roster",
-        "text": "Miami Dolphins: Claimed RB Kaytron Allen off waivers from Washington."
+        "type": "Activated",
+        "text": "Chicago Bears: Activated LB Noah Sewell from the physically unable to perform list. Reinstated LB Noah Sewell from the PUP list."
       },
       {
         "id": "nfl-t3",
-        "type": "Activated",
-        "text": "New England Patriots: Activated S Brenden Schooler from the NFI list."
+        "type": "Roster",
+        "text": "Cincinnati Bengals: Elevated DB Russ Yeast from the practice squad."
       },
       {
         "id": "nfl-t4",
-        "type": "Release",
-        "text": "Philadelphia Eagles: Released QB Andy Dalton. Signed C Jake Majors and RB Carson Steele to the active roster. Placed DT Uar Bernard on the practice squad injured list."
+        "type": "Roster",
+        "text": "Cleveland Browns: Elevated DTs Sam Kamara and Chris Williams from the practice squad."
       },
       {
         "id": "nfl-t5",
-        "type": "Injured reserve",
-        "text": "Los Angeles Chargers: Placed T Rashawn Slater on injured reserve."
+        "type": "Roster",
+        "text": "Denver Broncos: Elevated DBs Brent Austin and Sean Fresch from the practice squad."
       },
       {
         "id": "nfl-t6",
-        "type": "Release",
-        "text": "San Francisco 49ers: Released DL Ogbo Okoronkwo."
+        "type": "Roster",
+        "text": "Detroit Lions: Elevated DB Jalen Mills from the practice squad."
       },
       {
         "id": "nfl-t7",
-        "type": "Activated",
-        "text": "Dallas Cowboys: Activated G Tyler Smith from injured reserve. Waived RB Emari Demercado."
+        "type": "Injured reserve",
+        "text": "Green Bay Packers: Placed RB Chris Brooks on injured reserve. Signed RB Pierre Strong to their active roster."
       },
       {
         "id": "nfl-t8",
-        "type": "Signing",
-        "text": "Detroit Lions: Signed DL Jeffrey M'ba to the practice squad."
+        "type": "Roster",
+        "text": "Tennessee Titans: Elevated RB Kalel Mullings and DB Isaiah Oliver from the practice squad."
       }
     ],
     "statLeaders": [
@@ -277,76 +354,125 @@
     "headlines": [
       {
         "id": "nba-h1",
-        "title": "Game Preview: Suns host Spurs in preseason home opener",
-        "summary": "Phoenix will host their first home game of the 2026-27 preseason.",
+        "title": "Karl-Anthony Towns 'disappointed' with Knicks tabling talks",
+        "summary": "Karl-Anthony Towns responded to the Knicks' statement that they are tabling all extension talks until later in the season, saying he was \"disappointed.\"",
         "teams": [
-          "PHX",
-          "SAS"
+          "NY"
         ]
       },
       {
         "id": "nba-h2",
-        "title": "2026 NBA free agency: Grades for offseason signings, extensions",
-        "summary": "We're grading the biggest free agent signings and extensions, including Jalen Duren's new five-year deal.",
+        "title": "Kings C Maxime Raynaud (knee) to be reevaluated in 2 weeks",
+        "summary": "Kings second-year center Maxime Raynaud will be reevaluated in two weeks with a patellar subluxation in his right knee.",
         "teams": [
-          "PHX",
-          "ATL",
-          "WSH"
+          "SAC"
         ]
       },
       {
         "id": "nba-h3",
-        "title": "NBA preseason buzz: Latest on trades, news and intel",
-        "summary": "The NBA regular season is just a few weeks away, and we're tracking all the news, deals, and trades across the league.",
-        "teams": []
-      },
-      {
-        "id": "nba-h4",
-        "title": "With Brandin Podziemski's extension, Warriors maintain flexibility for one last title pursuit with Steph Curry",
-        "summary": "Podziemski's new $110 million deal only eats into $2 million of the cap space the Warriors created for next summer",
+        "title": "Kings lose Maxime Raynaud to apparent serious knee injury",
+        "summary": "Kings second-year center Maxime Raynaud suffered what appeared to be a serious right knee injury in Saturday's preseason game against the Warriors.",
         "teams": [
-          "GS"
+          "SAC"
         ]
       },
       {
+        "id": "nba-h4",
+        "title": "Watch Trae Young, Daniss Jenkins get ejected after pushing incident",
+        "summary": "There wasn't much to this, but both players were ejected.",
+        "teams": []
+      },
+      {
         "id": "nba-h5",
-        "title": "Warriors sign Brandin Podziemski to extension worth $110M over five years",
-        "summary": "The Golden State Warriors are giving Stephen Curry more stability by signing Brandin Podziemski to a contract extension worth a reported $110 million.",
+        "title": "Kyrie Irving returns to Mavs, dazzles in China preseason game",
+        "summary": "Kyrie Irving dazzled in his return to the Mavericks, scoring 17 points in his first game in 586 days.",
         "teams": [
-          "GS"
+          "DAL"
         ]
       },
       {
         "id": "nba-h6",
-        "title": "Pistons vs Wizards preview: Get better during preseason",
-        "summary": "The NBA preseason is a great time to work out some kinks, give reserves more opportunities to thrive, and for players to get their legs back under them. The Detroit Pistons did most of that in their first preseason win over the Phoenix Suns. Detroit travels t…",
+        "title": "Knicks Bulletin: ‘We’re gonna have each other’s back, regardless’",
+        "summary": "No Knicks basketball on Sunday; what did you expect on the day we all have for resting and disconnecting? (As if I ever do lol) However, New York folks keep logging practices and sending quotes out to the world for us to enjoy. Here’s the latest from Tarrytow…",
         "teams": [
-          "DET",
-          "WSH"
+          "NY"
         ]
       },
       {
         "id": "nba-h7",
-        "title": "The good, the bad and the murky of the Lakers preseason so far",
-        "summary": "Although the sample size is small, there are still emerging trends and choices worth taking note of.",
+        "title": "Raptors beat the Clippers, 114-106, in first game post-Kawhi trade",
+        "summary": "Toronto plays a preseason game in British Columbia against a regular contact from their offseason",
         "teams": [
-          "LAL"
+          "LAC",
+          "TOR"
         ]
       },
       {
         "id": "nba-h8",
-        "title": "Sixers head to Boston for penultimate preseason game",
-        "summary": "We’ll see how Nick Nurse handles his roster as the Sixers travel to Boston for a preseason tilt.",
-        "teams": []
+        "title": "6 things from the Mavericks’ 132-115 preseason win over the Houston Rockets in Macao",
+        "summary": "The Mavericks’ offense resembled a cohesive unit for the first time in what seemed like ages with Kyrie Irving back.",
+        "teams": [
+          "DAL",
+          "HOU"
+        ]
       }
     ],
     "results": [
       {
         "id": "nba-r1",
-        "game": "Grizzlies 104 at Bulls 100",
+        "game": "Mavericks 132 at Rockets 115",
         "status": "Final",
         "note": "Preseason",
-        "date": "2026-10-10T00:00Z"
+        "date": "2026-10-11T10:00Z"
+      },
+      {
+        "id": "nba-r2",
+        "game": "Spurs 98 at Suns 102",
+        "status": "Final",
+        "note": "Preseason",
+        "date": "2026-10-11T02:30Z"
+      },
+      {
+        "id": "nba-r3",
+        "game": "Kings 106 at Warriors 111",
+        "status": "Final",
+        "note": "Preseason",
+        "date": "2026-10-11T00:30Z"
+      },
+      {
+        "id": "nba-r4",
+        "game": "Timberwolves 125 at Heat 124",
+        "status": "Final",
+        "note": "Preseason",
+        "date": "2026-10-11T00:00Z"
+      },
+      {
+        "id": "nba-r5",
+        "game": "76ers 106 at Celtics 144",
+        "status": "Final",
+        "note": "Preseason",
+        "date": "2026-10-11T00:00Z"
+      },
+      {
+        "id": "nba-r6",
+        "game": "Hawks 119 at Pacers 117",
+        "status": "Final",
+        "note": "Preseason",
+        "date": "2026-10-10T23:00Z"
+      },
+      {
+        "id": "nba-r7",
+        "game": "Pistons 108 at Wizards 114",
+        "status": "Final/OT",
+        "note": "Preseason",
+        "date": "2026-10-10T23:00Z"
+      },
+      {
+        "id": "nba-r8",
+        "game": "Clippers 106 at Raptors 114",
+        "status": "Final",
+        "note": "Preseason",
+        "date": "2026-10-10T22:30Z"
       }
     ],
     "standings": [
@@ -360,7 +486,9 @@
       }
     ],
     "hotAndCold": {
-      "hot": [],
+      "hot": [
+        "Khaman Maluach (PHX): 15 rebounds against the Spurs."
+      ],
       "cold": []
     },
     "majorInjuries": [
@@ -373,17 +501,10 @@
       },
       {
         "id": "nba-i2",
-        "player": "Tristan Vukcevic",
-        "team": "WSH",
+        "player": "Maxime Raynaud",
+        "team": "SAC",
         "status": "Out",
-        "injury": "Left hip"
-      },
-      {
-        "id": "nba-i3",
-        "player": "Jamir Watkins",
-        "team": "WSH",
-        "status": "Out",
-        "injury": "Left knee"
+        "injury": "Right knee (dislocated)"
       }
     ],
     "transactions": [],
@@ -393,73 +514,131 @@
     "nfl": {
       "name": "Las Vegas Raiders",
       "record": {
-        "summary": "3-1",
+        "summary": "3-2",
         "standing": "2nd in AFC West"
       },
       "facts": [
         {
           "id": "myteam-nfl-f1",
           "kind": "last result",
-          "text": "L 27-30 vs Chiefs (Week 4), 2026-10-04T20:25Z"
+          "text": "L 17-45 at Patriots (Week 5), 2026-10-11T17:00Z"
         },
         {
           "id": "myteam-nfl-f2",
           "kind": "next game",
-          "text": "at Patriots, 2026-10-11T17:00Z (Week 5)"
+          "text": "vs Bills, 2026-10-18T20:25Z (Week 6)"
         },
         {
           "id": "myteam-nfl-f3",
           "kind": "since last edition",
-          "text": "Zuhn (knee) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports."
+          "text": "Lost to the Patriots 17–45 on the road (Week 5)."
         },
         {
           "id": "myteam-nfl-f4",
           "kind": "since last edition",
-          "text": "Thornton (hamstring) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports."
+          "text": "Elevated RB Roman Hemby and WR Deven Thompkins from the practice squad."
         },
         {
           "id": "myteam-nfl-f5",
           "kind": "since last edition",
-          "text": "Could Ashton Jeanty play against the Patriots this Sunday?"
+          "text": "O'Connel (coach's decision) is inactive but will serve as the Raiders' emergency third quarterback against the Patriots on Sunday."
         },
         {
           "id": "myteam-nfl-f6",
-          "kind": "news headline",
-          "text": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats"
+          "kind": "since last edition",
+          "text": "The Raiders elevated Hemby from the practice squad to the active roster Saturday."
         },
         {
           "id": "myteam-nfl-f7",
-          "kind": "news headline",
-          "text": "Inside the NFL's wild endings and why coaches need to adapt"
+          "kind": "since last edition",
+          "text": "Johnson (stinger/neck) is questionable to return to Sunday's game against the Patriots."
         },
         {
           "id": "myteam-nfl-f8",
-          "kind": "news headline",
-          "text": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty"
+          "kind": "since last edition",
+          "text": "Hemingway (neck) has been ruled out for the remainder of Sunday's game against the Patriots."
         },
         {
           "id": "myteam-nfl-f9",
           "kind": "news headline",
-          "text": "DJ Glaze putting together career year"
+          "text": "Drake Maye accounts for 5 TDs as Patriots roll past Raiders 45-17"
         },
         {
           "id": "myteam-nfl-f10",
-          "kind": "roster move (Move)",
-          "text": "Designated WR Dont'e Thornton to return from injured reserve."
+          "kind": "news headline",
+          "text": "Raiders RB Ashton Jeanty active against Patriots"
         },
         {
           "id": "myteam-nfl-f11",
+          "kind": "news headline",
+          "text": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats"
+        },
+        {
+          "id": "myteam-nfl-f12",
+          "kind": "news headline",
+          "text": "Inside the NFL's wild endings and why coaches need to adapt"
+        },
+        {
+          "id": "myteam-nfl-f13",
+          "kind": "news headline",
+          "text": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty"
+        },
+        {
+          "id": "myteam-nfl-f14",
           "kind": "playoff race",
-          "text": "6th in the AFC at 3–1."
+          "text": "6th in the AFC at 3–2."
         }
       ],
       "injuries": [
+        {
+          "player": "Aidan O'Connell",
+          "position": "QB",
+          "status": "Out",
+          "injury": "Coach's decision",
+          "note": "O'Connel (coach's decision) is inactive but will serve as the Raiders' emergency third quarterback against the Patriots on Sunday.",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
         {
           "player": "Trey Zuhn III",
           "position": "C",
           "status": "Out",
           "injury": "Knee (abrasion)",
-          "note": "Zuhn (knee) has been ruled out ahead of Sunday's game against the Patriots, Paul Gutierrez of Raiders.com reports.",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
+        {
+          "player": "JJ Pegues",
+          "position": "DT",
+          "status": "Out",
+          "injury": "Coach's decision",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
+        {
+          "player": "Dalton Johnson",
+          "position": "S",
+          "status": "Out",
+          "injury": "Coach's decision",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
+        {
+          "player": "Tristin McCollum",
+          "position": "S",
+          "status": "Out",
+          "injury": "Coach's decision",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
+        {
+          "player": "Jalen Nailor",
+          "position": "WR",
+          "status": "Out",
+          "injury": "Concussion",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+        },
+        {
+          "player": "Roman Hemby",
+          "position": "RB",
+          "status": "Out",
+          "injury": "Coach's decision",
+          "note": "The Raiders elevated Hemby from the practice squad to the active roster Saturday.",
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
@@ -471,20 +650,20 @@
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
-          "player": "Jalen Nailor",
-          "position": "WR",
-          "status": "Out",
-          "injury": "Concussion",
-          "note": "Nailor (concussion) has been ruled out for Sunday's game at New England, Paul Gutierrez of ESPN.com reports.",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
+          "player": "Patrick Johnson",
+          "position": "DE",
+          "status": "Questionable",
+          "injury": "Neck (stinger)",
+          "note": "Johnson (stinger/neck) is questionable to return to Sunday's game against the Patriots.",
+          "reportedTimeline": "Around Sun 11 Oct (estimate)"
         },
         {
-          "player": "Ashton Jeanty",
-          "position": "RB",
+          "player": "Tonka Hemingway",
+          "position": "DT",
           "status": "Questionable",
-          "injury": "Ankle",
-          "note": "Jeanty (ankle/foot) is questionable for Sunday's game against the Patriots, with Raiders coach Klint Kubiak saying Friday that the running back will \"do his best to go,\" Levi Edwards of the team's official site reports.",
-          "reportedTimeline": "Around Sun 11 Oct (estimate)"
+          "injury": "Neck (stinger)",
+          "note": "Hemingway (neck) has been ruled out for the remainder of Sunday's game against the Patriots.",
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
         }
       ],
       "form": [
@@ -493,21 +672,21 @@
           "position": "QB",
           "trend": "steady",
           "seasonLabel": "2026 Regular Season",
-          "stats": "PASS YDS: last 5 256.5, season 256.5; TD: last 5 2.8, season 2.8; INT: last 5 1, season 1"
+          "stats": "PASS YDS: last 5 253.8, season 253.8; TD: last 5 2.4, season 2.4; INT: last 5 0.8, season 0.8"
         },
         {
           "player": "Ashton Jeanty",
           "position": "RB",
           "trend": "steady",
           "seasonLabel": "2026 Regular Season",
-          "stats": "RUSH YDS: last 5 66, season 66; YPC: last 5 3.4, season 3.4; TD: last 5 0, season 0"
+          "stats": "RUSH YDS: last 5 58.2, season 58.2; YPC: last 5 3.2, season 3.2; TD: last 5 0, season 0"
         },
         {
           "player": "Tre Tucker",
           "position": "WR",
           "trend": "steady",
           "seasonLabel": "2026 Regular Season",
-          "stats": "REC: last 5 3.8, season 3.8; YDS: last 5 58.3, season 58.3; TD: last 5 0.3, season 0.3"
+          "stats": "REC: last 5 3.8, season 3.8; YDS: last 5 54.8, season 54.8; TD: last 5 0.2, season 0.2"
         },
         {
           "player": "Malcolm Koonce",
@@ -521,47 +700,57 @@
     "nba": {
       "name": "San Antonio Spurs",
       "record": {
-        "summary": "0-1",
-        "standing": "4th in Southwest Division"
+        "summary": "0-2",
+        "standing": "5th in Southwest Division"
       },
       "facts": [
         {
           "id": "myteam-nba-f1",
           "kind": "last result",
-          "text": "L 116-123 vs Hawks (Preseason), 2026-10-09T00:00Z"
+          "text": "L 98-102 at Suns (Preseason), 2026-10-11T02:30Z"
         },
         {
           "id": "myteam-nba-f2",
           "kind": "next game",
-          "text": "at Suns, 2026-10-11T02:30Z (Preseason)"
+          "text": "at Jazz, 2026-10-13T01:00Z (Preseason)"
         },
         {
           "id": "myteam-nba-f3",
           "kind": "since last edition",
-          "text": "Fox (undisclosed) won't play in Saturday's preseason game against the Suns, Duane Rankin of The Arizona Republic reports."
+          "text": "Lost to the Suns 98–102 on the road (preseason)."
         },
         {
           "id": "myteam-nba-f4",
           "kind": "since last edition",
-          "text": "2026 NBA free agency: Grades for offseason signings, extensions"
+          "text": "Williams (undisclosed) didn't play in Saturday's 102-98 preseason loss to the Suns."
         },
         {
           "id": "myteam-nba-f5",
-          "kind": "news headline",
-          "text": "What does your NBA team need? The biggest hole on all 30 rosters"
+          "kind": "since last edition",
+          "text": "Fox (undisclosed) has been ruled out for Saturday's preseason game against the Suns, Matt Guzman of SI.com reports."
         },
         {
           "id": "myteam-nba-f6",
           "kind": "news headline",
-          "text": "Basketball Power Index: NBA projections, playoff chances for 2026-27 season"
+          "text": "2026 NBA free agency: Grades for offseason signings, extensions"
         },
         {
           "id": "myteam-nba-f7",
           "kind": "news headline",
-          "text": "Spurs' Tobias Harris to miss preseason with left calf strain"
+          "text": "What does your NBA team need? The biggest hole on all 30 rosters"
         },
         {
           "id": "myteam-nba-f8",
+          "kind": "news headline",
+          "text": "Basketball Power Index: NBA projections, playoff chances for 2026-27 season"
+        },
+        {
+          "id": "myteam-nba-f9",
+          "kind": "news headline",
+          "text": "Spurs' Tobias Harris to miss preseason with left calf strain"
+        },
+        {
+          "id": "myteam-nba-f10",
           "kind": "playoff race",
           "text": "The regular season hasn't started yet. Every team in the West is 0–0."
         }
@@ -576,28 +765,20 @@
           "reportedTimeline": "Around Tue 1 Dec (estimate)"
         },
         {
-          "player": "De'Aaron Fox",
-          "position": "G",
-          "status": "Day-to-day",
-          "injury": "Undisclosed (soreness)",
-          "note": "Fox (undisclosed) won't play in Saturday's preseason game against the Suns, Duane Rankin of The Arizona Republic reports.",
-          "reportedTimeline": "Around Mon 12 Oct (estimate)"
-        },
-        {
           "player": "Malik Williams",
           "position": "C",
           "status": "Day-to-day",
           "injury": "Undisclosed",
-          "note": "Williams (undisclosed) is out for Thursday's preseason game against the Hawks, Matt Guzman of SI.com reports.",
-          "reportedTimeline": "Around Sat 10 Oct (estimate)"
+          "note": "Williams (undisclosed) didn't play in Saturday's 102-98 preseason loss to the Suns.",
+          "reportedTimeline": "Around Mon 12 Oct (estimate)"
         },
         {
-          "player": "Maliq Brown",
-          "position": "F",
+          "player": "De'Aaron Fox",
+          "position": "G",
           "status": "Day-to-day",
-          "injury": "Back",
-          "note": "Brown (back) is out for Thursday's preseason game against the Hawks, Tom Orsborn of the San Antonio Express-News reports.",
-          "reportedTimeline": "Around Sat 10 Oct (estimate)"
+          "injury": "Undisclosed (soreness)",
+          "note": "Fox (undisclosed) has been ruled out for Saturday's preseason game against the Suns, Matt Guzman of SI.com reports.",
+          "reportedTimeline": "Around Mon 12 Oct (estimate)"
         },
         {
           "player": "Tobias Harris",
