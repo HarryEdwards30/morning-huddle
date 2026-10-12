@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "leaders": {
     "nba": [],
     "nfl": [
@@ -7,29 +7,29 @@
         "category": "Passing Yards",
         "leaders": [
           {
+            "name": "Jared Goff",
+            "team": "DET",
+            "value": "1485"
+          },
+          {
+            "name": "Jordan Love",
+            "team": "GB",
+            "value": "1408"
+          },
+          {
+            "name": "C.J. Stroud",
+            "team": "HOU",
+            "value": "1402"
+          },
+          {
             "name": "Dak Prescott",
             "team": "DAL",
             "value": "1381"
           },
           {
-            "name": "Bryce Young",
-            "team": "CAR",
-            "value": "1268"
-          },
-          {
-            "name": "Jared Goff",
-            "team": "DET",
-            "value": "1214"
-          },
-          {
-            "name": "Tyler Shough",
-            "team": "NO",
-            "value": "1203"
-          },
-          {
-            "name": "Matthew Stafford",
-            "team": "LAR",
-            "value": "1189"
+            "name": "Joe Burrow",
+            "team": "CIN",
+            "value": "1361"
           }
         ]
       },
@@ -37,29 +37,29 @@
         "category": "Rushing Yards",
         "leaders": [
           {
+            "name": "Bijan Robinson",
+            "team": "ATL",
+            "value": "580"
+          },
+          {
             "name": "Kenneth Walker III",
             "team": "KC",
             "value": "537"
           },
           {
-            "name": "Bijan Robinson",
-            "team": "ATL",
-            "value": "494"
+            "name": "Jahmyr Gibbs",
+            "team": "DET",
+            "value": "504"
+          },
+          {
+            "name": "Derrick Henry",
+            "team": "BAL",
+            "value": "476"
           },
           {
             "name": "James Cook III",
             "team": "BUF",
             "value": "421"
-          },
-          {
-            "name": "Bucky Irving",
-            "team": "TB",
-            "value": "406"
-          },
-          {
-            "name": "Derrick Henry",
-            "team": "BAL",
-            "value": "374"
           }
         ]
       },
@@ -67,29 +67,29 @@
         "category": "Receiving Yards",
         "leaders": [
           {
+            "name": "Jaxon Smith-Njigba",
+            "team": "SEA",
+            "value": "583"
+          },
+          {
+            "name": "Chris Olave",
+            "team": "NO",
+            "value": "537"
+          },
+          {
             "name": "CeeDee Lamb",
             "team": "DAL",
             "value": "507"
           },
           {
-            "name": "Chris Olave",
-            "team": "NO",
-            "value": "491"
+            "name": "Drake London",
+            "team": "ATL",
+            "value": "488"
           },
           {
-            "name": "Jaxon Smith-Njigba",
-            "team": "SEA",
-            "value": "481"
-          },
-          {
-            "name": "Tee Higgins",
-            "team": "CIN",
-            "value": "401"
-          },
-          {
-            "name": "Davante Adams",
-            "team": "LAR",
-            "value": "390"
+            "name": "Christian Watson",
+            "team": "GB",
+            "value": "474"
           }
         ]
       },
@@ -97,35 +97,40 @@
         "category": "Total Tackles",
         "leaders": [
           {
-            "name": "Alex Singleton",
-            "team": "DEN",
-            "value": "47"
-          },
-          {
             "name": "Jacob Rodriguez",
             "team": "MIA",
-            "value": "46"
+            "value": "57"
           },
           {
-            "name": "Anthony Hill Jr.",
-            "team": "TEN",
-            "value": "42"
+            "name": "Alex Singleton",
+            "team": "DEN",
+            "value": "54"
+          },
+          {
+            "name": "Fred Warner",
+            "team": "SF",
+            "value": "50"
           },
           {
             "name": "Ernest Jones IV",
             "team": "SEA",
-            "value": "41"
+            "value": "50"
           },
           {
-            "name": "Josiah Trotter",
-            "team": "TB",
-            "value": "41"
+            "name": "Evan Williams",
+            "team": "GB",
+            "value": "49"
           }
         ]
       },
       {
         "category": "Sacks",
         "leaders": [
+          {
+            "name": "Will Anderson Jr.",
+            "team": "HOU",
+            "value": "8"
+          },
           {
             "name": "Greg Rousseau",
             "team": "BUF",
@@ -137,19 +142,14 @@
             "value": "6"
           },
           {
-            "name": "T.J. Watt",
-            "team": "PIT",
-            "value": "4"
+            "name": "DJ Wonnum",
+            "team": "DET",
+            "value": "5"
           },
           {
-            "name": "Will Anderson Jr.",
-            "team": "HOU",
-            "value": "4"
-          },
-          {
-            "name": "Mason Graham",
-            "team": "CLE",
-            "value": "4"
+            "name": "David Bailey",
+            "team": "NYJ",
+            "value": "5"
           }
         ]
       },
@@ -157,29 +157,29 @@
         "category": "Kickoff Yards",
         "leaders": [
           {
-            "name": "Brandon Aubrey",
-            "team": "DAL",
-            "value": "1729"
+            "name": "Jake Bates",
+            "team": "DET",
+            "value": "1858"
           },
           {
-            "name": "Ryan Fitzgerald",
-            "team": "CAR",
-            "value": "1642"
+            "name": "Jason Myers",
+            "team": "SEA",
+            "value": "1857"
           },
           {
-            "name": "Tyler Bass",
-            "team": "BUF",
-            "value": "1593"
+            "name": "Eddy Pineiro",
+            "team": "SF",
+            "value": "1794"
           },
           {
-            "name": "Chase McLaughlin",
-            "team": "TB",
-            "value": "1544"
+            "name": "Evan McPherson",
+            "team": "CIN",
+            "value": "1792"
           },
           {
-            "name": "Harrison Butker",
-            "team": "KC",
-            "value": "1494"
+            "name": "Tyler Loop",
+            "team": "BAL",
+            "value": "1748"
           }
         ]
       },
@@ -187,29 +187,29 @@
         "category": "Interceptions",
         "leaders": [
           {
+            "name": "Byron Murphy Jr.",
+            "team": "MIN",
+            "value": "3"
+          },
+          {
+            "name": "Xavier McKinney",
+            "team": "GB",
+            "value": "3"
+          },
+          {
             "name": "Jevon Holland",
             "team": "NYG",
             "value": "3"
           },
           {
-            "name": "Hezekiah Masses",
-            "team": "LV",
+            "name": "Renardo Green",
+            "team": "SF",
             "value": "3"
           },
           {
-            "name": "Jourdan Lewis",
-            "team": "JAX",
-            "value": "2"
-          },
-          {
-            "name": "Foyesade Oluokun",
-            "team": "JAX",
-            "value": "2"
-          },
-          {
-            "name": "Julian Love",
-            "team": "SEA",
-            "value": "2"
+            "name": "Jordan Battle",
+            "team": "CIN",
+            "value": "3"
           }
         ]
       },
@@ -217,29 +217,29 @@
         "category": "Passing Touchdowns",
         "leaders": [
           {
-            "name": "Kirk Cousins",
-            "team": "LV",
-            "value": "11"
-          },
-          {
             "name": "Brock Purdy",
             "team": "SF",
-            "value": "11"
+            "value": "13"
           },
           {
-            "name": "Dak Prescott",
-            "team": "DAL",
-            "value": "9"
+            "name": "Kirk Cousins",
+            "team": "LV",
+            "value": "12"
           },
           {
             "name": "Jared Goff",
             "team": "DET",
-            "value": "9"
+            "value": "12"
           },
           {
-            "name": "Patrick Mahomes",
-            "team": "KC",
-            "value": "9"
+            "name": "Joe Burrow",
+            "team": "CIN",
+            "value": "11"
+          },
+          {
+            "name": "Aaron Rodgers",
+            "team": "PIT",
+            "value": "10"
           }
         ]
       },
@@ -252,11 +252,6 @@
             "value": "127"
           },
           {
-            "name": "Brock Purdy",
-            "team": "SF",
-            "value": "126"
-          },
-          {
             "name": "Jaxson Dart",
             "team": "NYG",
             "value": "126"
@@ -267,9 +262,14 @@
             "value": "120"
           },
           {
-            "name": "Michael Penix Jr.",
-            "team": "ATL",
-            "value": "113"
+            "name": "Brock Purdy",
+            "team": "SF",
+            "value": "119"
+          },
+          {
+            "name": "Jared Goff",
+            "team": "DET",
+            "value": "111"
           }
         ]
       },
@@ -287,6 +287,11 @@
             "value": "7"
           },
           {
+            "name": "Jahmyr Gibbs",
+            "team": "DET",
+            "value": "7"
+          },
+          {
             "name": "Jonathan Taylor",
             "team": "IND",
             "value": "6"
@@ -295,11 +300,6 @@
             "name": "Javonte Williams",
             "team": "DAL",
             "value": "6"
-          },
-          {
-            "name": "Jahmyr Gibbs",
-            "team": "DET",
-            "value": "5"
           }
         ]
       }

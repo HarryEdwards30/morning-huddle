@@ -1,146 +1,107 @@
 {
-  "today": "2026-10-12",
+  "today": "2026-10-13",
   "note": "All times are UTC ISO strings unless stated. Records are wins-losses(-ties). GB means games behind.",
   "recentContextCards": [
     "What counts in the preseason",
     "How injured reserve works",
-    "How playoff tiebreakers work"
+    "How playoff tiebreakers work",
+    "How the NFL trade deadline works"
   ],
   "nfl": {
     "headlines": [
       {
         "id": "nfl-h1",
-        "title": "Will the Marvin Harrison Jr. trade unlock his potential? History offers hope, and a warning",
-        "summary": "Harrison's time in Arizona is over. Here's what his trade value could look like, what history says about a fresh start and three teams that could be on the other end of the deal",
-        "teams": []
+        "title": "Klint Kubiak confirms Kirk Cousins is still Las Vegas Raiders’ starting quarterback despite Fernando Mendoza’s debut",
+        "summary": "Highlights from the head coach’s press conference after the loss in New England",
+        "teams": [
+          "LV"
+        ]
       },
       {
         "id": "nfl-h2",
-        "title": "Browns WR KC Concepcion suffers concussion after illegal hit",
-        "summary": "Browns rookie wide receiver KC Concepcion sustained a concussion in the first quarter of the team's game against the Jets and was ruled out.",
+        "title": "Broncos estimate CB Riley Moss as limited practice participant",
+        "summary": "The Broncos did not practice Monday, but the NFL required an estimated injury report ahead of Thursday Night Football.",
         "teams": [
-          "CLE",
-          "NYJ"
+          "DEN"
         ]
       },
       {
         "id": "nfl-h3",
-        "title": "Jayden Daniels and Commanders settle for 27-27 tie with Giants after botching final play of OT",
-        "summary": "— Jayden Daniels took off on an ill-advised scramble in the closing seconds of overtime with the Commanders in field goal range and Washington was unable to stop the clock before time...",
-        "teams": [
-          "WSH",
-          "NYG"
-        ]
-      },
-      {
-        "id": "nfl-h4",
-        "title": "Falcons vs Ravens live updates: Sunday Night Football start time, how to watch, stream",
-        "summary": "Bijan Robinson and the Falcons host the Baltimore Ravens on \"Sunday Night Football\" in Week 5. USA TODAY Sports is providing live updates here:",
-        "teams": [
-          "ATL",
-          "BAL"
-        ]
-      },
-      {
-        "id": "nfl-h5",
-        "title": "Allen has late 22-yard TD run and Jets' defense, special teams come up big in 17-12 win over Browns",
-        "summary": "— Braelon Allen ran 22 yards for the go-ahead touchdown late in the fourth quarter after New York recovered a fumbled punt snap and the Jets ended a three-game skid with a 17-12 victory over the Cleveland Browns on a rain-soaked Sunday.",
-        "teams": [
-          "NYJ",
-          "CLE"
-        ]
-      },
-      {
-        "id": "nfl-h6",
-        "title": "Jaguars' emergency long snapper plays unlikely hero in win over Eagles",
-        "summary": "Jaguars nose tackle DaVon Hamilton delivered the crucial snap on Cam Little's game-winning 57-yard field goal.",
+        "title": "Jaguars signing LS Jacob Bobenmoyer",
+        "summary": "There is now a known name for Jacksonville's new long snapper.",
         "teams": [
           "JAX"
         ]
       },
       {
-        "id": "nfl-h7",
-        "title": "2026 NFL trade deadline updates: Marvin Harrison Jr., Cam Jurgens on the move",
-        "summary": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including the Cards sending Marvin Harrison Jr. to the Texans.",
+        "id": "nfl-h4",
+        "title": "Dan Quinn still 'furious' about tie with Giants after clock blunder: 'We've got a lot of s**t to clean up'",
+        "summary": "The Commanders and Giants tied on Sunday after Washington failed to stop the clock and set up a possible game-winning field goal.",
         "teams": [
-          "MIN",
-          "NYG",
-          "DAL"
+          "NYG"
+        ]
+      },
+      {
+        "id": "nfl-h5",
+        "title": "Bills elevate WR Trent Sherfield, DL Phidarian Mathis for Monday night",
+        "summary": "The Bills announced a handful of roster moves ahead of Monday night's game against the Rams.",
+        "teams": [
+          "BUF"
+        ]
+      },
+      {
+        "id": "nfl-h6",
+        "title": "Miami Dolphins will not bench Malik Willis following off week",
+        "summary": "“Malik needs to be better.”",
+        "teams": [
+          "MIA"
+        ]
+      },
+      {
+        "id": "nfl-h7",
+        "title": "Giants Notes: John Harbaugh praises Dennard Wilson's 'diverse' defense, provides injury updates for three starters",
+        "summary": "Giants head coach John Harbaugh met with reporters via Zoom on Monday to discuss his team's tie against the Washington Commanders and what's ahead in Week 6 vs. the New Orleans Saints...",
+        "teams": [
+          "NYG"
         ]
       },
       {
         "id": "nfl-h8",
-        "title": "NFL Week 5 Winners and Losers: Commanders have game-management gaffe for the ages in tie to Giants",
-        "summary": "The Giants were quite pleased at the end to get the tie.",
+        "title": "Caleb Williams is \"progressing\" but Bears haven't determined who will start if he can't",
+        "summary": "The Bears hope to have Caleb Williams back for Sunday's game against the Falcons.",
         "teams": [
-          "NYG",
-          "WSH"
+          "CHI"
         ]
       }
     ],
     "results": [
       {
         "id": "nfl-r1",
-        "game": "Bears 7 at Packers 31",
-        "status": "Final",
+        "game": "Ravens 30 at Falcons 23",
+        "status": "Final/OT",
         "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
+        "date": "2026-10-12T00:20Z"
       },
       {
         "id": "nfl-r2",
-        "game": "Texans 26 at Titans 3",
+        "game": "Lions 45 at Cardinals 21",
         "status": "Final",
         "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
+        "date": "2026-10-11T20:25Z"
       },
       {
         "id": "nfl-r3",
-        "game": "Bengals 31 at Dolphins 24",
+        "game": "49ers 32 at Seahawks 29",
         "status": "Final",
         "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
+        "date": "2026-10-11T20:25Z"
       },
       {
         "id": "nfl-r4",
-        "game": "Raiders 17 at Patriots 45",
+        "game": "Broncos 23 at Chargers 17",
         "status": "Final",
         "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
-      },
-      {
-        "id": "nfl-r5",
-        "game": "Vikings 23 at Saints 13",
-        "status": "Final",
-        "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
-      },
-      {
-        "id": "nfl-r6",
-        "game": "Browns 12 at Jets 17",
-        "status": "Final",
-        "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
-      },
-      {
-        "id": "nfl-r7",
-        "game": "Colts 22 at Steelers 34",
-        "status": "Final",
-        "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
-      },
-      {
-        "id": "nfl-r8",
-        "game": "Giants 27 at Commanders 27",
-        "status": "Final/OT",
-        "note": "Week 5",
-        "date": "2026-10-11T17:00Z"
-      },
-      {
-        "id": "nfl-r9",
-        "game": "Eagles 17 at Jaguars 19",
-        "status": "Final",
-        "note": "Week 5",
-        "date": "2026-10-11T13:30Z"
+        "date": "2026-10-11T20:05Z"
       }
     ],
     "standings": [
@@ -150,7 +111,7 @@
       },
       {
         "group": "AFC North",
-        "teams": "BAL 3-1 W2, CIN 3-2 W1, PIT 3-2 W1, CLE 3-2 L1"
+        "teams": "BAL 4-1 W3, CIN 3-2 W1, PIT 3-2 W1, CLE 3-2 L1"
       },
       {
         "group": "AFC South",
@@ -158,7 +119,7 @@
       },
       {
         "group": "AFC West",
-        "teams": "KC 4-0 W4, LV 3-2 L2, DEN 2-2 L1, LAC 0-4 L4"
+        "teams": "KC 4-0 W4, LV 3-2 L2, DEN 3-2 W1, LAC 0-5 L5"
       },
       {
         "group": "NFC East",
@@ -166,54 +127,51 @@
       },
       {
         "group": "NFC North",
-        "teams": "MIN 5-0 W5, CHI 3-2 L1, GB 3-2 W2, DET 2-2 L1"
+        "teams": "MIN 5-0 W5, CHI 3-2 L1, DET 3-2 W1, GB 3-2 W2"
       },
       {
         "group": "NFC South",
-        "teams": "CAR 2-2 W1, ATL 2-2 W2, TB 1-4 W1, NO 1-4 L3"
+        "teams": "CAR 2-2 W1, ATL 2-3 L1, TB 1-4 W1, NO 1-4 L3"
       },
       {
         "group": "NFC West",
-        "teams": "SF 4-0 W4, SEA 3-1 W1, LAR 2-2 W1, ARI 1-3 L3"
+        "teams": "SF 5-0 W5, SEA 3-2 L1, LAR 2-2 W1, ARI 1-4 L4"
       }
     ],
     "playoffPicture": [
       {
         "conference": "AFC",
-        "seeds": "1. KC 4–0, 2. JAX 4–1, 3. BAL 3–1, 4. BUF 3–1, 5. NE 3–2, 6. LV 3–2, 7. CLE 3–2",
-        "outside": "PIT 3–2 (– GB), CIN 3–2 (– GB), DEN 2–2 (0.5 GB)"
+        "seeds": "1. KC 4–0, 2. BAL 4–1, 3. JAX 4–1, 4. BUF 3–1, 5. NE 3–2, 6. DEN 3–2, 7. LV 3–2",
+        "outside": "CLE 3–2 (– GB), PIT 3–2 (– GB), CIN 3–2 (– GB)"
       },
       {
         "conference": "NFC",
-        "seeds": "1. MIN 5–0, 2. SF 4–0, 3. NYG 3–1–1, 4. CAR 2–2, 5. SEA 3–1, 6. GB 3–2, 7. CHI 3–2",
-        "outside": "LAR 2–2 (0.5 GB), ATL 2–2 (0.5 GB), DET 2–2 (0.5 GB)"
+        "seeds": "1. SF 5–0, 2. MIN 5–0, 3. NYG 3–1–1, 4. CAR 2–2, 5. GB 3–2, 6. CHI 3–2, 7. DET 3–2",
+        "outside": "SEA 3–2 (– GB), LAR 2–2 (0.5 GB), ATL 2–3 (1.0 GB)"
       }
     ],
     "hotAndCold": {
       "hot": [
         "MIN W5: 5 straight wins, now 5–0.",
+        "SF W5: 5 straight wins, now 5–0.",
         "KC W4: 4 straight wins, now 4–0.",
-        "SF W4: 4 straight wins, now 4–0.",
-        "JAX W3: 3 straight wins, now 4–1.",
-        "Drake Maye (NE): 26/34, 374 YDS, 4 TD against the Raiders.",
-        "Jordan Love (GB): 25/31, 367 YDS, 2 TD against the Bears.",
-        "Christian Watson (GB): 6 REC, 143 YDS, 2 TD against the Bears.",
-        "Trevor Lawrence (JAX): 24/39, 331 YDS, 2 TD, 1 INT against the Eagles."
+        "BAL W3: 3 straight wins, now 4–1.",
+        "Jahmyr Gibbs (DET): 25 CAR, 151 YDS, 2 TD against the Cardinals."
       ],
       "cold": [
         "MIA L5: 5 straight losses, now 0–5.",
         "TEN L5: 5 straight losses, now 0–5.",
-        "LAC L4: 4 straight losses, now 0–4.",
-        "PHI L3: 3 straight losses, now 2–3."
+        "LAC L5: 5 straight losses, now 0–5.",
+        "ARI L4: 4 straight losses, now 1–4."
       ]
     },
     "majorInjuries": [
       {
         "id": "nfl-i1",
-        "player": "Cam Jurgens",
+        "player": "Lamar Jackson",
         "team": "BAL",
         "status": "Out",
-        "injury": "Concussion"
+        "injury": "Left ankle (sprain)"
       },
       {
         "id": "nfl-i2",
@@ -224,45 +182,45 @@
       },
       {
         "id": "nfl-i3",
-        "player": "KC Concepcion",
-        "team": "CLE",
-        "status": "Questionable",
-        "injury": "Concussion"
+        "player": "Swayze Bozeman",
+        "team": "CIN",
+        "status": "Out",
+        "injury": "Right forearm (fracture)"
       },
       {
         "id": "nfl-i4",
-        "player": "David Montgomery",
-        "team": "HOU",
-        "status": "Questionable",
-        "injury": "Groin"
+        "player": "Riley Moss",
+        "team": "DEN",
+        "status": "Out",
+        "injury": "Ribs"
       },
       {
         "id": "nfl-i5",
-        "player": "Anton Harrison",
-        "team": "JAX",
-        "status": "Questionable",
-        "injury": "Knee"
+        "player": "Micah Parsons",
+        "team": "GB",
+        "status": "Out",
+        "injury": "Left knee - acl (surgery)"
       },
       {
         "id": "nfl-i6",
-        "player": "Quentin Lake",
-        "team": "LAR",
-        "status": "Questionable",
-        "injury": "Hip"
+        "player": "Javon Hargrave",
+        "team": "GB",
+        "status": "Out",
+        "injury": "Achilles (surgery)"
       },
       {
         "id": "nfl-i7",
-        "player": "T.J. Hockenson",
-        "team": "MIN",
-        "status": "Questionable",
-        "injury": "Concussion"
+        "player": "Edgerrin Cooper",
+        "team": "GB",
+        "status": "Out",
+        "injury": "Left achilles (surgery)"
       },
       {
         "id": "nfl-i8",
-        "player": "Will Campbell",
-        "team": "NE",
-        "status": "Questionable",
-        "injury": "Right knee"
+        "player": "Myles Garrett",
+        "team": "LAR",
+        "status": "Out",
+        "injury": "Left knee (surgery)"
       }
     ],
     "transactions": [
@@ -311,42 +269,42 @@
       {
         "id": "nfl-l1",
         "category": "Passing Yards",
-        "leaders": "Dak Prescott (DAL) 1381; Bryce Young (CAR) 1268; Jared Goff (DET) 1214; Tyler Shough (NO) 1203; Matthew Stafford (LAR) 1189"
+        "leaders": "Jared Goff (DET) 1485; Jordan Love (GB) 1408; C.J. Stroud (HOU) 1402; Dak Prescott (DAL) 1381; Joe Burrow (CIN) 1361"
       },
       {
         "id": "nfl-l2",
         "category": "Rushing Yards",
-        "leaders": "Kenneth Walker III (KC) 537; Bijan Robinson (ATL) 494; James Cook III (BUF) 421; Bucky Irving (TB) 406; Derrick Henry (BAL) 374"
+        "leaders": "Bijan Robinson (ATL) 580; Kenneth Walker III (KC) 537; Jahmyr Gibbs (DET) 504; Derrick Henry (BAL) 476; James Cook III (BUF) 421"
       },
       {
         "id": "nfl-l3",
         "category": "Receiving Yards",
-        "leaders": "CeeDee Lamb (DAL) 507; Chris Olave (NO) 491; Jaxon Smith-Njigba (SEA) 481; Tee Higgins (CIN) 401; Davante Adams (LAR) 390"
+        "leaders": "Jaxon Smith-Njigba (SEA) 583; Chris Olave (NO) 537; CeeDee Lamb (DAL) 507; Drake London (ATL) 488; Christian Watson (GB) 474"
       },
       {
         "id": "nfl-l4",
         "category": "Total Tackles",
-        "leaders": "Alex Singleton (DEN) 47; Jacob Rodriguez (MIA) 46; Anthony Hill Jr. (TEN) 42; Ernest Jones IV (SEA) 41; Josiah Trotter (TB) 41"
+        "leaders": "Jacob Rodriguez (MIA) 57; Alex Singleton (DEN) 54; Fred Warner (SF) 50; Ernest Jones IV (SEA) 50; Evan Williams (GB) 49"
       },
       {
         "id": "nfl-l5",
         "category": "Sacks",
-        "leaders": "Greg Rousseau (BUF) 6; Dallas Turner (MIN) 6; T.J. Watt (PIT) 4; Will Anderson Jr. (HOU) 4; Mason Graham (CLE) 4"
+        "leaders": "Will Anderson Jr. (HOU) 8; Greg Rousseau (BUF) 6; Dallas Turner (MIN) 6; DJ Wonnum (DET) 5; David Bailey (NYJ) 5"
       },
       {
         "id": "nfl-l6",
         "category": "Kickoff Yards",
-        "leaders": "Brandon Aubrey (DAL) 1729; Ryan Fitzgerald (CAR) 1642; Tyler Bass (BUF) 1593; Chase McLaughlin (TB) 1544; Harrison Butker (KC) 1494"
+        "leaders": "Jake Bates (DET) 1858; Jason Myers (SEA) 1857; Eddy Pineiro (SF) 1794; Evan McPherson (CIN) 1792; Tyler Loop (BAL) 1748"
       },
       {
         "id": "nfl-l7",
         "category": "Interceptions",
-        "leaders": "Jevon Holland (NYG) 3; Hezekiah Masses (LV) 3; Jourdan Lewis (JAX) 2; Foyesade Oluokun (JAX) 2; Julian Love (SEA) 2"
+        "leaders": "Byron Murphy Jr. (MIN) 3; Xavier McKinney (GB) 3; Jevon Holland (NYG) 3; Renardo Green (SF) 3; Jordan Battle (CIN) 3"
       },
       {
         "id": "nfl-l8",
         "category": "Passing Touchdowns",
-        "leaders": "Kirk Cousins (LV) 11; Brock Purdy (SF) 11; Dak Prescott (DAL) 9; Jared Goff (DET) 9; Patrick Mahomes (KC) 9"
+        "leaders": "Brock Purdy (SF) 13; Kirk Cousins (LV) 12; Jared Goff (DET) 12; Joe Burrow (CIN) 11; Aaron Rodgers (PIT) 10"
       }
     ]
   },
@@ -354,125 +312,86 @@
     "headlines": [
       {
         "id": "nba-h1",
-        "title": "Karl-Anthony Towns 'disappointed' with Knicks tabling talks",
-        "summary": "Karl-Anthony Towns responded to the Knicks' statement that they are tabling all extension talks until later in the season, saying he was \"disappointed.\"",
+        "title": "Kentavious Caldwell-Pope cites team chemistry as key to 76ers' success",
+        "summary": "Kentavious Caldwell-Pope says the 76ers' success this season depends on how well the team's diverse personalities mesh.",
         "teams": [
-          "NY"
+          "PHI"
         ]
       },
       {
         "id": "nba-h2",
-        "title": "Kings C Maxime Raynaud (knee) to be reevaluated in 2 weeks",
-        "summary": "Kings second-year center Maxime Raynaud will be reevaluated in two weeks with a patellar subluxation in his right knee.",
-        "teams": [
-          "SAC"
-        ]
-      },
-      {
-        "id": "nba-h3",
-        "title": "Kings lose Maxime Raynaud to apparent serious knee injury",
-        "summary": "Kings second-year center Maxime Raynaud suffered what appeared to be a serious right knee injury in Saturday's preseason game against the Warriors.",
-        "teams": [
-          "SAC"
-        ]
-      },
-      {
-        "id": "nba-h4",
-        "title": "Watch Trae Young, Daniss Jenkins get ejected after pushing incident",
-        "summary": "There wasn't much to this, but both players were ejected.",
-        "teams": []
-      },
-      {
-        "id": "nba-h5",
-        "title": "Kyrie Irving returns to Mavs, dazzles in China preseason game",
-        "summary": "Kyrie Irving dazzled in his return to the Mavericks, scoring 17 points in his first game in 586 days.",
-        "teams": [
-          "DAL"
-        ]
-      },
-      {
-        "id": "nba-h6",
-        "title": "Knicks Bulletin: ‘We’re gonna have each other’s back, regardless’",
-        "summary": "No Knicks basketball on Sunday; what did you expect on the day we all have for resting and disconnecting? (As if I ever do lol) However, New York folks keep logging practices and sending quotes out to the world for us to enjoy. Here’s the latest from Tarrytow…",
+        "title": "Kawhi Leonard available for matchup with Knicks, says coach Darko Rajaković",
+        "summary": "The star forward is set to take the court tomorrow at Scotiabank Arena",
         "teams": [
           "NY"
         ]
       },
       {
-        "id": "nba-h7",
-        "title": "Raptors beat the Clippers, 114-106, in first game post-Kawhi trade",
-        "summary": "Toronto plays a preseason game in British Columbia against a regular contact from their offseason",
+        "id": "nba-h3",
+        "title": "Game Preview: Utah Jazz vs San Antonio Spurs",
+        "summary": "How will the Jazz match up against the Finals runner-ups?",
         "teams": [
-          "LAC",
-          "TOR"
+          "SAS",
+          "UTAH"
         ]
       },
       {
-        "id": "nba-h8",
-        "title": "6 things from the Mavericks’ 132-115 preseason win over the Houston Rockets in Macao",
-        "summary": "The Mavericks’ offense resembled a cohesive unit for the first time in what seemed like ages with Kyrie Irving back.",
+        "id": "nba-h4",
+        "title": "Micah Parsons expected to remain sidelined",
+        "summary": "Packers DE Micah Parsons not ready to return to practice at this time",
+        "teams": []
+      },
+      {
+        "id": "nba-h5",
+        "title": "Windhorst: Why Cooper Flagg's ascension is starting to feel inevitable",
+        "summary": "The NBA China Games showcased Cooper Flagg's evolving game, leadership and, perhaps most impressive, his franchise-savior ceiling.",
         "teams": [
           "DAL",
           "HOU"
+        ]
+      },
+      {
+        "id": "nba-h6",
+        "title": "Joe Lacob has 32x’d his investment; how much higher can it go?",
+        "summary": "At what price would the Warriors’ owner sell?",
+        "teams": []
+      },
+      {
+        "id": "nba-h7",
+        "title": "Michael Jordan \"Last Dance,\" 1998 Finals Game 2 jersey sells for record $14 million",
+        "summary": "Anything Jordan, especially from the \"Last Dance\" season, is in great demand among collectors.",
+        "teams": []
+      },
+      {
+        "id": "nba-h8",
+        "title": "NBA pressure rankings: 10 teams and players who will be feeling the most heat this season",
+        "summary": "The 2026-27 NBA season tips off next week, and the expectations will be heavy for those on this list",
+        "teams": [
+          "MIA"
         ]
       }
     ],
     "results": [
       {
         "id": "nba-r1",
-        "game": "Mavericks 132 at Rockets 115",
+        "game": "Bulls 128 at Nuggets 133",
         "status": "Final",
         "note": "Preseason",
-        "date": "2026-10-11T10:00Z"
+        "date": "2026-10-12T01:00Z"
       },
       {
         "id": "nba-r2",
-        "game": "Spurs 98 at Suns 102",
+        "game": "Bucks 90 at Hornets 105",
         "status": "Final",
         "note": "Preseason",
-        "date": "2026-10-11T02:30Z"
+        "date": "2026-10-11T23:00Z"
       },
       {
         "id": "nba-r3",
-        "game": "Kings 106 at Warriors 111",
+        "game": "Magic 105 at Cavaliers 119",
         "status": "Final",
         "note": "Preseason",
-        "date": "2026-10-11T00:30Z"
-      },
-      {
-        "id": "nba-r4",
-        "game": "Timberwolves 125 at Heat 124",
-        "status": "Final",
-        "note": "Preseason",
-        "date": "2026-10-11T00:00Z"
-      },
-      {
-        "id": "nba-r5",
-        "game": "76ers 106 at Celtics 144",
-        "status": "Final",
-        "note": "Preseason",
-        "date": "2026-10-11T00:00Z"
-      },
-      {
-        "id": "nba-r6",
-        "game": "Hawks 119 at Pacers 117",
-        "status": "Final",
-        "note": "Preseason",
-        "date": "2026-10-10T23:00Z"
-      },
-      {
-        "id": "nba-r7",
-        "game": "Pistons 108 at Wizards 114",
-        "status": "Final/OT",
-        "note": "Preseason",
-        "date": "2026-10-10T23:00Z"
-      },
-      {
-        "id": "nba-r8",
-        "game": "Clippers 106 at Raptors 114",
-        "status": "Final",
-        "note": "Preseason",
-        "date": "2026-10-10T22:30Z"
+        "date": "2026-10-11T22:30Z"
       }
     ],
     "standings": [
@@ -486,9 +405,7 @@
       }
     ],
     "hotAndCold": {
-      "hot": [
-        "Khaman Maluach (PHX): 15 rebounds against the Spurs."
-      ],
+      "hot": [],
       "cold": []
     },
     "majorInjuries": [
@@ -505,6 +422,20 @@
         "team": "SAC",
         "status": "Out",
         "injury": "Right knee (dislocated)"
+      },
+      {
+        "id": "nba-i3",
+        "player": "Tristan Vukcevic",
+        "team": "WSH",
+        "status": "Out",
+        "injury": "Left hip"
+      },
+      {
+        "id": "nba-i4",
+        "player": "Jamir Watkins",
+        "team": "WSH",
+        "status": "Out",
+        "injury": "Left knee"
       }
     ],
     "transactions": [],
@@ -531,71 +462,58 @@
         {
           "id": "myteam-nfl-f3",
           "kind": "since last edition",
-          "text": "Lost to the Patriots 17–45 on the road (Week 5)."
+          "text": "Raiders head coach Klint Kubiak said Monday that Nailor (concussion) is expected to practice this week, Sam Warren of The Athletic reports."
         },
         {
           "id": "myteam-nfl-f4",
           "kind": "since last edition",
-          "text": "Elevated RB Roman Hemby and WR Deven Thompkins from the practice squad."
+          "text": "How active NFL players continue to redefine all-time sack list"
         },
         {
           "id": "myteam-nfl-f5",
           "kind": "since last edition",
-          "text": "O'Connel (coach's decision) is inactive but will serve as the Raiders' emergency third quarterback against the Patriots on Sunday."
+          "text": "2027 NFL draft order projections for Round 1, chances for top pick, more"
         },
         {
           "id": "myteam-nfl-f6",
           "kind": "since last edition",
-          "text": "The Raiders elevated Hemby from the practice squad to the active roster Saturday."
+          "text": "What are NFL overtime rules for regular and postseason play?"
         },
         {
           "id": "myteam-nfl-f7",
-          "kind": "since last edition",
-          "text": "Johnson (stinger/neck) is questionable to return to Sunday's game against the Patriots."
+          "kind": "news headline",
+          "text": "Fernando Mendoza makes season debut in loss to Patriots"
         },
         {
           "id": "myteam-nfl-f8",
-          "kind": "since last edition",
-          "text": "Hemingway (neck) has been ruled out for the remainder of Sunday's game against the Patriots."
+          "kind": "news headline",
+          "text": "Raiders' Fernando Mendoza makes NFL debut late in loss to Pats"
         },
         {
           "id": "myteam-nfl-f9",
-          "kind": "news headline",
-          "text": "Drake Maye accounts for 5 TDs as Patriots roll past Raiders 45-17"
+          "kind": "roster move (Roster)",
+          "text": "Elevated RB Roman Hemby and WR Deven Thompkins from the practice squad."
         },
         {
           "id": "myteam-nfl-f10",
-          "kind": "news headline",
-          "text": "Raiders RB Ashton Jeanty active against Patriots"
-        },
-        {
-          "id": "myteam-nfl-f11",
-          "kind": "news headline",
-          "text": "Raiders RB Ashton Jeanty (ankle/foot) questionable vs. Pats"
-        },
-        {
-          "id": "myteam-nfl-f12",
-          "kind": "news headline",
-          "text": "Inside the NFL's wild endings and why coaches need to adapt"
-        },
-        {
-          "id": "myteam-nfl-f13",
-          "kind": "news headline",
-          "text": "Why the Raiders' running game has struggled, and what's next for Ashton Jeanty"
-        },
-        {
-          "id": "myteam-nfl-f14",
           "kind": "playoff race",
-          "text": "6th in the AFC at 3–2."
+          "text": "7th in the AFC at 3–2."
         }
       ],
       "injuries": [
         {
-          "player": "Aidan O'Connell",
-          "position": "QB",
+          "player": "Tyler Scott",
+          "position": "WR",
           "status": "Out",
-          "injury": "Coach's decision",
-          "note": "O'Connel (coach's decision) is inactive but will serve as the Raiders' emergency third quarterback against the Patriots on Sunday.",
+          "injury": "Undisclosed",
+          "reportedTimeline": "Around Sun 15 Nov (estimate)"
+        },
+        {
+          "player": "Jalen Nailor",
+          "position": "WR",
+          "status": "Out",
+          "injury": "Concussion",
+          "note": "Raiders head coach Klint Kubiak said Monday that Nailor (concussion) is expected to practice this week, Sam Warren of The Athletic reports.",
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
@@ -603,42 +521,6 @@
           "position": "C",
           "status": "Out",
           "injury": "Knee (abrasion)",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
-        },
-        {
-          "player": "JJ Pegues",
-          "position": "DT",
-          "status": "Out",
-          "injury": "Coach's decision",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
-        },
-        {
-          "player": "Dalton Johnson",
-          "position": "S",
-          "status": "Out",
-          "injury": "Coach's decision",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
-        },
-        {
-          "player": "Tristin McCollum",
-          "position": "S",
-          "status": "Out",
-          "injury": "Coach's decision",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
-        },
-        {
-          "player": "Jalen Nailor",
-          "position": "WR",
-          "status": "Out",
-          "injury": "Concussion",
-          "reportedTimeline": "Around Sun 18 Oct (estimate)"
-        },
-        {
-          "player": "Roman Hemby",
-          "position": "RB",
-          "status": "Out",
-          "injury": "Coach's decision",
-          "note": "The Raiders elevated Hemby from the practice squad to the active roster Saturday.",
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
@@ -655,14 +537,14 @@
           "status": "Questionable",
           "injury": "Neck (stinger)",
           "note": "Johnson (stinger/neck) is questionable to return to Sunday's game against the Patriots.",
-          "reportedTimeline": "Around Sun 11 Oct (estimate)"
+          "reportedTimeline": "Around Sun 18 Oct (estimate)"
         },
         {
           "player": "Tonka Hemingway",
           "position": "DT",
           "status": "Questionable",
-          "injury": "Neck (stinger)",
-          "note": "Hemingway (neck) has been ruled out for the remainder of Sunday's game against the Patriots.",
+          "injury": "Concussion (stinger)",
+          "note": "Hemingway (neck) is questionable to return to Sunday's game against the Patriots.",
           "reportedTimeline": "Around Sun 18 Oct (estimate)"
         }
       ],
@@ -682,11 +564,11 @@
           "stats": "RUSH YDS: last 5 58.2, season 58.2; YPC: last 5 3.2, season 3.2; TD: last 5 0, season 0"
         },
         {
-          "player": "Tre Tucker",
-          "position": "WR",
+          "player": "Brock Bowers",
+          "position": "TE",
           "trend": "steady",
           "seasonLabel": "2026 Regular Season",
-          "stats": "REC: last 5 3.8, season 3.8; YDS: last 5 54.8, season 54.8; TD: last 5 0.2, season 0.2"
+          "stats": "REC: last 5 8, season 8; YDS: last 5 104, season 104; TD: last 5 1, season 1"
         },
         {
           "player": "Malcolm Koonce",
@@ -700,8 +582,8 @@
     "nba": {
       "name": "San Antonio Spurs",
       "record": {
-        "summary": "0-2",
-        "standing": "5th in Southwest Division"
+        "summary": "0-0",
+        "standing": "1st in Western Conference Division"
       },
       "facts": [
         {
@@ -717,40 +599,45 @@
         {
           "id": "myteam-nba-f3",
           "kind": "since last edition",
-          "text": "Lost to the Suns 98–102 on the road (preseason)."
+          "text": "Williams (undisclosed) is out for Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News."
         },
         {
           "id": "myteam-nba-f4",
           "kind": "since last edition",
-          "text": "Williams (undisclosed) didn't play in Saturday's 102-98 preseason loss to the Suns."
+          "text": "Bryant (ankle) won't play in Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News."
         },
         {
           "id": "myteam-nba-f5",
           "kind": "since last edition",
-          "text": "Fox (undisclosed) has been ruled out for Saturday's preseason game against the Suns, Matt Guzman of SI.com reports."
+          "text": "Castle (rest) will not play in Monday's preseason matchup against Utah, Tom Orsborn of the San Antonio Express-News reports."
         },
         {
           "id": "myteam-nba-f6",
-          "kind": "news headline",
-          "text": "2026 NBA free agency: Grades for offseason signings, extensions"
+          "kind": "since last edition",
+          "text": "Vassell (rest) won't play in Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News."
         },
         {
           "id": "myteam-nba-f7",
-          "kind": "news headline",
-          "text": "What does your NBA team need? The biggest hole on all 30 rosters"
+          "kind": "since last edition",
+          "text": "Fox (undisclosed) has been ruled out for Monday's preseason game against the Jazz, Tom Orsborn of the San Antonio Express-News reports."
         },
         {
           "id": "myteam-nba-f8",
-          "kind": "news headline",
-          "text": "Basketball Power Index: NBA projections, playoff chances for 2026-27 season"
+          "kind": "since last edition",
+          "text": "Harper (rest) won't play in Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News."
         },
         {
           "id": "myteam-nba-f9",
           "kind": "news headline",
-          "text": "Spurs' Tobias Harris to miss preseason with left calf strain"
+          "text": "2026 NBA free agency: Grades for offseason signings, extensions"
         },
         {
           "id": "myteam-nba-f10",
+          "kind": "news headline",
+          "text": "What does your NBA team need? The biggest hole on all 30 rosters"
+        },
+        {
+          "id": "myteam-nba-f11",
           "kind": "playoff race",
           "text": "The regular season hasn't started yet. Every team in the West is 0–0."
         }
@@ -769,16 +656,56 @@
           "position": "C",
           "status": "Day-to-day",
           "injury": "Undisclosed",
-          "note": "Williams (undisclosed) didn't play in Saturday's 102-98 preseason loss to the Suns.",
-          "reportedTimeline": "Around Mon 12 Oct (estimate)"
+          "note": "Williams (undisclosed) is out for Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
+        },
+        {
+          "player": "Carter Bryant",
+          "position": "F",
+          "status": "Day-to-day",
+          "injury": "Ankle",
+          "note": "Bryant (ankle) won't play in Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
+        },
+        {
+          "player": "Stephon Castle",
+          "position": "G",
+          "status": "Day-to-day",
+          "injury": "Rest",
+          "note": "Castle (rest) will not play in Monday's preseason matchup against Utah, Tom Orsborn of the San Antonio Express-News reports.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
+        },
+        {
+          "player": "Devin Vassell",
+          "position": "G",
+          "status": "Day-to-day",
+          "injury": "Rest",
+          "note": "Vassell (rest) won't play in Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
         },
         {
           "player": "De'Aaron Fox",
           "position": "G",
           "status": "Day-to-day",
           "injury": "Undisclosed (soreness)",
-          "note": "Fox (undisclosed) has been ruled out for Saturday's preseason game against the Suns, Matt Guzman of SI.com reports.",
-          "reportedTimeline": "Around Mon 12 Oct (estimate)"
+          "note": "Fox (undisclosed) has been ruled out for Monday's preseason game against the Jazz, Tom Orsborn of the San Antonio Express-News reports.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
+        },
+        {
+          "player": "Dylan Harper",
+          "position": "G",
+          "status": "Day-to-day",
+          "injury": "Rest",
+          "note": "Harper (rest) won't play in Monday's preseason game against Utah, per Tom Orsborn of the San Antonio Express-News.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
+        },
+        {
+          "player": "Victor Wembanyama",
+          "position": "F",
+          "status": "Day-to-day",
+          "injury": "Rest",
+          "note": "Wembanyama (rest) will not play in Monday's preseason matchup against the Jazz, Tom Orsborn of the San Antonio Express-News reports.",
+          "reportedTimeline": "Around Wed 14 Oct (estimate)"
         },
         {
           "player": "Tobias Harris",
