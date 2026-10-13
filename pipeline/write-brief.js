@@ -224,13 +224,14 @@ function merge(edition, brief, index, model, facts, input) {
     section.oneThing = b.oneThing?.text || null;
     if (b.headlines.length) {
       section.headlines = b.headlines.map(h => {
-        const cited = h.refs.map(r => index.get(r).item);
+        // A top story can cite news, a game or a roster move; only news items carry teams and links.
+        const gameTeams = h.refs.map(r => index.get(r)?.item).filter(g => g?.home && g?.away).flatMap(g => [g.home.abbr, g.away.abbr]);
         return {
           title: h.title,
           summary: h.summary,
           whyItMatters: h.whyItMatters,
-          teams: [...new Set(cited.flatMap(c => c.teams || []))].slice(0, 3),
-          sources: [...new Set(cited.flatMap(c => c.sources || []))],
+          teams: [...new Set([...teamsOf(h.refs), ...gameTeams])].slice(0, 3),
+          sources: sourcesOf(h.refs),
         };
       });
     }

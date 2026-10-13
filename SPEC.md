@@ -193,6 +193,13 @@ Starting points to verify (sport paths: `basketball/nba`, `football/nfl`):
 
 Optional fallbacks if ESPN breaks: balldontlie (has free tiers, needs a free key) or TheSportsDB.
 
+Added in October 2026 for the longer brief (all checked from GitHub before use):
+- **More news:** RealGM's NBA wiretap, ProFootballTalk (NFL), RotoWire player news (both leagues).
+- **Team news:** Pounding The Rock (Spurs); Silver And Black Pride, Raiders.com and the Las Vegas Review-Journal (Raiders); and a Google News search for each team's name (last two days, headlines that name the team only, live-stream spam filtered out).
+- **Box scores:** ESPN's game summary (`/summary?event=`) for each completed game's key players. Only the top performers are kept and sent to Claude, never full box scores.
+- **Full story text:** ESPN's content API (`content.core.api.espn.com/v1/sports/news/{id}`) for the likeliest top stories.
+- Tried and not usable (blocked or no feed): nba.com, NFL.com, SI, Bleacher Report, HoopsHype, Fox Sports, the Yahoo and CBS team pages, the San Antonio Express-News, KENS 5.
+
 Always keep the **source URL** for each news item so the app can link "Read more".
 
 ## 9. AI generation (Claude API)
@@ -223,6 +230,11 @@ Always keep the **source URL** for each news item so the app can link "Read more
     "oneThing": "…",
     "wrap": { "weekLabel": "Week 11", "summary": "…", "storylines": [ … ], "biggestResults": [ …games… ], "standouts": [ … ] },
     "headlines": [ { "title": "…", "summary": "…", "whyItMatters": "…", "teams": ["PHI", "DAL"], "sources": ["…"] } ],
+    "teamNews": [ { "title": "…", "text": "…", "teams": ["LV"], "sources": ["…"] } ],
+    "teamMore": [ { "title": "…", "sources": ["…"] } ],
+    "recaps": [ { "…a result…": "…", "text": "…", "keyLine": "Wembanyama 31 pts, 14 reb, 5 blk · …" } ],
+    "standouts": [ { "name": "…", "team": "SAS", "line": "31 pts, 14 reb, 5 blk", "game": "W 121–112 vs Nuggets", "why": "…" } ],
+    "quickHits": [ { "text": "…", "teams": [ … ], "sources": ["…"] } ],
     "results": [ … ],
     "contextCard": { "title": "…", "body": "…" },
     "followedPlayers": [ … ],
