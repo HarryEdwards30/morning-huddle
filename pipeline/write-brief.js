@@ -166,8 +166,9 @@ async function main() {
     if (result && settings.ai.factCheck !== false) {
       try {
         const sentences = sentencesOf(result);
+        // Thinking is switched off for the check: it only lists sentence ids, and thinking would double its cost.
         const response = await client.messages.stream({
-          model, max_tokens: 16000, output_config: { effort: 'low' },
+          model, max_tokens: 16000, output_config: { effort: 'low' }, thinking: { type: 'disabled' },
           system: readFileSync(join(ROOT, 'prompts', 'fact-check.md'), 'utf8'),
           messages: [{ role: 'user', content: `DATA (JSON):\n${inputText}\n\nBRIEF SENTENCES (JSON):\n${JSON.stringify(sentences.map(({ id, text }) => ({ id, text })))}` }],
         }).finalMessage();
