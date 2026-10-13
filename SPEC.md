@@ -42,7 +42,7 @@ The goal is to grow Jack's interest in both leagues by giving him a quick, well-
 | AI writer | **Claude Haiku 5.5** via the Claude API. No web search tool; Claude only writes from data we give it. |
 | API key | Already stored as the GitHub Actions secret **`ANTHROPIC_API_KEY`** |
 | Look | Dark, simple, easy to read, sporty |
-| Cost target | About A$0.30 to A$0.60 a month in API usage |
+| Cost target | Under about A$1 a month in API usage (raised from A$0.30 to A$0.60 for the longer brief in October 2026) |
 
 ## 4. Features (version 1)
 
@@ -51,14 +51,18 @@ The app has four tabs: **NFL · NBA · My Teams · Watch** (changed in October 2
 ### 4.1 NFL and NBA tabs
 The two league tabs share one layout. Each shows only its own league, in two parts with a clear label strip between them.
 
-**Today's brief** (built each morning from the overnight data):
+**Today's brief** (built each morning from the overnight data). Changed in October 2026 to a longer, more detailed brief: about **5 to 10 minutes** of reading on a normal day, longer on a busy one (Mondays and Tuesdays in the NFL season), shorter on a quiet one with no filler. The length follows how much news and how many games there were, not fixed counts.
 1. **Wednesday Wrap** for this league (Wednesdays only, see 4.5).
 2. **"If you only read one thing"**: one sentence with this league's single most important story.
 3. **Players you follow** in this league (only if `followedPlayers` has any, see 4.6).
-4. **Headlines**: the key stories, each with a 1 to 2 sentence summary plus a **"Why it matters"** line about its effect on the season (standings, playoff race, awards, a team's direction). "Why it matters" is shown as a highlighted callout inside each story.
-5. **Results**: compact scoreboard of completed games since the last edition, with Spurs and Raiders games highlighted.
-6. **Context card** (can be turned off in settings): one short card a day on league mechanics or season context, for example how the trade deadline works or how playoff tiebreakers work. **Not** game rules. It appears in the tab of the league it's about.
-7. Edition date and "updated at" time, in Melbourne time.
+4. **Top stories**: the stories worth talking about, each in 4 to 6 sentences (what happened, the key numbers, context or backstory) plus a **"Why it matters"** callout about its effect on the season (standings, playoff race, awards, a team's direction).
+5. **Spurs news** (NBA tab) / **Raiders news** (NFL tab): every story about Jack's team found in the sources, not just the biggest one. Stories Claude doesn't write up still appear as a headline with its link.
+6. **Game recaps**: every game when there are 1 to 4; otherwise the most notable (about 5 or 6 as a guide). Notable means close finishes or overtime, upsets on record, huge individual games, marquee matchups, or results that move the standings. Spurs and Raiders games are always recapped. Each is 2 to 4 sentences plus a key-players line ("Wembanyama 31 pts, 14 reb, 5 blk"), never a full box score.
+7. **Standout performers**: the day's best individual performances, each with its stat line and one sentence on why it stood out.
+8. **Quick hits**: one line for every other story worth knowing.
+9. **All scores**: compact scoreboard of completed games since the last edition, with Spurs and Raiders games highlighted.
+10. **Context card** (can be turned off in settings): one short card a day on league mechanics or season context, for example how the trade deadline works or how playoff tiebreakers work. **Not** game rules. It appears in the tab of the league it's about.
+11. Edition date, "updated at" time (Melbourne time) and an estimated reading time.
 
 **Around the league:**
 - **League pulse**: a split layout with a **Hot** column (teams and players in form, warm colour, up arrow) and a **Cold** column (out of form, cool colour, down arrow).
@@ -194,7 +198,7 @@ Always keep the **source URL** for each news item so the app can link "Read more
 ## 9. AI generation (Claude API)
 
 - **Model:** Claude Haiku 5.5. Put the model ID in `config/settings.json` (expected `claude-haiku-5-5`; check the exact ID on the Claude models docs page). Switching to Sonnet later should be a one-line change.
-- **Cost guard:** keep each request's input **under 100,000 tokens**, because Haiku 5.5's cheap rate only applies below that. Target about 40k tokens for the daily brief. If the shaped input is too large, trim lower-priority items first (older news, non-notable games). Log input and output tokens per run to `data/usage.json`.
+- **Cost guard:** keep each request's input **under 100,000 tokens**, because Haiku 5.5's cheap rate only applies below that. Target about 40k tokens for the daily brief (the longer brief of October 2026 uses about 20k to 35k). If the shaped input is too large, trim lower-priority items first (older news, non-notable games). Log input and output tokens per run to `data/usage.json`.
 - **No web search tool.** Claude only uses the data provided.
 - **Grounding rules (put these in the prompts):**
   - Only state facts that appear in the provided data. Never invent stats, scores, quotes, injuries or trades.

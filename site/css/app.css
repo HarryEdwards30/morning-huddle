@@ -336,6 +336,7 @@ main {
 .story.mine + .story { border-top-color: transparent; }
 .story.mine:not(:first-of-type) { margin-top: 8px; }
 .story h3.story-title-small { font-size: 20px; }
+.more-headlines { margin-top: 12px; border-top: 1px solid var(--line); }
 
 /* Game recaps: the scoreboard, a short write-up, then the key players' stat lines */
 .recap { padding: 16px 0; border-top: 1px solid var(--line); }

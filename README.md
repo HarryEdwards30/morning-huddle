@@ -24,12 +24,16 @@ It then opens full screen like any other app, with the MH icon. The same steps a
 
 | Tab | What's on it |
 |---|---|
-| **NFL** | Today's NFL brief (Wednesday Wrap on Wednesdays, "If you only read one thing", headlines with "Why it matters", results, context card), then around the NFL: hot and cold, standings, playoff picture, award races, major injuries, transactions, season timeline |
-| **NBA** | The same layout for the NBA. Its standings card doubles as the playoff race |
+| **NFL** | Today's NFL brief: Wednesday Wrap (Wednesdays), "If you only read one thing", **top stories** (each a full paragraph with "Why it matters"), **Raiders news** (every Raiders story found), **game recaps** with key players' stat lines, **standout performers**, **quick hits** (one line for everything else), all scores, context card. Then around the NFL: hot and cold, standings, playoff picture, award races, major injuries, transactions, season timeline |
+| **NBA** | The same layout for the NBA, with **Spurs news**. Its standings card doubles as the playoff race |
 | **My Teams** | Spurs and Raiders hubs (switch at the top): since the last edition, last result and next game, injuries, player form, roster moves, playoff race |
 | **Watch** | The week's best games in each league (Wednesday to Tuesday), ranked with a reason for each and refreshed every Wednesday. Your teams' games are always listed. Games already played are marked "Played" |
 
 The app opens on the tab you used last (My Teams the first time).
+
+**How long the brief is:** about 5 to 10 minutes to read on a normal day, longer when a lot happened (Mondays and Tuesdays in the NFL season, when Sunday's and Monday's games land), and shorter on a quiet day. The length follows how much news and how many games there were. The estimated reading time is shown under the date at the top of each league tab.
+
+**Where the news comes from:** ESPN, CBS Sports, Yahoo Sports, RealGM (NBA), ProFootballTalk (NFL) and RotoWire, plus for your teams: Pounding The Rock (Spurs), Silver And Black Pride, Raiders.com and the Las Vegas Review-Journal (Raiders), and a Google News search for each team's name. Scores and players' stat lines come from ESPN's box scores.
 
 **Wednesdays** bring the Wednesday Wrap: a look back at each league's week (main storylines, biggest results, who stood out) at the top of the NFL and NBA tabs. Older Wraps are listed at the bottom of each league tab under **Past Wednesday Wraps**; tap one to open it.
 

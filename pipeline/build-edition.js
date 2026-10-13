@@ -93,7 +93,7 @@ async function buildLeague(league, settingsTeam, ctx) {
   const teamItems = idx.myId ? [
     ...espnTeamNews,
     ...await fetchTeamFeeds(log, settingsTeam.abbr),
-    ...await googleNews(log, settingsTeam.name),
+    ...await googleNews(log, settingsTeam.name, settingsTeam.shortName),
   ].map(item => ({ ...item, teamFeed: true })) : [];
 
   // Everything since the last edition, for the longer brief (in facts.json; Claude picks and writes it up).
@@ -123,6 +123,7 @@ async function buildLeague(league, settingsTeam, ctx) {
     // Filled in by Claude (write-brief.js). Until then: every team story as a plain headline, and the
     // day's best stat lines.
     teamNews: pool.team.map(s => ({ title: s.title, text: null, teams: s.teams, sources: s.sources })),
+    teamMore: [],
     recaps: [],
     standouts: standoutCandidates(league, results, players).slice(0, 5).map(({ score, big, ...p }) => p),
     quickHits: [],

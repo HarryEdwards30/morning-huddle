@@ -2,7 +2,9 @@
 // can link "Read more". Betting, fantasy and picks articles are left out.
 
 // "Draft picks" stories are kept; "Week 6 picks" and expert-picks articles are not.
-const SKIP = /\b(odds|betting|bets?|parlays?|predictions?|fantasy|dfs|props|sportsbook|promo code)\b|\bpicks:|expert picks|week \d+ picks|picks against the spread|highlights|top performers|player grades|uniforms|arrivals/i;
+const SKIP = /\b(odds|betting|bets?|parlays?|predictions?|fantasy|dfs|props|sportsbook|promo code)\b|\bpicks:|expert picks|week \d+ picks|picks against the spread|highlights|top performers|player grades|uniforms|arrivals|live (game )?updates?|live ?streams?|free streams?|how to watch|what channel|tv channel|\bpodcast\b|^photos?:|pre-?game|post-?game|\bpresser\b/i;
+// Spam headlines dressed up with "fancy" Unicode letters (live-stream scams turn up in Google News).
+const SPAM = /[\u{1D400}-\u{1D7FF}\uFF01-\uFF5E]/u;
 
 const normalise = title => title.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(' ').filter(w => w.length > 3).slice(0, 8).join(' ');
 
@@ -84,7 +86,7 @@ export function newsPool(items, idx, sources, { since, limit = 40, teamLimit = 2
   const myAbbr = idx.abbr(idx.myId);
   const byKey = new Map();
   for (const item of items) {
-    if (SKIP.test(item.title)) continue;
+    if (SKIP.test(item.title) || SPAM.test(item.title)) continue;
     if (since && item.published && Date.parse(item.published) < since) continue;
     const key = normalise(item.title);
     if (!key) continue;

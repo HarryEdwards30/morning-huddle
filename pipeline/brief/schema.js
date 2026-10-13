@@ -99,8 +99,9 @@ export function checkBrief(brief, index, inputText, { wednesday = false } = {}) 
     const one = l.oneThing;
     out[league].oneThing = one && one.text && numbersOk(one.text, `${league} one thing`) ? { text: one.text, refs: validRefs(one.refs, `${league} one thing`) } : null;
 
-    // Items that must cite a story from this league (a league story or a team story).
-    const storyRefs = (refs, where, kinds = ['headline', 'teamStory']) =>
+    // Items that must cite something from this league: a story, a team story, or (for a story told from
+    // the data) a game, roster move, injury or team fact.
+    const storyRefs = (refs, where, kinds = ['headline', 'teamStory', 'result', 'move', 'injury', 'teamfact']) =>
       validRefs(refs, where).filter(id => kinds.includes(index.get(id).kind) && index.get(id).league === league);
 
     out[league].headlines = (l.headlines || []).filter((h, i) => {

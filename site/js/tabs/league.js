@@ -39,7 +39,7 @@ function renderLeague(league, { settings, edition, latest, now, archive }) {
     brief.oneThing(data.oneThing),
     brief.followedPlayers(data.followedPlayers),
     brief.headlines(data.headlines),
-    brief.teamNews(data.teamNews, settings.teams?.[league]?.shortName || 'Your team'),
+    brief.teamNews(data.teamNews, settings.teams?.[league]?.shortName || 'Your team', data.teamMore),
     brief.recaps(data.recaps),
     brief.standouts(data.standouts),
     brief.quickHits(data.quickHits),

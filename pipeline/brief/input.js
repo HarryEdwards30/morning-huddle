@@ -44,15 +44,22 @@ function dailyLists(league, section, daily, limits) {
   };
 }
 
-// About how many words to write for a league, from how much happened (not fixed counts).
-// Roughly 230 words is a minute's reading.
+// About how many words to write for a league, from how much happened (not fixed counts). There's always
+// plenty of news in the feeds, so news gives a steady base (two or three top stories, team news, quick
+// hits) and the swing comes from the games: recaps and standout performances. A minute's reading is about
+// 230 words: a quiet day comes to about 5 or 6 minutes for both leagues, a normal day 7 to 9, and a big NFL
+// Monday or Tuesday in the NBA season 10 or 11.
 export function targetWords(lists) {
-  const stories = lists.stories.length;
-  const top = Math.min(6, Math.ceil(stories / 4));
   const recaps = lists.recapGuide.startsWith('Recap every') ? lists.results.length : Math.min(lists.results.length, Number(lists.recapGuide.match(/about (\d+)/)?.[1] || 5));
-  const words = 50 + top * 100 + lists.teamStories.length * 35 + recaps * 70
-    + Math.min(5, lists.standoutCandidates.length) * 30 + Math.min(15, Math.max(0, stories - top)) * 18;
-  return Math.max(120, Math.min(1700, Math.round(words / 10) * 10));
+  const news = Math.min(lists.stories.length, 30);
+  const topStories = 2 + (news >= 24 ? 1 : 0) + (recaps >= 5 ? 1 : 0);
+  const words = 50                                         // one thing
+    + 110 * topStories                                      // top stories
+    + 20 * Math.min(6, lists.teamStories.length)            // team news
+    + 8 * Math.min(10, Math.max(0, news - 8))               // quick hits
+    + 75 * recaps                                           // game recaps
+    + 30 * Math.min(5, lists.standoutCandidates.length);    // standout performers
+  return Math.max(120, Math.min(1500, Math.round(words / 10) * 10));
 }
 
 function leagueInput(league, section, facts, limits) {

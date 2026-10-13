@@ -75,14 +75,18 @@ export function headlines(items) {
     }));
 }
 
-// Every story about Jack's team. Stories Claude didn't write up still appear as a headline with its link.
-export function teamNews(items, teamName) {
-  if (!items?.length) return null;
+// Every story about Jack's team: Claude's write-ups, then (folded away) every other team headline found,
+// each with its link, so nothing is missed.
+export function teamNews(items, teamName, more = []) {
+  if (!items?.length && !more?.length) return null;
   return card({ type: 'team', title: `${teamName} news`, mine: true },
-    items.map(t => el('article', { class: 'story' },
+    (items || []).map(t => el('article', { class: 'story' },
       t.text ? el('h3', { class: 'story-title-small' }, t.title) : null,
       el('p', {}, t.text || t.title),
-      sourceLinks(t.sources))));
+      sourceLinks(t.sources))),
+    more?.length ? el('details', { class: 'archive-item more-headlines' },
+      el('summary', {}, el('span', { class: 'archive-label' }, `More ${teamName} headlines (${more.length})`)),
+      el('ul', { class: 'bullets' }, more.map(m => el('li', {}, m.title, sourceLinks(m.sources))))) : null);
 }
 
 // Recaps of the day's notable games (all of them on a light day), with the key players' stat lines.

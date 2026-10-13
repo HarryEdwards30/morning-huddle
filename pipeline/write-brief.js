@@ -236,16 +236,14 @@ function merge(edition, brief, index, model, facts, input) {
     }
     section.contextCard = b.contextCard;
 
-    // Jack's team's news: Claude's write-ups, then any team story it didn't use anywhere, as a plain
-    // headline with its link, so no team story is ever missed.
+    // Jack's team's news: Claude's write-ups. Any team story it didn't use anywhere is still listed, as a
+    // headline with its link under "More … headlines", so no team story is ever missed.
     const cited = new Set([...b.headlines, ...b.teamNews, ...b.quickHits].flatMap(x => x.refs));
-    section.teamNews = [
-      ...b.teamNews.map(t => ({ title: t.title, text: t.text, teams: teamsOf(t.refs), sources: sourcesOf(t.refs) })),
-      ...input[league].teamStories.filter(t => !cited.has(t.id)).map(t => {
-        const story = index.get(t.id).item;
-        return { title: story.title, text: null, teams: story.teams, sources: story.sources };
-      }),
-    ];
+    if (b.teamNews.length) section.teamNews = b.teamNews.map(t => ({ title: t.title, text: t.text, teams: teamsOf(t.refs), sources: sourcesOf(t.refs) }));
+    section.teamMore = input[league].teamStories.filter(t => !cited.has(t.id)).map(t => {
+      const story = index.get(t.id).item;
+      return { title: story.title, sources: story.sources };
+    });
 
     // Game recaps, in Claude's order. Jack's team's games are always included, even if Claude skipped one.
     const myAbbr = edition.myTeams?.[league]?.abbr;

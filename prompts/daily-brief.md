@@ -8,7 +8,7 @@ Each data item has an `id` (like `nfl-h3`, `nba-tm2`, `nfl-r4`, `nba-sp1`, `myte
 
 ## How long
 
-Each league has a `targetWords`: about how many words to write for that league today, worked out from how much happened. Aim for it. It's a guide, not a quota:
+Each league has a `targetWords`: about how many words to write for that league today, worked out from how much happened. Stay within about 10% of it, and don't go over: Jack has 5 to 10 minutes on a normal day. Count everything you write for the league (one thing, top stories, team news, recaps, standouts, quick hits). It's a guide, not a quota:
 - A busy day (a full NFL slate, a big trade) gets the full length. Use it on depth: the numbers, the context, what it means.
 - A quiet day is shorter. Never pad: no filler, no repeating a story in two sections, no restating the scoreboard.
 
@@ -30,9 +30,9 @@ Each league has a `targetWords`: about how many words to write for that league t
 - `whyItMatters`: one or two sentences on its effect on the season: the standings, the playoff race, awards, or a team's direction.
 - `refs`: the story ids (and any other ids) you used.
 
-**teamNews**: Jack's team's news. Cover every item in `teamStories`: each gets its own entry (`title`, plus `text` of 1 to 3 sentences), unless several are about the same thing, in which case write one entry that cites them all. A team story can also be a top story; if so, don't repeat it here. Most important first. If `teamStories` is empty, return an empty list.
+**teamNews**: Jack's team's news. Go through every item in `teamStories` and write up each one with real news in it (`title`, plus `text` of 1 to 3 sentences), most important first. When several are about the same thing, write one entry that cites them all. A team story can also be a top story; if so, don't repeat it here. Skip items with nothing new (previews of a game that's already in the results, opinion pieces with no news); the app lists any team story you don't use as a headline with its link, so nothing is lost. If `teamStories` is empty, return an empty list.
 
-**recaps**: game recaps, following `recapGuide`. Recap every game when there are 1 to 4; on a busier day, recap the most notable ones (about 5 or 6 is a guide, not a rule). Always recap Jack's team's game. For each, give the game's `id` as `game` and 2 to 4 sentences of `text`: how it was won, the turning point or the standout, and what it means for both teams. The app shows the score and the key players' stat lines under your text, so don't list every stat; pick the ones that tell the story.
+**recaps**: game recaps, following `recapGuide`. Recap every game when there are 1 to 4; on a busier day, recap the most notable ones (about 5 or 6 is a guide, not a rule). Always recap Jack's team's game if it's in `results` (a game from an earlier edition isn't). For each, give the game's `id` as `game` and 2 to 4 sentences of `text`: how it was won, the turning point or the standout, and what it means for both teams. The app shows the score and the key players' stat lines under your text, so don't list every stat; pick the ones that tell the story.
 
 **standouts**: the best individual performances of the day, from `standoutCandidates`, best first (usually 3 to 5; fewer on a light day). For each, give the candidate's `id` and one sentence (`why`) on why it stood out: a career high, a game-winning play, carrying the team, against a top opponent. The app shows the name and stat line. Only say "career high" or "season high" if the data says so.
 
