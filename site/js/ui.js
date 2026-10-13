@@ -35,6 +35,9 @@ const ICONS = {
   watch: 'M3 5h18v12H3zM8 21h8M10 9l5 2-5 2z',
   lead: 'M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z',
   plain: 'M12 4l8 8-8 8-8-8z',
+  recap: 'M4 4h16v16H4zM8 9h8M8 13h8M8 17h5',
+  star: 'M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21l1.4-7L2 9.3l7-.8z',
+  quick: 'M13 2L4 14h7l-1 8 9-12h-7z',
   mine: 'M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z',
   why: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM10 8l4 4-4 4',
   up: 'M12 19V5M5 12l7-7 7 7',
@@ -59,7 +62,7 @@ export function icon(name, className = 'icon') {
 }
 
 // A section card. `type` picks its colour (see the card colours at the top of app.css):
-// plain, injury, hot, cold, results, news, moves, watch, lead.
+// plain, injury, hot, cold, results, news, moves, watch, lead, team, recap, star, quick.
 // Every card starts with a coloured header strip so it's clear where one section ends and the next begins.
 export function card({ type = 'plain', title, extra, mine = false, iconName }, ...children) {
   return el('section', { class: `card card--${type}${mine ? ' card--mine' : ''}` },

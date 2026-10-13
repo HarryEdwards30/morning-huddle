@@ -113,6 +113,68 @@
         ]
       }
     ],
+    "teamNews": [
+      {
+        "title": "Jeanty limited at practice",
+        "text": "Ashton Jeanty was limited on Wednesday with the ankle he hurt against the Chargers. The Raiders expect him to play on Sunday.",
+        "teams": [
+          "LV"
+        ],
+        "sources": []
+      },
+      {
+        "title": "Raiders sign a practice-squad receiver",
+        "text": null,
+        "teams": [
+          "LV"
+        ],
+        "sources": []
+      }
+    ],
+    "recaps": [
+      {
+        "start": "2026-11-17T01:15:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "PHI",
+          "name": "Eagles",
+          "score": 24
+        },
+        "home": {
+          "abbr": "DAL",
+          "name": "Cowboys",
+          "score": 21
+        },
+        "note": "Monday Night Football",
+        "keyLine": "Hurts 22/31, 248 yds, 2 TD · Barkley 21 car, 104 yds, 1 TD · Prescott 27/41, 301 yds, 2 TD, 1 INT · Lamb 9 rec, 121 yds",
+        "text": "The Eagles led by 10 at half-time and held on after Dallas cut it to three late. Saquon Barkley sealed it with a 12-yard run on third down with two minutes left, and Philadelphia are now two games clear in the NFC East."
+      }
+    ],
+    "standouts": [
+      {
+        "name": "Saquon Barkley",
+        "team": "PHI",
+        "line": "21 car, 104 yds, 1 TD",
+        "game": "W 24–21 at Cowboys",
+        "why": "His third-down run in the last two minutes closed the game out."
+      }
+    ],
+    "quickHits": [
+      {
+        "text": "The Jets put their starting left tackle on injured reserve.",
+        "teams": [
+          "NYJ"
+        ],
+        "sources": []
+      },
+      {
+        "text": "The Broncos signed a veteran kicker after a second missed extra point in two weeks.",
+        "teams": [
+          "DEN"
+        ],
+        "sources": []
+      }
+    ],
     "results": [
       {
         "start": "2026-11-17T01:15:00Z",
@@ -127,7 +189,8 @@
           "name": "Cowboys",
           "score": 21
         },
-        "note": "Monday Night Football"
+        "note": "Monday Night Football",
+        "keyLine": "Hurts 22/31, 248 yds, 2 TD · Barkley 21 car, 104 yds, 1 TD · Prescott 27/41, 301 yds, 2 TD, 1 INT · Lamb 9 rec, 121 yds"
       }
     ],
     "contextCard": null,
@@ -864,6 +927,60 @@
         ]
       }
     ],
+    "teamNews": [
+      {
+        "title": "Wembanyama leads Spurs past Denver",
+        "text": "Victor Wembanyama had 31 points, 14 rebounds and 5 blocks as the Spurs won their sixth straight. San Antonio are second in the West.",
+        "teams": [
+          "SAS"
+        ],
+        "sources": []
+      },
+      {
+        "title": "Spurs guard day-to-day with ankle sprain",
+        "text": null,
+        "teams": [
+          "SAS"
+        ],
+        "sources": []
+      }
+    ],
+    "recaps": [
+      {
+        "start": "2026-11-17T01:00:00Z",
+        "status": "Final",
+        "away": {
+          "abbr": "DEN",
+          "name": "Nuggets",
+          "score": 112
+        },
+        "home": {
+          "abbr": "SAS",
+          "name": "Spurs",
+          "score": 121
+        },
+        "keyLine": "Jokić 29 pts, 13 reb, 9 ast · Murray 21 pts, 4 reb, 6 ast · Wembanyama 31 pts, 14 reb, 5 ast, 5 blk · Fox 22 pts, 3 reb, 8 ast",
+        "text": "The Spurs pulled away in the fourth quarter behind Wembanyama, who blocked three shots in the last five minutes. Denver got 29 from Jokić but were outscored by 12 in the final quarter."
+      }
+    ],
+    "standouts": [
+      {
+        "name": "Victor Wembanyama",
+        "team": "SAS",
+        "line": "31 pts, 14 reb, 5 ast, 5 blk",
+        "game": "W 121–112 vs Nuggets",
+        "why": "Three of his five blocks came in the last five minutes as the Spurs closed it out."
+      }
+    ],
+    "quickHits": [
+      {
+        "text": "The Lakers are without their starting centre for a week with a sore knee.",
+        "teams": [
+          "LAL"
+        ],
+        "sources": []
+      }
+    ],
     "results": [
       {
         "start": "2026-11-17T01:00:00Z",
@@ -877,7 +994,8 @@
           "abbr": "SAS",
           "name": "Spurs",
           "score": 121
-        }
+        },
+        "keyLine": "Jokić 29 pts, 13 reb, 9 ast · Murray 21 pts, 4 reb, 6 ast · Wembanyama 31 pts, 14 reb, 5 ast, 5 blk · Fox 22 pts, 3 reb, 8 ast"
       },
       {
         "start": "2026-11-17T01:00:00Z",

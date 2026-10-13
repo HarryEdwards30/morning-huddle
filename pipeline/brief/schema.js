@@ -14,7 +14,16 @@ const person = obj({ name: str, team: str, note: str, refs });
 
 const dailyLeague = {
   oneThing: nullable(obj({ text: str, refs })),
+  // Top stories. Each must cite at least one story (or team story) id.
   headlines: { type: 'array', items: obj({ title: str, summary: str, whyItMatters: str, refs }) },
+  // Jack's team's news: every team story, covered here or in the top stories or quick hits.
+  teamNews: { type: 'array', items: obj({ title: str, text: str, refs }) },
+  // Game recaps. `game` is a result id; the app shows the score and the key players from the data.
+  recaps: { type: 'array', items: obj({ game: str, text: str }) },
+  // Standout performers. `id` is a standout candidate id; the app shows the stat line from the data.
+  standouts: { type: 'array', items: obj({ id: str, why: str }) },
+  // One-line updates for every other story worth knowing.
+  quickHits: { type: 'array', items: obj({ text: str, refs }) },
   contextCard: nullable(obj({ title: str, body: str })),
   awardRaces: { type: 'array', items: obj({ award: str, contenders: { type: 'array', items: person } }) },
   // One line per followed player (only when the data has followedPlayers). `id` is the player's input id.
@@ -90,12 +99,52 @@ export function checkBrief(brief, index, inputText, { wednesday = false } = {}) 
     const one = l.oneThing;
     out[league].oneThing = one && one.text && numbersOk(one.text, `${league} one thing`) ? { text: one.text, refs: validRefs(one.refs, `${league} one thing`) } : null;
 
+    // Items that must cite a story from this league (a league story or a team story).
+    const storyRefs = (refs, where, kinds = ['headline', 'teamStory']) =>
+      validRefs(refs, where).filter(id => kinds.includes(index.get(id).kind) && index.get(id).league === league);
+
     out[league].headlines = (l.headlines || []).filter((h, i) => {
-      const where = `${league} headline ${i + 1}`;
-      const r = validRefs(h.refs, where).filter(id => index.get(id).kind === 'headline' && index.get(id).league === league);
-      if (!r.length) { dropped.push(`${where}: no source headline`); return false; }
+      const where = `${league} top story ${i + 1}`;
+      const r = storyRefs(h.refs, where);
+      if (!r.length) { dropped.push(`${where}: no source story`); return false; }
       h.refs = r;
       return numbersOk(`${h.title} ${h.summary} ${h.whyItMatters}`, where);
+    });
+
+    out[league].teamNews = (l.teamNews || []).filter((t, i) => {
+      const where = `${league} team news ${i + 1}`;
+      const r = storyRefs(t.refs, where);
+      if (!r.length) { dropped.push(`${where}: no source story`); return false; }
+      t.refs = r;
+      return t.text && numbersOk(`${t.title} ${t.text}`, where);
+    });
+
+    const recapped = new Set();
+    out[league].recaps = (l.recaps || []).filter((rc, i) => {
+      const where = `${league} recap ${i + 1}`;
+      const entry = index.get(rc.game);
+      if (!entry || entry.kind !== 'result' || entry.league !== league || !entry.item) { dropped.push(`${where}: ${rc.game} isn't one of the games`); return false; }
+      if (recapped.has(rc.game)) return false;
+      recapped.add(rc.game);
+      return rc.text && numbersOk(rc.text, where);
+    });
+
+    const picked = new Set();
+    out[league].standouts = (l.standouts || []).filter((st, i) => {
+      const where = `${league} standout ${i + 1}`;
+      const entry = index.get(st.id);
+      if (!entry || entry.kind !== 'standoutCandidate' || entry.league !== league) { dropped.push(`${where}: ${st.id} isn't a standout candidate`); return false; }
+      if (picked.has(st.id)) return false;
+      picked.add(st.id);
+      return st.why && numbersOk(st.why, where);
+    });
+
+    out[league].quickHits = (l.quickHits || []).filter((q, i) => {
+      const where = `${league} quick hit ${i + 1}`;
+      const r = storyRefs(q.refs, where);
+      if (!r.length) { dropped.push(`${where}: no source story`); return false; }
+      q.refs = r;
+      return q.text && numbersOk(q.text, where);
     });
 
     // At most one context card a day, across both leagues.

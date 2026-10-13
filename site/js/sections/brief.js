@@ -62,7 +62,7 @@ function whyItMatters(text) {
 
 export function headlines(items) {
   if (!items?.length) return null;
-  return card({ type: 'news', title: 'Headlines' },
+  return card({ type: 'news', title: 'Top stories' },
     items.map(h => {
       const mine = involvesMyTeam(h.teams);
       return el('article', { class: `story${mine ? ' mine' : ''}` },
@@ -75,10 +75,64 @@ export function headlines(items) {
     }));
 }
 
-export function results(games) {
+// Every story about Jack's team. Stories Claude didn't write up still appear as a headline with its link.
+export function teamNews(items, teamName) {
+  if (!items?.length) return null;
+  return card({ type: 'team', title: `${teamName} news`, mine: true },
+    items.map(t => el('article', { class: 'story' },
+      t.text ? el('h3', { class: 'story-title-small' }, t.title) : null,
+      el('p', {}, t.text || t.title),
+      sourceLinks(t.sources))));
+}
+
+// Recaps of the day's notable games (all of them on a light day), with the key players' stat lines.
+export function recaps(items) {
+  if (!items?.length) return null;
+  return card({ type: 'recap', title: 'Game recaps' },
+    items.map(g => el('article', { class: `recap${involvesMyTeam([g.home.abbr, g.away.abbr]) ? ' mine' : ''}` },
+      gameRow(g),
+      g.text ? el('p', {}, g.text) : null,
+      g.keyLine ? el('p', { class: 'key-players small' }, el('strong', {}, 'Key players: '), g.keyLine) : null)));
+}
+
+// The best individual performances of the day: the stat line from the box score, and why it stood out.
+export function standouts(items) {
+  if (!items?.length) return null;
+  return card({ type: 'star', title: 'Standout performers' },
+    items.map(p => el('div', { class: `entry${isMyTeam(p.team) ? ' mine' : ''}` },
+      el('div', { class: 'entry-head' }, teamChip(p.team), p.name),
+      el('p', { class: 'stat-line num' }, p.line),
+      p.game ? el('p', { class: 'small muted' }, p.game) : null,
+      p.why ? el('p', { class: 'small' }, p.why) : null)));
+}
+
+// One line for every other story worth knowing.
+export function quickHits(items) {
+  if (!items?.length) return null;
+  return card({ type: 'quick', title: 'Quick hits' },
+    el('ul', { class: 'bullets quick-hits' }, items.map(q => el('li', { class: involvesMyTeam(q.teams) ? 'mine-hit' : null },
+      q.text, sourceLinks(q.sources)))));
+}
+
+export function results(games, { title = 'Results' } = {}) {
   if (!games) return null;
-  return card({ type: 'results', title: 'Results' },
+  return card({ type: 'results', title },
     games.length ? games.map(gameRow) : emptyNote('No completed games since the last edition.'));
+}
+
+// About how long the written brief takes to read (230 words a minute).
+export function readingMinutes(data) {
+  const texts = [
+    data.oneThing, data.wrap?.summary, ...(data.wrap?.storylines || []).map(s => s.text),
+    ...(data.headlines || []).flatMap(h => [h.title, h.summary, h.whyItMatters]),
+    ...(data.teamNews || []).flatMap(t => [t.title, t.text]),
+    ...(data.recaps || []).flatMap(r => [r.text, r.keyLine]),
+    ...(data.standouts || []).flatMap(p => [p.name, p.line, p.why]),
+    ...(data.quickHits || []).map(q => q.text),
+    data.contextCard?.body,
+  ];
+  const words = texts.filter(Boolean).join(' ').split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 230));
 }
 
 // One context card a day, shown in the tab of the league it's about. Can be turned off in settings.

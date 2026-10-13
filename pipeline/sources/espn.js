@@ -31,6 +31,10 @@ export const espn = {
   // League-wide stat leaders with player names (used by Claude for the award races; not shown as a table).
   leagueLeaders: (log, league) => getJson(log, `espn ${league} league leaders`,
     `https://site.web.api.espn.com/apis/site/v3/sports/${PATHS[league]}/leaders`, { optional: true }),
+  // One game's box score (used for each completed game's key players).
+  summary: (log, league, eventId) => getJson(log, `espn ${league} game summary`, `${site(league)}/summary?event=${eventId}`, { optional: true }),
+  // The full text of an ESPN news story (the news list only has a one-line description).
+  story: (log, articleId) => getJson(log, 'espn story text', `https://content.core.api.espn.com/v1/sports/news/${articleId}`, { optional: true }),
   gamelog: (log, league, athleteId) => getJson(log, `espn ${league} player game log`,
     `https://site.web.api.espn.com/apis/common/v3/sports/${PATHS[league]}/athletes/${athleteId}/gamelog`, { optional: true }),
 };

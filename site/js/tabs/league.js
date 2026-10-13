@@ -1,7 +1,8 @@
 // NFL and NBA tabs. Both use the same layout, each reading its own part of the edition (edition.nfl / edition.nba):
 //
-//   Today's brief:      Wednesday Wrap (Wednesdays only), one thing, players you follow, headlines,
-//                       results, context card (if it's about this league)
+//   Today's brief:      Wednesday Wrap (Wednesdays only), one thing, players you follow, top stories,
+//                       your team's news, game recaps, standout performers, quick hits, all scores,
+//                       context card (if it's about this league)
 //   Around the league:  pulse (hot and cold), standings, playoff picture (NFL), award races,
 //                       major injuries, transactions, season timeline, past Wednesday Wraps
 //
@@ -29,7 +30,8 @@ function renderLeague(league, { settings, edition, latest, now, archive }) {
       el('div', { class: 'meta' },
         e.date ? formatCalendarDate(e.date) : null,
         el('br'),
-        e.generatedAt ? `Updated ${formatTime(e.generatedAt)}` : null),
+        e.generatedAt ? `Updated ${formatTime(e.generatedAt)}` : null,
+        e.written ? [el('br'), `About ${brief.readingMinutes(data)} min read`] : null),
     ),
 
     el('h2', { class: 'part-heading' }, edition === latest ? "Today's brief" : 'The brief'),
@@ -37,7 +39,11 @@ function renderLeague(league, { settings, edition, latest, now, archive }) {
     brief.oneThing(data.oneThing),
     brief.followedPlayers(data.followedPlayers),
     brief.headlines(data.headlines),
-    data.offSeason && !data.results?.length ? null : brief.results(data.results),
+    brief.teamNews(data.teamNews, settings.teams?.[league]?.shortName || 'Your team'),
+    brief.recaps(data.recaps),
+    brief.standouts(data.standouts),
+    brief.quickHits(data.quickHits),
+    data.offSeason && !data.results?.length ? null : brief.results(data.results, { title: data.recaps?.length ? 'All scores' : 'Results' }),
     sections.contextCard === false ? null : brief.contextCard(data.contextCard),
 
     el('h2', { class: 'part-heading' }, `Around the ${league.toUpperCase()}`),

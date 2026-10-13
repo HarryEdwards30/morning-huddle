@@ -27,6 +27,7 @@ export function espnArticles(newsJson) {
       url: a.links.web.href,
       published: a.published || a.lastModified || null,
       publisher: 'ESPN',
+      articleId: a.id || null,
       teamIds: (a.categories || []).filter(c => c.type === 'team' && (c.teamId || c.team?.id)).map(c => String(c.teamId || c.team.id)),
       type: a.type,
     }));
@@ -71,6 +72,48 @@ export function headlines(items, idx, sources, { since, limit = 8, perTeams = 2 
       teams: i.teams,
       sources: [sources.add(i)],
     }));
+}
+
+const clipText = (text, n) => (text && text.length > n ? `${text.slice(0, n - 1)}…` : text || '');
+
+// Every story since the last edition, for the longer brief: one pool for the league and one for Jack's
+// team. Duplicates (the same headline from two outlets) are merged and keep both sources. A story is the
+// team's if it came from a team feed, is tagged with the team, or names the team in its headline.
+//   items: articles and feed items, each with { title, description, content, url, published, publisher, teamFeed? }
+export function newsPool(items, idx, sources, { since, limit = 40, teamLimit = 25 }) {
+  const myAbbr = idx.abbr(idx.myId);
+  const byKey = new Map();
+  for (const item of items) {
+    if (SKIP.test(item.title)) continue;
+    if (since && item.published && Date.parse(item.published) < since) continue;
+    const key = normalise(item.title);
+    if (!key) continue;
+    const teams = teamsIn(item, idx);
+    const existing = byKey.get(key);
+    if (existing) {
+      existing.sources.push(sources.add(item));
+      if (!existing.detailText && item.content) existing.detailText = item.content;
+      existing.mine ||= Boolean(item.teamFeed);
+      continue;
+    }
+    byKey.set(key, {
+      title: item.title,
+      summary: clipText(item.description || item.content, 320) || null,
+      teams,
+      mine: Boolean(item.teamFeed) || teams.includes(myAbbr),
+      published: item.published || null,
+      publisher: item.publisher,
+      articleId: item.articleId || null,
+      detailText: item.content && item.content.length > 400 ? item.content : null,
+      sources: [sources.add(item)],
+    });
+  }
+  const all = [...byKey.values()].map(s => ({ ...s, sources: [...new Set(s.sources)] }))
+    .sort((a, b) => Date.parse(b.published || 0) - Date.parse(a.published || 0));
+  return {
+    league: all.filter(s => !s.mine).slice(0, limit),
+    team: all.filter(s => s.mine).slice(0, teamLimit),
+  };
 }
 
 // What kind of roster move a transaction line describes.

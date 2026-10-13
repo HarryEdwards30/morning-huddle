@@ -19,14 +19,18 @@ import { SourceLog } from './lib/http.js';
 import { melbourneDate, melbourneIso, melbourneParts, recentUsDates, upcomingUsDates, addDays } from './lib/time.js';
 import { recentEditions, writeArchiveIndex } from './lib/archive.js';
 import { espn } from './sources/espn.js';
-import { fetchFeeds } from './sources/rss.js';
+import { fetchFeeds, decode } from './sources/rss.js';
+import { fetchTeamFeeds } from './sources/team-feeds.js';
+import { googleNews } from './sources/google-news.js';
 import { teamIndex } from './shape/teams.js';
 import { resultsFrom, lastAndNext, weekAhead, standoutLines } from './shape/games.js';
 import { weekLabel, upcomingGames, rankedGuide } from './shape/week.js';
 import { followedPlayers } from './shape/followed.js';
 import { nbaStandings, nflStandings, nflPlayoffPicture, playoffRace, hotAndCold } from './shape/standings.js';
 import { teamInjuries, majorInjuries } from './shape/injuries.js';
-import { Sources, espnArticles, headlines, transactions } from './shape/news.js';
+import { Sources, espnArticles, headlines, transactions, newsPool } from './shape/news.js';
+import { keyPlayers, keyLine } from './shape/boxscore.js';
+import { flagGames, recapPlan } from './shape/notable.js';
 import { leaderIds, rosterIndex, playerForm } from './shape/form.js';
 
 const ROOT = new URL('..', import.meta.url).pathname;
@@ -61,8 +65,9 @@ async function buildLeague(league, settingsTeam, ctx) {
   if (!idx.myId) console.warn(`  ! Couldn't find "${settingsTeam.name}" in ESPN's ${league.toUpperCase()} team list. Check the name in config/settings.json.`);
 
   // Scores: the last three US dates covers everything since yesterday's edition (eight on Wednesdays, for the week).
+  const days = Math.max(wednesday ? 8 : 3, Math.ceil((now.getTime() - since) / DAY) + 1);
   const boards = [];
-  for (const date of recentUsDates(wednesday ? 8 : 3, now)) boards.push(await espn.scoreboard(log, league, date));
+  for (const date of recentUsDates(days, now)) boards.push(await espn.scoreboard(log, league, date));
   const results = resultsFrom(boards, idx, { excludeIds: new Set(shownBefore[league] || []), since });
 
   // Off-season: ESPN says so (season type 4), or it's switched on in settings ("offSeason": true).
@@ -77,11 +82,29 @@ async function buildLeague(league, settingsTeam, ctx) {
   const standings = league === 'nfl' ? nflStandings(standingsJson, idx) : nbaStandings(standingsJson, idx);
   const playoffPicture = league === 'nfl' ? nflPlayoffPicture(confJson, idx) : null;
 
-  // News: ESPN plus the CBS and Yahoo feeds.
+  // News: ESPN plus the league-wide feeds (CBS, Yahoo, RealGM or ProFootballTalk, RotoWire).
   const espnNews = espnArticles(await espn.news(log, league));
   const rssNews = await fetchFeeds(log, league);
   const allNews = [...espnNews, ...rssNews];
   const leagueHeadlines = headlines(allNews, idx, sources, { since: since - 12 * 3600000, limit: 8 });
+
+  // Jack's team: ESPN's team news, the team's own feeds and a Google News search. All of it counts as team news.
+  const espnTeamNews = idx.myId ? espnArticles(await espn.news(log, league, idx.myId)) : [];
+  const teamItems = idx.myId ? [
+    ...espnTeamNews,
+    ...await fetchTeamFeeds(log, settingsTeam.abbr),
+    ...await googleNews(log, settingsTeam.name),
+  ].map(item => ({ ...item, teamFeed: true })) : [];
+
+  // Everything since the last edition, for the longer brief (in facts.json; Claude picks and writes it up).
+  const pool = newsPool([...allNews, ...teamItems], idx, sources, { since: since - 12 * 3600000 });
+  await addStoryText(log, pool, { league: 6, team: 4 });
+
+  // Each completed game's key players (from the box score), and which games look most worth a recap.
+  const players = {};
+  for (const g of results) players[g.id] = keyPlayers(league, await espn.summary(log, league, g.id), idx);
+  const flagged = flagGames(league, results, players, standings, idx.isMine);
+  const plan = recapPlan(flagged);
 
   const leaders = statLeaders(await espn.leagueLeaders(log, league), idx);
   const injuriesJson = await espn.injuries(log, league);
@@ -97,7 +120,13 @@ async function buildLeague(league, settingsTeam, ctx) {
     oneThing: null,
     wrap: null,
     headlines: leagueHeadlines,
-    results: results.map(({ leaders, ...game }) => game),
+    // Filled in by Claude (write-brief.js). Until then: every team story as a plain headline, and the
+    // day's best stat lines.
+    teamNews: pool.team.map(s => ({ title: s.title, text: null, teams: s.teams, sources: s.sources })),
+    recaps: [],
+    standouts: standoutCandidates(league, results, players).slice(0, 5).map(({ score, big, ...p }) => p),
+    quickHits: [],
+    results: results.map(({ leaders, ...game }) => ({ ...game, keyLine: keyLine(league, players[game.id] || {}) })),
     contextCard: null,
     followedPlayers: followedPlayers(settings.followedPlayers, league, { results, leaders, injuriesJson, news: allNews, sources, idx }),
     pulse: { hot: { teams: streaks.hot, players: hotPlayers }, cold: { teams: streaks.cold, players: [] } },
@@ -111,14 +140,55 @@ async function buildLeague(league, settingsTeam, ctx) {
   };
 
   const myTeam = idx.myId ? await buildTeamHub(league, settingsTeam, idx, {
-    ...ctx, results, confJson, injuriesJson, transactionsJson, teamNewsSince: since, offSeason,
+    ...ctx, results, confJson, injuriesJson, transactionsJson, teamNewsSince: since, offSeason, espnTeamNews,
   }) : null;
 
   const week = wednesday ? await buildWeek(league, idx, {
     ...ctx, boards, standings, leagueHeadlines, transactionsJson,
   }) : null;
 
-  return { leagueSection, myTeam, idx, leaders, week };
+  const daily = {
+    stories: pool.league,
+    teamStories: pool.team,
+    games: results.map(g => {
+      const f = flagged.find(x => x.id === g.id);
+      return {
+        id: g.id,
+        flags: f.flags,
+        notable: plan.notableIds.includes(g.id),
+        players: Object.values(players[g.id] || {}).flatMap(list => (league === 'nba' ? list.slice(0, 3) : list))
+          .map(p => `${p.name} (${p.team}): ${p.line}`),
+      };
+    }),
+    plan: { recapAll: plan.recapAll, suggested: plan.suggested },
+    standouts: standoutCandidates(league, results, players).slice(0, 10),
+  };
+
+  return { leagueSection, myTeam, idx, leaders, week, daily };
+}
+
+// The day's best individual performances across the league, from the box scores.
+function standoutCandidates(league, results, players) {
+  const min = league === 'nba' ? 30 : 16;
+  return results.flatMap(g => Object.values(players[g.id] || {}).flat().map(p => {
+    const opp = p.team === g.home.abbr ? g.away : g.home;
+    const mineSide = p.team === g.home.abbr ? g.home : g.away;
+    const result = mineSide.score > opp.score ? 'W' : mineSide.score < opp.score ? 'L' : 'T';
+    const hi = Math.max(mineSide.score, opp.score), lo = Math.min(mineSide.score, opp.score);
+    return { name: p.name, team: p.team, line: p.line, game: `${result} ${hi}–${lo} ${p.team === g.home.abbr ? 'vs' : 'at'} ${opp.name}`, score: p.score, big: p.big };
+  })).filter(p => p.big || p.score >= min).sort((a, b) => b.score - a.score);
+}
+
+// Full story text for the likeliest top stories: the newest ESPN articles (ESPN's news list only has a
+// one-line description). Feed items that carry the full post already have it.
+async function addStoryText(log, pool, counts) {
+  for (const [part, count] of Object.entries(counts)) {
+    for (const story of pool[part].filter(s => s.articleId && !s.detailText).slice(0, count)) {
+      const json = await espn.story(log, story.articleId);
+      const text = decode(json?.headlines?.[0]?.story || '');
+      if (text) story.detailText = text;
+    }
+  }
 }
 
 // The Wednesday extras for one league: the past seven days (for the Wrap) and the games in the coming
@@ -181,7 +251,7 @@ function statLeaders(json, idx) {
 }
 
 async function buildTeamHub(league, settingsTeam, idx, ctx) {
-  const { log, sources, now, results, confJson, injuriesJson, transactionsJson, teamNewsSince, offSeason } = ctx;
+  const { log, sources, now, results, confJson, injuriesJson, transactionsJson, teamNewsSince, offSeason, espnTeamNews } = ctx;
   const id = idx.myId;
 
   const teamJson = await espn.team(log, league, id);
@@ -221,7 +291,7 @@ async function buildTeamHub(league, settingsTeam, idx, ctx) {
 
   // Roster moves and news: this team's transactions (last 14 days) and ESPN team news (last 5 days).
   const moves = transactions(transactionsJson, idx, { since: now.getTime() - 14 * DAY, teamId: id, limit: 8 });
-  const teamNews = espnArticles(await espn.news(log, league, id))
+  const teamNews = espnTeamNews
     .filter(a => a.teamIds.includes(String(id)) && Date.parse(a.published || 0) >= now.getTime() - 5 * DAY)
     .slice(0, 5);
   const news = [
@@ -238,7 +308,7 @@ async function buildTeamHub(league, settingsTeam, idx, ctx) {
     const mine = idx.isMine(mineGame.home.id) ? mineGame.home : mineGame.away;
     const opp = mine === mineGame.home ? mineGame.away : mineGame.home;
     const verb = mine.score > opp.score ? 'Beat' : mine.score < opp.score ? 'Lost to' : 'Tied with';
-    sinceLast.push({ text: `${verb} the ${opp.name} ${mine.score}–${opp.score} ${mine === mineGame.home ? 'at home' : 'on the road'}${mineGame.note ? ` (${mineGame.note.toLowerCase().startsWith('week') ? mineGame.note : mineGame.note.toLowerCase()})` : ''}.` });
+    sinceLast.push({ text: `${verb} the ${opp.name} ${Math.max(mine.score, opp.score)}–${Math.min(mine.score, opp.score)} ${mine === mineGame.home ? 'at home' : 'on the road'}${mineGame.note ? ` (${mineGame.note.toLowerCase().startsWith('week') ? mineGame.note : mineGame.note.toLowerCase()})` : ''}.` });
   }
   for (const m of moves.filter(m => Date.parse(m.date) >= teamNewsSince - DAY)) sinceLast.push({ text: m.plainText });
   // Injury notes from the feed, if they're new and say something (some are just one word).
@@ -286,11 +356,16 @@ async function main() {
 
   // "Since the last edition" covers from the previous day's edition to now (36 hours on the very first run).
   // Re-running on the same day rebuilds today's edition over the same window, so nothing goes missing.
-  const sameDay = realPrevious?.edition?.date === today && realPrevious.edition.window;
-  const since = sameDay ? realPrevious.edition.window.since
+  // For testing only, WINDOW_HOURS widens the window (for example to see what a full NFL Sunday looks like).
+  const testWindow = Number(process.env.WINDOW_HOURS) || 0;
+  const sameDay = !testWindow && realPrevious?.edition?.date === today && realPrevious.edition.window;
+  const since = testWindow ? now.getTime() - testWindow * 3600000
+    : sameDay ? realPrevious.edition.window.since
     : realPrevious?.edition?.generatedAt ? Date.parse(realPrevious.edition.generatedAt) : now.getTime() - 36 * 3600000;
-  const shownBefore = sameDay ? realPrevious.edition.window.shownBefore
+  const shownBefore = testWindow ? { nba: [], nfl: [] }
+    : sameDay ? realPrevious.edition.window.shownBefore
     : { nba: (realPrevious?.nba?.results || []).map(g => g.id), nfl: (realPrevious?.nfl?.results || []).map(g => g.id) };
+  if (testWindow) console.log(`Test window: everything from the last ${testWindow} hours.`);
 
   // The Wednesday edition adds the Wrap and the watch guide. A manual run can pretend it's Wednesday.
   const isWrapDay = melbourneParts(now).weekday === (settings.schedule?.wrapDay || 'Wednesday');
@@ -340,7 +415,7 @@ async function main() {
   if (ok) {
     // Extra facts for Claude's brief that the app doesn't show (see pipeline/write-brief.js).
     const week = wednesday ? { nba: nba.week, nfl: nfl.week } : null;
-    writeFileSync(join(out, 'facts.json'), JSON.stringify({ date: today, leaders: { nba: nba.leaders, nfl: nfl.leaders }, week }, null, 2) + '\n');
+    writeFileSync(join(out, 'facts.json'), JSON.stringify({ date: today, leaders: { nba: nba.leaders, nfl: nfl.leaders }, daily: { nba: nba.daily, nfl: nfl.daily }, week }, null, 2) + '\n');
     writeFileSync(join(out, 'latest.json'), JSON.stringify(edition, null, 2) + '\n');
     writeFileSync(join(out, 'editions', `${today}.json`), JSON.stringify(edition) + '\n');
     pruneArchive(join(out, 'editions'), today);

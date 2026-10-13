@@ -9,20 +9,60 @@ const clip = (text, n) => (text && text.length > n ? `${text.slice(0, n - 1)}…
 // Rough token estimate for the cost guard (about 3.5 characters per token for this kind of JSON).
 export const estimateTokens = obj => Math.ceil(JSON.stringify(obj).length / 3.5);
 
+// The stories, games and standout performances since the last edition (from facts.json `daily`), in the
+// order they matter: notable games and Jack's team first; the newest news first.
+function dailyLists(league, section, daily, limits) {
+  const id = (kind, i) => `${league}-${kind}${i + 1}`;
+  const story = (s, i, kind) => ({
+    id: id(kind, i), title: s.title, summary: clip(s.summary, limits.summaryChars) || undefined,
+    teams: s.teams?.length ? s.teams : undefined, outlet: s.publisher,
+    detail: i < limits.detailStories && s.detailText ? clip(s.detailText, limits.detailChars) : undefined,
+  });
+  const gameFacts = new Map((daily?.games || []).map(g => [g.id, g]));
+  const ordered = [...(section.results || [])].sort((a, b) => {
+    const fa = gameFacts.get(a.id) || {}, fb = gameFacts.get(b.id) || {};
+    return Number(Boolean(fb.notable)) - Number(Boolean(fa.notable));
+  });
+  const results = ordered.filter((g, i) => i < limits.results || gameFacts.get(g.id)?.notable).map((g, i) => {
+    const f = gameFacts.get(g.id) || {};
+    const record = side => (side.record ? ` (${side.record})` : '');
+    return {
+      id: id('r', i), _ref: g.id,
+      game: `${g.away.name}${record(g.away)} ${g.away.score} at ${g.home.name}${record(g.home)} ${g.home.score}`,
+      status: g.status, note: g.note || undefined, date: g.start,
+      notable: f.notable || undefined,
+      flags: f.flags?.length ? f.flags : undefined,
+      keyPlayers: (f.players || []).slice(0, f.notable ? 99 : limits.playersPerOtherGame),
+    };
+  });
+  return {
+    stories: (daily?.stories || []).slice(0, limits.stories).map((s, i) => story(s, i, 'h')),
+    teamStories: (daily?.teamStories || []).slice(0, limits.teamStories).map((s, i) => story(s, i, 'tm')),
+    results,
+    standoutCandidates: (daily?.standouts || []).slice(0, limits.standouts).map((p, i) => ({ id: id('sp', i), line: `${p.name} (${p.team}): ${p.line}, ${p.game}` })),
+    recapGuide: daily?.plan?.recapAll ? 'Recap every game.' : `Recap about ${daily?.plan?.suggested ?? 5} games: the notable ones (notable: true) first. Always recap Jack's team.`,
+  };
+}
+
+// About how many words to write for a league, from how much happened (not fixed counts).
+// Roughly 230 words is a minute's reading.
+export function targetWords(lists) {
+  const stories = lists.stories.length;
+  const top = Math.min(6, Math.ceil(stories / 4));
+  const recaps = lists.recapGuide.startsWith('Recap every') ? lists.results.length : Math.min(lists.results.length, Number(lists.recapGuide.match(/about (\d+)/)?.[1] || 5));
+  const words = 50 + top * 100 + lists.teamStories.length * 35 + recaps * 70
+    + Math.min(5, lists.standoutCandidates.length) * 30 + Math.min(15, Math.max(0, stories - top)) * 18;
+  return Math.max(120, Math.min(1700, Math.round(words / 10) * 10));
+}
+
 function leagueInput(league, section, facts, limits) {
   const week = facts?.week?.[league];
   const id = (kind, i) => `${league}-${kind}${i + 1}`;
-  const headlines = (section.headlines || []).slice(0, limits.headlines).map((h, i) => ({
-    id: id('h', i), title: h.title, summary: clip(h.summary, limits.summaryChars), teams: h.teams,
-  }));
-  const results = (section.results || []).slice(0, limits.results).map((g, i) => ({
-    id: id('r', i),
-    game: `${g.away.name} ${g.away.score} at ${g.home.name} ${g.home.score}`,
-    status: g.status, note: g.note || undefined, date: g.start,
-  }));
+  const lists = dailyLists(league, section, facts?.daily?.[league], limits);
+  // #N is the team's current place (seed) in its conference, so Claude never has to work it out.
   const standings = (section.standings?.groups || []).map(gr => ({
     group: gr.name,
-    teams: gr.rows.map(r => `${r.abbr} ${r.w}-${r.l}${r.t ? `-${r.t}` : ''}${r.streak ? ` ${r.streak}` : ''}`).join(', '),
+    teams: gr.rows.map(r => `${r.seed && r.w + r.l + r.t ? `#${r.seed} ` : ''}${r.abbr} ${r.w}-${r.l}${r.t ? `-${r.t}` : ''}${r.streak && r.streak !== '-' ? ` ${r.streak}` : ''}`).join(', '),
   }));
   const playoffPicture = section.playoffPicture?.conferences?.map(c => ({
     conference: c.name,
@@ -48,7 +88,7 @@ function leagueInput(league, section, facts, limits) {
   return {
     ...(section.offSeason ? { offSeason: true } : {}),
     ...(followed.length ? { followedPlayers: followed } : {}),
-    headlines, results, standings, ...(playoffPicture ? { playoffPicture } : {}), hotAndCold: pulse, majorInjuries: injuries, transactions: moves, statLeaders,
+    ...lists, standings, ...(playoffPicture ? { playoffPicture } : {}), hotAndCold: pulse, majorInjuries: injuries, transactions: moves, statLeaders,
     ...(week ? { week: weekInput(league, week, limits), watchCandidates: watchInput(league, week, limits) } : {}),
   };
 }
@@ -101,25 +141,36 @@ function teamInput(league, team, limits) {
 }
 
 export const DEFAULT_LIMITS = {
-  headlines: 10, summaryChars: 260, results: 16, injuries: 8, moves: 8,
+  stories: 30, teamStories: 20, detailStories: 10, detailChars: 1200, summaryChars: 300,
+  results: 16, playersPerOtherGame: 2, standouts: 10, injuries: 8, moves: 8,
   leaderCategories: 8, leadersPer: 5, teamNews: 6,
   weekResults: 60, weekHeadlines: 14, weekMoves: 10, watchGames: 12,
 };
 
-// Smaller limits, tried in order if the input is over the token budget.
+// Smaller limits, tried in order if the input is over the token budget. The lowest-priority items go
+// first: older news (the lists are newest first), story detail, and the key players of non-notable games
+// (notable games and Jack's team always keep theirs).
 export const TRIM_STEPS = [
-  { headlines: 8, summaryChars: 180, results: 12, moves: 6, leadersPer: 4, weekResults: 45, weekHeadlines: 12, weekMoves: 8 },
-  { headlines: 6, summaryChars: 120, results: 10, injuries: 6, moves: 4, leaderCategories: 6, leadersPer: 3, teamNews: 4, weekResults: 30, weekHeadlines: 10, weekMoves: 6, watchGames: 10 },
-  { headlines: 5, summaryChars: 80, results: 8, injuries: 4, moves: 3, leaderCategories: 4, leadersPer: 3, teamNews: 3, weekResults: 20, weekHeadlines: 8, weekMoves: 4, watchGames: 8 },
+  { stories: 24, detailChars: 900, playersPerOtherGame: 1, moves: 6, leadersPer: 4, weekResults: 45, weekHeadlines: 12, weekMoves: 8 },
+  { stories: 18, teamStories: 15, detailStories: 6, detailChars: 700, summaryChars: 200, playersPerOtherGame: 0, results: 10, injuries: 6, moves: 4, leaderCategories: 6, leadersPer: 3, teamNews: 4, weekResults: 30, weekHeadlines: 10, weekMoves: 6, watchGames: 10 },
+  { stories: 12, teamStories: 10, detailStories: 4, detailChars: 500, summaryChars: 140, results: 6, injuries: 4, moves: 3, leaderCategories: 4, leadersPer: 3, teamNews: 3, weekResults: 20, weekHeadlines: 8, weekMoves: 4, watchGames: 8 },
 ];
 
+// The whole brief aims for 5 to 10 minutes on a normal day, longer on a big day (about 11 at most).
+const MAX_TOTAL_WORDS = 2600;
+
 export function buildInput(edition, facts, recentContextCards, limits = DEFAULT_LIMITS) {
+  const nfl = leagueInput('nfl', edition.nfl, facts, limits);
+  const nba = leagueInput('nba', edition.nba, facts, limits);
+  const raw = { nfl: targetWords(nfl), nba: targetWords(nba) };
+  const scale = Math.min(1, MAX_TOTAL_WORDS / (raw.nfl + raw.nba));
+  for (const [league, data] of [['nfl', nfl], ['nba', nba]]) data.targetWords = Math.round(raw[league] * scale / 10) * 10;
   return {
     today: edition.edition.date,
-    note: 'All times are UTC ISO strings unless stated. Records are wins-losses(-ties). GB means games behind.',
+    note: 'All times are UTC ISO strings unless stated. Records are wins-losses(-ties); in results they are each team\'s record after the game. In standings, #N is the team\'s current place (seed) in its conference. GB means games behind.',
     recentContextCards,
-    nfl: leagueInput('nfl', edition.nfl, facts, limits),
-    nba: leagueInput('nba', edition.nba, facts, limits),
+    nfl,
+    nba,
     myTeams: {
       nfl: teamInput('nfl', edition.myTeams?.nfl, limits),
       nba: teamInput('nba', edition.myTeams?.nba, limits),
@@ -141,8 +192,11 @@ export function idIndex(input, edition, facts, limits = DEFAULT_LIMITS) {
       const games = watchGames(week, limits);
       data.watchCandidates.forEach((g, i) => index.set(g.id, { kind: 'watchGame', league, item: games[i] }));
     }
-    data.headlines.forEach((h, i) => index.set(h.id, { kind: 'headline', league, item: edition[league].headlines[i], sources: edition[league].headlines[i].sources || [] }));
-    data.results.forEach(r => index.set(r.id, { kind: 'result', league }));
+    const daily = facts?.daily?.[league] || {};
+    data.stories.forEach((h, i) => index.set(h.id, { kind: 'headline', league, item: daily.stories[i], sources: daily.stories[i].sources || [] }));
+    data.teamStories.forEach((h, i) => index.set(h.id, { kind: 'teamStory', league, item: daily.teamStories[i], sources: daily.teamStories[i].sources || [] }));
+    data.results.forEach(r => index.set(r.id, { kind: 'result', league, item: edition[league].results.find(g => g.id === r._ref) }));
+    data.standoutCandidates.forEach((p, i) => index.set(p.id, { kind: 'standoutCandidate', league, item: daily.standouts[i] }));
     data.majorInjuries.forEach(r => index.set(r.id, { kind: 'injury', league }));
     data.transactions.forEach(r => index.set(r.id, { kind: 'move', league }));
     data.statLeaders.forEach(r => index.set(r.id, { kind: 'leaders', league }));

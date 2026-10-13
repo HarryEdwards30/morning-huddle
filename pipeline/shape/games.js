@@ -20,7 +20,8 @@ export function seasonNote(event) {
 
 function side(competitor, idx) {
   const id = competitor.team?.id ?? competitor.id;
-  return { abbr: idx.abbr(id), name: idx.name(id), score: scoreOf(competitor), id: String(id) };
+  const record = competitor.records?.find(r => r.type === 'total' || r.name === 'overall')?.summary || competitor.records?.[0]?.summary;
+  return { abbr: idx.abbr(id), name: idx.name(id), score: scoreOf(competitor), id: String(id), ...(record ? { record } : {}) };
 }
 
 // Completed games from the last few scoreboards that weren't already in the previous edition.
@@ -36,12 +37,16 @@ export function resultsFrom(scoreboards, idx, { excludeIds = new Set(), since } 
       const home = comp.competitors?.find(c => c.homeAway === 'home');
       const away = comp.competitors?.find(c => c.homeAway === 'away');
       if (!home || !away) continue;
-      const status = (comp.status || event.status)?.type?.shortDetail || 'Final';
+      const statusInfo = comp.status || event.status;
+      const status = statusInfo?.type?.shortDetail || 'Final';
+      // Overtime: more periods than regulation (4 quarters in both leagues), or "OT" in the status.
+      const ot = Number(statusInfo?.period) > 4 || /OT/.test(status);
       games.push({
         id: event.id,
         start: event.date,
         status,
         note: seasonNote(event),
+        ot,
         home: side(home, idx),
         away: side(away, idx),
         leaders: gameLeaders(comp, idx),

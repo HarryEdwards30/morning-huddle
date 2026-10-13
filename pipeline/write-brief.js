@@ -114,9 +114,12 @@ async function main() {
     // If the API rejects a request (HTTP 400), the next variant drops the effort setting.
     // The API's explanation is always logged.
     const schemaNote = `\n\n---\n\nReply with only one JSON object (no other text) that matches this JSON schema:\n${JSON.stringify(schema)}`;
+    // The longer brief needs room: up to about 10 minutes of reading plus the JSON around it. This is a
+    // ceiling, not what's used (a normal day uses well under half). Streamed, so a long reply can't time out.
+    const maxTokens = settings.ai.maxOutputTokens || 48000;
     const variants = [
-      { label: 'JSON by instruction', request: { model, max_tokens: 16000, system: system + schemaNote, output_config: { effort: 'low' }, messages: [userMessage] } },
-      { label: 'JSON by instruction, default effort', request: { model, max_tokens: 16000, system: system + schemaNote, messages: [userMessage] } },
+      { label: 'JSON by instruction', request: { model, max_tokens: maxTokens, system: system + schemaNote, output_config: { effort: 'low' }, messages: [userMessage] } },
+      { label: 'JSON by instruction, default effort', request: { model, max_tokens: maxTokens, system: system + schemaNote, messages: [userMessage] } },
     ];
 
     let variant = 0;
@@ -126,7 +129,7 @@ async function main() {
       const { label, request } = variants[variant];
       let response;
       try {
-        response = await client.messages.create(request);
+        response = await client.messages.stream(request).finalMessage();
       } catch (apiError) {
         if (apiError instanceof Anthropic.BadRequestError) {
           console.warn(`The API rejected the request (${label}): ${apiError.message}`);
@@ -178,7 +181,12 @@ async function main() {
     return;
   }
 
-  merge(edition, result, index, model, facts);
+  merge(edition, result, index, model, facts, input);
+  const words = { nfl: wordsIn(edition.nfl), nba: wordsIn(edition.nba) };
+  const minutes = Math.round((words.nfl + words.nba) / 230);
+  console.log(`Written brief: about ${minutes} minutes to read (NFL ${words.nfl} words, NBA ${words.nba}; aimed for ${input.nfl.targetWords} and ${input.nba.targetWords}).`);
+  usageLog.runs.at(-1).words = words.nfl + words.nba;
+  writeJson(join(out, 'usage.json'), usageLog);
   writeJson(join(out, 'latest.json'), edition);
   writeJson(join(out, 'editions', `${edition.edition.date}.json`), edition, false);
   writeArchiveIndex(out);
@@ -192,9 +200,24 @@ async function main() {
   console.log('Brief written.');
 }
 
+// Words in a league's written brief (what a reader reads in the "Today's brief" part of the tab).
+function wordsIn(section) {
+  const texts = [
+    section.oneThing, section.wrap?.summary, ...(section.wrap?.storylines || []).map(s => s.text),
+    ...(section.headlines || []).flatMap(h => [h.title, h.summary, h.whyItMatters]),
+    ...(section.teamNews || []).flatMap(t => [t.title, t.text]),
+    ...(section.recaps || []).flatMap(r => [r.text, r.keyLine]),
+    ...(section.standouts || []).flatMap(p => [p.name, p.line, p.why]),
+    ...(section.quickHits || []).map(q => q.text),
+    section.contextCard?.body,
+  ];
+  return texts.filter(Boolean).join(' ').split(/\s+/).filter(Boolean).length;
+}
+
 // Put Claude's writing into the edition. Sources for each story come from the items it cited.
-function merge(edition, brief, index, model, facts) {
+function merge(edition, brief, index, model, facts, input) {
   const sourcesOf = refs => [...new Set(refs.flatMap(r => index.get(r)?.sources || []))];
+  const teamsOf = refs => [...new Set(refs.flatMap(r => index.get(r)?.item?.teams || []))].slice(0, 3);
   for (const league of ['nfl', 'nba']) {
     const b = brief[league];
     const section = edition[league];
@@ -212,6 +235,33 @@ function merge(edition, brief, index, model, facts) {
       });
     }
     section.contextCard = b.contextCard;
+
+    // Jack's team's news: Claude's write-ups, then any team story it didn't use anywhere, as a plain
+    // headline with its link, so no team story is ever missed.
+    const cited = new Set([...b.headlines, ...b.teamNews, ...b.quickHits].flatMap(x => x.refs));
+    section.teamNews = [
+      ...b.teamNews.map(t => ({ title: t.title, text: t.text, teams: teamsOf(t.refs), sources: sourcesOf(t.refs) })),
+      ...input[league].teamStories.filter(t => !cited.has(t.id)).map(t => {
+        const story = index.get(t.id).item;
+        return { title: story.title, text: null, teams: story.teams, sources: story.sources };
+      }),
+    ];
+
+    // Game recaps, in Claude's order. Jack's team's games are always included, even if Claude skipped one.
+    const myAbbr = edition.myTeams?.[league]?.abbr;
+    const recapped = new Set(b.recaps.map(r => r.game));
+    section.recaps = [
+      ...b.recaps.map(r => ({ ...index.get(r.game).item, text: r.text })),
+      ...input[league].results.filter(r => !recapped.has(r.id)).map(r => index.get(r.id).item)
+        .filter(g => g && myAbbr && [g.home.abbr, g.away.abbr].includes(myAbbr)).map(g => ({ ...g, text: null })),
+    ];
+    if (b.standouts.length) {
+      section.standouts = b.standouts.map(st => {
+        const { name, team, line, game } = index.get(st.id).item;
+        return { name, team, line, game, why: st.why };
+      });
+    }
+    section.quickHits = b.quickHits.map(q => ({ text: q.text, teams: teamsOf(q.refs), sources: sourcesOf(q.refs) }));
     for (const f of b.followedNotes) index.get(f.id).item.note = f.note;
     section.awardRaces = b.awardRaces.map(a => ({ award: a.award, contenders: a.contenders.map(({ refs, ...c }) => c) }));
 
