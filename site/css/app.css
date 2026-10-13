@@ -382,6 +382,9 @@ main {
   margin-right: 14px;
 }
 .read-more:hover, .read-more:focus-visible { color: var(--text); text-decoration: underline; }
+.read-more-row { display: flex; flex-wrap: wrap; align-items: center; column-gap: 6px; }
+.read-more-row .read-more { margin-right: 0; }
+.read-more-label, .read-more-sep { font-size: 15px; color: var(--text-muted); }
 
 .bullets { margin: 0; padding: 0; list-style: none; }
 .bullets li { position: relative; padding-left: 18px; margin-bottom: 8px; }

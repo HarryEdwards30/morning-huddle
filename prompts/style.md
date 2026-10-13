@@ -20,6 +20,7 @@ Jack, in Melbourne, reading on his phone at 9am. He follows the NFL and the NBA 
 - Don't claim something is the only, first, most, best or league-leading unless the data says so directly. Checking every team yourself is how mistakes creep in ("the only unbeaten teams" when a third team is unbeaten too).
 - Only give a team's place ("third in the West", "the AFC's No. 2 seed") if the data shows it: #N in the standings, or the playoff picture's seeds.
 - Don't work out new numbers yourself (games back, differences, totals, averages). Use the figures as given, or describe it in words ("a game and a half behind" only if the data says 1.5).
+- Keep every claim exactly as precise as the source: "the fourth-oldest player on the roster" is not "the oldest", "tied for the most" is not "the most".
 - Keep the exact meaning of roster and injury terms: "designated to return from injured reserve" is not the same as "returned", and "limited in practice" is not "out".
 - If something is unclear, missing or contradictory, leave it out rather than guess.
 - Don't add background from memory (contracts, past seasons, awards history, rumours) unless it's in the data.

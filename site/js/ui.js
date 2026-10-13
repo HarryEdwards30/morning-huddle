@@ -114,12 +114,20 @@ export function withSources(sources, build) {
   sourceIndex = sources || {};
   try { return build(); } finally { sourceIndex = saved; }
 }
+// Several links show on one line ("Read more: ESPN ↗ · Silver And Black Pride ↗ · Silver And Black Pride (2) ↗").
 export function sourceLinks(ids) {
+  const seen = {};
   const links = (ids || [])
     .map(id => sourceIndex[id])
     .filter(s => s && /^https?:\/\//i.test(s.url || ''))
-    .map(s => el('a', { class: 'read-more', href: s.url, target: '_blank', rel: 'noopener' }, `Read more: ${s.publisher || 'source'} ↗`));
-  return links.length ? el('div', {}, links) : null;
+    .map(s => {
+      const name = s.publisher || 'source';
+      seen[name] = (seen[name] || 0) + 1;
+      return el('a', { class: 'read-more', href: s.url, target: '_blank', rel: 'noopener' }, `${name}${seen[name] > 1 ? ` (${seen[name]})` : ''} ↗`);
+    });
+  if (!links.length) return null;
+  return el('div', { class: 'read-more-row' }, el('span', { class: 'read-more-label' }, 'Read more:'),
+    links.flatMap((a, i) => (i ? [el('span', { class: 'read-more-sep', 'aria-hidden': 'true' }, '·'), a] : [a])));
 }
 
 // One completed game in scoreboard style: winner in bold, Jack's team highlighted.
