@@ -149,8 +149,7 @@ async function main() {
       const text = response.content.find(b => b.type === 'text')?.text || '';
       try {
         // Without structured output the JSON can arrive wrapped in a code fence; take the outermost object.
-        const json = text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
-        const checked = checkBrief(JSON.parse(json), index, inputText, { wednesday });
+        const checked = checkBrief(JSON.parse(firstJsonObject(text)), index, inputText, { wednesday });
         result = checked.brief;
         dropped = checked.dropped;
         error = null;
@@ -166,15 +165,15 @@ async function main() {
     if (result && settings.ai.factCheck !== false) {
       try {
         const sentences = sentencesOf(result);
-        // Thinking is switched off for the check: it only lists sentence ids, and thinking would double its cost.
+        // Thinking stays on (at low effort): tested without it, the check flagged over half the sentences.
         const response = await client.messages.stream({
-          model, max_tokens: 16000, output_config: { effort: 'low' }, thinking: { type: 'disabled' },
+          model, max_tokens: 16000, output_config: { effort: 'low' },
           system: readFileSync(join(ROOT, 'prompts', 'fact-check.md'), 'utf8'),
           messages: [{ role: 'user', content: `DATA (JSON):\n${inputText}\n\nBRIEF SENTENCES (JSON):\n${JSON.stringify(sentences.map(({ id, text }) => ({ id, text })))}` }],
         }).finalMessage();
         usage = { input_tokens: usage.input_tokens + response.usage.input_tokens, output_tokens: usage.output_tokens + response.usage.output_tokens };
         const text = response.content.find(b => b.type === 'text')?.text || '';
-        const reply = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1));
+        const reply = JSON.parse(firstJsonObject(text));
         const known = new Set(sentences.map(x => x.id));
         const flagged = (reply.unsupported || []).filter(f => known.has(f.id));
         const reasons = Object.fromEntries(flagged.map(f => [f.id, f.reason]));
@@ -236,6 +235,24 @@ async function main() {
     console.log(`${league.toUpperCase()} Wrap: ${w ? `${w.storylines.length} storylines, ${w.biggestResults.length} results, ${w.standouts.length} standouts` : 'not written'}; watch: ${edition.watchGuide[league].picks.map(p => `${p.away.abbr}@${p.home.abbr}`).join(', ') || 'none'}`);
   }
   console.log('Brief written.');
+}
+
+// The first complete JSON object in a reply (it can arrive in a code fence, or with text after it).
+function firstJsonObject(text) {
+  const start = text.indexOf('{');
+  if (start < 0) return text;
+  let depth = 0;
+  let inString = false;
+  for (let i = start; i < text.length; i++) {
+    const c = text[i];
+    if (inString) {
+      if (c === '\\') i++;
+      else if (c === '"') inString = false;
+    } else if (c === '"') inString = true;
+    else if (c === '{') depth++;
+    else if (c === '}' && --depth === 0) return text.slice(start, i + 1);
+  }
+  return text.slice(start);
 }
 
 // Words in a league's written brief (what a reader reads in the "Today's brief" part of the tab).
