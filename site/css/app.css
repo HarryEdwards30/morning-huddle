@@ -23,6 +23,10 @@
   --card-moves-bg: #251e31;      --card-moves-accent: #bf9bf5;    /* transactions and roster moves: purple */
   --card-watch-bg: #16281f;      --card-watch-accent: #63d18f;    /* watch guide: green */
   --card-lead-bg: #262b33;       --card-lead-accent: #e3e8ec;     /* "If you only read one thing" */
+  --card-team-bg: #22262c;       --card-team-accent: #e3e8ec;     /* Spurs / Raiders news: silver, with the your-team border */
+  --card-recap-bg: #142a2b;      --card-recap-accent: #5fd0c4;    /* game recaps: teal */
+  --card-star-bg: #2b1a2a;       --card-star-accent: #f2a0d6;     /* standout performers: rose */
+  --card-quick-bg: #1c1e33;      --card-quick-accent: #a8b1ff;    /* quick hits: indigo */
 
   /* ---- "Why it matters" callout ---- */
   --why-bg: #24364a;
@@ -225,6 +229,10 @@ main {
 .card--moves   { --card-bg: var(--card-moves-bg);   --card-accent: var(--card-moves-accent); }
 .card--watch   { --card-bg: var(--card-watch-bg);   --card-accent: var(--card-watch-accent); }
 .card--lead    { --card-bg: var(--card-lead-bg);    --card-accent: var(--card-lead-accent); }
+.card--team    { --card-bg: var(--card-team-bg);    --card-accent: var(--card-team-accent); }
+.card--recap   { --card-bg: var(--card-recap-bg);   --card-accent: var(--card-recap-accent); }
+.card--star    { --card-bg: var(--card-star-bg);    --card-accent: var(--card-star-accent); }
+.card--quick   { --card-bg: var(--card-quick-bg);   --card-accent: var(--card-quick-accent); }
 .card--mine    { box-shadow: inset 0 0 0 2px var(--mine-border); }
 
 .card-head {
@@ -327,6 +335,21 @@ main {
 .story.mine { margin: 0 -10px; padding-left: 10px; padding-right: 10px; border-radius: var(--radius-small); box-shadow: inset 0 0 0 2px var(--mine-border); border-top-color: transparent; }
 .story.mine + .story { border-top-color: transparent; }
 .story.mine:not(:first-of-type) { margin-top: 8px; }
+.story h3.story-title-small { font-size: 20px; }
+.more-headlines { margin-top: 12px; border-top: 1px solid var(--line); }
+
+/* Game recaps: the scoreboard, a short write-up, then the key players' stat lines */
+.recap { padding: 16px 0; border-top: 1px solid var(--line); }
+.recap:first-of-type { border-top: 0; padding-top: 0; }
+.recap:last-child { padding-bottom: 0; }
+.recap > p { margin: 10px 0 0; }
+.recap .key-players { color: var(--text-muted); }
+.recap .key-players strong { color: var(--card-accent); font-weight: 700; }
+
+/* Standout performers and quick hits */
+.stat-line { font-family: var(--font-display); font-size: 19px; font-weight: 600; margin: 4px 0 2px; }
+.quick-hits li { margin-bottom: 10px; }
+.quick-hits li.mine-hit::before { background: var(--mine-border); }
 
 /* "Why it matters": a highlighted callout inside each story */
 .why {
@@ -359,6 +382,9 @@ main {
   margin-right: 14px;
 }
 .read-more:hover, .read-more:focus-visible { color: var(--text); text-decoration: underline; }
+.read-more-row { display: flex; flex-wrap: wrap; align-items: center; column-gap: 6px; }
+.read-more-row .read-more { margin-right: 0; }
+.read-more-label, .read-more-sep { font-size: 15px; color: var(--text-muted); }
 
 .bullets { margin: 0; padding: 0; list-style: none; }
 .bullets li { position: relative; padding-left: 18px; margin-bottom: 8px; }
