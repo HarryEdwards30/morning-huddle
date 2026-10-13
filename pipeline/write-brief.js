@@ -24,6 +24,7 @@ import { buildInput, forClaude, idIndex, estimateTokens, DEFAULT_LIMITS, TRIM_ST
 import { DAILY_BRIEF_SCHEMA, WEDNESDAY_SCHEMA, checkBrief } from './brief/schema.js';
 import { melbourneIso } from './lib/time.js';
 import { writeArchiveIndex } from './lib/archive.js';
+import { sentencesOf, removeSentences } from './brief/factcheck.js';
 import { watchEntry } from './shape/week.js';
 
 const ROOT = new URL('..', import.meta.url).pathname;
@@ -96,6 +97,7 @@ async function main() {
   let error = null;
   let dropped = [];
   const rejected = []; // API 400s from request variants that were tried and turned down
+  let factCheck = null; // what the fact check looked at and removed
 
   try {
     if (!process.env.ANTHROPIC_API_KEY) throw new Error('missing key');
@@ -158,6 +160,39 @@ async function main() {
         console.warn(`Attempt ${usableAttempts} (${label}): ${error.message}`);
       }
     }
+
+    // The fact check: a second, smaller call reads every sentence against the same data and lists any the
+    // data doesn't support; those are removed. If the check itself fails, the brief goes ahead unchecked.
+    if (result && settings.ai.factCheck !== false) {
+      try {
+        const sentences = sentencesOf(result);
+        const response = await client.messages.stream({
+          model, max_tokens: 16000, output_config: { effort: 'low' },
+          system: readFileSync(join(ROOT, 'prompts', 'fact-check.md'), 'utf8'),
+          messages: [{ role: 'user', content: `DATA (JSON):\n${inputText}\n\nBRIEF SENTENCES (JSON):\n${JSON.stringify(sentences.map(({ id, text }) => ({ id, text })))}` }],
+        }).finalMessage();
+        usage = { input_tokens: usage.input_tokens + response.usage.input_tokens, output_tokens: usage.output_tokens + response.usage.output_tokens };
+        const text = response.content.find(b => b.type === 'text')?.text || '';
+        const reply = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1));
+        const known = new Set(sentences.map(x => x.id));
+        const flagged = (reply.unsupported || []).filter(f => known.has(f.id));
+        const reasons = Object.fromEntries(flagged.map(f => [f.id, f.reason]));
+        if (flagged.length > sentences.length * 0.3) {
+          // Flagging this much means the check went wrong, not the brief: keep the brief as written.
+          console.warn(`Fact check flagged ${flagged.length} of ${sentences.length} sentences; that's too many to trust, so nothing was removed.`);
+          factCheck = { checked: sentences.length, removed: 0, skipped: 'too many flagged' };
+        } else {
+          const removed = sentences.filter(x => reasons[x.id]).map(x => ({ where: x.where, sentence: x.text, reason: reasons[x.id] }));
+          removeSentences(result, sentences, flagged.map(f => f.id));
+          factCheck = { checked: sentences.length, removed: removed.length, sentences: removed };
+          console.log(`Fact check: ${sentences.length} sentences checked, ${removed.length} removed.`);
+          for (const r of removed) console.log(` - ${r.where}: ${r.sentence}\n   (${r.reason})`);
+        }
+      } catch (checkError) {
+        console.warn(`Fact check skipped: ${checkError.message}`);
+        factCheck = { checked: 0, removed: 0, skipped: String(checkError.message).slice(0, 200) };
+      }
+    }
   } catch (e) {
     error = e;
   }
@@ -190,7 +225,9 @@ async function main() {
   writeJson(join(out, 'latest.json'), edition);
   writeJson(join(out, 'editions', `${edition.edition.date}.json`), edition, false);
   writeArchiveIndex(out);
-  status.brief = { ok: true, error: null, at: melbourneIso(), droppedItems: dropped.length, rejectedRequests: rejected };
+  status.brief = { ok: true, error: null, at: melbourneIso(), droppedItems: dropped.length, rejectedRequests: rejected,
+    factCheck: factCheck && { checked: factCheck.checked, removed: factCheck.removed, ...(factCheck.skipped ? { skipped: factCheck.skipped } : {}) } };
+  if (factCheck) writeJson(join(out, 'fact-check.json'), { date: edition.edition.date, ...factCheck });
   writeJson(statusPath, status);
   if (dropped.length) console.log(`Dropped ${dropped.length} item(s) that failed the checks:\n - ${dropped.join('\n - ')}`);
   if (wednesday) for (const league of ['nfl', 'nba']) {
