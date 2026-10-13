@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-14",
+  "checked": 112,
+  "removed": 3,
+  "sentences": [
+    {
+      "where": "nfl standouts 2",
+      "sentence": "He ran as well as he passed in the Bills' overtime win in Los Angeles.",
+      "reason": "Says Allen 'ran as well as he passed', an evaluative comparison not in the data (210 passing yards vs 121 rushing yards)."
+    },
+    {
+      "where": "nfl wrap",
+      "sentence": "The Bills' overtime win over the Rams was the week's biggest result, and the 49ers stayed unbeaten at 5–0 with a 32–29 win over Seattle.",
+      "reason": "Calls the Bills' win 'the week's biggest result', a superlative the data does not state."
+    },
+    {
+      "where": "nba wrap",
+      "sentence": "The week was all preseason, but the biggest contract news came with Payton Pritchard's extension.",
+      "reason": "Calls Pritchard's extension 'the biggest contract news' of the week, a superlative the data does not support."
+    }
+  ]
+}
