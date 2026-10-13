@@ -1,0 +1,16 @@
+# TEMPORARY: checks candidate data sources from GitHub. Read-only. Removed after use.
+name: Probe (temporary)
+on:
+  push:
+    branches: [claude/morning-huddle-spec-plan-2fgh1z]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: node scripts/probe-sources.mjs
