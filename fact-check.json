@@ -1,32 +1,12 @@
 {
-  "date": "2026-10-15",
-  "checked": 102,
-  "removed": 5,
+  "date": "2026-10-16",
+  "checked": 98,
+  "removed": 1,
   "sentences": [
     {
-      "where": "nba recaps 1",
-      "sentence": "Walker Kessler's rebounding was the Lakers' best interior work, and he is worth watching as the Lakers' frontcourt settles in.",
-      "reason": "Calling Kessler's work the Lakers' 'best interior work' is a superlative the data doesn't support; it only gives his 9 rebounds."
-    },
-    {
-      "where": "nba recaps 2",
-      "sentence": "Portland were in control for most of this one, and Deni Avdija led the way for the Trail Blazers.",
-      "reason": "The data gives only the final score and scoring leader. It does not say Portland was in control for most of the game."
-    },
-    {
-      "where": "nba recaps 3",
-      "sentence": "Jared McCain's scoring off the bench and Shai Gilgeous-Alexander's playmaking carried the Thunder, and the margin came down to the final minutes.",
-      "reason": "The data does not say McCain scored off the bench."
-    },
-    {
-      "where": "nba recaps 4",
-      "sentence": "Tristan da Silva added 18 points off the bench.",
-      "reason": "The data does not say Tristan da Silva came off the bench."
-    },
-    {
-      "where": "nba recaps 5",
-      "sentence": "James Wiseman was the Knicks' best player, with 18 points and 10 rebounds, but New York have now lost four straight in the preseason.",
-      "reason": "Calling Wiseman the Knicks' 'best player' is a superlative the data doesn't state; it only gives his line."
+      "where": "nfl headlines 3",
+      "sentence": "Colts running back Jonathan Taylor says he doesn't need the big plays that have made him famous.",
+      "reason": "The data says Taylor pointed out a 20-yard run and said 'Everybody loves those'. It does not say he doesn't need big plays."
     }
   ]
 }
