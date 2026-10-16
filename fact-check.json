@@ -1,12 +1,27 @@
 {
-  "date": "2026-10-16",
-  "checked": 98,
-  "removed": 1,
+  "date": "2026-10-17",
+  "checked": 93,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl headlines 3",
-      "sentence": "Colts running back Jonathan Taylor says he doesn't need the big plays that have made him famous.",
-      "reason": "The data says Taylor pointed out a 20-yard run and said 'Everybody loves those'. It does not say he doesn't need big plays."
+      "where": "nfl headlines 1",
+      "sentence": "Green Bay gets its starting running back back into the mix, but his availability depends on how the investigation ends.",
+      "reason": "Data calls Josh Jacobs a running back but never says he is the starter."
+    },
+    {
+      "where": "nfl standouts 1",
+      "sentence": "Smith-Njigba carried Seattle's passing game in a losing effort, and his 717 receiving yards lead the league.",
+      "reason": "Data shows 12 catches for 134 yards and a loss, but does not say Smith-Njigba 'carried' Seattle's passing game."
+    },
+    {
+      "where": "nfl quickHits 5",
+      "sentence": "Tyjae Spears is listed as questionable for the Titans' game against the Colts.",
+      "reason": "Data does not name Tyjae Spears's team, so 'the Titans' game' is not supported."
+    },
+    {
+      "where": "nba standouts 1",
+      "sentence": "Towns' 15 rebounds and 9 assists were the biggest reason New York won a close game after an 0–4 start.",
+      "reason": "Data lists Towns's stat line but gives no cause; calling it 'the biggest reason' New York won is an unsupported claim."
     }
   ]
 }
