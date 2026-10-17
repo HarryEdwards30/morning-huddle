@@ -1,27 +1,27 @@
 {
-  "date": "2026-10-17",
-  "checked": 93,
+  "date": "2026-10-18",
+  "checked": 107,
   "removed": 4,
   "sentences": [
     {
-      "where": "nfl headlines 1",
-      "sentence": "Green Bay gets its starting running back back into the mix, but his availability depends on how the investigation ends.",
-      "reason": "Data calls Josh Jacobs a running back but never says he is the starter."
+      "where": "nfl headlines 4",
+      "sentence": "The Cowboys host Green Bay on Sunday Night Football, then face the Eagles on Monday Night Football in Week 7.",
+      "reason": "The data says Dallas has Green Bay on its slate for Sunday Night Football, but does not say the Cowboys are the home team."
     },
     {
-      "where": "nfl standouts 1",
-      "sentence": "Smith-Njigba carried Seattle's passing game in a losing effort, and his 717 receiving yards lead the league.",
-      "reason": "Data shows 12 catches for 134 yards and a loss, but does not say Smith-Njigba 'carried' Seattle's passing game."
+      "where": "nfl headlines 3",
+      "sentence": "The Packers are 3–2 and fifth in the NFC, and their defence is badly thinned for a big game against a division rival.",
+      "reason": "Green Bay and Dallas are in different NFC divisions (North and East), so calling Dallas a division rival is not supported."
     },
     {
-      "where": "nfl quickHits 5",
-      "sentence": "Tyjae Spears is listed as questionable for the Titans' game against the Colts.",
-      "reason": "Data does not name Tyjae Spears's team, so 'the Titans' game' is not supported."
+      "where": "nfl teamNews 2",
+      "sentence": "Head coach Klint Kubiak admits the Raiders can't keep relying on Brock Bowers.",
+      "reason": "The data names Klint Kubiak but never gives his title as head coach."
     },
     {
-      "where": "nba standouts 1",
-      "sentence": "Towns' 15 rebounds and 9 assists were the biggest reason New York won a close game after an 0–4 start.",
-      "reason": "Data lists Towns's stat line but gives no cause; calling it 'the biggest reason' New York won is an unsupported claim."
+      "where": "nba standouts 2",
+      "sentence": "His 14 rebounds were the highest total in the group, and he added 20 points in Atlanta's win at Dallas.",
+      "reason": "The data does not say Jalen Johnson's 14 rebounds were the highest in any group; it only lists him and gives his totals."
     }
   ]
 }
