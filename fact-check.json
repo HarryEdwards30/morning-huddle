@@ -1,27 +1,12 @@
 {
-  "date": "2026-10-18",
-  "checked": 107,
-  "removed": 4,
+  "date": "2026-10-19",
+  "checked": 101,
+  "removed": 1,
   "sentences": [
     {
-      "where": "nfl headlines 4",
-      "sentence": "The Cowboys host Green Bay on Sunday Night Football, then face the Eagles on Monday Night Football in Week 7.",
-      "reason": "The data says Dallas has Green Bay on its slate for Sunday Night Football, but does not say the Cowboys are the home team."
-    },
-    {
-      "where": "nfl headlines 3",
-      "sentence": "The Packers are 3–2 and fifth in the NFC, and their defence is badly thinned for a big game against a division rival.",
-      "reason": "Green Bay and Dallas are in different NFC divisions (North and East), so calling Dallas a division rival is not supported."
-    },
-    {
-      "where": "nfl teamNews 2",
-      "sentence": "Head coach Klint Kubiak admits the Raiders can't keep relying on Brock Bowers.",
-      "reason": "The data names Klint Kubiak but never gives his title as head coach."
-    },
-    {
-      "where": "nba standouts 2",
-      "sentence": "His 14 rebounds were the highest total in the group, and he added 20 points in Atlanta's win at Dallas.",
-      "reason": "The data does not say Jalen Johnson's 14 rebounds were the highest in any group; it only lists him and gives his totals."
+      "where": "nfl recaps 1",
+      "sentence": "Kyler Gordon, activated from the PUP list this week, made the biggest defensive impact with three sacks.",
+      "reason": "Calling Gordon's impact the 'biggest' defensive impact goes beyond the data, which only lists his 3 sacks and 4 tackles."
     }
   ]
 }
