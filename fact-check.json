@@ -1,12 +1,17 @@
 {
-  "date": "2026-10-19",
-  "checked": 101,
-  "removed": 1,
+  "date": "2026-10-20",
+  "checked": 103,
+  "removed": 2,
   "sentences": [
     {
-      "where": "nfl recaps 1",
-      "sentence": "Kyler Gordon, activated from the PUP list this week, made the biggest defensive impact with three sacks.",
-      "reason": "Calling Gordon's impact the 'biggest' defensive impact goes beyond the data, which only lists his 3 sacks and 4 tackles."
+      "where": "nfl headlines 1",
+      "sentence": "The Rams lost 18–16 to the Cardinals on Sunday, and the injuries mounted.",
+      "reason": "Score is reversed. The data has Cardinals 18, Rams 16, so the Rams lost 16–18, not 18–16."
+    },
+    {
+      "where": "nba oneThing",
+      "sentence": "Brandon Miller has signed a five-year, $209 million extension with Charlotte, and the NBA season tips off Wednesday with the Spurs hosting the Thunder.",
+      "reason": "The data says the Spurs-Thunder game is the Spurs' opener, and that the regular season opens with Celtics-Pistons. It does not say the season tips off Wednesday with Spurs-Thunder."
     }
   ]
 }
