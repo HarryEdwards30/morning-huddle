@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-20",
-  "checked": 103,
+  "date": "2026-10-21",
+  "checked": 82,
   "removed": 2,
   "sentences": [
     {
-      "where": "nfl headlines 1",
-      "sentence": "The Rams lost 18–16 to the Cardinals on Sunday, and the injuries mounted.",
-      "reason": "Score is reversed. The data has Cardinals 18, Rams 16, so the Rams lost 16–18, not 18–16."
+      "where": "nfl wrap storyline 3",
+      "sentence": "The Raiders lost 30–33 to the Bills in a game they led late into the fourth quarter, and their third straight loss leaves them 3–3 and 1.0 games behind the last playoff spot.",
+      "reason": "The data shows the Bills beat the Raiders 33-30. It does not say the Raiders led late into the fourth quarter."
     },
     {
-      "where": "nba oneThing",
-      "sentence": "Brandon Miller has signed a five-year, $209 million extension with Charlotte, and the NBA season tips off Wednesday with the Spurs hosting the Thunder.",
-      "reason": "The data says the Spurs-Thunder game is the Spurs' opener, and that the regular season opens with Celtics-Pistons. It does not say the season tips off Wednesday with Spurs-Thunder."
+      "where": "nba headlines 1",
+      "sentence": "Washington's new front line is missing its most important rookie, and the start of his development is now uncertain.",
+      "reason": "Calling Dybantsa Washington's 'most important rookie' is a superlative the data does not state. The data says only that he is the No. 1 pick and day-to-day."
     }
   ]
 }
