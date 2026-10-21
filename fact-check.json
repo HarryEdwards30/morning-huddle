@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-21",
-  "checked": 82,
+  "date": "2026-10-22",
+  "checked": 87,
   "removed": 2,
   "sentences": [
     {
-      "where": "nfl wrap storyline 3",
-      "sentence": "The Raiders lost 30–33 to the Bills in a game they led late into the fourth quarter, and their third straight loss leaves them 3–3 and 1.0 games behind the last playoff spot.",
-      "reason": "The data shows the Bills beat the Raiders 33-30. It does not say the Raiders led late into the fourth quarter."
+      "where": "nba teamNews 1",
+      "sentence": "The Express-News says the opener was a season-starting reality check for Wembanyama and the Spurs, with Wembanyama's worst-ever shooting night a big part of it.",
+      "reason": "The 'worst-ever shooting' point is attributed to the Express-News, but the data ties that framing to a different source (roundtable.io); the Express-News item only has the 'reality check' headline."
     },
     {
-      "where": "nba headlines 1",
-      "sentence": "Washington's new front line is missing its most important rookie, and the start of his development is now uncertain.",
-      "reason": "Calling Dybantsa Washington's 'most important rookie' is a superlative the data does not state. The data says only that he is the No. 1 pick and day-to-day."
+      "where": "nba team update",
+      "sentence": "Next up is the Rockets on Saturday.",
+      "reason": "The data gives the Rockets game as 2026-10-24T01:30Z, which is Friday evening in US time. Calling it Saturday is not supported by the data."
     }
   ]
 }
