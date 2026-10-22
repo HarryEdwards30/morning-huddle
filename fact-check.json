@@ -1,17 +1,32 @@
 {
-  "date": "2026-10-22",
-  "checked": 87,
-  "removed": 2,
+  "date": "2026-10-23",
+  "checked": 116,
+  "removed": 5,
   "sentences": [
     {
-      "where": "nba teamNews 1",
-      "sentence": "The Express-News says the opener was a season-starting reality check for Wembanyama and the Spurs, with Wembanyama's worst-ever shooting night a big part of it.",
-      "reason": "The 'worst-ever shooting' point is attributed to the Express-News, but the data ties that framing to a different source (roundtable.io); the Express-News item only has the 'reality check' headline."
+      "where": "nfl headlines 1",
+      "sentence": "A healthy Mayfield gives the Bucs their best chance to get back into the NFC South race.",
+      "reason": "Unsourced opinion stated as fact: the data gives no assessment of Mayfield's return as the Bucs' 'best chance' in the NFC South race."
     },
     {
-      "where": "nba team update",
-      "sentence": "Next up is the Rockets on Saturday.",
-      "reason": "The data gives the Rockets game as 2026-10-24T01:30Z, which is Friday evening in US time. Calling it Saturday is not supported by the data."
+      "where": "nba headlines 1",
+      "sentence": "The officiating debate is now about one of the Wolves' new guards, and it will follow him into the season.",
+      "reason": "Speculative claim that the officiating debate 'will follow him into the season'; the data does not say this."
+    },
+    {
+      "where": "nba headlines 2",
+      "sentence": "One game is a small sample, but it's a strong start for a team that will be in the playoff hunt.",
+      "reason": "Unsourced prediction that Memphis 'will be in the playoff hunt'; the data gives no such projection."
+    },
+    {
+      "where": "nba recaps 1",
+      "sentence": "Minnesota's win in Miami was built on Anthony Edwards's shooting, and he was the difference from start to finish.",
+      "reason": "Goes beyond the data: calling Edwards 'the difference from start to finish' is an interpretive overstatement not in the sources."
+    },
+    {
+      "where": "nba standouts 1",
+      "sentence": "Edwards's nine threes and 45 points were the biggest single-game line of the night, in a win on the road.",
+      "reason": "Claims Edwards's line was the 'biggest single-game line of the night', but Ty Jerome also scored 45 points that night and the data does not rank the lines."
     }
   ]
 }
