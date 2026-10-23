@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-23",
-  "checked": 116,
+  "date": "2026-10-24",
+  "checked": 95,
   "removed": 5,
   "sentences": [
     {
       "where": "nfl headlines 1",
-      "sentence": "A healthy Mayfield gives the Bucs their best chance to get back into the NFC South race.",
-      "reason": "Unsourced opinion stated as fact: the data gives no assessment of Mayfield's return as the Bucs' 'best chance' in the NFC South race."
+      "sentence": "San Antonio's rivals in the NFC are not the story here.",
+      "reason": "Claims something about San Antonio's NFC rivals; the data has no such content, and San Antonio is an NBA team."
     },
     {
-      "where": "nba headlines 1",
-      "sentence": "The officiating debate is now about one of the Wolves' new guards, and it will follow him into the season.",
-      "reason": "Speculative claim that the officiating debate 'will follow him into the season'; the data does not say this."
+      "where": "nfl headlines 2",
+      "sentence": "Cam Skattebo, who had zero carries in Sunday's 34-27 loss to the Saints after a fumble in overtime, is expected back in the running back mix.",
+      "reason": "Ties the overtime fumble to the Saints loss; the data places the fumble in the tie with the Commanders, not the Saints game."
     },
     {
-      "where": "nba headlines 2",
-      "sentence": "One game is a small sample, but it's a strong start for a team that will be in the playoff hunt.",
-      "reason": "Unsourced prediction that Memphis 'will be in the playoff hunt'; the data gives no such projection."
+      "where": "nfl teamNews 2",
+      "sentence": "The Raiders are expected to be favoured in the game, which the report calls a near must-win for Las Vegas.",
+      "reason": "Says the Raiders are expected to be favoured; the data says the Rams are the favourites (4.5)."
     },
     {
-      "where": "nba recaps 1",
-      "sentence": "Minnesota's win in Miami was built on Anthony Edwards's shooting, and he was the difference from start to finish.",
-      "reason": "Goes beyond the data: calling Edwards 'the difference from start to finish' is an interpretive overstatement not in the sources."
+      "where": "nfl standouts 1",
+      "sentence": "His 130 receiving yards and a touchdown gave the Bears the big-play threat they needed to hold off a Patriots team that had plenty of chances.",
+      "reason": "Says the Patriots 'had plenty of chances'; the data does not support this characterisation."
     },
     {
       "where": "nba standouts 1",
-      "sentence": "Edwards's nine threes and 45 points were the biggest single-game line of the night, in a win on the road.",
-      "reason": "Claims Edwards's line was the 'biggest single-game line of the night', but Ty Jerome also scored 45 points that night and the data does not rank the lines."
+      "sentence": "His 32 points and six assists were the biggest reason the Sixers came back from a big first-half hole.",
+      "reason": "Calls Maxey's 32 points and six assists 'the biggest reason' for the comeback; the data does not rank his contribution."
     }
   ]
 }
