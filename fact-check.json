@@ -1,32 +1,22 @@
 {
-  "date": "2026-10-24",
-  "checked": 95,
-  "removed": 5,
+  "date": "2026-10-25",
+  "checked": 93,
+  "removed": 3,
   "sentences": [
     {
-      "where": "nfl headlines 1",
-      "sentence": "San Antonio's rivals in the NFC are not the story here.",
-      "reason": "Claims something about San Antonio's NFC rivals; the data has no such content, and San Antonio is an NBA team."
+      "where": "nba headlines 1",
+      "sentence": "Banchero left Friday's loss to the Timberwolves early after rolling his ankle.",
+      "reason": "The data says Banchero left the game early but does not mention rolling his ankle."
     },
     {
-      "where": "nfl headlines 2",
-      "sentence": "Cam Skattebo, who had zero carries in Sunday's 34-27 loss to the Saints after a fumble in overtime, is expected back in the running back mix.",
-      "reason": "Ties the overtime fumble to the Saints loss; the data places the fumble in the tie with the Commanders, not the Saints game."
+      "where": "nba headlines 4",
+      "sentence": "He thinks better communication could fix most of the issues.",
+      "reason": "The data says communication could solve 'a lot of issues'; 'most' overstates it."
     },
     {
-      "where": "nfl teamNews 2",
-      "sentence": "The Raiders are expected to be favoured in the game, which the report calls a near must-win for Las Vegas.",
-      "reason": "Says the Raiders are expected to be favoured; the data says the Rams are the favourites (4.5)."
-    },
-    {
-      "where": "nfl standouts 1",
-      "sentence": "His 130 receiving yards and a touchdown gave the Bears the big-play threat they needed to hold off a Patriots team that had plenty of chances.",
-      "reason": "Says the Patriots 'had plenty of chances'; the data does not support this characterisation."
-    },
-    {
-      "where": "nba standouts 1",
-      "sentence": "His 32 points and six assists were the biggest reason the Sixers came back from a big first-half hole.",
-      "reason": "Calls Maxey's 32 points and six assists 'the biggest reason' for the comeback; the data does not rank his contribution."
+      "where": "nba recaps 2",
+      "sentence": "Austin Reaves and Luka Dončić did most of the offensive work, and Walker Kessler anchored the defence with six blocks.",
+      "reason": "The data lists Reaves and Dončić as top scorers but does not say they did most of Los Angeles's offensive work."
     }
   ]
 }
