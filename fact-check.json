@@ -1,22 +1,27 @@
 {
-  "date": "2026-10-25",
-  "checked": 93,
-  "removed": 3,
+  "date": "2026-10-26",
+  "checked": 163,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nba headlines 1",
-      "sentence": "Banchero left Friday's loss to the Timberwolves early after rolling his ankle.",
-      "reason": "The data says Banchero left the game early but does not mention rolling his ankle."
+      "where": "nfl recaps 1",
+      "sentence": "For the Falcons, it was a win that snapped a 3-4 start going the other way.",
+      "reason": "Data says Atlanta was 2-4 before the win (upset: ATL 2-4 beat SF), not 3-4; the 3-4 figure is its record after the game."
     },
     {
-      "where": "nba headlines 4",
-      "sentence": "He thinks better communication could fix most of the issues.",
-      "reason": "The data says communication could solve 'a lot of issues'; 'most' overstates it."
+      "where": "nfl standouts 5",
+      "sentence": "Two rushing touchdowns and 106 yards in a 43–13 win, the biggest result of the day for the Buccaneers.",
+      "reason": "'The biggest result of the day for the Buccaneers' is an unsupported superlative; the data gives no such ranking."
     },
     {
-      "where": "nba recaps 2",
-      "sentence": "Austin Reaves and Luka Dončić did most of the offensive work, and Walker Kessler anchored the defence with six blocks.",
-      "reason": "The data lists Reaves and Dončić as top scorers but does not say they did most of Los Angeles's offensive work."
+      "where": "nfl team update",
+      "sentence": "Lost 33–30 to the Bills in Week 6, and are now 3-3 and 10th in the AFC.",
+      "reason": "The score is reversed: the data says the Raiders lost 30-33 to the Bills, not 33-30."
+    },
+    {
+      "where": "nba headlines 2",
+      "sentence": "The Sixers went with the medical advice to keep him healthy.",
+      "reason": "The data does not say the Sixers acted on medical advice; it only says they wanted to keep Embiid healthy."
     }
   ]
 }
