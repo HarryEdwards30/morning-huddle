@@ -1,42 +1,42 @@
 {
-  "date": "2026-10-27",
-  "checked": 138,
+  "date": "2026-10-28",
+  "checked": 99,
   "removed": 7,
   "sentences": [
     {
-      "where": "nfl headlines 4",
-      "sentence": "The rule on lowering the helmet is a live question for every team that runs the ball between the tackles.",
-      "reason": "Claim that the helmet rule is a live question for every team running between the tackles is not in the data."
+      "where": "nfl headlines 2",
+      "sentence": "The 49ers were pressured to the point that Falcons quarterback Michael Penix Jr. was hit on only three of his 34 dropbacks in San Francisco's last game, so their defensive line needed help.",
+      "reason": "Data says Penix was pressured on three of 34 dropbacks, not hit; 'hit' changes the fact."
     },
     {
-      "where": "nfl recaps 3",
-      "sentence": "Detroit's win came down to the final drive and a three-point margin.",
-      "reason": "Says the win came down to the final drive; the data gives only the score and the three-point margin."
+      "where": "nfl teamNews 2",
+      "sentence": "Offensive coordinator Klint Kubiak says Kirk Cousins will remain the starter against the Jets, despite the questions about Fernando Mendoza.",
+      "reason": "Data does not give Klint Kubiak's title; 'offensive coordinator' is not in the data."
     },
     {
-      "where": "nfl recaps 3",
-      "sentence": "Love was efficient for the Packers but could not get the late points that would have changed the result.",
-      "reason": "Asserts Love could not get the late points that would have changed the result; the data does not say this."
+      "where": "nfl quickHits 3",
+      "sentence": "The Giants beat Houston 27–21, but Brian Harbaugh's team had to deal with a Cam Skattebo helmet penalty that moved New York back from second-and-3 to first-and-20.",
+      "reason": "Data names the Giants coach as Harbaugh but gives no first name; 'Brian' is not supported."
     },
     {
-      "where": "nfl recaps 4",
-      "sentence": "Denver controlled the game from the first half, with Nix running as well as throwing.",
-      "reason": "Says Denver controlled the game from the first half; the data gives no game-flow detail."
+      "where": "nfl wrap",
+      "sentence": "The week's biggest result was Atlanta ending San Francisco's unbeaten start.",
+      "reason": "'The week's biggest result' is a superlative the data does not state."
     },
     {
-      "where": "nfl recaps 4",
-      "sentence": "Harvey was a useful outlet, and Singleton led a defence that made stops in the second half.",
-      "reason": "Credits Singleton with leading second-half stops; the data has no second-half detail for him."
+      "where": "nba recaps 3",
+      "sentence": "Giannis's triple-double wasn't enough, and Miami dropped to 0–4 after a late collapse.",
+      "reason": "The data does not mention a late collapse by Miami."
     },
     {
-      "where": "nfl recaps 4",
-      "sentence": "McBride was Arizona's most productive target, but the Cardinals had no answer for Denver's balance.",
-      "reason": "Calls McBride Arizona's most productive target and says Denver had balance Arizona could not answer; not supported by the data."
+      "where": "nba recaps 3",
+      "sentence": "The Heat's struggles are now the early season's biggest question.",
+      "reason": "Calling the Heat's struggles the season's 'biggest question' is a superlative not in the data."
     },
     {
-      "where": "nba recaps 4",
-      "sentence": "The Magic's margin came after Jalen Suggs' knee gave way on a layup in the second half.",
-      "reason": "Says Suggs' knee gave way in the second half and links it to the margin; the data gives no half and no link to the result."
+      "where": "nba recaps 5",
+      "sentence": "The Cavs have their first winning streak, and Minnesota's unbeaten start is over.",
+      "reason": "Data shows Cleveland on a two-game win streak, not that it is their first winning streak."
     }
   ]
 }
