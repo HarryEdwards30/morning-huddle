@@ -1,42 +1,17 @@
 {
-  "date": "2026-10-28",
-  "checked": 99,
-  "removed": 7,
+  "date": "2026-10-29",
+  "checked": 103,
+  "removed": 2,
   "sentences": [
     {
       "where": "nfl headlines 2",
-      "sentence": "The 49ers were pressured to the point that Falcons quarterback Michael Penix Jr. was hit on only three of his 34 dropbacks in San Francisco's last game, so their defensive line needed help.",
-      "reason": "Data says Penix was pressured on three of 34 dropbacks, not hit; 'hit' changes the fact."
+      "sentence": "Buffalo host the Ravens in Week 8.",
+      "reason": "The data says Buffalo face the Ravens in Week 8 but does not say the game is at Buffalo, so 'host' is not supported."
     },
     {
-      "where": "nfl teamNews 2",
-      "sentence": "Offensive coordinator Klint Kubiak says Kirk Cousins will remain the starter against the Jets, despite the questions about Fernando Mendoza.",
-      "reason": "Data does not give Klint Kubiak's title; 'offensive coordinator' is not in the data."
-    },
-    {
-      "where": "nfl quickHits 3",
-      "sentence": "The Giants beat Houston 27–21, but Brian Harbaugh's team had to deal with a Cam Skattebo helmet penalty that moved New York back from second-and-3 to first-and-20.",
-      "reason": "Data names the Giants coach as Harbaugh but gives no first name; 'Brian' is not supported."
-    },
-    {
-      "where": "nfl wrap",
-      "sentence": "The week's biggest result was Atlanta ending San Francisco's unbeaten start.",
-      "reason": "'The week's biggest result' is a superlative the data does not state."
-    },
-    {
-      "where": "nba recaps 3",
-      "sentence": "Giannis's triple-double wasn't enough, and Miami dropped to 0–4 after a late collapse.",
-      "reason": "The data does not mention a late collapse by Miami."
-    },
-    {
-      "where": "nba recaps 3",
-      "sentence": "The Heat's struggles are now the early season's biggest question.",
-      "reason": "Calling the Heat's struggles the season's 'biggest question' is a superlative not in the data."
-    },
-    {
-      "where": "nba recaps 5",
-      "sentence": "The Cavs have their first winning streak, and Minnesota's unbeaten start is over.",
-      "reason": "Data shows Cleveland on a two-game win streak, not that it is their first winning streak."
+      "where": "nfl headlines 4",
+      "sentence": "Keeping the same playcaller means no change in the offence's approach while the team searches for its first win.",
+      "reason": "The data says McDaniel will keep calling plays. It does not say the offence's approach will stay the same, so this inference goes beyond the data."
     }
   ]
 }
