@@ -1,17 +1,27 @@
 {
-  "date": "2026-10-29",
-  "checked": 103,
-  "removed": 2,
+  "date": "2026-10-30",
+  "checked": 95,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl headlines 2",
-      "sentence": "Buffalo host the Ravens in Week 8.",
-      "reason": "The data says Buffalo face the Ravens in Week 8 but does not say the game is at Buffalo, so 'host' is not supported."
+      "where": "nfl teamNews 1",
+      "sentence": "Jackson Powers-Johnson did not practise and is questionable with a back problem.",
+      "reason": "Data says Powers-Johnson is questionable with a back issue, not that he did not practise."
     },
     {
-      "where": "nfl headlines 4",
-      "sentence": "Keeping the same playcaller means no change in the offence's approach while the team searches for its first win.",
-      "reason": "The data says McDaniel will keep calling plays. It does not say the offence's approach will stay the same, so this inference goes beyond the data."
+      "where": "nfl quickHits 6",
+      "sentence": "Patriots WR A.J.",
+      "reason": "Data never gives A.J. Brown's position as wide receiver."
+    },
+    {
+      "where": "nba recaps 4",
+      "sentence": "Atlanta's Flemings and Alexander-Walker both scored 23, but the Hawks couldn't hold on in the second half.",
+      "reason": "Data does not say the Hawks couldn't hold on in the second half."
+    },
+    {
+      "where": "nba recaps 5",
+      "sentence": "Indiana were without Tyrese Haliburton and Ivica Zubac, and the close finish was the difference.",
+      "reason": "Data does not say the close finish was the difference; the causal claim goes beyond the data."
     }
   ]
 }
