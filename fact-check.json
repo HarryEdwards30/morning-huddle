@@ -1,27 +1,17 @@
 {
-  "date": "2026-10-30",
-  "checked": 95,
-  "removed": 4,
+  "date": "2026-10-31",
+  "checked": 111,
+  "removed": 2,
   "sentences": [
     {
       "where": "nfl teamNews 1",
-      "sentence": "Jackson Powers-Johnson did not practise and is questionable with a back problem.",
-      "reason": "Data says Powers-Johnson is questionable with a back issue, not that he did not practise."
+      "sentence": "Jack Bech is on injured reserve with a broken right forearm, which he suffered before Week 3 against New Orleans.",
+      "reason": "Data says Bech has been on IR since the Week 3 game against New Orleans, and he played in that span. It does not say he was injured before Week 3."
     },
     {
-      "where": "nfl quickHits 6",
-      "sentence": "Patriots WR A.J.",
-      "reason": "Data never gives A.J. Brown's position as wide receiver."
-    },
-    {
-      "where": "nba recaps 4",
-      "sentence": "Atlanta's Flemings and Alexander-Walker both scored 23, but the Hawks couldn't hold on in the second half.",
-      "reason": "Data does not say the Hawks couldn't hold on in the second half."
-    },
-    {
-      "where": "nba recaps 5",
-      "sentence": "Indiana were without Tyrese Haliburton and Ivica Zubac, and the close finish was the difference.",
-      "reason": "Data does not say the close finish was the difference; the causal claim goes beyond the data."
+      "where": "nba recaps 1",
+      "sentence": "Memphis led from the start and won 124–103 in Portland.",
+      "reason": "The data gives only the final score (124–103) and says nothing about Memphis leading from the start."
     }
   ]
 }

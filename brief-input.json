@@ -1,8 +1,7 @@
 {
-  "today": "2026-10-30",
+  "today": "2026-10-31",
   "note": "All times are UTC ISO strings unless stated. Records are wins-losses(-ties); in results they are each team's record after the game. In standings, #N is the team's current place (seed) in its conference. GB means games behind.",
   "recentContextCards": [
-    "How Exhibit 10 contracts work",
     "How bye weeks work",
     "How two-way contracts work",
     "How NFL international games work",
@@ -13,198 +12,117 @@
     "How the NBA play-in tournament works",
     "What \"designated to return\" means",
     "How NFL injury designations work",
-    "How practice squads work"
+    "How practice squads work",
+    "How the NBA Cup works"
   ],
   "nfl": {
     "stories": [
       {
         "id": "nfl-h1",
-        "title": "Jaylen Waddle: Limited Thursday",
-        "summary": "Waddle (chest) practiced in a limited capacity Thursday, Aric DiLalla of the Broncos' official site reports. Visit RotoWire.com for more analysis on this update.",
-        "outlet": "RotoWire"
+        "title": "Cardinals rookie RB Jeremiyah Love (ankle) set to return",
+        "summary": "Jeremiyah Love is expected to return to the field for the Cardinals on Sunday after missing the past two weeks with an ankle injury.",
+        "teams": [
+          "ARI"
+        ],
+        "outlet": "ESPN",
+        "detail": "TEMPE, Ariz. -- Cardinals rookie running back Jeremiyah Love is set to return to the field Sunday against the Dallas Cowboys at AT&T Stadium after missing the past two weeks with an ankle injury. Arizona coach Mike LaFleur said Friday that Love will \"be good\" to play this weekend and will not have any restrictions on what he can do. \"We're never going to put a guy out there that we don't think can obviously benefit the team, benefit, in this case, the offense,\" LaFleur said. \"So, I'll keep it at that. But he's out there for a reason and we expect him to go.\" Love said the rest was needed and that he feels \"pretty good.\" \"It helped me get back to myself,\" Love said. \"So, hopefully, I can go out there and execute.\" Love said the last two games were the first games he's missed since high school. LaFleur emphasized that the Cardinals won't play a player who's not ready, especially those who touch the football. \"If they're not dynamic within their own ability, I mean let's get the next guy up,\" LaFleur said. \"So, I mean we feel good. He feels good enough to go out there and produce and look forward to having him back out there.\" Love said his ankle injuries this season impacted him \"qu…"
       },
       {
         "id": "nfl-h2",
-        "title": "RJ Harvey: Added to injury report Thursday",
-        "summary": "Harvey (knee) was a limited participant in Thursday's practice. Visit RotoWire.com for more analysis on this update.",
-        "outlet": "RotoWire"
+        "title": "Cleveland Browns vs. Pittsburgh Steelers: Week 8 Need to Know",
+        "summary": "First place is on the line when the Browns face the Steelers on Sunday. Here is everything to know about the game.",
+        "teams": [
+          "CLE",
+          "PIT"
+        ],
+        "outlet": "Yahoo Sports",
+        "detail": "(Photo by Lauren Leigh Bacho/Getty Images) | Getty Images The Cleveland Browns hit the road again this week as they take on the Pittsburgh Steelers. It was just four weeks ago that these two teams met in Cleveland, with the Browns picking up an important divisional win. Since then, the Browns have won two of their past three games, while the Steelers have enjoyed a stretch of patsies to build a three-game winning streak. Sunday’s game is not going to be an easy one for the Browns – you may have heard that they have not won a regular-season game in Pittsburgh since 2003 – but when is anything ever easy for the guys in the orange helmets. A win on Sunday and the Browns not only maintain their hold on first place in the AFC North, but it will give them their first season sweep of the Steelers since 1988. It is the Browns vs. the Steelers in Cleveland’s house of horrors, which is appropriate for Halloween weekend. Here is everything to know about the game. go out there ready to execute @getspectrum | #DawgPound pic.twitter.com/3opTIJxJhg — Cleveland Browns (@Browns) October 29, 2026 Game Info Records: Cleveland is 5-2. Pittsburgh is 5-2. Kickoff: 1 p.m. Stadium: Acrisure Stadium, Pitt…"
       },
       {
         "id": "nfl-h3",
-        "title": "Jags' home winning streak against Indy is 'weird, quirky' and a long shot to end Sunday",
-        "summary": "— Jaguars left tackle Walker Little perfectly summed up Jacksonville's 11-game home winning streak against Indianapolis.",
-        "teams": [
-          "JAX",
-          "IND"
-        ],
-        "outlet": "ESPN",
-        "detail": "JACKSONVILLE, Fla. -- — Jaguars left tackle Walker Little perfectly summed up Jacksonville's 11-game home winning streak against Indianapolis. “It’s one of those weird, quirky stats that you see and you’re like, ‘That’s crazy,’” Little said. It has been an annual storyline surrounding this AFC South matchup for years — and might very well still be in 2027. The Jaguars (4-2), fresh off a bye week, will try to extend the streak when they host the struggling Colts (2-5) on Sunday. Indianapolis last won at EverBank Stadium in 2014 and will try to end the skid after a trying week in which the Colts traded team captain DeForest Buckner and longtime guard Quenton Nelson to start a rebuilding effort. “Regardless of circumstances, we have a job to do, and we’re excited for that challenge,” Colts coach Shane Steichen said. Indianapolis has dropped three in a row and 12 of 14 dating to last season. The Colts’ futility on the road against Jacksonville might be even more of a head-scratching slump. The 11-game slide includes a trip to London in 2016. Even in some of the Jaguars’ worst years — a one-win campaign in 2020 and a pair of three-win seasons — they managed to beat Indianapolis at home…"
+        "title": "NFL Week 8 schedule: Why you should watch these three underrated games",
+        "summary": "Here are three games you should watch that people may not be talking about",
+        "outlet": "CBS Sports"
       },
       {
         "id": "nfl-h4",
-        "title": "Aaron Jones: Logs limited practice Thursday",
-        "summary": "Jones (knee) was limited at Thursday's practice. Visit RotoWire.com for more analysis on this update.",
+        "title": "Michael Wilson: No designation for Sunday",
+        "summary": "Wilson (ribs) doesn't have a designation for Sunday's game in Dallas, Josh Weinfuss of ESPN.com reports. Visit RotoWire.com for more analysis on this update.",
         "outlet": "RotoWire"
       },
       {
         "id": "nfl-h5",
-        "title": "Falcons' Penix and Buccaneers' Mayfield aiming to help rebounding teams take control of NFC South",
-        "summary": "— Welcome to the NFC South, where inconsistency and seemingly disastrous starts to this season have not undermined the aspirations of the Atlanta Falcons and Tampa Bay Buccaneers.",
+        "title": "LOOK: Cardinals' Budda Baker addresses trade rumors while wearing Halloween costume",
+        "summary": "Baker isn't letting trade speculation spoil his Halloween spirit",
         "teams": [
-          "TB",
-          "ATL"
+          "ARI"
         ],
-        "outlet": "ESPN",
-        "detail": "TAMPA, Fla. -- — Welcome to the NFC South, where inconsistency and seemingly disastrous starts to this season have not undermined the aspirations of the Atlanta Falcons and Tampa Bay Buccaneers . After all, it is a division won by teams finishing with losing records two of the past four seasons, including a year ago when Carolina, the Falcons and Bucs all went 8-9. The Panthers by tiebreaker claimed their first title since 2015 and currently sit atop the standings again with a 3-3 record. Atlanta (3-4) and Tampa Bay (2-5) are lurking despite slow starts, with each hoping to bolster bids to take control of a wide-open race when the rivals meet Sunday. With Michael Penix Jr . at quarterback, the Falcons have won three of five following an 0-2 start that included a 31-point loss at Carolina. The third-year pro, who missed much of lase season with a knee injury, is coming off throwing for three touchdowns without an interception in a 29-20 victory over previously unbeaten San Francisco. The Bucs dropped four straight to begin the season, but are feeling better about themselves after riding a rejuvenated defense and relentless rushing attack to win two of their past three. Quarterback …"
+        "outlet": "CBS Sports"
       },
       {
         "id": "nfl-h6",
-        "title": "Jets' Brownlee says he was benched for missing meetings, but 'good' for Sunday",
-        "summary": "Jets nickelback Jarvis Brownlee Jr. was benched last Sunday because he missed multiple mandatory meetings and was fined by the team.",
-        "teams": [
-          "NYJ"
-        ],
-        "outlet": "ESPN",
-        "detail": "FLORHAM PARK, N.J. -- New York Jets nickelback Jarvis Brownlee Jr . was benched last Sunday because he missed multiple mandatory meetings and was fined by the team, he told ESPN on Thursday. Brownlee said he couldn't recall the amount of the fine, except to say he was notified in a letter from the team. He said he missed \"more than one\" meeting, adding that he understood the discipline. \"No doubt, no doubt,\" he said. \"Just accountability.\" Asked why he missed the meetings, Brownlee said, \"It was just something in-house, some things I had to get right.\" Brownlee, the Jets' starting nickel, was inactive for the New York's 28-25 loss to the Miami Dolphins . He was replaced by rookie D'Angelo Ponds . Coach Aaron Glenn declined to say why he benched Brownlee, adding that he wanted to keep the reason \"in-house.\" Brownlee said he's \"good\" for this week. From indications, he will be active Sunday when the Jets (2-5) host the Las Vegas Raiders (3-4). The Jets acquired Brownlee from the Tennessee Titans early in the 2025 season. The Jets traded a 2026 sixth-round pick for Brownlee and a 2026 seventh-round pick. Brownlee, a 2024 fifth-round pick by Tennessee, has appeared in 13 games for the…"
-      },
-      {
-        "id": "nfl-h7",
-        "title": "Cowboys look for rare winning streak under Brian Schottenheimer in visit from Cardinals",
-        "summary": "— Sustainability is the next challenge for the Dallas Cowboys, who have just one winning streak in nearly a season and a half under coach Brian Schottenheimer.",
-        "teams": [
-          "DAL",
-          "ARI"
-        ],
-        "outlet": "ESPN",
-        "detail": "ARLINGTON, Texas -- — Sustainability is the next challenge for the Dallas Cowboys , who have just one winning streak in nearly a season and a half under coach Brian Schottenheimer. Dallas (3-4) begins a stretch of four home games in five weeks with a visit from Arizona on Sunday after a 38-21 road division win against two-time defending NFC East champion Philadelphia. As strange as it sounds, the Cowboys did what they should have against the Eagles. Philadelphia's offense is decimated by injuries, and the beleaguered Dallas defense still needed three quarters to figure out how to get stops. The Cowboys had the second-worst rushing offense in the NFL before Javonte Williams went for a career-high 155 yards rushing among the team's 204. A two-week rut ended for one of the league's best offenses, with season highs in yards and points. Now Dallas has to do it again. “It’s a business where you have to be consistent with your execution, with your performance,” said Schottenheimer, whose only winning streak was a three-game run last season. “And I think we've been lacking that at times. Another good week, another opponent coming in there with a lot of challenges that they’re going to pre…"
-      },
-      {
-        "id": "nfl-h8",
-        "title": "NFL fines Caleb Williams $23,882 for \"unauthorized logo\" on shoes in Week 7",
-        "summary": "NFL doubles the fine amount from Week 6; Williams has said he won't back down.",
-        "outlet": "ProFootballTalk",
-        "detail": "{\"unknownError\":\"There has been an error\",\"expiredError\":\"This video has been expired due to copyright restrictions.\",\"unavailableError\":\"This content is not yet available.\",\"georestrictedError\":\"This content is not available in your location.\",\"networkId\":\"169843\",\"adManagerUrl\":\"https://mssl.fwmrm.net/libs/adm/6.51.0/AdManager.js\",\"serverId\":\"https://29773.v.fwmrm.net/ad/g/1\",\"profileId\":\"169843:nbcu_web_jwp_cs_moat_https\",\"afid\":\"140315314\",\"caid\":\"nbcs_nbc_pftpm_bearsside_261029\",\"csid\":\"nbcsports_embed_on_domain\",\"sfid\":\"\",\"adHocGroup\":\"\",\"athlete\":\"\",\"businessUnit\":\"NBC Sports\",\"category\":\"\",\"duration\":\"450216\",\"event\":\"\",\"externalAdvertiserId\":\"nbcs_nbc_pftpm_bearsside_261029\",\"genre\":\"News\",\"guid\":\"nbc_pftpm_bearsside_261029\",\"league\":\"NFL\",\"network\":\"\",\"platform\":\"PC\",\"playlist\":\"\",\"show\":\"PFT PM\",\"sport\":\"Football\",\"subtype\":\"\",\"team\":\"Chicago Bears\",\"title\": \"Florio: Bears deal with Hammond, IN was a 'ruse'\",\"datePublished\":\"\",\"videoPageUrl\": \"https://www.nbcsports.com/watch/nfl/profootballtalk/pft-pm/chicago-bears-reportedly-close-to-a-deal-to-stay-in-illinois\",\"availableDate\":\"2026-10-29T20:05:20Z\",\"expirationDate\":\"\",\"countries\":\"\"} As to Caleb Williams, the NFL curr…"
-      },
-      {
-        "id": "nfl-h9",
-        "title": "George Pickens: Limited again Thursday",
-        "summary": "Pickens (shoulder/hamstring) was a limited participant at Thursday's practice, Jon Machota of The Athletic reports. Visit RotoWire.com for more analysis on this update.",
+        "title": "George Pickens: Questionable for Sunday",
+        "summary": "Pickens (shoulder/hamstring) is listed as questionable for Sunday's game against the Cardinals, Patrik Walker of the Cowboys' official site reports. Visit RotoWire.com for more analysis on this update.",
         "outlet": "RotoWire"
       },
       {
-        "id": "nfl-h10",
-        "title": "Cowboys add OG Tyler Smith, TE Luke Schoonmaker to their injury report",
-        "summary": "The Cowboys added two players to their injury report and opened the 21-day practice window for defensive tackle Jonathan Bullard (calf).",
+        "id": "nfl-h7",
+        "title": "Jeremiyah Love will play against Dallas Cowboys",
+        "summary": "Arizona Cardinals Jeremiyah Love to make his return against Cowboys from injury.",
         "teams": [
           "DAL"
         ],
         "outlet": "Yahoo Sports",
-        "detail": "The Cowboys added two players to their injury report and opened the 21-day practice window for defensive tackle Jonathan Bullard (calf). Bullard was a full participant. Left guard Tyler Smith (ankle) was also a full participant. He was not on Wednesday's injury report. Tight end Luke Schoonmaker (groin) also wasn't on the injury report Wednesday. He was a non-participant Thursday. The rest of the Cowboys' report remained the same. Cowboys defensive back Caleb Downs (ankle), wide receiver George Pickens (shoulder/hamstring) and defensive tackle Quinnen Williams were limited participants again Thursday. Pickens played only 41 of 68 offensive snaps on Monday night, while Downs was in on 56 of 66 defensive snaps and Williams on 38. Offensive tackle Drew Shelton (hamstring) was the team’s other limited player. Wide receiver KaVontae Turpin (ribs) and linebacker Dee Winters (calf) remained out of practice. Outside linebacker Marist Liufau (forearm) and safety P.J. Locke (foot) both appear ready to return. They are in their 21-day return-to-practice windows."
+        "detail": "Arizona Cardinals running back Jeremiyah Love (4) runs with the ball in the second quarter, Sunday, October 4, 2026, in East Rutherford. | USA TODAY Network via Reuters Co Maybe it is finally going to happen. The Arizona Cardinals third overall pick, running back Jeremiyah Love, will get a chance to show up and show out on Sunday in his return from an ankle injury. Jeremiyah Love is good to go on Sunday for the Arizona Cardinals, per Mike LaFleur pic.twitter.com/6ZZotrYJFu — Bo Brack (@BoBrack) October 30, 2026 This is huge because the Arizona Cardinals need to focus their offense around the rushing attack, especially going up against what has statistically been the worst rushing defense in the NFL, where the Dallas Cowboys have already allowed over 1000 yards on the season. On top of that, the Cowboys allow an average of 4.7 yards per carry, and the Cardinals as a team average a paltry 3.7 yards per carry and Love himself is right at that average. This could be the breakout game we have been hoping for, but it’ll be tough even against a bad Cowboys rush defense with their fourth string right guard, and potentially a fifth string right guard if projected starter Hayden Conner has …"
       },
       {
-        "id": "nfl-h11",
-        "title": "Ja'Marr Chase returns to practice as a full participant",
-        "summary": "The Bengals got one of their key players back at practice on Thursday.",
-        "outlet": "ProFootballTalk"
-      },
-      {
-        "id": "nfl-h12",
-        "title": "Brock Bowers: Full practice Thursday",
-        "summary": "Bowers (calf) was a full practice participant Thursday. Visit RotoWire.com for more analysis on this update.",
+        "id": "nfl-h8",
+        "title": "Jeremiyah Love: Ready to return in Week 8",
+        "summary": "Love (ankle) doesn't have a designation for Sunday's game at Dallas, Josh Weinfuss of ESPN.com reports. Visit RotoWire.com for more analysis on this update.",
         "outlet": "RotoWire"
       },
       {
-        "id": "nfl-h13",
-        "title": "Longtime football coach June Jones, pioneer of run-and-shoot offense, dies at 73",
-        "summary": "Longtime college and pro football coach June Jones, who helped popularize the run-and-shoot offense, has died at 73.",
+        "id": "nfl-h9",
+        "title": "Cowboys injuries: KaVontae Turpin, Dee Winters ruled out",
+        "summary": "Here is Friday's injury report for the Dallas Cowboys.",
         "teams": [
-          "ATL"
-        ],
-        "outlet": "ESPN"
-      },
-      {
-        "id": "nfl-h14",
-        "title": "Seahawks rookie RB Jadarian Price returns to practice",
-        "summary": "Seahawks rookie running back Jadarian Price is nearing a return.",
-        "teams": [
-          "SEA"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nfl-h15",
-        "title": "Stampede Blue Reacts results (Week 8): Colts fan confidence plummets amid roster overhaul",
-        "summary": "Fan confidence drops sharply as the Colts continue losing and trade away two of their biggest stars.",
-        "teams": [
-          "IND"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nfl-h16",
-        "title": "TreVeyon Henderson did not practice Thursday due to an illness",
-        "summary": "Aside from A.J.",
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nfl-h17",
-        "title": "Patriots vs. Dolphins Thursday injury report: TreVeyon Henderson, A.J. Brown sidelined",
-        "summary": "The second injury report heading into Week 8 in Miami Gardens.",
-        "teams": [
-          "MIA",
-          "NE"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nfl-h18",
-        "title": "Packers elevate Arron Mosby from the practice squad",
-        "summary": "The Packers elevated edge rusher Arron Mosby from the practice squad to the active roster, the team announced Thursday.",
-        "teams": [
-          "GB"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nfl-h19",
-        "title": "2026 NFL trade deadline updates: Jeffery Simmons, Quenton Nelson on the move",
-        "summary": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including a blockbuster sending Jeffery Simmons to Chicago.",
-        "teams": [
-          "MIN",
-          "NYG",
           "DAL"
         ],
-        "outlet": "ESPN"
+        "outlet": "Yahoo Sports",
+        "detail": "Photo by Michael Owens/Getty Images | Getty Images If the Cowboys have any hope of being serious contenders in the NFC East, they need to be more consistent. The Arizona Cardinals are a team the Cowboys are supposed to beat. It’s partially due to the talent gap between Dallas and Arizona, but also because of the injuries that have been sustained by both teams. Here’s what we know after Dallas’ final injury report of the week. 🔑 #Cowboys final injury report vs. Cardinals: pic.twitter.com/Jg580M0abR — Patrik [No C] Walker (@VoiceOfTheStar) October 30, 2026 After not practicing all week, the team has ruled Dee Winters (Calf) out for this week. Also not playing this week will be KaVontae Turpin (Ribs). Turpin worked off the side but never did enough to resume team activities. Marist Liufau (Forearm) and Jonathan Bullard (Calf) were full participants Friday, but the team has not made a decision on whether either will be activated this week and listed them as questionable. Also questionable is Luke Schoonmaker (Groin) who did not practice the past two days. Safety P.J. Locke (Foot) also has a chance to play this week after practicing all week. For the Cardinals, Carson Beck (Back) was …"
       },
       {
-        "id": "nfl-h20",
-        "title": "Lamar Jackson has another full practice on Thursday",
-        "summary": "Accurate predictions about whether Ravens quarterback Lamar Jackson will return to action from an ankle injury have been tough to come by in recent weeks, but it's looking a lot like this will be the week.",
+        "id": "nfl-h10",
+        "title": "Eagles' Saquon Barkley carries no injury designation for Commanders matchup",
+        "summary": "Saquon Barkley, who did not practice Wednesday or Thursday and was a limited participant Friday, carries no designation into Sunday's game.",
+        "teams": [
+          "PHI"
+        ],
+        "outlet": "ESPN",
+        "detail": "PHILADELPHIA -- Eagles running back Saquon Barkley appears in line to play Sunday night against the host Washington Commanders . Barkley did not practice Wednesday or Thursday and was a limited participant Friday, but he carries no designation into the game. He entered Week 7 against the visiting Dallas Cowboys with a hamstring injury and had his back lock up on him over the course of Monday's game, forcing him to miss a portion of the second half. He played nine snaps and got the ball every time he was on the field, totaling 71 yards and a touchdown. \"I would hope so; I believe I'll be able to,\" Barkley said when asked after Friday's practice if he thinks he'll play against Washington. \"There's one day I'm not going to be playing football. Whenever that is, I don't want to look back and be like, 'I could have given it a chance and I didn't.' It's kind of what I live by. I'm going to try my best to just keep recovering, being smart, but I like playing football, so if I have an opportunity to play, I'm going to try my best to play.\" With running backs Tank Bigsby , Will Shipley , Dameon Pierce and Carson Steele all on injured reserve, Jaydon Blue and Elijah Mitchell are the Eagles'…"
+      },
+      {
+        "id": "nfl-h11",
+        "title": "Cowboys list Kenny Clark, George Pickens as questionable",
+        "summary": "The Cowboys added defensive tackle Kenny Clark to the injury report on Friday.",
+        "teams": [
+          "DAL"
+        ],
         "outlet": "Yahoo Sports"
       },
       {
-        "id": "nfl-h21",
-        "title": "Patriots' A.J. Brown misses practice Thursday due to new knee ailment",
-        "summary": "The Patriots' A.J. Brown missed his first practice since returning from IR, with a new knee ailment in addition to his previously injured ankle.",
+        "id": "nfl-h12",
+        "title": "Budda Baker fields trade rumor questions in costume",
+        "summary": "Budda Baker fields trade rumor questions in costume",
         "teams": [
-          "NE"
+          "ARI"
         ],
         "outlet": "ESPN"
       },
       {
-        "id": "nfl-h22",
-        "title": "Seahawks' dominant defense faces challenge in Bears QB Caleb Williams and NFL's top rushing offense",
-        "summary": "Now it's Chicago's turn to face Seattle's “Dark Side.”",
-        "teams": [
-          "SEA",
-          "CHI"
-        ],
-        "outlet": "ESPN"
-      },
-      {
-        "id": "nfl-h23",
-        "title": "Chiefs-Broncos Week 8 Thursday injury report: Mansoor Delane misses",
-        "summary": "The latest injury news for the Week 8 game between Kansas City and Denver.",
+        "id": "nfl-h13",
+        "title": "Jaylen Waddle questionable, RJ Harvey ruled out for Broncos-Chiefs",
+        "summary": "At this point, it's still unclear whether or not the Broncos will have receiver Jaylen Waddle for Sunday's game against the Chiefs.",
         "teams": [
           "DEN",
           "KC"
@@ -212,77 +130,154 @@
         "outlet": "Yahoo Sports"
       },
       {
-        "id": "nfl-h24",
-        "title": "Minnesota Vikings News and Links: Does Being Undefeated Make You Happy?",
-        "summary": "I am bewildered as to why so many people (writers, bloggers, podcasters, fans, etc) are down on the Vikings mainly because the offense is failing to score enough points for their liking. I contend that the Vikings are actually doing an excellent job running their offense especially considering the …",
+        "id": "nfl-h14",
+        "title": "Jaylen Waddle questionable, RJ Harvey ruled out for Broncos-Chiefsharvey",
+        "summary": "At this point, it’s still unclear whether or not the Broncos will have receiver Jaylen Waddle for Sunday’s game against the Chiefs.",
         "teams": [
-          "MIN"
+          "DEN"
+        ],
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nfl-h15",
+        "title": "5 Bills to focus on vs. Ravens",
+        "summary": "After a week to recharge, the Bills face a perennial AFC contender on Sunday",
+        "teams": [
+          "BAL",
+          "BUF"
+        ],
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nfl-h16",
+        "title": "With 10 games left and Ejiro Evero out, what's next for Panthers' defense?",
+        "summary": "Here are three reasons for optimism as Carolina makes a defensive coordinator change to Todd Wash.",
+        "teams": [
+          "CAR"
+        ],
+        "outlet": "ESPN"
+      },
+      {
+        "id": "nfl-h17",
+        "title": "Panthers relieve Ejiro Evero of defensive coordinator duties",
+        "summary": "The Carolina Panthers are moving on from defensive coordinator Ejiro Evero, the team announced Friday, with defensive line coach Todd Wash taking over on an interim basis.",
+        "teams": [
+          "CAR"
+        ],
+        "outlet": "ESPN"
+      },
+      {
+        "id": "nfl-h18",
+        "title": "RJ Harvey: Ruled out for Sunday's game",
+        "summary": "Harvey (knee) has been ruled out for Sunday's game against the Chiefs, Chris Tomasson of the Denver Gazette reports. Visit RotoWire.com for more analysis on this update.",
+        "outlet": "RotoWire"
+      },
+      {
+        "id": "nfl-h19",
+        "title": "Commanders add DT Daron Payne to injury report as questionable",
+        "summary": "The Commanders had already ruled out defensive tackle Javon Kinlaw (knee).",
+        "teams": [
+          "WSH"
+        ],
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nfl-h20",
+        "title": "Eagles-Commanders Final Injury Report: Saquon Barkley WILL play",
+        "summary": "Week 8 game status updates.",
+        "teams": [
+          "PHI",
+          "WSH"
+        ],
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nfl-h21",
+        "title": "Brock Bowers will be available for Week 8",
+        "summary": "Raiders TE Brock Bowers was a full participant in the last two practices and is set to play",
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nfl-h22",
+        "title": "Ladd McConkey: Will play Sunday",
+        "summary": "McConkey (concussion) is off the injury report and will play in Sunday's game against the Rams, Noah Furtado of The Athletic reports. Visit RotoWire.com for more analysis on this update.",
+        "outlet": "RotoWire"
+      },
+      {
+        "id": "nfl-h23",
+        "title": "Rams list Trent McDuffie, Coleman Shelton as questionable",
+        "summary": "The Rams didn't rule anyone out on their final injury report of the week, but they're not sure they'll have cornerback Trent McDuffie against the Chargers on Sunday.",
+        "teams": [
+          "LAR"
+        ],
+        "outlet": "ProFootballTalk"
+      },
+      {
+        "id": "nfl-h24",
+        "title": "Ladd McConkey set to play, Derwin James out vs. Rams",
+        "summary": "The Chargers will have two of their key receivers for Sunday's game against the Rams.",
+        "teams": [
+          "LAR"
         ],
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nfl-h25",
-        "title": "Toub: Butker still Chiefs' kicker despite struggles, Tucker signing",
-        "summary": "Chiefs special teams coordinator Dave Toub expressed rather emphatically that Harrison Butker is the team's kicker despite the team signing Justin Tucker, who hasn't played in the NFL since 2024, to their practice squad.",
+        "title": "Patriots vs. Dolphins Friday injury report: A.J. Brown among New England’s questionable for Week 8",
+        "summary": "Game designations for Week 8 at Hard Rock Stadium.",
         "teams": [
-          "KC"
+          "MIA",
+          "NE"
         ],
-        "outlet": "ESPN"
+        "outlet": "Yahoo Sports"
       },
       {
         "id": "nfl-h26",
-        "title": "Panthers place CB Akayleb Evans on injured reserve",
-        "summary": "The Panthers placed cornerback Akayleb Evans on injured reserve, the team announced.",
-        "teams": [
-          "CAR"
-        ],
+        "title": "Jeffery Simmons says calling Caleb Williams \"Painted Nails\" was \"just smack talk\"",
+        "summary": "New Bears defensive tackle Jeffery Simmons said his nickname for Caleb Williams two years ago was nothing more than gamesmanship.",
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nfl-h27",
-        "title": "Kyle Monangai again listed as non-participant on Thursday",
-        "summary": "Bears running back Kyle Monangai remains sidelined as Chicago begins its practice week for the Monday night match with Seattle.",
+        "title": "Dolphins claim DE Jamree Kromah off waivers",
+        "summary": "The Dolphins made a roster change a couple of days before their Week 8 game against the Patriots.",
+        "teams": [
+          "MIA"
+        ],
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nfl-h28",
-        "title": "Reacts Results: Oh we of little faith",
-        "summary": "What do the Panthers have to do to earn a little credit? How about start by producing consistent results.",
+        "title": "Commanders vs. Eagles injury report: Washington could be without two key defensive linemen",
+        "summary": "The Commanders official injury report is out heading into Sunday’s game against the Philadelphia Eagle",
+        "teams": [
+          "PHI",
+          "WSH"
+        ],
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nfl-h29",
-        "title": "Kyle Monangai does not practice Thursday",
-        "summary": "Bears RB Kyle Monangai still sidelined leading up to the Week 8 game",
+        "title": "Hot Take Friday: Super Bears, Super Bowl",
+        "summary": "With the arrival of Jeffery Simmons, the Chicago Bears can win the Super Bowl. Embrace it, Bears fans.",
+        "teams": [
+          "CHI"
+        ],
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nfl-h30",
-        "title": "David Bailey misses second straight practice, Braelon Allen up to full participation",
-        "summary": "The Jets practiced without first-round pick David Bailey for the second straight day on Thursday.",
+        "title": "Titans rule out WR Carnell Tate, RB Tyjae Spears, P Tommy Townsend",
+        "summary": "The Titans ruled out rookie wide receiver Carnell Tate (shoulder) for Sunday's game against the Bengals.",
+        "teams": [
+          "TEN"
+        ],
         "outlet": "Yahoo Sports"
       }
     ],
     "teamStories": [
       {
         "id": "nfl-tm1",
-        "title": "Raiders injury news: Jackson Powers-Johnson doesn’t practice",
-        "teams": [
-          "LV"
-        ],
-        "outlet": "Silver And Black Pride"
-      },
-      {
-        "id": "nfl-tm2",
-        "title": "Jets shrug off Ashton Jeanty's tackling criticism ahead of Sunday's game vs. Raiders",
-        "teams": [
-          "LV",
-          "NYJ"
-        ],
-        "outlet": "The Washington Post"
-      },
-      {
-        "id": "nfl-tm3",
         "title": "Jets-Raiders Game Preview | How Slim the Margins Are",
         "teams": [
           "LV",
@@ -291,18 +286,91 @@
         "outlet": "New York Jets"
       },
       {
+        "id": "nfl-tm2",
+        "title": "Raiders Coaches Deliver Blunt Assessment of the Team",
+        "teams": [
+          "LV"
+        ],
+        "outlet": "Sports Illustrated"
+      },
+      {
+        "id": "nfl-tm3",
+        "title": "Raiders Injury Report Opens Critical Question Ahead of Jets Clash",
+        "teams": [
+          "LV",
+          "NYJ"
+        ],
+        "outlet": "Sports Illustrated"
+      },
+      {
         "id": "nfl-tm4",
-        "title": "Defensive collapse, offensive impotence leading to Raiders’ freefall",
-        "summary": "Growing pains were expected with rookie coaches Klint Kubiak and Rob Leonard, but the 4-game skid shows how bad it is",
+        "title": "Jack Bech’s status for Week 8 against New York Jets unclear on Las Vegas Raiders’ final injury report",
+        "summary": "Update on a few notable Jets as well",
+        "teams": [
+          "LV",
+          "NYJ"
+        ],
+        "outlet": "Yahoo Sports",
+        "detail": "(Photo by Harry How/Getty Images) | Getty Images The Las Vegas Raiders opened Jack Bech’s 21-day practice window ahead of the Week 8 matchup against the New York Jets . However, Bech’s game status is still unclear after the Raiders released the final injury report for the week and head coach Klint Kubiak held his Friday press conference. #Raiders final injury report for the week: WR Jack Bech is questionable to play. The team will unlikely face #Jets rookie edge David Bailey. pic.twitter.com/ECGBgSGIfi — Ryan McFadden (@ryanmcfadden_) October 30, 2026 Bech, who has been on injured reserve with a broken right forearm since the Week 3 game against the New Orleans Saints, is listed as questionable for Sunday’s game. Kubiak was asked if the wide receiver will be activated before the team’s trek to the Big Apple, but the coach said they have until Saturday to make that decision, according to The Athletic’s Sam Warren . The 2025 second-round pick had five catches for 48 yards and a touchdown in the three games he played to begin the season, while also serving as a notable run blocker on the perimeter. If Bech can’t play, then recently activated wide receiver Dont’e Thornton Jr. could se…"
+      },
+      {
+        "id": "nfl-tm5",
+        "title": "The Raiders have already decided on the price they will ask from teams interested in Maxx Crosby",
+        "teams": [
+          "LV"
+        ],
+        "outlet": "MARCA"
+      },
+      {
+        "id": "nfl-tm6",
+        "title": "Jets' David Bailey doubtful, Breece Hall questionable for Week 8 meeting with Raiders",
+        "summary": "It looks like the Jets will be shorthanded for their Week 8 meeting with the Raiders.",
+        "teams": [
+          "LV",
+          "NYJ"
+        ],
+        "outlet": "Yahoo Sports",
+        "detail": "It looks like the Jets will be shorthanded for their Week 8 meeting with the Raiders. Defensive lineman T'Vondre Sweat missed Friday's practice and has already been ruled out due to the knee injury he suffered last weekend against the Dolphins. Rookie pass rusher David Bailey sat out his third straight practice session as well with a lingering groin issue, and he's being listed as doubtful heading into the weekend. If he ends up sidelined, it'll be the first missed contest of his career. Star running back Breece Hall appears to be heading in the same direction, having logged three straight limited practices; the team is calling him questionable, as they did last weekend before he was ruled out. One positive for Gang Green is that OL Dylan Parham was able to put together his first full practice of the week, so he appears to be trending towards playing, despite dealing with a knee issue."
+      },
+      {
+        "id": "nfl-tm7",
+        "title": "Raiders G Jackson Powers-Johnson is questionable for Sunday",
+        "summary": "The Raiders aren't sure if they'll have one of their starting offensive linemen for Sunday's game against the Jets.",
         "teams": [
           "LV"
         ],
         "outlet": "Yahoo Sports",
-        "detail": "(Photo by Candice Ward/Getty Images) | Getty Images The game of football is decided in the trenches — more often than not. And the Las Vegas Raiders are habitually losing that battle. And, as a result, the team is in a four-game freefall and are 3-4 overall after a torrid 3-0 start to the 2026 season. The Silver & Black’s most recent outing — a 35-21 shellacking at the hands of the visiting Los Angeles Rams this past Sunday — where the team was outgained on the ground 199 yards to 48 yards, was the latest example of the ineffectiveness in the trenches. The Rams battered the Raiders at the line of scrimmage — offensively and defensively — sprinting to a 28-6 lead at halftime and the deficit threw everything into disarray for Las Vegas head coach Klint Kubiak and his coaching staff. The lack of production in the ground game reeked of not only ineffectiveness but also coaching ineptitude and the reeling Rams used the Raiders as a get-right game showcasing the balanced offensive attack and aggressive defense that Kubiak wants from his football team. “Yeah, well, we’re not going to run the ball until we stop the run. Until you make the game competitive,” Kubiak plainly said on Monday w…"
+        "detail": "The Raiders aren't sure if they'll have one of their starting offensive linemen for Sunday's game against the Jets. Right guard Jackson Powers-Johnson has been listed as questionable because of a back injury. Powers-Johnson was added to the report after he missed practice on Thursday and he returned for a limited practice on Friday. Defensive end Patrick Johnson (stinger) has been ruled out for this weekend and the Raiders announced that they will not activate tight end Carter Runyon (foot) from injured reserve. Wide receiver Jack Bech (forearm) is also on injured reserve and he is listed as questionable to make his return to the lineup. Tight end Brock Bowers (calf), defensive lineman Foley Fatukasi (shoulder), offensive tackle DJ Glaze (ankle), tight end Ian Thomas (shoulder), linebacker Quay Walker (chest), and cornerback Eric Stokes (illness) are all off the injury report."
       },
       {
-        "id": "nfl-tm5",
-        "title": "Raiders-Jets Week 8 Injury Report",
+        "id": "nfl-tm8",
+        "title": "New York Jets Defense May Miss David Bailey, T'Vondre Sweat Against Las Vegas Raiders",
+        "teams": [
+          "LV",
+          "NYJ"
+        ],
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nfl-tm9",
+        "title": "Will Raiders’ Wide Receivers Jack Bech or Dont’e Thornton Play This Week?",
+        "teams": [
+          "LV"
+        ],
+        "outlet": "Athlon Sports"
+      },
+      {
+        "id": "nfl-tm10",
+        "title": "Raiders final Week 8 injury report vs Jets: WR Jack Bech could return",
+        "teams": [
+          "LV",
+          "NYJ"
+        ],
+        "outlet": "Central Oregon Daily"
+      },
+      {
+        "id": "nfl-tm11",
+        "title": "Raiders-Jets Week 8 Injury Report: Patrick Johnson ruled out, Jackson Powers-Johnson and Jack Bech questionable for Sunday",
         "summary": "Take a look at the Raiders' injury report as the team prepares to face the New York Jets.",
         "teams": [
           "LV",
@@ -311,16 +379,26 @@
         "outlet": "Raiders.com"
       },
       {
-        "id": "nfl-tm6",
-        "title": "Raiders named potential fits for two wide receivers at trade deadline",
+        "id": "nfl-tm12",
+        "title": "Raiders RB Ashton Jeanty comment serves up 'bulletin board material' for Jets",
         "teams": [
-          "LV"
+          "LV",
+          "NYJ"
         ],
         "outlet": "Central Oregon Daily"
       },
       {
-        "id": "nfl-tm7",
-        "title": "Raiders' Cooper can make history against the Jets",
+        "id": "nfl-tm13",
+        "title": "New York Jets and Las Vegas Raiders Celebrate the 58th Anniversary of the Game That Changed TV",
+        "teams": [
+          "LV",
+          "NYJ"
+        ],
+        "outlet": "Athlon Sports"
+      },
+      {
+        "id": "nfl-tm14",
+        "title": "NFL Week 8 Preview: Raiders vs. Jets",
         "teams": [
           "LV",
           "NYJ"
@@ -328,96 +406,43 @@
         "outlet": "NBC Sports"
       },
       {
-        "id": "nfl-tm8",
-        "title": "Raiders’ latest offensive line shakeup points to first start for promising rookie",
-        "teams": [
-          "LV"
-        ],
-        "outlet": "New York Post"
-      },
-      {
-        "id": "nfl-tm9",
-        "title": "Patriots unsuccessfully tried to claim ex-Raiders defensive tackle, per report",
-        "summary": "The Patriots were trying to bolster their defensive line.",
-        "teams": [
-          "LV",
-          "NE"
-        ],
-        "outlet": "Yahoo Sports",
-        "detail": "The New England Patriots attempted to add to their defensive line this week, but ultimately failed to do so. One of six teams to put in a waiver claim on former Las Vegas Raiders defender Jonah Laulu, they were undone by their record being superior to that of the other five potential claimants. Besides the Patriots, the Tennessee Titans, Miami Dolphins, Houston Texans, Indianapolis Colts and New York Jets also tried to bring Laulu on board, according to a report by NFL insider Jordan Schultz. The 1-5 Titans were awarded the 26-year-old on Wednesday. Laulu entered the league as a seventh-round draft pick by the Colts in 2024 but was waived after his rookie training camp. He ended up with the Raiders as a waiver claim, and since then played 39 games with 22 starts for Las Vegas. Along the way, he registered 5.5 combined sacks — including 0.5 in five games this season. However, Las Vegas’ new coaching staff under Klint Kubiak did not view him as an integral part of the team’s defensive rotation. After playing 68% of defensive snaps in 2025, he was on the field for only 23% so far this year. His release earlier this week did not come as a particular surprise. For the Patriots, the mov…"
-      },
-      {
-        "id": "nfl-tm10",
-        "title": "Raiders Might Have Made a Mistake on Jonah Laulu, Based on the Response of 6 Teams",
-        "teams": [
-          "LV"
-        ],
-        "outlet": "Raiders Beat"
-      },
-      {
-        "id": "nfl-tm11",
-        "title": "No role handed to Dont'e Thornton for Raiders, has to 'beat somebody out'",
-        "teams": [
-          "LV"
-        ],
-        "outlet": "Elko Daily Free Press"
-      },
-      {
-        "id": "nfl-tm12",
-        "title": "Emerging rookie Omar Cooper Jr. will test Taron Johnson in slot for Las Vegas Raiders-New York Jets Week 8 key matchups",
-        "summary": "Fernando Mendoza’s college teammate has been on a tear since returning from injury two weeks ago",
-        "teams": [
-          "LV",
-          "NYJ"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nfl-tm13",
-        "title": "RAIDERS SQUAD SHOW: Las Vegas RAIDERS vs New York JETS PREVIEW, Donte THORNTON JR activated off IR",
-        "teams": [
-          "LV",
-          "NYJ"
-        ],
-        "outlet": "Central Oregon Daily"
-      },
-      {
-        "id": "nfl-tm14",
-        "title": "Raiders' run game issues may be what's keeping Fernando Mendoza on the bench",
-        "teams": [
-          "LV"
-        ],
-        "outlet": "Just Blog Baby"
-      },
-      {
         "id": "nfl-tm15",
-        "title": "Raiders veteran CB among best in NFL in yards allowed per coverage snap",
+        "title": "Raiders coach Klint Kubiak previews Sunday’s game against Jets",
+        "summary": "Las Vegas Raiders coach Klint Kubiak spoke to the media at Intermountain Health Performance Center ahead of Sunday’s game against the New York Jets.",
         "teams": [
-          "LV"
+          "LV",
+          "NYJ"
         ],
-        "outlet": "Central Oregon Daily"
+        "outlet": "Las Vegas Review-Journal"
       },
       {
         "id": "nfl-tm16",
-        "title": "Raiders Lead Running Back Is Lagging Behind League Average",
+        "title": "JETS get hit with HUGE injury news AHEAD of Raiders GAME!",
         "teams": [
-          "LV"
+          "LV",
+          "NYJ"
         ],
-        "outlet": "Yahoo Sports"
+        "outlet": "kiiitv.com"
       },
       {
         "id": "nfl-tm17",
-        "title": "Raiders and Jets will try to stop struggles and quiet some outside noise when they square off Sunday",
-        "summary": "— Las Vegas Raiders fans are getting restless, while New York Jets fans are fully frustrated.",
+        "title": "Raiders should consider Jim Schwartz next offseason if Rob Leonard can't rally",
         "teams": [
-          "NYJ",
           "LV"
         ],
-        "outlet": "ESPN"
+        "outlet": "Just Blog Baby"
       },
       {
         "id": "nfl-tm18",
-        "title": "The Stats Look Good but Geno Smith Still Struggles With Pressure 😳 #genosmith #raiders #jets #nfl",
+        "title": "Potential Rob Leonard Replacement Emerges if Raiders Defense Keeps Struggling",
+        "teams": [
+          "LV"
+        ],
+        "outlet": "Heavy.com"
+      },
+      {
+        "id": "nfl-tm19",
+        "title": "Jets sack leader Doubtful Week 8 vs Raiders",
         "teams": [
           "LV",
           "NYJ"
@@ -425,25 +450,44 @@
         "outlet": "Central Oregon Daily"
       },
       {
-        "id": "nfl-tm19",
-        "title": "Raiders' Quay Walker has turned back into who Packers fans warned us about",
-        "teams": [
-          "GB",
-          "LV"
-        ],
-        "outlet": "Just Blog Baby"
-      },
-      {
         "id": "nfl-tm20",
-        "title": "Geno Smith Stats vs. Raiders: Career Stats & Game Logs",
+        "title": "Why Raiders should be 'slight' favorites vs. Jets",
         "teams": [
-          "LV"
+          "LV",
+          "NYJ"
         ],
-        "outlet": "sports.betmgm.com"
+        "outlet": "NBC Sports"
       }
     ],
-    "results": [],
-    "standoutCandidates": [],
+    "results": [
+      {
+        "id": "nfl-r1",
+        "game": "Panthers (3-4) 19 at Packers (5-3) 27",
+        "status": "Final",
+        "note": "Week 8",
+        "date": "2026-10-30T00:15Z",
+        "notable": true,
+        "flags": [
+          "one-score game"
+        ],
+        "keyPlayers": [
+          "Bryce Young (CAR): 23/41, 209 yds, 1 TD, 1 INT",
+          "Chuba Hubbard (CAR): 22 car, 81 yds, 1 TD",
+          "Tetairoa McMillan (CAR): 6 rec, 58 yds",
+          "Zakee Wheatley (CAR): 1 INT, 7 tkl",
+          "Jordan Love (GB): 30/41, 288 yds, 3 TD, 1 INT",
+          "Josh Jacobs (GB): 21 car, 39 yds, 1 TD",
+          "Christian Watson (GB): 8 rec, 113 yds",
+          "Ty'Ron Hopper (GB): 1 sack, 1 INT, 8 tkl"
+        ]
+      }
+    ],
+    "standoutCandidates": [
+      {
+        "id": "nfl-sp1",
+        "line": "Jordan Love (GB): 30/41, 288 yds, 3 TD, 1 INT, W 27–19 vs Panthers"
+      }
+    ],
     "recapGuide": "Recap every game.",
     "standings": [
       {
@@ -468,11 +512,11 @@
       },
       {
         "group": "NFC North",
-        "teams": "#1 MIN 6-0 W6, #5 CHI 5-2 W2, #6 DET 4-2 W2, #7 GB 4-3 L1"
+        "teams": "#1 MIN 6-0 W6, #5 CHI 5-2 W2, #6 DET 4-2 W2, #7 GB 5-3 W1"
       },
       {
         "group": "NFC South",
-        "teams": "#4 CAR 3-3 L1, #9 ATL 3-4 W1, #12 TB 2-5 W1, #13 NO 2-5 L1"
+        "teams": "#9 ATL 3-4 W1, #4 CAR 3-4 L2, #12 TB 2-5 W1, #13 NO 2-5 L1"
       },
       {
         "group": "NFC West",
@@ -487,8 +531,8 @@
       },
       {
         "conference": "NFC",
-        "seeds": "1. MIN 6–0, 2. SF 6–1, 3. NYG 4–2–1, 4. CAR 3–3, 5. CHI 5–2, 6. DET 4–2, 7. GB 4–3",
-        "outside": "SEA 4–3 (– GB), ATL 3–4 (1.0 GB), LAR 3–4 (1.0 GB)"
+        "seeds": "1. MIN 6–0, 2. SF 6–1, 3. NYG 4–2–1, 4. CAR 3–4, 5. CHI 5–2, 6. DET 4–2, 7. GB 5–3",
+        "outside": "SEA 4–3 (0.5 GB), ATL 3–4 (1.5 GB), LAR 3–4 (1.5 GB)"
       }
     ],
     "hotAndCold": {
@@ -507,108 +551,108 @@
     "majorInjuries": [
       {
         "id": "nfl-i1",
-        "player": "Akayleb Evans",
-        "team": "CAR",
+        "player": "Dee Winters",
+        "team": "DAL",
         "status": "Out",
-        "injury": "Triceps"
+        "injury": "Calf (strain)"
       },
       {
         "id": "nfl-i2",
+        "player": "KaVontae Turpin",
+        "team": "DAL",
+        "status": "Out",
+        "injury": "Ribs"
+      },
+      {
+        "id": "nfl-i3",
+        "player": "RJ Harvey",
+        "team": "DEN",
+        "status": "Out",
+        "injury": "Knee"
+      },
+      {
+        "id": "nfl-i4",
         "player": "Kerby Joseph",
         "team": "DET",
         "status": "Out",
         "injury": "Knee"
       },
       {
-        "id": "nfl-i3",
-        "player": "Micah Parsons",
-        "team": "GB",
-        "status": "Out",
-        "injury": "Left knee - acl (surgery)"
-      },
-      {
-        "id": "nfl-i4",
-        "player": "Jadarian Price",
-        "team": "SEA",
-        "status": "Out",
-        "injury": "Chest"
-      },
-      {
         "id": "nfl-i5",
-        "player": "Lamar Jackson",
-        "team": "BAL",
-        "status": "Questionable",
-        "injury": "Left ankle (sprain)"
+        "player": "Antonio Johnson",
+        "team": "JAX",
+        "status": "Out",
+        "injury": "Ankle"
       },
       {
         "id": "nfl-i6",
-        "player": "Kyle Monangai",
-        "team": "CHI",
-        "status": "Questionable",
-        "injury": "Thumb (sprain)"
+        "player": "Jack Bech",
+        "team": "LV",
+        "status": "Out",
+        "injury": "Right forearm (fracture)"
       },
       {
         "id": "nfl-i7",
-        "player": "Tytus Howard",
-        "team": "CLE",
-        "status": "Questionable",
-        "injury": "Concussion"
+        "player": "T'Vondre Sweat",
+        "team": "NYJ",
+        "status": "Out",
+        "injury": "Knee"
       },
       {
         "id": "nfl-i8",
-        "player": "Jared Verse",
-        "team": "CLE",
-        "status": "Questionable",
-        "injury": "Knee (inflammation)"
+        "player": "DeVonta Smith",
+        "team": "PHI",
+        "status": "Out",
+        "injury": "Hamstring"
       }
     ],
     "transactions": [
       {
         "id": "nfl-t1",
-        "type": "Trade",
-        "text": "Chicago Bears: Acquired DT Jeffery Simmons and a 2028 fifth-round draft pick from Tennessee in exchange for a 2027 first and fourth-round draft pick and a 2028 first-round draft pick. Released DE Jamree Kromah."
+        "type": "Signing",
+        "text": "Tennessee Titans: Signed DT Timmy Horne to the active roster. Signed LB Dominique Hampton to the practice squad."
       },
       {
         "id": "nfl-t2",
-        "type": "Move",
-        "text": "Dallas Cowboys: Designated DT Jonathan Bullard to return from injured reserve."
+        "type": "Signing",
+        "text": "Indianapolis Colts: Signed DT Kevin Givens to the active roster."
       },
       {
         "id": "nfl-t3",
         "type": "Signing",
-        "text": "Tennessee Titans: Signed DT Timmy Horne to the practice squad. Released LB Mohamoud Diabate from the practice squad."
+        "text": "Miami Dolphins: Signed G DJ Campbell to the practice squad. Released T Gottlieb Ayedze from the practice squad. Claimed EDGE Jamree Kromah off waivers from Chicago. Waived EDGE Rob Beal Jr."
       },
       {
         "id": "nfl-t4",
+        "type": "Trade",
+        "text": "Chicago Bears: Acquired DT Jeffery Simmons and a 2028 fifth-round draft pick from Tennessee in exchange for a 2027 first and fourth-round draft pick and a 2028 first-round draft pick. Released DE Jamree Kromah."
+      },
+      {
+        "id": "nfl-t5",
+        "type": "Move",
+        "text": "Dallas Cowboys: Designated DT Jonathan Bullard to return from injured reserve."
+      },
+      {
+        "id": "nfl-t6",
+        "type": "Signing",
+        "text": "Tennessee Titans: Signed DT Timmy Horne to the practice squad. Released LB Mohamoud Diabate from the practice squad."
+      },
+      {
+        "id": "nfl-t7",
         "type": "Signing",
         "text": "Indianapolis Colts: Signed OT Charlie Heck to the active roster. Signed G Joshua Gray to the practice squad. Released LB Germaine Pratt from the practice squad."
       },
       {
-        "id": "nfl-t5",
+        "id": "nfl-t8",
         "type": "Release",
         "text": "New Orleans Saints: Released DB David Long from injured reserve."
-      },
-      {
-        "id": "nfl-t6",
-        "type": "Injured reserve",
-        "text": "Carolina Panthers: Placed CB Akayleb Evans on injured reserve. Signed CB Malcolm DeWalt IV to the active roster."
-      },
-      {
-        "id": "nfl-t7",
-        "type": "Move",
-        "text": "Buffalo Bills: Designated WR Tyrell Shavers to return from the physically unable to perform list."
-      },
-      {
-        "id": "nfl-t8",
-        "type": "Signing",
-        "text": "Cleveland Browns: Signed TE Carsen Ryan to the practice squad."
       }
     ],
     "statLeaders": [
       {
         "id": "nfl-l1",
         "category": "Passing Yards",
-        "leaders": "Matthew Stafford (LAR) 1989; Jordan Love (GB) 1958; Kirk Cousins (LV) 1877; C.J. Stroud (HOU) 1867; Dak Prescott (DAL) 1851"
+        "leaders": "Jordan Love (GB) 2246; Matthew Stafford (LAR) 1989; Bryce Young (CAR) 1921; Kirk Cousins (LV) 1877; C.J. Stroud (HOU) 1867"
       },
       {
         "id": "nfl-l2",
@@ -618,12 +662,12 @@
       {
         "id": "nfl-l3",
         "category": "Receiving Yards",
-        "leaders": "Jaxon Smith-Njigba (SEA) 867; CeeDee Lamb (DAL) 651; Chris Olave (NO) 636; Drake London (ATL) 616; Zay Flowers (BAL) 608"
+        "leaders": "Jaxon Smith-Njigba (SEA) 867; Christian Watson (GB) 708; CeeDee Lamb (DAL) 651; Chris Olave (NO) 636; Matthew Golden (GB) 619"
       },
       {
         "id": "nfl-l4",
         "category": "Total Tackles",
-        "leaders": "Alex Singleton (DEN) 87; Fred Warner (SF) 72; Ernest Jones IV (SEA) 68; Nakobe Dean (LV) 68; Anthony Hill Jr. (TEN) 68"
+        "leaders": "Alex Singleton (DEN) 87; Fred Warner (SF) 72; Evan Williams (GB) 71; Ernest Jones IV (SEA) 68; Nakobe Dean (LV) 68"
       },
       {
         "id": "nfl-l5",
@@ -633,7 +677,7 @@
       {
         "id": "nfl-l6",
         "category": "Kickoff Yards",
-        "leaders": "Tyler Bass (BUF) 2502; Jason Myers (SEA) 2454; Chase McLaughlin (TB) 2451; Eddy Pineiro (SF) 2375; Ka'imi Fairbairn (HOU) 2328"
+        "leaders": "Tyler Bass (BUF) 2502; Ryan Fitzgerald (CAR) 2469; Jason Myers (SEA) 2454; Chase McLaughlin (TB) 2451; Eddy Pineiro (SF) 2375"
       },
       {
         "id": "nfl-l7",
@@ -643,115 +687,190 @@
       {
         "id": "nfl-l8",
         "category": "Passing Touchdowns",
-        "leaders": "Kirk Cousins (LV) 16; Joe Burrow (CIN) 15; Brock Purdy (SF) 15; Matthew Stafford (LAR) 14; Jared Goff (DET) 14"
+        "leaders": "Kirk Cousins (LV) 16; Jordan Love (GB) 16; Joe Burrow (CIN) 15; Brock Purdy (SF) 15; Matthew Stafford (LAR) 14"
       }
     ],
-    "targetWords": 580
+    "targetWords": 690
   },
   "nba": {
     "stories": [
       {
         "id": "nba-h1",
+        "title": "Dejounte Murray: Absent from injury report",
+        "summary": "Murray (personal) is off the injury report for Saturday's game against the Hawks. Visit RotoWire.com for more analysis on this update.",
+        "outlet": "RotoWire"
+      },
+      {
+        "id": "nba-h2",
         "title": "Get Your Latest NBA News From RealGM's Basketball Wiretap",
         "summary": "Get all the latest news and happenings from around the NBA with RealGM's Basketball Wiretap.",
         "outlet": "RealGM"
       },
       {
-        "id": "nba-h2",
-        "title": "Aaron Nesmith: Expected to play Friday",
-        "summary": "Nesmith (hamstring) is probable for Friday's game against the Heat. Visit RotoWire.com for more analysis on this update.",
-        "outlet": "RotoWire"
-      },
-      {
         "id": "nba-h3",
-        "title": "Andrew Nembhard: Probable for Friday",
-        "summary": "Nembhard (neck) is listed as probable for Friday's game against Miami. Visit RotoWire.com for more analysis on this update.",
+        "title": "Jaylon Tyson: Ruled out for Saturday",
+        "summary": "Tyson (ankle) has been ruled out for Saturday's game against the Bucks. Visit RotoWire.com for more analysis on this update.",
         "outlet": "RotoWire"
       },
       {
         "id": "nba-h4",
-        "title": "Ivica Zubac: Still out with ankle sprain",
-        "summary": "Zubac (ankle) is out for Friday's game against the Heat. Visit RotoWire.com for more analysis on this update.",
-        "outlet": "RotoWire"
+        "title": "Is Ziaire Williams playing vs. Warriors tonight? Injury update on Lakers wing",
+        "summary": "Lakers starter Ziare Williams has been day-to-day with left foot soreness and will miss his second consecutive game.",
+        "teams": [
+          "GS",
+          "LAL"
+        ],
+        "outlet": "Yahoo Sports",
+        "detail": "The Los Angeles Lakers will be without one of their key role players in Friday night's NBA Cup opener against the Golden State Warriors . Ziaire Williams is out for the second consecutive game with a left foot injury, the team announced Friday, Oct. 30. He's considered day-to-day and was questionable after missing the 103-87 win over the Los Angeles Clippers on Wednesday, Oct. 28 before having his status downgraded. Head coach JJ Redick told reporters before that game that both Williams and Luka Dončić woke up sore after Tuesday's loss to the Portland Trailblazers and that the team preferred to be cautious on the second night of a back-to-back with a stretch of five games in the next seven days ahead of them. Dončić is not on the injury report and is expected to play against Golden State Friday night. NBA CUP EXPLAINED: 2026 schedule, format, groups and more Williams is hampered by the same foot injury that limited him throughout the preseason, though the 25-year-old wing has thrived in a starting role this year. He is averaging 11.3 points on 57.1% shooting and 46.7% from 3-point range, providing spacing and athleticism alongside the core of Dončić, Austin Reaves and Walker Kessl…"
       },
       {
         "id": "nba-h5",
-        "title": "Reed Sheppard: Ruled out for Friday",
-        "summary": "Sheppard (back) is out for Friday's game against the Mavericks. Visit RotoWire.com for more analysis on this update.",
+        "title": "Gui Santos: Now questionable",
+        "summary": "Santos (knee) is questionable for Friday's game against the Lakers. Visit RotoWire.com for more analysis on this update.",
         "outlet": "RotoWire"
       },
       {
         "id": "nba-h6",
-        "title": "Alperen Sengun: Questionable for Friday",
-        "summary": "Sengun (back) is questionable for Friday's game against the Mavericks. Visit RotoWire.com for more analysis on this update.",
-        "outlet": "RotoWire"
+        "title": "Ja Morant out at least 4 weeks with hamstring strain suffered against Grizzlies",
+        "summary": "Trail Blazers guard Ja Morant sustained a left hamstring strain in his first game against the Grizzlies, his former team, and will be out at least four weeks.",
+        "teams": [
+          "POR",
+          "MEM"
+        ],
+        "outlet": "ESPN",
+        "detail": "Portland Trail Blazers guard Ja Morant has sustained a Grade 2 left hamstring strain and will be out at least four weeks before being reevaluated, the team announced Friday. Morant suffered the injury while playing in his first game against his former team, the Memphis Grizzlies , on Thursday night. He exited in the fourth quarter and did not return. Coach Micah Nori said postgame that Morant felt a twinge in his hamstring before leaving the game. The setback comes amid a promising start for Morant and the Trail Blazers, who are 3-1 entering Friday. The four-week timeline means that Morant will miss at least the next 15 games. The Trail Blazers begin a four-game road trip against the Utah Jazz on Saturday. Morant, who was acquired by Portland in a surprising offseason trade, has joined Damian Lillard in a star-studded backcourt that has delivered the NBA's No. 3 offense through Thursday. Morant, a two-time All-Star, scored a season-high 23 points in a victory over the Los Angeles Lakers on Tuesday. He has averaged 15.8 points and 5.5 assists over his first four games with the Trail Blazers. In Morant's absence, Nori will likely lean more heavily on backup guards Jrue Holiday and S…"
       },
       {
         "id": "nba-h7",
-        "title": "Knicks to decline Pacome Dadiet's fourth-year option",
-        "summary": "The Knicks are set to decline Pacome Dadiet's fourth-year option, making the former first-round pick an unrestricted free agent in June.",
-        "teams": [
-          "NY"
-        ],
-        "outlet": "Yahoo Sports",
-        "detail": "The Knicks are planning to decline former first-round pick Pacome Dadiet 's fourth-year option, SNY's NBA Insider Ian Begley confirms. New York's move will make Dadiet an unrestricted free agent next June and create salary space heading into the 2027-28 season. Dadiet, who was selected 25th overall in the 2024 NBA Draft, has been unable to carve out playing time with the Knicks since he arrived. The French national appeared in 18 games his rookie season, where he averaged 1.7 points on 32 percent shooting. He averaged the same amount of points on 33 percent shooting across 29 games last season. This season, the 21-year-old has appeared in one game, grabbing one board in his one minute on the court."
+        "title": "Karl-Anthony Towns: Likely to play Friday",
+        "summary": "Towns (wrist) is listed as probable for Friday's game against Philadelphia. Visit RotoWire.com for more analysis on this update.",
+        "outlet": "RotoWire"
       },
       {
         "id": "nba-h8",
-        "title": "LeBron James looked all 41 years of his life on these highlight plays",
-        "summary": "LeBron James was on the wrong end of a crossover and chasedown block to finally look old",
-        "outlet": "Yahoo Sports",
-        "detail": "LeBron James is essentially outlasting every elite athlete in the history of sports by playing his 24th season for the Philadelphia 76ers this year. James turns 42 years old in Dec., and if he fulfills the second year of his contract next season, he will have played 10 more seasons than Michael Jordan. James’ peak wasn’t as high as MJ’s by most models , but he’s trying to win the GOAT debate on longevity, and he’s certainly made it a worthwhile discussion. Father Time doesn’t lose, and that’s even the case against a freak of nature like LeBron. James showed some signs of age on Wednesday night as his 76ers needed a big fourth quarter comeback just to get by the Indiana Pacers without Tyrese Haliburton and Ivica Zubac. James was solid in the win with 13 points, 10 assists, five rebounds, and three stocks, but he was also on the wrong end of two highlight plays that the internet is still talking about a day later. Early in the second quarter, James was speeding down the court for what should have been a fastbreak dunk. Instead, Indiana’s Jalen Slawson, who is only on a two-way contract, beat him to the rim for the chasedown block. He did a LeBron to LeBron! Watch the play here: JALE…"
+        "title": "Jaylen Brown: Downgraded to doubtful",
+        "summary": "Brown (knee) is doubtful for Friday's game against the Knicks. Visit RotoWire.com for more analysis on this update.",
+        "outlet": "RotoWire"
       },
       {
         "id": "nba-h9",
-        "title": "Timberwolves' Anthony Edwards undergoes successful knee scope",
-        "summary": "Timberwolves star Anthony Edwards underwent a \"successful\" arthroscopic procedure on his ailing right knee at the Mayo Clinic on Thursday, the team announced.",
+        "title": "Ja Morant injury: Trail Blazers star expected to miss at least four weeks with hamstring strain",
+        "summary": "Another day, another notable injury in the NBA -- and this time, Morant is expected to miss at least a month",
         "teams": [
-          "MIN"
+          "POR"
         ],
-        "outlet": "ESPN",
-        "detail": "Timberwolves star Anthony Edwards underwent a \"successful\" arthroscopic procedure on his ailing right knee at the Mayo Clinic in Rochester, Minnesota, on Thursday, the team announced. Edwards had a debridement procedure performed on his knee, which is a minimally invasive measure used to clean, smooth or remove damaged cartilage, bone spurs or loose joint fragments from the knee joint to relieve pain and improve mobility, according to the Mayo Clinic. The team's statement said Edwards is expected to make a full recovery but did not denote a time frame for his potential return. Sources told ESPN's Shams Charania that Edwards could be sidelined up to two months . Speaking before Wednesday night's loss to the Warriors, Timberwolves president of basketball operations Tim Connelly said he expects Edwards to be \"good as new\" when he eventually returns to game action . Edwards, 25, has been bothered by right knee pain since last spring and was limited to a career-low 61 games last season. He was seen grabbing his knee and grimacing at one point during Sunday's home opener against the Toronto Raptors . Even after being listed as questionable to play Monday, Edwards scored 47 points in an …"
+        "outlet": "CBS Sports"
       },
       {
         "id": "nba-h10",
-        "title": "Blazers Exercise 2027-28 Options On Donovan Clingan, Yang Hansen",
-        "summary": "The Portland Trail Blazers have picked up their 2027-28 team options on centers Donovan Clingan and Yang Hansen. Clingan, now in his third season, has appeared in 147 games with 117 starts for Portland. Clingan holds career averages of 9.5 points, 9.8 rebounds and 1.7 blocks in 23.7 minutes. Clinga…",
-        "outlet": "RealGM"
+        "title": "Source: Fever hires Blazers' Sheri Sam as assistant GM",
+        "summary": "Sheri Sam, who was the scouting manager for the Trail Blazers, has been hired as assistant general manager of the WNBA's Fever, a source told ESPN.",
+        "teams": [
+          "CLE",
+          "POR"
+        ],
+        "outlet": "ESPN",
+        "detail": "The Indiana Fever have hired Sheri Sam as assistant general manager, a source confirmed to ESPN on Friday. Sam joins the Fever from the Portland Trail Blazers , where she had held the position of scouting manager since 2022. She played 10 years in the WNBA and won championships in Seattle (2004) and Detroit (2008). Her responsibilities with the Trail Blazers included collegiate and professional player scouting and evaluation. The Fever had planned to invest in their scouting and analytics efforts, and the addition of Sam was one step in that direction. Indiana remains without a team president and general manager after Kelly Krauskopf stepped down and Amber Cox was fired last week. The Fever lost to the Las Vegas Aces in the first round of the playoffs after finishing with a 28-16 regular-season record and earning the No. 6 seed for the third consecutive season. Sam's hiring was first reported by the Indy Star."
       },
       {
         "id": "nba-h11",
-        "title": "Kyrie Irving, Mavericks Aligned On Future Despite Strong Trade Interest",
-        "summary": "Kyrie Irving would command a robust trade market if the Dallas Mavericks made him available, sources told ESPN. For now, Irving and team president Masai Ujiri have both signaled a shared commitment to building alongside Cooper Flagg. Ujiri said the front office believes Irving can thrive in the new…",
+        "title": "Portland's Ja Morant to miss at least a month with left hamstring strain",
+        "summary": "This throws cold water on one of the best stories of the early season, the Trail Blazers offense.",
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nba-h12",
+        "title": "Rockets Exercise $14M Option For 27-28 On Reed Sheppard",
+        "summary": "The Houston Rockets have exercised their $14.0 million fourth-year option for the 2027-28 season on Reed Sheppard. The Rockets selected Sheppard with the third overall pick in the 2024 NBA draft. Sheppard has appeared in four games this season with the Rockets, averaging 10.5 points, 2.8 rebounds a…",
         "teams": [
-          "DAL"
+          "HOU"
         ],
         "outlet": "RealGM"
       },
       {
-        "id": "nba-h12",
-        "title": "Collin Sexton complimented Jarred Vanderbilt’s professionalism, leadership",
-        "summary": "The veteran forward helped key a win for the undermanned Lakers on Wednesday",
-        "outlet": "Yahoo Sports"
-      },
-      {
         "id": "nba-h13",
-        "title": "“Yak is our starter,” but here’s what Rajaković’s centre rotation might look like",
-        "summary": "While Poeltl’s starting job seems safe, Trayce Jackson-Davis’ heroics might have earned him a bigger opportunity to come",
+        "title": "Trail Blazers' Ja Morant out at least four weeks with hamstring injury",
+        "summary": "Portland Trail Blazers guard Ja Morant will miss at least four weeks, adding to the list of NBA stars who have gotten injured already this season.",
+        "teams": [
+          "POR"
+        ],
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nba-h14",
-        "title": "Blake Wesley, Clippers Agree To 10-Day Contract",
-        "summary": "Blake Wesley and the Los Angeles Clippers have agreed to a 10-day contract via an injury hardship exception. Wesley appeared in 31 games last season with the Portland Trail Blazers, averaging 4.8 points, 1.3 rebounds and 2.0 assists in 11.6 minutes. Wesley appeared in three preseason games with the…",
+        "title": "Ochai Agbaji, Thunder Agree To Contract",
+        "summary": "Ochai Agbaji has agreed to sign with the Oklahoma City Thunder. The Thunder had an open roster spot and a major need on the wing following injuries to Jalen Williams and Cason Wallace last Sunday. Agbaji was waived by the New York Knicks at the end of preseason. In 62 games last season with the Tor…",
         "teams": [
-          "LAC"
+          "OKC"
         ],
         "outlet": "RealGM"
       },
       {
         "id": "nba-h15",
-        "title": "Boston Celtics Daily Links 10/29/26",
+        "title": "No, Josh Kushner is not struggling to find money to buy the Lakers",
+        "summary": "Despite reports to the contrary, Josh Kushner isn’t having issues finding investors to buy stakes in the Lakers",
+        "teams": [
+          "LAL"
+        ],
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nba-h16",
+        "title": "Josh Kushner, Bob Iger Selling Lakers Minority Stakes Starting At $250M",
+        "summary": "Josh Kushner and Bob Iger are offering minority stakes in the Los Angeles Lakers starting at $250 million each. The pair are building out their ownership group after agreeing to buy the team at a record $12.5 billion valuation. Kushner and Iger have been selling stakes for between $250 million and …",
+        "teams": [
+          "LAL"
+        ],
+        "outlet": "RealGM"
+      },
+      {
+        "id": "nba-h17",
+        "title": "Ja Morant Out At Least Four Weeks With Grade 2 Left Hamstring Strain",
+        "summary": "Ja Morant has been diagnosed with a grade 2 left hamstring strain and will be reevaluated in four weeks. Morant suffered the injury in the fourth quarter of the Portland Trail Blazers' 124-103 loss to the Memphis Grizzlies. Morant is averaging 15.8 points, 2.5 rebounds and 5.5 assists in 25.9 minut…",
+        "outlet": "RealGM"
+      },
+      {
+        "id": "nba-h18",
+        "title": "NBA buzz: Latest on trades, news, roster moves and intel",
+        "summary": "The NBA is back. The buzz never left. Bookmark this page for the latest news, rumblings and analysis from ESPN's insiders.",
+        "outlet": "ESPN"
+      },
+      {
+        "id": "nba-h19",
+        "title": "Heat unveil updated Dwyane Wade statue after original's face was panned",
+        "summary": "Dwyane Wade has a new face -- on his statue.",
+        "teams": [
+          "MIA"
+        ],
+        "outlet": "ESPN"
+      },
+      {
+        "id": "nba-h20",
+        "title": "The Credits: The Empire Strikes Back",
+        "summary": "A slew of injuries to key players and a couple of 5-0 starts headline this week in the NBA",
+        "outlet": "Yahoo Sports"
+      },
+      {
+        "id": "nba-h21",
+        "title": "Why Yaxel Lendeborg could be the key to saving what's left of the Warriors' Stephen Curry era",
+        "summary": "The Warriors have been wrong about a lot, but they appear to have been absolutely right about the No. 11 pick in June's draft",
+        "teams": [
+          "GS"
+        ],
+        "outlet": "CBS Sports"
+      },
+      {
+        "id": "nba-h22",
+        "title": "Sources: Thunder signing Agbaji to fill roster after Williams, Wallace injuries",
+        "summary": "The Thunder are signing forward Ochai Agbaji to fill their open roster spot in the wake of major injuries suffered to starting wings Jalen Williams and Cason Wallace, sources told ESPN's Shams Charania.",
+        "teams": [
+          "OKC"
+        ],
+        "outlet": "ESPN"
+      },
+      {
+        "id": "nba-h23",
+        "title": "Boston Celtics Daily Links 10/30/26",
         "summary": "All the Celtics news you need in one convenient place.",
         "teams": [
           "BOS"
@@ -759,163 +878,99 @@
         "outlet": "Yahoo Sports"
       },
       {
-        "id": "nba-h16",
-        "title": "Hawks First Week Recap: Positives and negatives",
-        "summary": "Observations from the first week of play.",
-        "teams": [
-          "ATL"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h17",
-        "title": "Miami finally wins, Cooper Flagg’s rise, impact rookies & league-wide injury woes with Steve Jones",
-        "summary": "Kevin O'Connor and Steve Jones react to the latest NBA news including the Heat finally getting a win, AJ Dybantsa's debut and more.",
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h18",
-        "title": "JJ Redick was pleased with the bench’s performance in win over Clippers",
-        "summary": "A trio of Lakers reserves stepped up in a big way Wednesday night",
-        "teams": [
-          "LAC"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h19",
-        "title": "How the NBA’s injury onslaught could help—and hurt—the Sixers",
-        "summary": "The Sixers could bank some early-season wins thanks to injuries around the NBA, but those injuries could lead to some long-term financial consequences.",
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h20",
-        "title": "Praying for the healthy Knicks as we approach Día de Muertos",
-        "summary": "The injury bug is bitting hard early in the NBA season. Somehow, the Knicks keep escaping Santa Muerte.",
-        "teams": [
-          "NY"
-        ],
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h21",
-        "title": "‘He’s putting it all together ’: Evan Mobley’s leap could be upon us",
-        "summary": "Mobley is knocking down three-pointers at a career-high rate.",
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h22",
-        "title": "NBA's biggest surprises, most concerning starts and best teams of the early season",
-        "summary": "Our writers share their takeaways from the first week-plus and power-rank the five best teams so far.",
-        "outlet": "Yahoo Sports"
-      },
-      {
-        "id": "nba-h23",
-        "title": "Dunc'd On: Steph's 44; AJ Debuts; NYK @ CHI; NBA Cup Outlook",
-        "summary": "Nate and Danny break down Stephen Curry's 44-point night in Minnesota, AJ Dybantsa's NBA debut against Cleveland, and the Knicks' comeback in Chicago. They also discuss what Anthony Edwards' injury means for the Wolves, Cooper Flagg's strong start and Dallas' decision on Zaccharie Risacher, the lat…",
-        "outlet": "RealGM"
-      },
-      {
         "id": "nba-h24",
-        "title": "Clippers host sparks online war over whether she farted live on air — decide for yourself",
-        "summary": "A viral clip of Los Angeles Clippers in-arena host Hannah Cormier's hot mic mishap during the Lakers game is sparking controversy.",
-        "teams": [
-          "LAC"
-        ],
+        "title": "Jarred Vanderbilt showed why he should get more playing time",
+        "summary": "After being buried on the bench to start the year, Vando’s minutes vs. the Clippers should earn him more chances.",
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nba-h25",
-        "title": "Jaylen Brown takes the high road in response to debunked trade demand rumor",
-        "summary": "Jaylen Brown said his piece about the Jayson Tatum video. Now, he’s ready to move on.",
-        "outlet": "Yahoo Sports"
+        "title": "Dwyane Wade's statue gets a facelift: Heat legend's bronze likeness updated with new face",
+        "summary": "'I hope when people see it now, they see a better likeness of me,' Wade said on Friday",
+        "teams": [
+          "MIA"
+        ],
+        "outlet": "CBS Sports"
       },
       {
         "id": "nba-h26",
-        "title": "Knicks Bulletin: ‘Sugar’",
-        "summary": "All of a sudden, the Knicks look scary. Who would have thought after they won the championship four months ago lost three in a row!? Here’s the latest as the guys rest up for their NBA Cup title-defending debut on Friday. Mike Brown On why Mo Diawara and Pacome Dadiet haven’t played this season: “I…",
+        "title": "NBA's 'unprecedented' early season injury crisis has players and coaches searching for answers",
+        "summary": "Less than two weeks into the 2026-27 NBA season, a large handful of star players have already sustained notable injuries",
+        "outlet": "CBS Sports"
+      },
+      {
+        "id": "nba-h27",
+        "title": "Grizzlies & Blazers Impress Early, Trick or Treat + 2026 WNBA Finals Game 6 Takeaways",
+        "summary": "Nekias Duncan and Steve Jones review NBA teams' starts to the regular season and recap Game 6 of the WNBA Finals.",
         "teams": [
-          "NY"
+          "MEM"
         ],
         "outlet": "Yahoo Sports"
       },
       {
-        "id": "nba-h27",
-        "title": "Nikola Jokic records 200th career triple-double in Nuggets' win over Pelicans",
-        "summary": "Denver's Nikola Jokic had 21 points, 13 rebounds and 10 assists for his 200th career triple-double Wednesday night as the Nuggets beat the Pelicans. He needs 10 more to supplant the retired Russell Westbrook as the NBA leader.",
-        "teams": [
-          "DEN"
-        ],
-        "outlet": "ESPN"
-      },
-      {
         "id": "nba-h28",
-        "title": "'A true professional': Jarred Vanderbilt leads Lakers' bench unit against Clippers",
-        "summary": "Jarred Vanderbilt starred in his bench role in the Lakers' 103-87 win over the Clippers at Intuit Dome. The offensive numbers are unremarkable. The impact was undeniable.",
+        "title": "Yahoo Perfect 5: Building around Luka Dončić, Joel Embiid and two Warriors' value plays for Friday's slate",
+        "summary": "Dan Titus takes you through who he's picking for his Perfect 5 lineup for Friday's Prime doubleheader.",
         "teams": [
-          "LAC",
-          "LAL"
+          "GS"
         ],
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nba-h29",
-        "title": "Jaylen Brown insists he never demanded Celtics trade, pushes back on 'false allegations' from Brian Scalabrine",
-        "summary": "The now-76ers star denied giving Boston a list of ultimatums or a trade demand this summer",
-        "teams": [
-          "BOS"
-        ],
-        "outlet": "CBS Sports"
+        "title": "Kam Williams is nearing a return from injury but unlikely to play in Kentucky vs. Manhattan",
+        "summary": "Kentucky is slowly approaching full health with the regular season on deck.",
+        "outlet": "Yahoo Sports"
       },
       {
         "id": "nba-h30",
-        "title": "The reinvention of Zaccharie Risacher and his quiet eye",
-        "summary": "New Dallas Mavericks coach Dusty May’s approach is helping Zaccharie Risacher understand his role and his talent.",
+        "title": "Game Preview #6: Wolves vs. Clippers Game Thread",
+        "summary": "The Timberwolves kick off their NBA Cup run with a “get right” game against the Clippers.",
+        "teams": [
+          "LAC"
+        ],
         "outlet": "Yahoo Sports"
       }
     ],
     "teamStories": [
       {
         "id": "nba-tm1",
-        "title": "Debunk or double down? Judging 10 early-season NBA overreactions",
-        "summary": "A 29-year-old is the NBA's next breakout star. Miami's Giannis era is already cooked. And so are the Thunder, Knicks and Warriors. Which overreactions are valid?",
+        "title": "Spurs Rookie Gets Baptized After NBA Debut: ‘Newness of Life’",
         "teams": [
-          "SAS",
-          "CHA",
-          "CHI"
+          "SAS"
         ],
-        "outlet": "ESPN",
-        "detail": "Welcome to the final days of October, featuring falling leaves, early sunsets, Halloween decorations illuminating the night -- and the yearly pastime of overreacting to the first week of a new NBA season . After all, small sample size theatre has provided early gems such as: The sky is falling in Oklahoma City , New York and Miami ! The three-guard experiment in San Antonio needs to go! Charlotte is already better without LaMelo Ball ! Ty Jerome ? Ty Jerome! With those early storylines and more in mind, let's examine 10 popular overreactions to the young 2026-27 season -- and determine which have staying power. ( Note: stats through Tuesday's games .) The Miami Heat will finish with their worst record since 2008. Zach Kram: Not an overreaction For reference, 2007-08 was the last time the Heat finished with fewer than 37 wins, the season that they tanked down the stretch to go 15-67 in a futile attempt to land Derrick Rose in the draft. Merely by the law of averages, the 2026-27 Heat are bound to improve. They've had the seventh-worst shooting luck on offense, according to GeniusIQ tracking, and the second-worst shooting luck on defense. Miami is actually forcing teams into tough s…"
+        "outlet": "Movieguide"
       },
       {
         "id": "nba-tm2",
-        "title": "Toronto Raptors vs San Antonio Spurs Dec 3, 2026 Game Summary",
+        "title": "Spurs Jazz Basketball",
         "teams": [
           "SAS",
-          "TOR"
+          "UTAH"
         ],
-        "outlet": "NBA.com"
+        "outlet": "Idaho State Journal"
       },
       {
         "id": "nba-tm3",
-        "title": "Spurs' Harris reaches benchmark, still no timetable in recovery from calf injury",
+        "title": "Why injured Timberwolves star Anthony Edwards has the Spurs' sympathies",
         "teams": [
+          "MIN",
           "SAS"
         ],
         "outlet": "San Antonio Express-News"
       },
       {
         "id": "nba-tm4",
-        "title": "Victor Wembanyama on 60 Minutes: Spurs star explains why 'villain' label didn't bother him during NBA Finals",
-        "summary": "The full 60 Minutes interview with Wembanyama will air this Sunday (Nov. 1) on CBS",
+        "title": "Thunder at Spurs",
         "teams": [
+          "OKC",
           "SAS"
         ],
-        "outlet": "CBS Sports"
+        "outlet": "NBC Sports"
       },
       {
         "id": "nba-tm5",
-        "title": "Spurs' Mitch Johnson admits to loss of poise at critical point Wednesday night",
+        "title": "Spurs star Victor Wembyanyama joined elite company with big game in Utah",
         "teams": [
           "SAS"
         ],
@@ -923,35 +978,31 @@
       },
       {
         "id": "nba-tm6",
-        "title": "How Devin Vassell's 'extremely mature performance' helped save Spurs in Utah",
+        "title": "Spurs Favored to Win NBA Cup",
         "teams": [
           "SAS"
         ],
-        "outlet": "San Antonio Express-News"
+        "outlet": "Heavy.com"
       },
       {
         "id": "nba-tm7",
-        "title": "What we learned from the Spurs win over the Jazz",
-        "summary": "Point guards and parables",
+        "title": "Asked what the Spurs star would bring to his playbook …",
         "teams": [
-          "SAS",
-          "UTAH"
+          "SAS"
         ],
-        "outlet": "Yahoo Sports",
-        "detail": "SALT LAKE CITY, UTAH - OCTOBER 28: De'aaron Fox #4 of the San Antonio Spurs drives past Josh Green #5 of the Utah Jazz during the second half of a game at Delta Center on October 28, 2026 in Salt Lake City, Utah. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting to the terms and conditions of the Getty Images License Agreement. (Photo by Alex Goodlett/Getty Images) | Getty Images “Are they going to put Wemby back in?” It was an excellent question, and one that I had myself. It was, in a way, the question of the season so far when it comes to a Spurs team that has scuffled quite a bit coming out of the gate. The starting unit, forced into a new configuration by the ascension of the prodigious Dylan Harper, has looked disjointed and seems to do its scoring in fits and starts. The bench, on the other hand, seems almost lost — unmoored without the steady hand of the rookie who led it for most of last season. The one player holding everything together has been, somewhat predictably, Wembanyama, and the better part of almost every game has seemed to hinge on his presence and the antigravity of his occasional absenc…"
+        "outlet": "Yahoo Sports"
       },
       {
         "id": "nba-tm8",
-        "title": "Why Utah Jazz Controversially Benched Darryn Peterson in OT vs. Spurs",
+        "title": "The Spurs' surprisingly good scoring attack makes Tobias Harris addition more exciting",
         "teams": [
-          "SAS",
-          "UTAH"
+          "SAS"
         ],
-        "outlet": "Sports Illustrated"
+        "outlet": "Air Alamo"
       },
       {
         "id": "nba-tm9",
-        "title": "Coach, teammates defend Spurs center Luke Kornet in face of subpar numbers",
+        "title": "Spurs icon Tim Duncan spotted waiting in San Antonio voting line for midterms",
         "teams": [
           "SAS"
         ],
@@ -959,399 +1010,281 @@
       },
       {
         "id": "nba-tm10",
-        "title": "Spurs' elite depth gets them ahead of NBA's early-season injury bug",
-        "teams": [
-          "SAS"
-        ],
-        "outlet": "Air Alamo"
-      },
-      {
-        "id": "nba-tm11",
-        "title": "Victor Wembanyama Finally Returned to Form for Spurs",
+        "title": "Spurs Reveal Why They Want Devin Vassell Taking the Last Shot",
         "teams": [
           "SAS"
         ],
         "outlet": "roundtable.io"
       },
       {
+        "id": "nba-tm11",
+        "title": "Spurs open preseason tonight against Hawks as NBA Finals runners-up return to court",
+        "teams": [
+          "ATL",
+          "SAS"
+        ],
+        "outlet": "KABB"
+      },
+      {
         "id": "nba-tm12",
-        "title": "Frost Bank Center: Home of the San Antonio Spurs, Capacity, Amenities and What's Next",
+        "title": "Hemisfair projects take shape as Spurs arena plans advance, but one parcel remains unresolved",
         "teams": [
           "SAS"
         ],
-        "outlet": "Sportscape Magazine"
+        "outlet": "The Business Journals"
       },
       {
         "id": "nba-tm13",
-        "title": "Will Hardy explains why Darryn Peterson sat out overtime in Jazz loss to Spurs",
+        "title": "What Went Wrong in Jazz Loss to Spurs?",
         "teams": [
           "SAS",
           "UTAH"
         ],
-        "outlet": "The Salt Lake Tribune"
+        "outlet": "roundtable.io"
       },
       {
         "id": "nba-tm14",
-        "title": "Darryn Peterson vs San Antonio Spurs: stats, game log",
+        "title": "The Spurs are hitting their stride, and Victor Wembanyama is finding his groove",
         "teams": [
           "SAS"
         ],
-        "outlet": "BasketNews.com"
+        "outlet": "The New York Times"
       },
       {
         "id": "nba-tm15",
-        "title": "Open Thread: Champagnie’s unparalleled prowess",
-        "summary": "It took a Venn Diagram to isolate the Spurs sharpshooter",
+        "title": "Open Thread: Tim Duncan makes two unexpected appearances",
+        "summary": "Random sightings of the Spurs yeti this week",
         "outlet": "Yahoo Sports"
       },
       {
         "id": "nba-tm16",
-        "title": "Harrison Barnes not spooked by Spurs' start, speaks on giving back with UNICEF",
-        "summary": "The San Antonio Spurs lost their first two games, but Harrison Barnes isn't spooked. Here's his thoughts on the season, Victor Wembanyama and working with UNICEF.",
+        "title": "2026 NBA Cup: Schedule, format, groups, updates and more",
+        "summary": "Here's everything you need to know about the fourth annual in-season tournament.",
         "teams": [
-          "SAS"
+          "ATL",
+          "BOS",
+          "BKN"
         ],
-        "outlet": "Yahoo Sports"
+        "outlet": "ESPN"
       },
       {
         "id": "nba-tm17",
-        "title": "Spurs Survive Jazz in Overtime Behind Wembanyama’s Dominant Performance",
+        "title": "Spurs' Victor Wembanyama embraces competitive edge but rejects villain label after NBA playoff lessons",
         "teams": [
-          "SAS",
-          "UTAH"
+          "SAS"
         ],
-        "outlet": "Yahoo Sports"
+        "outlet": "Fox News"
       },
       {
         "id": "nba-tm18",
-        "title": "Mitch Johnson Says Spurs 'Had My Back' Against Jazz After Late Coaching Error",
+        "title": "Why Spurs Believe Luke Kornet's Early-Season Struggles Are 'Not Just a Luke Thing'",
         "teams": [
-          "SAS",
-          "UTAH"
+          "SAS"
         ],
-        "outlet": "Yahoo Sports"
+        "outlet": "Sports Illustrated"
       },
       {
         "id": "nba-tm19",
-        "title": "Jazz Take Spurs to OT, Can't Get Job Done",
+        "title": "Comparing life in 1999 versus 2026 as Knicks-Spurs ready for NBA Finals rematch",
         "teams": [
-          "SAS",
-          "UTAH"
+          "NY",
+          "SAS"
         ],
-        "outlet": "Yahoo Sports"
+        "outlet": "ABC7 Bay Area"
       },
       {
         "id": "nba-tm20",
-        "title": "Jazz Youngsters Can’t Hold On Versus The Spurs",
-        "summary": "Poor coaching decisions and a talent deficit leads to a 111-117 loss to San Antonio",
+        "title": "Debunk or double down? Judging 10 early-season NBA overreactions",
+        "summary": "A 29-year-old is the NBA's next breakout star. Miami's Giannis era is already cooked. And so are the Thunder, Knicks and Warriors. Which overreactions are valid?",
         "teams": [
           "SAS",
-          "UTAH"
+          "CHA",
+          "CHI"
         ],
-        "outlet": "Yahoo Sports"
+        "outlet": "ESPN"
       }
     ],
     "results": [
       {
         "id": "nba-r1",
-        "game": "Thunder (4-1) 96 at Mavericks (3-2) 120",
+        "game": "Grizzlies (5-0) 124 at Trail Blazers (3-1) 103",
         "status": "Final",
-        "date": "2026-10-29T01:30Z",
+        "date": "2026-10-30T02:00Z",
         "notable": true,
         "flags": [
-          "upset: DAL (2-2) beat OKC (4-0)"
+          "two winning teams",
+          "big game: Cameron Boozer 18 pts, 12 reb, 12 ast"
         ],
         "keyPlayers": [
-          "Ajay Mitchell (OKC): 29 pts, 4 reb, 3 ast",
-          "Shai Gilgeous-Alexander (OKC): 21 pts, 6 reb, 2 ast",
-          "Isaiah Hartenstein (OKC): 10 pts, 14 reb, 3 ast",
-          "Cooper Flagg (DAL): 26 pts, 5 reb, 8 ast",
-          "P.J. Washington (DAL): 18 pts, 9 reb, 0 ast",
-          "Kyrie Irving (DAL): 15 pts, 2 reb, 4 ast"
+          "Cameron Boozer (MEM): 18 pts, 12 reb, 12 ast",
+          "Isaiah Stewart (MEM): 18 pts, 3 reb, 0 ast",
+          "Cedric Coward (MEM): 17 pts, 7 reb, 4 ast, 3 stl",
+          "Deni Avdija (POR): 24 pts, 9 reb, 7 ast",
+          "Ja Morant (POR): 14 pts, 2 reb, 3 ast",
+          "Toumani Camara (POR): 13 pts, 2 reb, 1 ast"
         ]
       },
       {
         "id": "nba-r2",
-        "game": "Spurs (3-2) 117 at Jazz (1-4) 111",
-        "status": "Final/OT",
-        "date": "2026-10-29T01:00Z",
+        "game": "Cavaliers (3-2) 111 at Hawks (3-3) 114",
+        "status": "Final",
+        "date": "2026-10-30T00:00Z",
         "notable": true,
         "flags": [
-          "Jack’s team",
-          "overtime",
-          "big game: Victor Wembanyama 36 pts, 14 reb, 5 ast, 3 stl"
+          "close finish (3-point margin)",
+          "upset: ATL (2-3) beat CLE (3-1)"
         ],
         "keyPlayers": [
-          "Victor Wembanyama (SAS): 36 pts, 14 reb, 5 ast, 3 stl",
-          "Devin Vassell (SAS): 21 pts, 5 reb, 2 ast, 3 stl",
-          "Stephon Castle (SAS): 14 pts, 6 reb, 8 ast",
-          "Keyonte George (UTAH): 31 pts, 4 reb, 3 ast, 5 3PM",
-          "Ace Bailey (UTAH): 19 pts, 6 reb, 0 ast",
-          "Darryn Peterson (UTAH): 18 pts, 5 reb, 3 ast"
+          "James Harden (CLE): 24 pts, 5 reb, 4 ast",
+          "Donovan Mitchell (CLE): 22 pts, 3 reb, 3 ast",
+          "Sam Merrill (CLE): 16 pts, 2 reb, 3 ast",
+          "Onyeka Okongwu (ATL): 29 pts, 12 reb, 2 ast",
+          "Nickeil Alexander-Walker (ATL): 25 pts, 3 reb, 1 ast",
+          "Aaron Wiggins (ATL): 20 pts, 7 reb, 3 ast"
         ]
       },
       {
         "id": "nba-r3",
-        "game": "Warriors (2-3) 119 at Timberwolves (3-2) 114",
+        "game": "Kings (0-5) 120 at Pelicans (1-4) 132",
         "status": "Final",
-        "date": "2026-10-29T00:00Z",
+        "date": "2026-10-30T00:00Z",
         "notable": true,
         "flags": [
-          "close finish (5-point margin)",
-          "upset: GS (1-3) beat MIN (3-1)",
-          "big game: Stephen Curry 44 pts, 8 reb, 6 ast, 6 3PM"
+          "big game: Darius Acuff Jr. 34 pts, 6 reb, 14 ast"
         ],
         "keyPlayers": [
-          "Stephen Curry (GS): 44 pts, 8 reb, 6 ast, 6 3PM",
-          "Yaxel Lendeborg (GS): 26 pts, 9 reb, 1 ast",
-          "Brandon Williams (GS): 11 pts, 3 reb, 1 ast",
-          "Jonathan Kuminga (MIN): 20 pts, 3 reb, 5 ast",
-          "Jaden McDaniels (MIN): 19 pts, 7 reb, 4 ast",
-          "Terrence Shannon Jr. (MIN): 19 pts, 6 reb, 2 ast"
-        ]
-      },
-      {
-        "id": "nba-r4",
-        "game": "Heat (1-4) 129 at Hawks (2-3) 117",
-        "status": "Final",
-        "date": "2026-10-28T23:00Z",
-        "notable": true,
-        "flags": [
-          "upset: MIA (0-4) beat ATL (2-2)",
-          "big game: Giannis Antetokounmpo 24 pts, 18 reb, 3 ast"
-        ],
-        "keyPlayers": [
-          "Giannis Antetokounmpo (MIA): 24 pts, 18 reb, 3 ast",
-          "Bam Adebayo (MIA): 24 pts, 9 reb, 3 ast, 3 stl",
-          "Andrew Wiggins (MIA): 18 pts, 2 reb, 2 ast",
-          "Kingston Flemings (ATL): 23 pts, 5 reb, 5 ast",
-          "Nickeil Alexander-Walker (ATL): 23 pts, 3 reb, 1 ast, 5 3PM",
-          "CJ McCollum (ATL): 13 pts, 2 reb, 1 ast"
-        ]
-      },
-      {
-        "id": "nba-r5",
-        "game": "76ers (4-1) 114 at Pacers (2-3) 109",
-        "status": "Final",
-        "date": "2026-10-28T23:00Z",
-        "notable": true,
-        "flags": [
-          "close finish (5-point margin)",
-          "big game: Andrew Nembhard 18 pts, 3 reb, 14 ast"
-        ],
-        "keyPlayers": [
-          "Tyrese Maxey (PHI): 27 pts, 5 reb, 4 ast",
-          "Joel Embiid (PHI): 21 pts, 11 reb, 2 ast",
-          "Jaylen Brown (PHI): 20 pts, 10 reb, 2 ast",
-          "Pascal Siakam (IND): 26 pts, 11 reb, 3 ast",
-          "Andrew Nembhard (IND): 18 pts, 3 reb, 14 ast",
-          "Aaron Nesmith (IND): 18 pts, 2 reb, 1 ast"
-        ]
-      },
-      {
-        "id": "nba-r6",
-        "game": "Lakers (4-1) 103 at Clippers (1-3) 87",
-        "status": "Final",
-        "date": "2026-10-29T02:30Z",
-        "keyPlayers": [
-          "Quentin Grimes (LAL): 23 pts, 3 reb, 5 ast, 4 stl",
-          "Collin Sexton (LAL): 21 pts, 4 reb, 2 ast"
-        ]
-      },
-      {
-        "id": "nba-r7",
-        "game": "Knicks (2-3) 133 at Bulls (1-4) 127",
-        "status": "Final",
-        "date": "2026-10-29T00:00Z",
-        "flags": [
-          "big game: Jalen Brunson 38 pts, 1 reb, 7 ast, 6 3PM"
-        ],
-        "keyPlayers": [
-          "Jalen Brunson (NY): 38 pts, 1 reb, 7 ast, 6 3PM",
-          "OG Anunoby (NY): 23 pts, 6 reb, 1 ast"
-        ]
-      },
-      {
-        "id": "nba-r8",
-        "game": "Rockets (5-0) 132 at Bucks (1-4) 100",
-        "status": "Final",
-        "date": "2026-10-29T00:00Z",
-        "keyPlayers": [
-          "Fred VanVleet (HOU): 24 pts, 6 reb, 5 ast",
-          "Amen Thompson (HOU): 23 pts, 4 reb, 3 ast"
-        ]
-      },
-      {
-        "id": "nba-r9",
-        "game": "Nuggets (2-2) 104 at Pelicans (0-4) 91",
-        "status": "Final",
-        "date": "2026-10-29T00:00Z",
-        "flags": [
-          "big game: Nikola Jokic 21 pts, 13 reb, 10 ast"
-        ],
-        "keyPlayers": [
-          "Jamal Murray (DEN): 23 pts, 1 reb, 6 ast, 5 3PM",
-          "Nikola Jokic (DEN): 21 pts, 13 reb, 10 ast"
-        ]
-      },
-      {
-        "id": "nba-r10",
-        "game": "Magic (1-3) 99 at Raptors (3-1) 129",
-        "status": "Final",
-        "date": "2026-10-28T23:30Z",
-        "keyPlayers": [
-          "Tristan da Silva (ORL): 20 pts, 3 reb, 1 ast",
-          "Franz Wagner (ORL): 15 pts, 4 reb, 5 ast"
-        ]
-      },
-      {
-        "id": "nba-r11",
-        "game": "Wizards (2-3) 111 at Cavaliers (3-1) 121",
-        "status": "Final",
-        "date": "2026-10-28T23:00Z",
-        "keyPlayers": [
-          "AJ Dybantsa (WSH): 19 pts, 2 reb, 2 ast",
-          "Alex Sarr (WSH): 18 pts, 4 reb, 2 ast, 4 stl"
-        ]
-      },
-      {
-        "id": "nba-r12",
-        "game": "Hornets (3-2) 89 at Pistons (4-1) 97",
-        "status": "Final",
-        "date": "2026-10-28T23:00Z",
-        "flags": [
-          "two winning teams"
-        ],
-        "keyPlayers": [
-          "Brandon Miller (CHA): 31 pts, 12 reb, 3 ast",
-          "Dennis Schroder (CHA): 14 pts, 4 reb, 5 ast"
+          "Darius Acuff Jr. (SAC): 34 pts, 6 reb, 14 ast",
+          "Precious Achiuwa (SAC): 24 pts, 9 reb, 2 ast, 4 stl",
+          "De'Andre Hunter (SAC): 24 pts, 5 reb, 1 ast",
+          "Jeremiah Fears (NO): 22 pts, 8 reb, 13 ast, 4 blk",
+          "Zion Williamson (NO): 22 pts, 6 reb, 2 ast, 5 stl",
+          "Trey Murphy III (NO): 19 pts, 5 reb, 3 ast"
         ]
       }
     ],
     "standoutCandidates": [
       {
         "id": "nba-sp1",
-        "line": "Victor Wembanyama (SAS): 36 pts, 14 reb, 5 ast, 3 stl, W 117–111 at Jazz"
+        "line": "Cameron Boozer (MEM): 18 pts, 12 reb, 12 ast, W 124–103 at Trail Blazers"
       },
       {
         "id": "nba-sp2",
-        "line": "Nikola Jokic (DEN): 21 pts, 13 reb, 10 ast, W 104–91 at Pelicans"
+        "line": "Darius Acuff Jr. (SAC): 34 pts, 6 reb, 14 ast, L 132–120 at Pelicans"
       },
       {
         "id": "nba-sp3",
-        "line": "Stephen Curry (GS): 44 pts, 8 reb, 6 ast, 6 3PM, W 119–114 at Timberwolves"
+        "line": "Jeremiah Fears (NO): 22 pts, 8 reb, 13 ast, 4 blk, W 132–120 vs Kings"
       },
       {
         "id": "nba-sp4",
-        "line": "Giannis Antetokounmpo (MIA): 24 pts, 18 reb, 3 ast, W 129–117 at Hawks"
+        "line": "Onyeka Okongwu (ATL): 29 pts, 12 reb, 2 ast, W 114–111 vs Cavaliers"
       },
       {
         "id": "nba-sp5",
-        "line": "Brandon Miller (CHA): 31 pts, 12 reb, 3 ast, L 97–89 at Pistons"
+        "line": "Deni Avdija (POR): 24 pts, 9 reb, 7 ast, L 124–103 vs Grizzlies"
       },
       {
         "id": "nba-sp6",
-        "line": "Jalen Brunson (NY): 38 pts, 1 reb, 7 ast, 6 3PM, W 133–127 at Bulls"
+        "line": "Precious Achiuwa (SAC): 24 pts, 9 reb, 2 ast, 4 stl, L 132–120 at Pelicans"
       },
       {
         "id": "nba-sp7",
-        "line": "Scottie Barnes (TOR): 28 pts, 6 reb, 4 ast, 3 stl, W 129–99 vs Magic"
+        "line": "Zion Williamson (NO): 22 pts, 6 reb, 2 ast, 5 stl, W 132–120 vs Kings"
       },
       {
         "id": "nba-sp8",
-        "line": "Cade Cunningham (DET): 30 pts, 5 reb, 7 ast, W 97–89 vs Hornets"
+        "line": "Domantas Sabonis (SAC): 9 pts, 15 reb, 7 ast, L 132–120 at Pelicans"
       },
       {
         "id": "nba-sp9",
-        "line": "RJ Barrett (TOR): 25 pts, 9 reb, 6 ast, W 129–99 vs Magic"
+        "line": "Zach LaVine (SAC): 21 pts, 3 reb, 5 ast, 3 stl, L 132–120 at Pelicans"
       },
       {
         "id": "nba-sp10",
-        "line": "Pascal Siakam (IND): 26 pts, 11 reb, 3 ast, L 114–109 vs 76ers"
+        "line": "Cedric Coward (MEM): 17 pts, 7 reb, 4 ast, 3 stl, W 124–103 at Trail Blazers"
       }
     ],
-    "recapGuide": "Recap about 5 games: the notable ones (notable: true) first. Always recap Jack's team.",
+    "recapGuide": "Recap every game.",
     "standings": [
       {
         "group": "Western Conference",
-        "teams": "#1 HOU 5-0 W5, #2 MEM 4-0 W4, #3 POR 3-0 W3, #4 LAL 4-1 W1, #5 OKC 4-1 L1, #6 SAS 3-2 W3, #7 DAL 3-2 W2, #8 MIN 3-2 L2, #9 DEN 2-2 W1, #10 GS 2-3 W2, #11 PHX 1-2 L1, #12 LAC 1-3 L3, #13 UTAH 1-4 L3, #14 NO 0-4 L4, #15 SAC 0-4 L4"
+        "teams": "#1 HOU 5-0 W5, #2 MEM 5-0 W5, #3 OKC 4-1 L1, #4 LAL 4-1 W1, #5 POR 3-1 L1, #6 SAS 3-2 W3, #7 DAL 3-2 W2, #8 MIN 3-2 L2, #9 DEN 2-2 W1, #10 GS 2-3 W2, #11 PHX 1-2 L1, #12 LAC 1-3 L3, #13 UTAH 1-4 L3, #14 NO 1-4 W1, #15 SAC 0-5 L5"
       },
       {
         "group": "Eastern Conference",
-        "teams": "#1 DET 4-1 W1, #2 PHI 4-1 W1, #3 TOR 3-1 W1, #4 BOS 3-1 W3, #5 CLE 3-1 W3, #6 CHA 3-2 L1, #7 ATL 2-3 L3, #8 NY 2-3 W2, #9 WSH 2-3 L2, #10 IND 2-3 L2, #11 ORL 1-3 L1, #12 CHI 1-4 L3, #13 MIA 1-4 W1, #14 MIL 1-4 L1, #15 BKN 0-4 L4"
+        "teams": "#1 DET 4-1 W1, #2 PHI 4-1 W1, #3 BOS 3-1 W3, #4 TOR 3-1 W1, #5 CHA 3-2 L1, #6 CLE 3-2 L1, #7 ATL 3-3 W1, #8 NY 2-3 W2, #9 WSH 2-3 L2, #10 IND 2-3 L2, #11 ORL 1-3 L1, #12 CHI 1-4 L3, #13 MIA 1-4 W1, #14 MIL 1-4 L1, #15 BKN 0-4 L4"
       }
     ],
     "hotAndCold": {
       "hot": [
         "HOU W5 · 5-0 L10: 5 straight wins, now 5–0.",
-        "MEM W4 · 4-0 L10: 4 straight wins, now 4–0.",
-        "Stephen Curry (GS): 44 points against the Timberwolves.",
-        "Jalen Brunson (NY): 38 points against the Bulls.",
-        "Victor Wembanyama (SAS): 36 points against the Jazz.",
-        "Giannis Antetokounmpo (MIA): 18 rebounds against the Hawks."
+        "MEM W5 · 5-0 L10: 5 straight wins, now 5–0.",
+        "Darius Acuff Jr. (SAC): 14 assists against the Pelicans.",
+        "Jeremiah Fears (NO): 13 assists against the Kings.",
+        "Cameron Boozer (MEM): 12 assists against the Trail Blazers.",
+        "Domantas Sabonis (SAC): 15 rebounds against the Pelicans."
       ],
       "cold": [
-        "NO L4 · 0-4 L10: 4 straight losses, now 0–4.",
-        "SAC L4 · 0-4 L10: 4 straight losses, now 0–4.",
+        "SAC L5 · 0-5 L10: 5 straight losses, now 0–5.",
         "BKN L4 · 0-4 L10: 4 straight losses, now 0–4."
       ]
     },
     "majorInjuries": [
       {
         "id": "nba-i1",
+        "player": "Egor Demin",
+        "team": "BKN",
+        "status": "Out",
+        "injury": "Right leg (bruise)"
+      },
+      {
+        "id": "nba-i2",
+        "player": "Tyler Bilodeau",
+        "team": "BKN",
+        "status": "Out",
+        "injury": "Right shoulder (sprain)"
+      },
+      {
+        "id": "nba-i3",
+        "player": "Kon Knueppel",
+        "team": "CHA",
+        "status": "Out",
+        "injury": "Left hamstring"
+      },
+      {
+        "id": "nba-i4",
+        "player": "Jaylon Tyson",
+        "team": "CLE",
+        "status": "Out",
+        "injury": "Right ankle (sprain)"
+      },
+      {
+        "id": "nba-i5",
         "player": "Reed Sheppard",
         "team": "HOU",
         "status": "Out",
         "injury": "Back"
       },
       {
-        "id": "nba-i2",
-        "player": "Ivica Zubac",
-        "team": "IND",
+        "id": "nba-i6",
+        "player": "Marcus Smart",
+        "team": "HOU",
         "status": "Out",
-        "injury": "Left ankle (sprain)"
+        "injury": "Left forearm (strain)"
       },
       {
-        "id": "nba-i3",
+        "id": "nba-i7",
         "player": "Tyrese Haliburton",
         "team": "IND",
         "status": "Out",
         "injury": "Left hamstring (strain)"
       },
       {
-        "id": "nba-i4",
-        "player": "Anthony Edwards",
-        "team": "MIN",
-        "status": "Out",
-        "injury": "Right knee (surgery)"
-      },
-      {
-        "id": "nba-i5",
-        "player": "Jalen Williams",
-        "team": "OKC",
-        "status": "Out",
-        "injury": "Left leg (fracture)"
-      },
-      {
-        "id": "nba-i6",
-        "player": "Cason Wallace",
-        "team": "OKC",
-        "status": "Out",
-        "injury": "Left shoulder"
-      },
-      {
-        "id": "nba-i7",
-        "player": "Jalen Suggs",
-        "team": "ORL",
-        "status": "Out",
-        "injury": "Right knee"
-      },
-      {
         "id": "nba-i8",
-        "player": "Kawhi Leonard",
-        "team": "TOR",
+        "player": "Yanic Konan Niederhauser",
+        "team": "LAC",
         "status": "Out",
-        "injury": "Left knee (inflammation)"
+        "injury": "Right foot (surgery)"
       }
     ],
     "transactions": [
@@ -1359,43 +1292,38 @@
         "id": "nba-t1",
         "type": "Release",
         "text": "Los Angeles Lakers: Waived F AK Okereke. Signed C Lawson Lovering to a two-way contract."
-      },
-      {
-        "id": "nba-t2",
-        "type": "Signing",
-        "text": "Minnesota Timberwolves: Signed F Enrique Freeman to a two-way contract."
       }
     ],
     "statLeaders": [
       {
         "id": "nba-l1",
         "category": "Points Per Game",
-        "leaders": "Luka Doncic (LAL) 36.0; Anthony Edwards (MIN) 33.2; Ty Jerome (MEM) 29.8; Stephen Curry (GS) 28.8; Tyrese Maxey (PHI) 28.4"
+        "leaders": "Luka Doncic (LAL) 36.0; Anthony Edwards (MIN) 33.2; Stephen Curry (GS) 28.8; Tyrese Maxey (PHI) 28.4; Jayson Tatum (BOS) 28.0"
       },
       {
         "id": "nba-l2",
         "category": "Assists Per Game",
-        "leaders": "Trae Young (WSH) 10.4; Tyrese Haliburton (IND) 9.5; Nikola Jokic (DEN) 9.0; Jalen Johnson (ATL) 8.8; Luka Doncic (LAL) 8.2"
+        "leaders": "Trae Young (WSH) 10.4; Tyrese Haliburton (IND) 9.5; Nikola Jokic (DEN) 9.0; Jalen Johnson (ATL) 8.5; Luka Doncic (LAL) 8.2"
       },
       {
         "id": "nba-l3",
         "category": "Field Goal Percentage",
-        "leaders": "Robert Williams III (POR) 76.5; Walker Kessler (LAL) 75.0; Domantas Sabonis (SAC) 72.1; Paolo Banchero (ORL) 69.6; Wendell Carter Jr. (ORL) 69.0"
+        "leaders": "Walker Kessler (LAL) 75.0; Domantas Sabonis (SAC) 70.0; Paolo Banchero (ORL) 69.6; Wendell Carter Jr. (ORL) 69.0; Paul Reed (DET) 66.7"
       },
       {
         "id": "nba-l4",
         "category": "Rebounds Per Game",
-        "leaders": "Domantas Sabonis (SAC) 16.5; Karl-Anthony Towns (NY) 13.8; Rudy Gobert (MIN) 12.2; Victor Wembanyama (SAS) 11.4; Giannis Antetokounmpo (MIA) 11.2"
+        "leaders": "Domantas Sabonis (SAC) 16.2; Karl-Anthony Towns (NY) 13.8; Rudy Gobert (MIN) 12.2; Victor Wembanyama (SAS) 11.4; Giannis Antetokounmpo (MIA) 11.2"
       },
       {
         "id": "nba-l5",
         "category": "Steals Per Game",
-        "leaders": "Dyson Daniels (ATL) 3.4; Kris Dunn (LAC) 2.8; Zion Williamson (NO) 2.8; Cooper Flagg (DAL) 2.8; Collin Gillespie (PHX) 2.7"
+        "leaders": "Zion Williamson (NO) 3.2; Dyson Daniels (ATL) 3.0; Kris Dunn (LAC) 2.8; Cooper Flagg (DAL) 2.8; Collin Gillespie (PHX) 2.7"
       },
       {
         "id": "nba-l6",
         "category": "Blocks Per Game",
-        "leaders": "Victor Wembanyama (SAS) 3.8; Myles Turner (MIL) 2.6; Walker Kessler (LAL) 2.4; Jarrett Allen (CLE) 2.2; Jaxson Hayes (UTAH) 2.2"
+        "leaders": "Victor Wembanyama (SAS) 3.8; Myles Turner (MIL) 2.6; Walker Kessler (LAL) 2.4; Jaxson Hayes (UTAH) 2.2; Donovan Clingan (POR) 2.2"
       },
       {
         "id": "nba-l7",
@@ -1405,10 +1333,10 @@
       {
         "id": "nba-l8",
         "category": "3 points field goal percentage",
-        "leaders": "Paul Reed (DET) 1.0; Cedric Coward (MEM) 0.7; Bogdan Bogdanovic (HOU) 0.7; Evan Mobley (CLE) 0.7; Alperen Sengun (HOU) 0.7"
+        "leaders": "Paul Reed (DET) 1.0; Cedric Coward (MEM) 0.7; Bogdan Bogdanovic (HOU) 0.7; Alperen Sengun (HOU) 0.7; Moritz Wagner (BKN) 0.6"
       }
     ],
-    "targetWords": 1220
+    "targetWords": 960
   },
   "myTeams": {
     "nfl": {
@@ -1431,45 +1359,40 @@
         {
           "id": "myteam-nfl-f3",
           "kind": "since last edition",
-          "text": "Signed LB Bralen Trice to the practice squad."
+          "text": "Bech (forearm) is listed as questionable for Sunday's game at the Jets, Sam Warren of The Athletic reports."
         },
         {
           "id": "myteam-nfl-f4",
           "kind": "since last edition",
-          "text": "Johnson (neck) did not participate in Wednesday's practice, Anthony Galaviz of The Fresno Bee reports."
+          "text": "Jets dealing with defensive injuries for matchup vs. Raiders, RB Ashton Jeanty"
         },
         {
           "id": "myteam-nfl-f5",
           "kind": "since last edition",
-          "text": "Thomas (shoulder) was a limited participant in Wednesday's practice, Anthony Galaviz of The Fresno Bee reports."
+          "text": "When will the Raiders make Fernando Mendoza the starting QB?"
         },
         {
           "id": "myteam-nfl-f6",
           "kind": "since last edition",
-          "text": "Raiders and Jets will try to stop struggles and quiet some outside noise when they square off Sunday"
+          "text": "2027 NFL draft order projections for Round 1, chances for top pick, more"
         },
         {
           "id": "myteam-nfl-f7",
-          "kind": "since last edition",
-          "text": "What has gone wrong for 2025 running backs? Ashton Jeanty, Omarion Hampton, more"
+          "kind": "news headline",
+          "text": "Raiders and Jets will try to stop struggles and quiet some outside noise when they square off Sunday"
         },
         {
           "id": "myteam-nfl-f8",
-          "kind": "since last edition",
-          "text": "Ranking the best 2026 NFL rookies: Arvell Reese, Denzel Boston, others in top 10"
+          "kind": "news headline",
+          "text": "What has gone wrong for 2025 running backs? Ashton Jeanty, Omarion Hampton, more"
         },
         {
           "id": "myteam-nfl-f9",
-          "kind": "news headline",
-          "text": "2026 NFL trade deadline: Ranking the top 25 candidates to move, plus team fits"
+          "kind": "roster move (Signing)",
+          "text": "Signed LB Bralen Trice to the practice squad."
         },
         {
           "id": "myteam-nfl-f10",
-          "kind": "news headline",
-          "text": "NFL Power Rankings: How all 32 teams stack up for Week 8, plus offseason adds"
-        },
-        {
-          "id": "myteam-nfl-f11",
           "kind": "playoff race",
           "text": "10th in the AFC at 3–4. 1.5 games behind the last playoff spot."
         }
@@ -1480,44 +1403,21 @@
           "position": "WR",
           "status": "Out",
           "injury": "Right forearm (fracture)",
-          "note": "The Raiders designated Bech (forearm) for return from injured reserve Monday.",
+          "note": "Bech (forearm) is listed as questionable for Sunday's game at the Jets, Sam Warren of The Athletic reports.",
           "reportedTimeline": "Around Sun 1 Nov (estimate)"
+        },
+        {
+          "player": "Patrick Johnson",
+          "position": "DE",
+          "status": "Out",
+          "injury": "Neck (stinger)",
+          "reportedTimeline": "Around Sun 8 Nov (estimate)"
         },
         {
           "player": "Jackson Powers-Johnson",
           "position": "G",
           "status": "Questionable",
           "injury": "Back",
-          "reportedTimeline": "Around Sun 1 Nov (estimate)"
-        },
-        {
-          "player": "Patrick Johnson",
-          "position": "DE",
-          "status": "Questionable",
-          "injury": "Neck (stinger)",
-          "note": "Johnson (neck) did not participate in Wednesday's practice, Anthony Galaviz of The Fresno Bee reports.",
-          "reportedTimeline": "Around Sun 1 Nov (estimate)"
-        },
-        {
-          "player": "Ian Thomas",
-          "position": "TE",
-          "status": "Questionable",
-          "injury": "Shoulder",
-          "note": "Thomas (shoulder) was a limited participant in Wednesday's practice, Anthony Galaviz of The Fresno Bee reports.",
-          "reportedTimeline": "Around Sun 1 Nov (estimate)"
-        },
-        {
-          "player": "Folorunso Fatukasi",
-          "position": "DT",
-          "status": "Questionable",
-          "injury": "Shoulder",
-          "reportedTimeline": "Around Sun 1 Nov (estimate)"
-        },
-        {
-          "player": "DJ Glaze",
-          "position": "OT",
-          "status": "Questionable",
-          "injury": "Ankle",
           "reportedTimeline": "Around Sun 1 Nov (estimate)"
         }
       ],
@@ -1572,16 +1472,16 @@
         {
           "id": "myteam-nba-f3",
           "kind": "since last edition",
-          "text": "Beat the Jazz 117–111 on the road."
+          "text": "2026 NBA Cup: Schedule, format, groups, updates and more"
         },
         {
           "id": "myteam-nba-f4",
-          "kind": "since last edition",
+          "kind": "news headline",
           "text": "Debunk or double down? Judging 10 early-season NBA overreactions"
         },
         {
           "id": "myteam-nba-f5",
-          "kind": "since last edition",
+          "kind": "news headline",
           "text": "Wembanyama scores 36 points and the Spurs clamp down in overtime to beat the Jazz 117-111"
         },
         {
@@ -1596,11 +1496,6 @@
         },
         {
           "id": "myteam-nba-f8",
-          "kind": "news headline",
-          "text": "Wembanyama's 29 points and 10 rebounds fuels Spurs in 130-103 victory over Kings"
-        },
-        {
-          "id": "myteam-nba-f9",
           "kind": "playoff race",
           "text": "6th in the West at 3–2."
         }
