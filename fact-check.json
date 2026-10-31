@@ -1,17 +1,27 @@
 {
-  "date": "2026-10-31",
-  "checked": 111,
-  "removed": 2,
+  "date": "2026-11-01",
+  "checked": 109,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl teamNews 1",
-      "sentence": "Jack Bech is on injured reserve with a broken right forearm, which he suffered before Week 3 against New Orleans.",
-      "reason": "Data says Bech has been on IR since the Week 3 game against New Orleans, and he played in that span. It does not say he was injured before Week 3."
+      "where": "nfl headlines 4",
+      "sentence": "The seven players fined without a flag included Broncos linebacker Alex Singleton, who was fined $47,662 after the second straight week of fines.",
+      "reason": "Data gives Singleton's $23,882 fine as the second straight week of fines; the $47,662 figure is his fine in the list, and 'Broncos linebacker' is not stated."
+    },
+    {
+      "where": "nfl headlines 1",
+      "sentence": "A trade would signal a full rebuild for a 2-5 team.",
+      "reason": "The data does not say a trade would signal a full rebuild; this is an added inference."
     },
     {
       "where": "nba recaps 1",
-      "sentence": "Memphis led from the start and won 124–103 in Portland.",
-      "reason": "The data gives only the final score (124–103) and says nothing about Memphis leading from the start."
+      "sentence": "Curry also dropped Doncic in the first half and seemed stunned by his own move.",
+      "reason": "The data does not say the Curry-Doncic moment happened in the first half."
+    },
+    {
+      "where": "nba standouts 4",
+      "sentence": "Scottie Barnes scored 41 in a losing effort, and his points were the most of any player on the day.",
+      "reason": "'Most of any player on the day' is a superlative the data does not establish; it only covers the listed standout candidates."
     }
   ]
 }
