@@ -1,27 +1,67 @@
 {
-  "date": "2026-11-01",
-  "checked": 109,
-  "removed": 4,
+  "date": "2026-11-02",
+  "checked": 153,
+  "removed": 12,
   "sentences": [
     {
-      "where": "nfl headlines 4",
-      "sentence": "The seven players fined without a flag included Broncos linebacker Alex Singleton, who was fined $47,662 after the second straight week of fines.",
-      "reason": "Data gives Singleton's $23,882 fine as the second straight week of fines; the $47,662 figure is his fine in the list, and 'Broncos linebacker' is not stated."
+      "where": "nfl recaps 1",
+      "sentence": "Minnesota's offence had been held back by penalties and a lack of spark through the game.",
+      "reason": "Penalties hurting Minnesota's offence are not in the data; the penalties listed were Detroit's taunting flags."
     },
     {
-      "where": "nfl headlines 1",
-      "sentence": "A trade would signal a full rebuild for a 2-5 team.",
-      "reason": "The data does not say a trade would signal a full rebuild; this is an added inference."
+      "where": "nfl recaps 1",
+      "sentence": "Justin Jefferson's end-zone tip was the only real moment.",
+      "reason": "Calling Jefferson's tip 'the only real moment' goes further than the data, which only says the offence struggled overall."
+    },
+    {
+      "where": "nfl recaps 3",
+      "sentence": "Pittsburgh's running game set the tone early and kept Cleveland's offence off the field.",
+      "reason": "Claim that Pittsburgh's running game kept Cleveland's offence off the field is not in the data."
+    },
+    {
+      "where": "nfl recaps 3",
+      "sentence": "Fannin had a big game for Cleveland, but the Browns struggled to get consistent drives, and their division lead is gone.",
+      "reason": "Claim that the Browns struggled to get consistent drives is not in the data."
+    },
+    {
+      "where": "nfl standouts 2",
+      "sentence": "Irving carried Tampa Bay's offence on a day when the passing game produced nothing, and he did it against a team that had struggled to stop the run.",
+      "reason": "Claim that Tampa Bay's opponent had struggled to stop the run is not in the data."
+    },
+    {
+      "where": "nba headlines 3",
+      "sentence": "The win ends a short slide for the Rockets, who had lost to the Thunder's defence.",
+      "reason": "Data shows no 'short slide' for Houston, and no prior Rockets loss to the Thunder; the stated slide is unsupported."
     },
     {
       "where": "nba recaps 1",
-      "sentence": "Curry also dropped Doncic in the first half and seemed stunned by his own move.",
-      "reason": "The data does not say the Curry-Doncic moment happened in the first half."
+      "sentence": "Smith and Smart combined for 13 three-pointers, and the Rockets pulled away after a close first half.",
+      "reason": "Claim that Houston pulled away after a close first half is not in the data."
     },
     {
-      "where": "nba standouts 4",
-      "sentence": "Scottie Barnes scored 41 in a losing effort, and his points were the most of any player on the day.",
-      "reason": "'Most of any player on the day' is a superlative the data does not establish; it only covers the listed standout candidates."
+      "where": "nba recaps 3",
+      "sentence": "Harper and Fox were both strong, and the Spurs' defence held Minnesota's offence well enough in the second half.",
+      "reason": "Claim that the Spurs' defence held Minnesota well enough in the second half is not in the data."
+    },
+    {
+      "where": "nba recaps 4",
+      "sentence": "Atlanta's offence was flat, and its best players struggled to create good looks.",
+      "reason": "Claim that Atlanta's best players struggled to create good looks is not in the data."
+    },
+    {
+      "where": "nba recaps 4",
+      "sentence": "The win is a reminder that the Pelicans can beat better teams when they play with energy.",
+      "reason": "Generalisation that the Pelicans can beat better teams when energetic is not supported by the data."
+    },
+    {
+      "where": "nba recaps 5",
+      "sentence": "Allen and Miller were both hot from three, and the Hornets fought back after trailing for most of the game.",
+      "reason": "Claim that the Hornets trailed for most of the game is not in the data."
+    },
+    {
+      "where": "nba quickHits 6",
+      "sentence": "The Mavericks host the Kings next.",
+      "reason": "Data does not say the Mavericks are hosting the Kings; home/away is not given."
     }
   ]
 }
