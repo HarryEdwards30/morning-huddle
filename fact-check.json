@@ -1,67 +1,27 @@
 {
-  "date": "2026-11-02",
-  "checked": 153,
-  "removed": 12,
+  "date": "2026-11-03",
+  "checked": 115,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl recaps 1",
-      "sentence": "Minnesota's offence had been held back by penalties and a lack of spark through the game.",
-      "reason": "Penalties hurting Minnesota's offence are not in the data; the penalties listed were Detroit's taunting flags."
-    },
-    {
-      "where": "nfl recaps 1",
-      "sentence": "Justin Jefferson's end-zone tip was the only real moment.",
-      "reason": "Calling Jefferson's tip 'the only real moment' goes further than the data, which only says the offence struggled overall."
-    },
-    {
-      "where": "nfl recaps 3",
-      "sentence": "Pittsburgh's running game set the tone early and kept Cleveland's offence off the field.",
-      "reason": "Claim that Pittsburgh's running game kept Cleveland's offence off the field is not in the data."
-    },
-    {
-      "where": "nfl recaps 3",
-      "sentence": "Fannin had a big game for Cleveland, but the Browns struggled to get consistent drives, and their division lead is gone.",
-      "reason": "Claim that the Browns struggled to get consistent drives is not in the data."
+      "where": "nfl recaps 4",
+      "sentence": "Joe Burrow threw five touchdowns and an overtime-winning drive set up the Bengals' 43–36 win over the Titans.",
+      "reason": "The data gives only the final score and OT flag; it does not say an overtime-winning drive by Burrow set up the win."
     },
     {
       "where": "nfl standouts 2",
-      "sentence": "Irving carried Tampa Bay's offence on a day when the passing game produced nothing, and he did it against a team that had struggled to stop the run.",
-      "reason": "Claim that Tampa Bay's opponent had struggled to stop the run is not in the data."
+      "sentence": "Two touchdowns and 155 yards made him the main target in the overtime win.",
+      "reason": "The data gives Higgins's 155 yards and two touchdowns but does not say he was the main target."
+    },
+    {
+      "where": "nfl team update",
+      "sentence": "Ian Schefter said he does not see Kirk Cousins as a trade option.",
+      "reason": "The data names the analyst only as 'Schefter'; 'Ian Schefter' is not in the data."
     },
     {
       "where": "nba headlines 3",
-      "sentence": "The win ends a short slide for the Rockets, who had lost to the Thunder's defence.",
-      "reason": "Data shows no 'short slide' for Houston, and no prior Rockets loss to the Thunder; the stated slide is unsupported."
-    },
-    {
-      "where": "nba recaps 1",
-      "sentence": "Smith and Smart combined for 13 three-pointers, and the Rockets pulled away after a close first half.",
-      "reason": "Claim that Houston pulled away after a close first half is not in the data."
-    },
-    {
-      "where": "nba recaps 3",
-      "sentence": "Harper and Fox were both strong, and the Spurs' defence held Minnesota's offence well enough in the second half.",
-      "reason": "Claim that the Spurs' defence held Minnesota well enough in the second half is not in the data."
-    },
-    {
-      "where": "nba recaps 4",
-      "sentence": "Atlanta's offence was flat, and its best players struggled to create good looks.",
-      "reason": "Claim that Atlanta's best players struggled to create good looks is not in the data."
-    },
-    {
-      "where": "nba recaps 4",
-      "sentence": "The win is a reminder that the Pelicans can beat better teams when they play with energy.",
-      "reason": "Generalisation that the Pelicans can beat better teams when energetic is not supported by the data."
-    },
-    {
-      "where": "nba recaps 5",
-      "sentence": "Allen and Miller were both hot from three, and the Hornets fought back after trailing for most of the game.",
-      "reason": "Claim that the Hornets trailed for most of the game is not in the data."
-    },
-    {
-      "where": "nba quickHits 6",
-      "sentence": "The Mavericks host the Kings next.",
-      "reason": "Data does not say the Mavericks are hosting the Kings; home/away is not given."
+      "sentence": "It is the team's highest honour for a player who spent most of his career in the city, and it will be shown on national TV.",
+      "reason": "The data says the number is being retired and that Westbrook played 11 of 18 seasons in OKC; it does not call it the team's highest honour."
     }
   ]
 }
