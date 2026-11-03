@@ -1,27 +1,17 @@
 {
-  "date": "2026-11-03",
-  "checked": 115,
-  "removed": 4,
+  "date": "2026-11-04",
+  "checked": 114,
+  "removed": 2,
   "sentences": [
     {
-      "where": "nfl recaps 4",
-      "sentence": "Joe Burrow threw five touchdowns and an overtime-winning drive set up the Bengals' 43–36 win over the Titans.",
-      "reason": "The data gives only the final score and OT flag; it does not say an overtime-winning drive by Burrow set up the win."
+      "where": "nba headlines 4",
+      "sentence": "Indiana is 2–6 on a five-game losing streak, and Haliburton's absence is a big part of that.",
+      "reason": "The data gives Indiana's record and losing streak but says nothing about Haliburton's absence being a big part of it; that causal claim is not in the data."
     },
     {
-      "where": "nfl standouts 2",
-      "sentence": "Two touchdowns and 155 yards made him the main target in the overtime win.",
-      "reason": "The data gives Higgins's 155 yards and two touchdowns but does not say he was the main target."
-    },
-    {
-      "where": "nfl team update",
-      "sentence": "Ian Schefter said he does not see Kirk Cousins as a trade option.",
-      "reason": "The data names the analyst only as 'Schefter'; 'Ian Schefter' is not in the data."
-    },
-    {
-      "where": "nba headlines 3",
-      "sentence": "It is the team's highest honour for a player who spent most of his career in the city, and it will be shown on national TV.",
-      "reason": "The data says the number is being retired and that Westbrook played 11 of 18 seasons in OKC; it does not call it the team's highest honour."
+      "where": "nba recaps 4",
+      "sentence": "Sacramento's three scorers, Acuff, Monk and LaVine, all reached 23 or more points, which was the difference against a Dallas team that had been playing well.",
+      "reason": "The data lists Sacramento's three scorers and Dallas's record, but does not say their scoring was the difference in the game."
     }
   ]
 }
