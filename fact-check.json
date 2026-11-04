@@ -1,17 +1,17 @@
 {
-  "date": "2026-11-04",
-  "checked": 114,
+  "date": "2026-11-05",
+  "checked": 62,
   "removed": 2,
   "sentences": [
     {
-      "where": "nba headlines 4",
-      "sentence": "Indiana is 2–6 on a five-game losing streak, and Haliburton's absence is a big part of that.",
-      "reason": "The data gives Indiana's record and losing streak but says nothing about Haliburton's absence being a big part of it; that causal claim is not in the data."
+      "where": "nfl headlines 1",
+      "sentence": "Arizona's headline is 'All in for Gardner Minshew', so the Cardinals are backing Minshew as their quarterback.",
+      "reason": "The headline 'All in for Gardner Minshew' does not say the Cardinals are backing him as their starting quarterback; that conclusion goes beyond the data."
     },
     {
-      "where": "nba recaps 4",
-      "sentence": "Sacramento's three scorers, Acuff, Monk and LaVine, all reached 23 or more points, which was the difference against a Dallas team that had been playing well.",
-      "reason": "The data lists Sacramento's three scorers and Dallas's record, but does not say their scoring was the difference in the game."
+      "where": "nba teamNews 3",
+      "sentence": "Devin Vassell has become the veteran presence the Spurs lean on, even though he rarely draws attention.",
+      "reason": "The data says Vassell is a quiet veteran presence; it does not say he rarely draws attention, which adds a claim."
     }
   ]
 }
