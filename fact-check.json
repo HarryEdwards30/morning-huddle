@@ -1,17 +1,22 @@
 {
-  "date": "2026-11-05",
-  "checked": 62,
-  "removed": 2,
+  "date": "2026-11-06",
+  "checked": 105,
+  "removed": 3,
   "sentences": [
     {
-      "where": "nfl headlines 1",
-      "sentence": "Arizona's headline is 'All in for Gardner Minshew', so the Cardinals are backing Minshew as their quarterback.",
-      "reason": "The headline 'All in for Gardner Minshew' does not say the Cardinals are backing him as their starting quarterback; that conclusion goes beyond the data."
+      "where": "nfl headlines 4",
+      "sentence": "Green Bay's season depends on Love carrying an offence that is one-dimensional.",
+      "reason": "\"Season depends on Love\" is an overstated claim the data does not make; it only says Love is carrying a one-dimensional offense."
     },
     {
-      "where": "nba teamNews 3",
-      "sentence": "Devin Vassell has become the veteran presence the Spurs lean on, even though he rarely draws attention.",
-      "reason": "The data says Vassell is a quiet veteran presence; it does not say he rarely draws attention, which adds a claim."
+      "where": "nba headlines 2",
+      "sentence": "Doncic is averaging 38.5 points per game, and Los Angeles has won six of its last seven games to move to 7-2.",
+      "reason": "\"Won six of its last seven games\" is not in the data, which gives only the 7-2 record and no game-by-game sequence for the Lakers."
+    },
+    {
+      "where": "nba recaps 3",
+      "sentence": "Zion Williamson and Dejounte Murray helped the Pelicans rally to 4-4.",
+      "reason": "The data shows the Pelicans won 120-113 in overtime, but does not say they rallied."
     }
   ]
 }
