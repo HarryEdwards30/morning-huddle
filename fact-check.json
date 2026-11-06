@@ -1,22 +1,22 @@
 {
-  "date": "2026-11-06",
-  "checked": 105,
+  "date": "2026-11-07",
+  "checked": 92,
   "removed": 3,
   "sentences": [
     {
-      "where": "nfl headlines 4",
-      "sentence": "Green Bay's season depends on Love carrying an offence that is one-dimensional.",
-      "reason": "\"Season depends on Love\" is an overstated claim the data does not make; it only says Love is carrying a one-dimensional offense."
+      "where": "nfl recaps 1",
+      "sentence": "Justice Hill was Baltimore's best runner, with 85 yards and a touchdown.",
+      "reason": "The data gives Justice Hill's 9 carries, 85 yards and 1 TD, but never says he was Baltimore's best runner."
     },
     {
-      "where": "nba headlines 2",
-      "sentence": "Doncic is averaging 38.5 points per game, and Los Angeles has won six of its last seven games to move to 7-2.",
-      "reason": "\"Won six of its last seven games\" is not in the data, which gives only the 7-2 record and no game-by-game sequence for the Lakers."
+      "where": "nba headlines 3",
+      "sentence": "Plane problems meant the Heat didn't reach their hotel until around 3am, league sources told The Athletic, after what the team called a rough trip.",
+      "reason": "The data says the rough trip followed the plane issues. It does not say the team called the trip rough."
     },
     {
-      "where": "nba recaps 3",
-      "sentence": "Zion Williamson and Dejounte Murray helped the Pelicans rally to 4-4.",
-      "reason": "The data shows the Pelicans won 120-113 in overtime, but does not say they rallied."
+      "where": "nba recaps 1",
+      "sentence": "Golden State controlled the game from start to finish, and the Heat ended the night 3–6.",
+      "reason": "The data gives no game flow, so 'controlled the game from start to finish' goes beyond it."
     }
   ]
 }
