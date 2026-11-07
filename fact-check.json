@@ -1,22 +1,17 @@
 {
-  "date": "2026-11-07",
-  "checked": 92,
-  "removed": 3,
+  "date": "2026-11-08",
+  "checked": 96,
+  "removed": 2,
   "sentences": [
     {
-      "where": "nfl recaps 1",
-      "sentence": "Justice Hill was Baltimore's best runner, with 85 yards and a touchdown.",
-      "reason": "The data gives Justice Hill's 9 carries, 85 yards and 1 TD, but never says he was Baltimore's best runner."
+      "where": "nfl oneThing",
+      "sentence": "Lions linebacker Jack Campbell has been placed on injured reserve with a serious neck injury, the biggest blow of the week in the NFL.",
+      "reason": "\"The biggest blow of the week in the NFL\" is an unsupported superlative judgment; the data gives no such ranking."
     },
     {
-      "where": "nba headlines 3",
-      "sentence": "Plane problems meant the Heat didn't reach their hotel until around 3am, league sources told The Athletic, after what the team called a rough trip.",
-      "reason": "The data says the rough trip followed the plane issues. It does not say the team called the trip rough."
-    },
-    {
-      "where": "nba recaps 1",
-      "sentence": "Golden State controlled the game from start to finish, and the Heat ended the night 3–6.",
-      "reason": "The data gives no game flow, so 'controlled the game from start to finish' goes beyond it."
+      "where": "nfl quickHits 3",
+      "sentence": "Baltimore traded QB Jacoby Brissett and a 2027 fifth-round pick to Arizona for a 2027 fourth-rounder and a 2028 seventh.",
+      "reason": "Reverses the trade direction. The data says Arizona acquired the picks from Baltimore in exchange for Brissett and a 2027 fifth, and Baltimore acquired Brissett from Arizona. The sentence has Baltimore sending Brissett to Arizona."
     }
   ]
 }
