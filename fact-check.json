@@ -1,17 +1,32 @@
 {
-  "date": "2026-11-08",
-  "checked": 96,
-  "removed": 2,
+  "date": "2026-11-09",
+  "checked": 143,
+  "removed": 5,
   "sentences": [
     {
-      "where": "nfl oneThing",
-      "sentence": "Lions linebacker Jack Campbell has been placed on injured reserve with a serious neck injury, the biggest blow of the week in the NFL.",
-      "reason": "\"The biggest blow of the week in the NFL\" is an unsupported superlative judgment; the data gives no such ranking."
+      "where": "nfl teamNews 1",
+      "sentence": "The coach's decisions were made before kickoff.",
+      "reason": "The data says only 'coach's decision'; it gives no timing for when the decisions were made."
     },
     {
-      "where": "nfl quickHits 3",
-      "sentence": "Baltimore traded QB Jacoby Brissett and a 2027 fifth-round pick to Arizona for a 2027 fourth-rounder and a 2028 seventh.",
-      "reason": "Reverses the trade direction. The data says Arizona acquired the picks from Baltimore in exchange for Brissett and a 2027 fifth, and Baltimore acquired Brissett from Arizona. The sentence has Baltimore sending Brissett to Arizona."
+      "where": "nfl recaps 1",
+      "sentence": "The Chiefs were tied with the Jets at halftime, then pulled away with two third-quarter touchdowns while New York went backwards.",
+      "reason": "The data says Kansas City led 14-12 at halftime, not that the teams were tied."
+    },
+    {
+      "where": "nfl recaps 3",
+      "sentence": "Washington had chances to win but couldn't convert them, and Daniels' yards didn't translate into points.",
+      "reason": "The data does not describe Washington's chances or conversions; it only gives totals such as Daniels' 274 yards."
+    },
+    {
+      "where": "nfl recaps 4",
+      "sentence": "Carolina's Bryce Young threw for lots of yards but couldn't finish drives in the red zone.",
+      "reason": "The data does not say anything about Carolina's red-zone finishing; it only gives Young's yards, TDs and interception."
+    },
+    {
+      "where": "nba recaps 1",
+      "sentence": "It was their eighth straight win and their second in a row against a team with a winning record.",
+      "reason": "The data does not give the Spurs' previous opponent or its record, so 'second in a row against a winning team' is unsupported."
     }
   ]
 }
