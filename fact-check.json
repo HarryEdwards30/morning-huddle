@@ -1,32 +1,27 @@
 {
-  "date": "2026-11-09",
-  "checked": 143,
-  "removed": 5,
+  "date": "2026-11-10",
+  "checked": 132,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl teamNews 1",
-      "sentence": "The coach's decisions were made before kickoff.",
-      "reason": "The data says only 'coach's decision'; it gives no timing for when the decisions were made."
-    },
-    {
-      "where": "nfl recaps 1",
-      "sentence": "The Chiefs were tied with the Jets at halftime, then pulled away with two third-quarter touchdowns while New York went backwards.",
-      "reason": "The data says Kansas City led 14-12 at halftime, not that the teams were tied."
-    },
-    {
-      "where": "nfl recaps 3",
-      "sentence": "Washington had chances to win but couldn't convert them, and Daniels' yards didn't translate into points.",
-      "reason": "The data does not describe Washington's chances or conversions; it only gives totals such as Daniels' 274 yards."
+      "where": "nfl recaps 2",
+      "sentence": "The game got away from the Patriots early.",
+      "reason": "The data says the Patriots trailed 42-14 late in the third quarter, not that the game got away from them early."
     },
     {
       "where": "nfl recaps 4",
-      "sentence": "Carolina's Bryce Young threw for lots of yards but couldn't finish drives in the red zone.",
-      "reason": "The data does not say anything about Carolina's red-zone finishing; it only gives Young's yards, TDs and interception."
+      "sentence": "Dallas beat the Colts 27–23 in a game that was closer than the score suggests.",
+      "reason": "The 27-23 score is already a one-score game, so 'closer than the score suggests' goes beyond the data and runs the wrong way."
     },
     {
-      "where": "nba recaps 1",
-      "sentence": "It was their eighth straight win and their second in a row against a team with a winning record.",
-      "reason": "The data does not give the Spurs' previous opponent or its record, so 'second in a row against a winning team' is unsupported."
+      "where": "nba recaps 4",
+      "sentence": "Los Angeles is 9-2 at this point in the update.",
+      "reason": "The Lakers are 10-2 in the data, not 9-2; 9-2 was their record before the Hawks win."
+    },
+    {
+      "where": "nba quickHits 3",
+      "sentence": "Pelicans coach Zion Williamson is set to miss his first game of the season, out for rest in the next game.",
+      "reason": "Zion Williamson is a Pelicans player, not their coach, and the data does not describe him as coach."
     }
   ]
 }
