@@ -1,27 +1,27 @@
 {
-  "date": "2026-11-10",
-  "checked": 132,
+  "date": "2026-11-11",
+  "checked": 119,
   "removed": 4,
   "sentences": [
     {
-      "where": "nfl recaps 2",
-      "sentence": "The game got away from the Patriots early.",
-      "reason": "The data says the Patriots trailed 42-14 late in the third quarter, not that the game got away from them early."
+      "where": "nfl headlines 3",
+      "sentence": "Cam Skattebo said the team's offence would be fine.",
+      "reason": "The data does not say Skattebo claimed the offence would be fine; it only has his 'They know what I can do' response."
     },
     {
-      "where": "nfl recaps 4",
-      "sentence": "Dallas beat the Colts 27–23 in a game that was closer than the score suggests.",
-      "reason": "The 27-23 score is already a one-score game, so 'closer than the score suggests' goes beyond the data and runs the wrong way."
+      "where": "nfl headlines 3",
+      "sentence": "New York is 5–2–1 and third in the NFC, and it goes into the second half of the season with the roster it had before the deadline.",
+      "reason": "The data does not say the Giants kept their roster unchanged through the deadline, or that they made no moves."
     },
     {
-      "where": "nba recaps 4",
-      "sentence": "Los Angeles is 9-2 at this point in the update.",
-      "reason": "The Lakers are 10-2 in the data, not 9-2; 9-2 was their record before the Hawks win."
+      "where": "nfl headlines 1",
+      "sentence": "The Raiders are now Mendoza's team for the rest of the season.",
+      "reason": "The data says Mendoza will start this week; it does not say he will be the starter for the rest of the season."
     },
     {
-      "where": "nba quickHits 3",
-      "sentence": "Pelicans coach Zion Williamson is set to miss his first game of the season, out for rest in the next game.",
-      "reason": "Zion Williamson is a Pelicans player, not their coach, and the data does not describe him as coach."
+      "where": "nfl headlines 3",
+      "sentence": "The Giants wanted a running back upgrade for a playoff push, and they didn't get one.",
+      "reason": "The data says the Giants pulled a trade offer, but not that they wanted a running back upgrade for a playoff push."
     }
   ]
 }
