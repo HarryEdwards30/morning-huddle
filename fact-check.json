@@ -1,12 +1,17 @@
 {
-  "date": "2026-11-12",
-  "checked": 96,
-  "removed": 1,
+  "date": "2026-11-13",
+  "checked": 92,
+  "removed": 2,
   "sentences": [
     {
-      "where": "nba standouts 1",
-      "sentence": "Six threes and 36 points made the biggest difference in a road win over a 9–3 team.",
-      "reason": "\"Biggest difference\" is an unsupported causal/superlative claim about the game; the data gives the scoring lines but does not rank what mattered most."
+      "where": "nfl headlines 2",
+      "sentence": "The move is a bet on a stronger passing game over the second half of the season.",
+      "reason": "Gives a reason or intent behind the Nacua IR move (a bet on the passing game) that the data does not state."
+    },
+    {
+      "where": "nba teamNews 2",
+      "sentence": "Curry's absence is the biggest change for the Spurs.",
+      "reason": "Claims Curry's absence is the biggest change for the Spurs. Curry plays for Golden State, and the data does not support this claim about the Spurs."
     }
   ]
 }
