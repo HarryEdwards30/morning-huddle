@@ -1,17 +1,32 @@
 {
-  "date": "2026-11-13",
-  "checked": 92,
-  "removed": 2,
+  "date": "2026-11-14",
+  "checked": 110,
+  "removed": 5,
   "sentences": [
     {
-      "where": "nfl headlines 2",
-      "sentence": "The move is a bet on a stronger passing game over the second half of the season.",
-      "reason": "Gives a reason or intent behind the Nacua IR move (a bet on the passing game) that the data does not state."
+      "where": "nfl oneThing",
+      "sentence": "Kirk Cousins starts for the Vikings against the Packers at Lambeau Field on Sunday, his first game back in Minnesota after the trade.",
+      "reason": "The data says the Vikings are starting Cousins at Lambeau, but nothing says this is his first game back in Minnesota."
     },
     {
-      "where": "nba teamNews 2",
-      "sentence": "Curry's absence is the biggest change for the Spurs.",
-      "reason": "Claims Curry's absence is the biggest change for the Spurs. Curry plays for Golden State, and the data does not support this claim about the Spurs."
+      "where": "nfl recaps 1",
+      "sentence": "Cam Skattebo scored twice for New York, and Isaiah Likely had 127 yards, but the turning point came on a crucial Jameis Winston sneak, when Skattebo stayed in his stance.",
+      "reason": "The data calls the Winston sneak 'crucial' but does not say it was the turning point of the game."
+    },
+    {
+      "where": "nfl team update",
+      "sentence": "The Raiders lost 38–17 to the 49ers in Week 9.",
+      "reason": "The data gives the score as 17-38 (Raiders 17, 49ers 38), so the sentence reverses the score."
+    },
+    {
+      "where": "nba headlines 2",
+      "sentence": "Dončić leads the league at 38.6 points a game, so keeping him on the floor is the priority.",
+      "reason": "The data gives Doncic's scoring average but says nothing about keeping him on the floor being the team's priority."
+    },
+    {
+      "where": "nba headlines 4",
+      "sentence": "Irving's future depends on whether the team decides to rebuild around its current roster.",
+      "reason": "The data does not say anything about Irving's future depending on whether Dallas rebuilds."
     }
   ]
 }
