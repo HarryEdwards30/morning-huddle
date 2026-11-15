@@ -1,32 +1,22 @@
 {
-  "date": "2026-11-14",
-  "checked": 110,
-  "removed": 5,
+  "date": "2026-11-15",
+  "checked": 85,
+  "removed": 3,
   "sentences": [
     {
       "where": "nfl oneThing",
-      "sentence": "Kirk Cousins starts for the Vikings against the Packers at Lambeau Field on Sunday, his first game back in Minnesota after the trade.",
-      "reason": "The data says the Vikings are starting Cousins at Lambeau, but nothing says this is his first game back in Minnesota."
+      "sentence": "The Steelers host the Bengals in Week 10 in a rematch that decides the early AFC North lead, and the winner takes a one-game division edge.",
+      "reason": "Data says the Steelers travel to Cincinnati, so they are not hosting the Bengals."
     },
     {
-      "where": "nfl recaps 1",
-      "sentence": "Cam Skattebo scored twice for New York, and Isaiah Likely had 127 yards, but the turning point came on a crucial Jameis Winston sneak, when Skattebo stayed in his stance.",
-      "reason": "The data calls the Winston sneak 'crucial' but does not say it was the turning point of the game."
-    },
-    {
-      "where": "nfl team update",
-      "sentence": "The Raiders lost 38–17 to the 49ers in Week 9.",
-      "reason": "The data gives the score as 17-38 (Raiders 17, 49ers 38), so the sentence reverses the score."
-    },
-    {
-      "where": "nba headlines 2",
-      "sentence": "Dončić leads the league at 38.6 points a game, so keeping him on the floor is the priority.",
-      "reason": "The data gives Doncic's scoring average but says nothing about keeping him on the floor being the team's priority."
+      "where": "nfl headlines 2",
+      "sentence": "Ravens defensive coordinator Jesse Minter said he was 'very, very impressed' with how quickly Brissett picked up the offence.",
+      "reason": "Data does not give Jesse Minter's role; 'defensive coordinator' is not stated, and 'how quickly' goes beyond the quote."
     },
     {
       "where": "nba headlines 4",
-      "sentence": "Irving's future depends on whether the team decides to rebuild around its current roster.",
-      "reason": "The data does not say anything about Irving's future depending on whether Dallas rebuilds."
+      "sentence": "A trade would reshape the Suns' backcourt, and Phoenix host the Lakers on Sunday.",
+      "reason": "Data says the Lakers play at Phoenix on Sunday, not the reverse."
     }
   ]
 }
