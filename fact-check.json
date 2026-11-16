@@ -1,22 +1,57 @@
 {
-  "date": "2026-11-15",
-  "checked": 85,
-  "removed": 3,
+  "date": "2026-11-16",
+  "checked": 154,
+  "removed": 10,
   "sentences": [
     {
-      "where": "nfl oneThing",
-      "sentence": "The Steelers host the Bengals in Week 10 in a rematch that decides the early AFC North lead, and the winner takes a one-game division edge.",
-      "reason": "Data says the Steelers travel to Cincinnati, so they are not hosting the Bengals."
+      "where": "nfl headlines 1",
+      "sentence": "San Francisco ran past Dallas 46–40 on Sunday night, with 584 yards of offence in total.",
+      "reason": "\"Sunday night\" is not in the data; the game is listed only as Sunday, 21:25Z."
     },
     {
-      "where": "nfl headlines 2",
-      "sentence": "Ravens defensive coordinator Jesse Minter said he was 'very, very impressed' with how quickly Brissett picked up the offence.",
-      "reason": "Data does not give Jesse Minter's role; 'defensive coordinator' is not stated, and 'how quickly' goes beyond the quote."
+      "where": "nfl headlines 1",
+      "sentence": "The 49ers are now 8–1 and the Cowboys have lost their last two, at 4–6.",
+      "reason": "Data shows Dallas lost its last game (L1), not its last two."
+    },
+    {
+      "where": "nfl headlines 3",
+      "sentence": "The Jets are 2–8 and last in the AFC East.",
+      "reason": "Miami is 1-8 in the AFC East, so the Jets are not last in the division."
+    },
+    {
+      "where": "nfl teamNews 1",
+      "sentence": "Bowers had 50 catches for 676 yards and six touchdowns before the injury.",
+      "reason": "The season totals of 50 catches, 676 yards and six TDs include the Week 10 game, not only the games before the injury."
+    },
+    {
+      "where": "nfl recaps 2",
+      "sentence": "Dallas led for long stretches of the game, but the 49ers kept scoring and finally pulled away.",
+      "reason": "The data does not say Dallas led for long stretches."
+    },
+    {
+      "where": "nfl recaps 4",
+      "sentence": "Minnesota controlled the game from the start, with Jordan Mason keeping the offence balanced.",
+      "reason": "The data does not say Minnesota controlled the game from the start."
+    },
+    {
+      "where": "nfl recaps 4",
+      "sentence": "The Packers have now lost two of their last three games, and the frustration was obvious after the loss.",
+      "reason": "The data gives no record for the Packers' last three games, only their 6-4 overall record."
     },
     {
       "where": "nba headlines 4",
-      "sentence": "A trade would reshape the Suns' backcourt, and Phoenix host the Lakers on Sunday.",
-      "reason": "Data says the Lakers play at Phoenix on Sunday, not the reverse."
+      "sentence": "Minnesota is losing a wing and a game in the West standings, and Chicago gets a useful win.",
+      "reason": "The data does not show Minnesota losing ground in the West standings; the claim goes beyond the data."
+    },
+    {
+      "where": "nba teamNews 2",
+      "sentence": "San Antonio is 12–2 and is the only team in the West with a winning record to beat.",
+      "reason": "The claim that San Antonio is the only West team with a winning record to beat is not in the data."
+    },
+    {
+      "where": "nba standouts 2",
+      "sentence": "Wembanyama was a double-double threat with blocks, and his fourth-quarter plays helped secure the Spurs' win.",
+      "reason": "The data does not specify Wembanyama's fourth-quarter plays or their role in securing the win."
     }
   ]
 }
