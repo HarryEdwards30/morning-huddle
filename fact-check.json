@@ -1,17 +1,27 @@
 {
-  "date": "2026-11-17",
-  "checked": 126,
-  "removed": 2,
+  "date": "2026-11-18",
+  "checked": 65,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl headlines 4",
-      "sentence": "6 seed, and this game is the first chance to show the Bengals loss was a one-off.",
-      "reason": "The data never mentions a Bengals loss. Cincinnati is 7-2 on a five-game winning streak, so 'the Bengals loss was a one-off' is not supported."
+      "where": "nfl wrap storyline 3",
+      "sentence": "Hutchinson's season-ending ACL tear is the week's biggest injury blow, though Detroit still sits 7–2.",
+      "reason": "Calls Hutchinson's injury the week's biggest injury blow; the data does not rank injuries."
     },
     {
-      "where": "nfl standouts 2",
-      "sentence": "Chase's 231 yards on 11 catches were the big-play side of the Bengals' passing game, with Burrow looking his way all day.",
-      "reason": "The claim that Burrow was 'looking his way all day' is not in the data, which only gives Chase's 11 catches and 231 yards."
+      "where": "nba recaps 1",
+      "sentence": "Nikola Jokic had 28 points, 15 rebounds and seven assists, and Jamal Murray added 28, but Denver could not stop the Suns in the second half.",
+      "reason": "Claims Denver could not stop the Suns in the second half; the data gives no half-by-half detail."
+    },
+    {
+      "where": "nba standouts 1",
+      "sentence": "Jokic was close to a triple-double in a losing effort and kept Denver in the game.",
+      "reason": "Says Jokic kept Denver in the game; the data does not support that characterization."
+    },
+    {
+      "where": "nba standouts 2",
+      "sentence": "Booker's eight assists came in a win on the road, and he led Phoenix's offence.",
+      "reason": "Says Booker led Phoenix's offence; the data only gives his stat line (8 assists)."
     }
   ]
 }
