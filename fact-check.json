@@ -1,27 +1,22 @@
 {
-  "date": "2026-11-18",
-  "checked": 65,
-  "removed": 4,
+  "date": "2026-11-19",
+  "checked": 72,
+  "removed": 3,
   "sentences": [
     {
-      "where": "nfl wrap storyline 3",
-      "sentence": "Hutchinson's season-ending ACL tear is the week's biggest injury blow, though Detroit still sits 7–2.",
-      "reason": "Calls Hutchinson's injury the week's biggest injury blow; the data does not rank injuries."
+      "where": "nfl oneThing",
+      "sentence": "The biggest NFL story is Drake Maye's likely season-ending injury, a serious blow for a Patriots side that is 5–5 and just outside the AFC playoff picture.",
+      "reason": "Calls the Maye injury the 'biggest' NFL story; the data does not rank the stories."
     },
     {
-      "where": "nba recaps 1",
-      "sentence": "Nikola Jokic had 28 points, 15 rebounds and seven assists, and Jamal Murray added 28, but Denver could not stop the Suns in the second half.",
-      "reason": "Claims Denver could not stop the Suns in the second half; the data gives no half-by-half detail."
+      "where": "nfl headlines 2",
+      "sentence": "San Francisco is 8–1 and first in the NFC, so the defence is carrying its share.",
+      "reason": "The claim that the defence is 'carrying its share' is an explanation the data does not give."
     },
     {
-      "where": "nba standouts 1",
-      "sentence": "Jokic was close to a triple-double in a losing effort and kept Denver in the game.",
-      "reason": "Says Jokic kept Denver in the game; the data does not support that characterization."
-    },
-    {
-      "where": "nba standouts 2",
-      "sentence": "Booker's eight assists came in a win on the road, and he led Phoenix's offence.",
-      "reason": "Says Booker led Phoenix's offence; the data only gives his stat line (8 assists)."
+      "where": "nfl headlines 2",
+      "sentence": "Bosa is still one of their main pass rushers, and they face the Vikings in Mexico City next.",
+      "reason": "Calls Bosa 'still one of their main pass rushers'; the data does not describe his role."
     }
   ]
 }
