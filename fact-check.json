@@ -1,22 +1,27 @@
 {
-  "date": "2026-11-19",
-  "checked": 72,
-  "removed": 3,
+  "date": "2026-11-20",
+  "checked": 124,
+  "removed": 4,
   "sentences": [
     {
-      "where": "nfl oneThing",
-      "sentence": "The biggest NFL story is Drake Maye's likely season-ending injury, a serious blow for a Patriots side that is 5–5 and just outside the AFC playoff picture.",
-      "reason": "Calls the Maye injury the 'biggest' NFL story; the data does not rank the stories."
+      "where": "nba oneThing",
+      "sentence": "The Jazz beat the Lakers 109–97, with Keyonte George scoring 30 and handing the league's top team a loss.",
+      "reason": "Calls the Lakers the league's top team; the data only ranks them first in the Western Conference."
     },
     {
-      "where": "nfl headlines 2",
-      "sentence": "San Francisco is 8–1 and first in the NFC, so the defence is carrying its share.",
-      "reason": "The claim that the defence is 'carrying its share' is an explanation the data does not give."
+      "where": "nba headlines 4",
+      "sentence": "Minnesota are fourth in the West at 11-4, and their season now depends on a return date nobody has put on record.",
+      "reason": "Says Minnesota's season 'now depends' on a return date; the data only says no timeline was announced, so this overstates it."
     },
     {
-      "where": "nfl headlines 2",
-      "sentence": "Bosa is still one of their main pass rushers, and they face the Vikings in Mexico City next.",
-      "reason": "Calls Bosa 'still one of their main pass rushers'; the data does not describe his role."
+      "where": "nba recaps 2",
+      "sentence": "Both teams are in the top three of their conference.",
+      "reason": "Says both teams are in the top three of their conference; Denver is 7th in the West per the standings."
+    },
+    {
+      "where": "nba standouts 1",
+      "sentence": "A triple-double against a team that has a Western Conference record of 9-6, and the assists were the difference.",
+      "reason": "Garbled and unsupported: no team in the data has a 9-6 Western Conference record matching this triple-double context, and the claim that assists were the difference is not in the data."
     }
   ]
 }
