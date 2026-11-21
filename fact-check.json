@@ -1,27 +1,32 @@
 {
-  "date": "2026-11-20",
-  "checked": 124,
-  "removed": 4,
+  "date": "2026-11-21",
+  "checked": 108,
+  "removed": 5,
   "sentences": [
     {
-      "where": "nba oneThing",
-      "sentence": "The Jazz beat the Lakers 109–97, with Keyonte George scoring 30 and handing the league's top team a loss.",
-      "reason": "Calls the Lakers the league's top team; the data only ranks them first in the Western Conference."
+      "where": "nfl headlines 1",
+      "sentence": "They have a Week 11 bye before hosting the Packers in Week 12.",
+      "reason": "The data says the Rams have a Week 11 bye and face the Packers in Week 12, but does not say the Rams are hosting."
     },
     {
-      "where": "nba headlines 4",
-      "sentence": "Minnesota are fourth in the West at 11-4, and their season now depends on a return date nobody has put on record.",
-      "reason": "Says Minnesota's season 'now depends' on a return date; the data only says no timeline was announced, so this overstates it."
+      "where": "nfl headlines 4",
+      "sentence": "The matchup tests the NFC's two best offences and defences, with the 49ers the top seed and the Vikings fifth.",
+      "reason": "The data does not rank the NFC's best offences and defences. It only gives the 49ers' offence and the Vikings' defence as league leaders, so 'two best' goes further than the data."
     },
     {
-      "where": "nba recaps 2",
-      "sentence": "Both teams are in the top three of their conference.",
-      "reason": "Says both teams are in the top three of their conference; Denver is 7th in the West per the standings."
+      "where": "nfl teamNews 2",
+      "sentence": "Defensive line depth is a concern against a Broncos offence that has been moving the ball.",
+      "reason": "The data does not mention defensive line depth as a concern, and it does not say the Broncos offence has been moving the ball."
     },
     {
-      "where": "nba standouts 1",
-      "sentence": "A triple-double against a team that has a Western Conference record of 9-6, and the assists were the difference.",
-      "reason": "Garbled and unsupported: no team in the data has a 9-6 Western Conference record matching this triple-double context, and the claim that assists were the difference is not in the data."
+      "where": "nfl standouts 1",
+      "sentence": "Three touchdowns and one interception in a game where Houston took control early, and his passing is the reason the Texans won by 23.",
+      "reason": "The data does not say Houston took control early or that Stroud's passing was the reason for the 23-point win."
+    },
+    {
+      "where": "nba recaps 4",
+      "sentence": "The Spurs bounced back from a loss to Detroit and stayed unbeaten at home in this game.",
+      "reason": "The data does not give the Spurs' home record, so 'unbeaten at home' is not supported."
     }
   ]
 }
