@@ -1,32 +1,17 @@
 {
-  "date": "2026-11-21",
-  "checked": 108,
-  "removed": 5,
+  "date": "2026-11-22",
+  "checked": 83,
+  "removed": 2,
   "sentences": [
     {
-      "where": "nfl headlines 1",
-      "sentence": "They have a Week 11 bye before hosting the Packers in Week 12.",
-      "reason": "The data says the Rams have a Week 11 bye and face the Packers in Week 12, but does not say the Rams are hosting."
+      "where": "nba teamNews 2",
+      "sentence": "San Antonio trailed for most of the game, then closed with a 19–9 run to win 124–112.",
+      "reason": "The data says the Clippers game was close for 42 minutes; it does not say the Spurs trailed for most of the game."
     },
     {
-      "where": "nfl headlines 4",
-      "sentence": "The matchup tests the NFC's two best offences and defences, with the 49ers the top seed and the Vikings fifth.",
-      "reason": "The data does not rank the NFC's best offences and defences. It only gives the 49ers' offence and the Vikings' defence as league leaders, so 'two best' goes further than the data."
-    },
-    {
-      "where": "nfl teamNews 2",
-      "sentence": "Defensive line depth is a concern against a Broncos offence that has been moving the ball.",
-      "reason": "The data does not mention defensive line depth as a concern, and it does not say the Broncos offence has been moving the ball."
-    },
-    {
-      "where": "nfl standouts 1",
-      "sentence": "Three touchdowns and one interception in a game where Houston took control early, and his passing is the reason the Texans won by 23.",
-      "reason": "The data does not say Houston took control early or that Stroud's passing was the reason for the 23-point win."
-    },
-    {
-      "where": "nba recaps 4",
-      "sentence": "The Spurs bounced back from a loss to Detroit and stayed unbeaten at home in this game.",
-      "reason": "The data does not give the Spurs' home record, so 'unbeaten at home' is not supported."
+      "where": "nba recaps 1",
+      "sentence": "It was another close Sixers win, but they now have the league's best record.",
+      "reason": "The data says the 76ers are tied for the NBA's best record, not that they have the league's best record outright."
     }
   ]
 }

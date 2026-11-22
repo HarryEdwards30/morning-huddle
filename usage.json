@@ -461,10 +461,20 @@
       "costUsd": 0.01889,
       "ok": true,
       "words": 1934
+    },
+    {
+      "date": "2026-11-22",
+      "at": "2026-11-22T12:08:00+11:00",
+      "model": "claude-haiku-5-5",
+      "inputTokens": 64531,
+      "outputTokens": 27216,
+      "costUsd": 0.02006,
+      "ok": true,
+      "words": 1497
     }
   ],
   "monthToDate": {
     "month": "2026-11",
-    "costUsd": 0.4732
+    "costUsd": 0.4933
   }
 }
