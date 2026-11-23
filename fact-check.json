@@ -1,17 +1,17 @@
 {
-  "date": "2026-11-22",
-  "checked": 83,
+  "date": "2026-11-23",
+  "checked": 118,
   "removed": 2,
   "sentences": [
     {
-      "where": "nba teamNews 2",
-      "sentence": "San Antonio trailed for most of the game, then closed with a 19–9 run to win 124–112.",
-      "reason": "The data says the Clippers game was close for 42 minutes; it does not say the Spurs trailed for most of the game."
+      "where": "nfl standouts 4",
+      "sentence": "Mahomes threw three touchdowns in a 34–7 win over Arizona while the Chiefs were fighting for a top seed.",
+      "reason": "The data does not say the Chiefs were fighting for a top seed. It only shows them 5th in the AFC."
     },
     {
-      "where": "nba recaps 1",
-      "sentence": "It was another close Sixers win, but they now have the league's best record.",
-      "reason": "The data says the 76ers are tied for the NBA's best record, not that they have the league's best record outright."
+      "where": "nba recaps 3",
+      "sentence": "Landry Shamet added six threes, and Donovan Clingan had 22 points and 13 rebounds for the Trail Blazers in the one-point loss.",
+      "reason": "Landry Shamet played for the Knicks (NY), not the Trail Blazers. The data lists him with NY."
     }
   ]
 }
