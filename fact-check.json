@@ -1,17 +1,42 @@
 {
-  "date": "2026-11-23",
-  "checked": 118,
-  "removed": 2,
+  "date": "2026-11-24",
+  "checked": 109,
+  "removed": 7,
   "sentences": [
     {
-      "where": "nfl standouts 4",
-      "sentence": "Mahomes threw three touchdowns in a 34–7 win over Arizona while the Chiefs were fighting for a top seed.",
-      "reason": "The data does not say the Chiefs were fighting for a top seed. It only shows them 5th in the AFC."
+      "where": "nfl headlines 3",
+      "sentence": "A division title would guarantee New York a playoff spot, and it would weaken the AFC's Jaguars' hold on a top-three seed.",
+      "reason": "The data says the Giants' win 'boosts their chances' of making the playoffs as a division champion. It does not say a division title guarantees a playoff spot."
     },
     {
-      "where": "nba recaps 3",
-      "sentence": "Landry Shamet added six threes, and Donovan Clingan had 22 points and 13 rebounds for the Trail Blazers in the one-point loss.",
-      "reason": "Landry Shamet played for the Knicks (NY), not the Trail Blazers. The data lists him with NY."
+      "where": "nfl recaps 1",
+      "sentence": "Burrow kept the Bengals in it all night, but Cincinnati's defence could not stop the late drive, and the Commanders' pass rush (Boye Mafe had three sacks for Cincinnati) was not enough to close it out.",
+      "reason": "Boye Mafe is listed as a Bengals player who had three sacks. The sentence presents him as part of the Commanders' pass rush."
+    },
+    {
+      "where": "nfl recaps 2",
+      "sentence": "San Francisco was in control from early, with Brock Purdy throwing three touchdowns and Mike Evans catching one of them for 109 yards.",
+      "reason": "The data gives Mike Evans 109 receiving yards on six catches, not on one touchdown catch. It also does not say San Francisco was in control from early."
+    },
+    {
+      "where": "nfl recaps 2",
+      "sentence": "Kirk Cousins had an interception and no touchdowns for Minnesota, and the Vikings' offence did not threaten much in the second half.",
+      "reason": "The data does not describe the Vikings' second-half offence."
+    },
+    {
+      "where": "nfl recaps 2",
+      "sentence": "The win keeps the 49ers unbeaten at home this season, and it leaves them 9–1 at the top of the NFC.",
+      "reason": "A home record of being unbeaten is not in the data."
+    },
+    {
+      "where": "nba recaps 4",
+      "sentence": "Turner fouling out was a turning point for the Bucks late in the game.",
+      "reason": "Calling Turner's foul-out a turning point is an inference the data does not state."
+    },
+    {
+      "where": "nba recaps 7",
+      "sentence": "Mitchell had 28 points for Cleveland, but the Cavs could not match Chicago's depth in the second half.",
+      "reason": "The claim that Cleveland could not match Chicago's depth in the second half is a cause the data does not give."
     }
   ]
 }
