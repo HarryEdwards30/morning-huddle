@@ -1,42 +1,22 @@
 {
-  "date": "2026-11-24",
-  "checked": 109,
-  "removed": 7,
+  "date": "2026-11-25",
+  "checked": 110,
+  "removed": 3,
   "sentences": [
     {
-      "where": "nfl headlines 3",
-      "sentence": "A division title would guarantee New York a playoff spot, and it would weaken the AFC's Jaguars' hold on a top-three seed.",
-      "reason": "The data says the Giants' win 'boosts their chances' of making the playoffs as a division champion. It does not say a division title guarantees a playoff spot."
+      "where": "nba headlines 1",
+      "sentence": "A healthy Leonard would be the biggest boost to their season.",
+      "reason": "Unattributed opinion presented as fact: 'biggest boost' is not in the data."
     },
     {
-      "where": "nfl recaps 1",
-      "sentence": "Burrow kept the Bengals in it all night, but Cincinnati's defence could not stop the late drive, and the Commanders' pass rush (Boye Mafe had three sacks for Cincinnati) was not enough to close it out.",
-      "reason": "Boye Mafe is listed as a Bengals player who had three sacks. The sentence presents him as part of the Commanders' pass rush."
+      "where": "nba recaps 1",
+      "sentence": "Tatum's 28 first-half points made the difference, and Paul George's ankle-breaking crossover on Kyshawn George was the moment of the night.",
+      "reason": "'Moment of the night' is an unsupported superlative judgment not in the data."
     },
     {
-      "where": "nfl recaps 2",
-      "sentence": "San Francisco was in control from early, with Brock Purdy throwing three touchdowns and Mike Evans catching one of them for 109 yards.",
-      "reason": "The data gives Mike Evans 109 receiving yards on six catches, not on one touchdown catch. It also does not say San Francisco was in control from early."
-    },
-    {
-      "where": "nfl recaps 2",
-      "sentence": "Kirk Cousins had an interception and no touchdowns for Minnesota, and the Vikings' offence did not threaten much in the second half.",
-      "reason": "The data does not describe the Vikings' second-half offence."
-    },
-    {
-      "where": "nfl recaps 2",
-      "sentence": "The win keeps the 49ers unbeaten at home this season, and it leaves them 9–1 at the top of the NFC.",
-      "reason": "A home record of being unbeaten is not in the data."
-    },
-    {
-      "where": "nba recaps 4",
-      "sentence": "Turner fouling out was a turning point for the Bucks late in the game.",
-      "reason": "Calling Turner's foul-out a turning point is an inference the data does not state."
-    },
-    {
-      "where": "nba recaps 7",
-      "sentence": "Mitchell had 28 points for Cleveland, but the Cavs could not match Chicago's depth in the second half.",
-      "reason": "The claim that Cleveland could not match Chicago's depth in the second half is a cause the data does not give."
+      "where": "nba standouts 4",
+      "sentence": "Davis's 33 points and 13 rebounds were the best of the night in a losing effort.",
+      "reason": "Calls Davis's 33 points the best of the night, but Tatum had 41 points in the same game."
     }
   ]
 }
