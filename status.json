@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "lastAttempt": "2026-11-25T15:02:00+11:00",
-  "lastSuccess": "2026-11-25T15:02:00+11:00",
+  "lastAttempt": "2026-11-26T14:27:00+11:00",
+  "lastSuccess": "2026-11-26T14:27:00+11:00",
   "error": null,
   "sources": {
-    "total": 70,
-    "ok": 70,
+    "total": 46,
+    "ok": 46,
     "failed": []
   },
   "brief": {
     "ok": true,
     "error": null,
-    "at": "2026-11-25T15:05:00+11:00",
+    "at": "2026-11-26T14:29:00+11:00",
     "droppedItems": 1,
     "rejectedRequests": [],
     "factCheck": {
-      "checked": 110,
+      "checked": 86,
       "removed": 3
     }
   }

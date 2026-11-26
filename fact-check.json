@@ -1,22 +1,22 @@
 {
-  "date": "2026-11-25",
-  "checked": 110,
+  "date": "2026-11-26",
+  "checked": 86,
   "removed": 3,
   "sentences": [
     {
-      "where": "nba headlines 1",
-      "sentence": "A healthy Leonard would be the biggest boost to their season.",
-      "reason": "Unattributed opinion presented as fact: 'biggest boost' is not in the data."
+      "where": "nfl team update",
+      "sentence": "The Raiders lost 38–24 at Denver in Week 11, dropping them to 4–7 and 10th in the AFC.",
+      "reason": "Score is reversed. The data lists the Week 11 result as 24-38 at Denver, with the Raiders scoring 24, not 38-24 in their favor."
     },
     {
-      "where": "nba recaps 1",
-      "sentence": "Tatum's 28 first-half points made the difference, and Paul George's ankle-breaking crossover on Kyshawn George was the moment of the night.",
-      "reason": "'Moment of the night' is an unsupported superlative judgment not in the data."
+      "where": "nba headlines 3",
+      "sentence": "Thursday's update will show whether this is a short absence or another extended stint on the sideline for the 76ers' leading scorer.",
+      "reason": "The data never calls Brown the 76ers' leading scorer. It gives his 22.4 average but does not rank him against teammates."
     },
     {
-      "where": "nba standouts 4",
-      "sentence": "Davis's 33 points and 13 rebounds were the best of the night in a losing effort.",
-      "reason": "Calls Davis's 33 points the best of the night, but Tatum had 41 points in the same game."
+      "where": "nba recaps 4",
+      "sentence": "Tyler Herro scored 28 for the Bucks, but Milwaukee could not get enough stops late.",
+      "reason": "The data gives no reason for Milwaukee's late defense. The claim that they 'could not get enough stops late' is not in the data."
     }
   ]
 }
