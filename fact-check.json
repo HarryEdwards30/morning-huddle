@@ -1,52 +1,42 @@
 {
-  "date": "2026-11-27",
-  "checked": 98,
-  "removed": 9,
+  "date": "2026-11-28",
+  "checked": 116,
+  "removed": 7,
   "sentences": [
     {
-      "where": "nfl headlines 2",
-      "sentence": "Detroit (8–3) is fifth in the NFC and lost its first game in a row since the early season run of results shown in the data.",
-      "reason": "Data shows Detroit's last game as a loss (L1) but says nothing about it being its first loss in a row or a comparison to earlier results."
+      "where": "nfl headlines 1",
+      "sentence": "Mason Rudolph started at quarterback and the defence did the heavy lifting against a Denver offence that managed little.",
+      "reason": "The data does not say Rudolph started; it only shows him playing and completing passes. Calling the defence the reason for the win is also an unstated causal claim."
     },
     {
-      "where": "nfl teamNews 2",
-      "sentence": "Fernando Mendoza is settling in as the Raiders' starting quarterback despite the 38–24 loss at Denver in Week 11.",
-      "reason": "The data's last-result record gives the Raiders-Broncos score as L 24-38, not 38-24 in the Raiders' favour."
-    },
-    {
-      "where": "nfl recaps 1",
-      "sentence": "Schottenheimer's fourth-and-1 call from the Eagles' 39 with 55 seconds left backfired when Prescott was sacked, leaving the Cowboys with no timeouts.",
-      "reason": "The data says the punt would have pinned the Eagles with no timeouts, not that the Cowboys had none."
+      "where": "nfl headlines 4",
+      "sentence": "Its seven-game winning streak is the longest in the NFL right now.",
+      "reason": "The data lists Buffalo's 7-game streak as hot but never says it is the longest in the NFL."
     },
     {
       "where": "nfl recaps 2",
-      "sentence": "Chicago led most of the game but had to hold on after Detroit's Gibbs ran through the defence for three touchdowns.",
-      "reason": "The data does not say Chicago led most of the game; it only shows Chicago trailing by three late."
+      "sentence": "Buffalo edged Kansas City 13–10 in a game decided by a late defensive stand and a steady ground game.",
+      "reason": "The data gives no detail on how the game was decided; a 'late defensive stand' is not mentioned."
     },
     {
       "where": "nfl recaps 2",
-      "sentence": "Detroit's false starts gave the Bears free yards all afternoon, and the loss makes it hard for the Lions to keep pace in the NFC North.",
-      "reason": "The data mentions false starts as a storyline but does not support 'free yards all afternoon' or the claim about the NFC North race."
+      "sentence": "Mahomes had no touchdown passes and Kansas City could not finish drives.",
+      "reason": "The data shows Mahomes threw no touchdown passes but says nothing about Kansas City failing to finish drives."
+    },
+    {
+      "where": "nfl team update",
+      "sentence": "He has not played since Week 10 except for a limited return.",
+      "reason": "The data says Bowers was kept out of the Week 11 game, but says nothing about a limited return."
     },
     {
       "where": "nba recaps 2",
-      "sentence": "Houston's Sengun had a triple-double with 23 points, 11 rebounds and 11 assists, and the Rockets were comfortable in the second half.",
-      "reason": "The data does not say the Rockets were comfortable in the second half."
-    },
-    {
-      "where": "nba recaps 2",
-      "sentence": "Phoenix had Booker's 25 points but couldn't keep up with Houston's depth.",
-      "reason": "The data does not give a reason for Phoenix's loss such as Houston's depth."
+      "sentence": "Indiana was missing Tyrese Haliburton, which was a big factor in the margin.",
+      "reason": "The data notes Haliburton was out but does not say his absence was a big factor in the margin."
     },
     {
       "where": "nba recaps 3",
-      "sentence": "Golden State pulled away in the second half, with De'Anthony Melton making eight threes in his 24-point game.",
-      "reason": "The data does not say Golden State pulled away in the second half."
-    },
-    {
-      "where": "nba recaps 3",
-      "sentence": "Sacramento was short-handed but got a strong night from Domantas Sabonis, who had a double-double with 27 points and 10 rebounds.",
-      "reason": "The data does not say Sacramento was short-handed."
+      "sentence": "The Raptors led throughout and pulled away in the second half.",
+      "reason": "The data does not say Toronto led throughout the game."
     }
   ]
 }
